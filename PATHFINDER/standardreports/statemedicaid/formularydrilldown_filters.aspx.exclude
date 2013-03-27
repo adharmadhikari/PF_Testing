@@ -1,0 +1,12 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/standardreports/MasterPages/filters.master" AutoEventWireup="true" CodeFile="formularydrilldown_filters.aspx.cs" Inherits="standardreports_statemedicaid_formularydrilldown_filters" %>
+<%@ Register src="../controls/FilterSearchTypeStateMedicaid.ascx" tagname="FilterSearchType" tagprefix="uc1" %>
+<%@ Register src="../controls/FilterDrugSelection.ascx" tagname="FilterDrugSelection" tagprefix="uc2" %>
+<%@ Register src="../controls/FilterRestrictions.ascx" tagname="FilterRestrictions" tagprefix="uc3" %>
+<%@ Register src="../controls/filterbenefitdesign.ascx" tagname="FilterBenefitDesign" tagprefix="uc4" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="filtersContainer" Runat="Server">
+    <uc1:FilterSearchType ID="SearchType" runat="server" />
+    <uc2:FilterDrugSelection ID="DrugSelection" MaxDrugs="10" runat="server" />
+    <uc3:FilterRestrictions ID="Restrictions" runat="server" />
+    <uc4:FilterBenefitDesign ID="BenefitDesign" runat="server" />
+</asp:Content>
+

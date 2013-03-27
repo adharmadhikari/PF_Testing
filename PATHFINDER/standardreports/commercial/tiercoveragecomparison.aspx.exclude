@@ -1,0 +1,31 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Pyramid.master" AutoEventWireup="true" CodeFile="tiercoveragecomparison.aspx.cs" Inherits="standardreports_commercial_tiercoveragecomparison" %>
+ <%@ Register src="../controls/tiercoveragechart.ascx" tagname="tiercoveragechart" tagprefix="pinso" %>
+<%@ Register src="../controls/TierCoverageScript.ascx" tagname="TierCoverageScript" tagprefix="pinso" %>
+<%@ Register src="../controls/tiercoveragedata.ascx" tagname="tiercoveragedata" tagprefix="pinso" %>
+<%@ Register src="../controls/TierCoverageDrillDown.ascx" tagname="TierCoverageDrillDown" tagprefix="pinso" %>
+
+<%-- Standard Reports - Commercial -  Tier Coverage Comparison Report--%>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="scriptContainer" runat="Server">
+    <pinso:TierCoverageScript ID="tiercoveragescript" runat="server" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Tile3Title" runat="Server">
+    <asp:Literal runat="server" ID="lbl1" Text='<%$ Resources:Resource, SectionTitle_TierCoverage %>' />
+</asp:Content>
+<asp:Content ID="optionsMenuContent" ContentPlaceHolderID="Tile3Tools" runat="Server">
+    <pinso:TileOptionsMenu runat="server" ID="optionsMenu" UserRole="export"/>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Tile3" Runat="Server">
+    <div id="divtiercoverageChart" style="height:100%">
+          <pinso:tiercoveragechart ID="Tiercoveragechart1" runat="server" />     
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Tile4" runat="server"> 
+    <pinso:tiercoveragedata ID="tiercoveragedata1" runat="server" />
+   
+</asp:Content>
+<asp:Content ID="Content5" runat="server" ContentPlaceHolderID="tile5">
+    <pinso:TierCoverageDrillDown ID="gridDrilldown" runat="server" />
+</asp:Content>
+
+

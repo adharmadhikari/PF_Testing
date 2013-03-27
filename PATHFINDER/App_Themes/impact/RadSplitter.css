@@ -1,0 +1,36 @@
+﻿.RadSplitter_impact .rspResizeBar
+{
+    
+    background:#215fa0 !important;
+    border:solid 1px #215fa0;
+    cursor:w-resize;
+    
+    }
+.RadSplitter_impact .rspCollapseBarExpand
+{
+    background: url(images/rt_arrow.png) no-repeat !important;
+    height:80px;
+    width:10px;
+    border:0;
+    cursor:pointer;
+    }
+   .ie6 .RadSplitter_impact .rspCollapseBarExpand
+{
+    background: url(images/rt_arrow.gif) no-repeat !important;
+    }
+.RadSplitter_impact .rspCollapseBarCollapse
+{
+    background: url(images/lef_arrow.png) no-repeat !important;
+    height:80px;
+    width:10px;
+    border:0;
+    cursor:pointer;
+    }
+   .ie6 .RadSplitter_impact .rspCollapseBarCollapse
+{
+    background: url(images/lef_arrow.gif) no-repeat !important;
+    }
+.RadSplitter_impact .rspCollapseBarSpacer 
+{
+    display:none;
+    }

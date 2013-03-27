@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PathfinderMarketplaceAnalyticsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PathfinderMarketplaceAnalyticsModelStoreContainer">
+          <EntitySet Name="Lkp_MS_ShortLongMonthNames" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_ShortLongMonthNames" store:Type="Tables" store:Schema="dbo" store:Name="Lkp_MS_ShortLongMonthNames">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_ShortLongMonthNames].[Number] AS [Number], 
+      [Lkp_MS_ShortLongMonthNames].[ShortName] AS [ShortName], 
+      [Lkp_MS_ShortLongMonthNames].[LongName] AS [LongName]
+      FROM [dbo].[Lkp_MS_ShortLongMonthNames] AS [Lkp_MS_ShortLongMonthNames]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_ShortLongQuarterNames" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_ShortLongQuarterNames" store:Type="Tables" store:Schema="dbo" store:Name="Lkp_MS_ShortLongQuarterNames">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_ShortLongQuarterNames].[Number] AS [Number], 
+      [Lkp_MS_ShortLongQuarterNames].[ShortName] AS [ShortName], 
+      [Lkp_MS_ShortLongQuarterNames].[LongName] AS [LongName]
+      FROM [dbo].[Lkp_MS_ShortLongQuarterNames] AS [Lkp_MS_ShortLongQuarterNames]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_ShortLongRollingQuarterNames" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_ShortLongRollingQuarterNames" store:Type="Tables" store:Schema="dbo" store:Name="Lkp_MS_ShortLongRollingQuarterNames">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_ShortLongRollingQuarterNames].[Number] AS [Number], 
+      [Lkp_MS_ShortLongRollingQuarterNames].[ShortName] AS [ShortName], 
+      [Lkp_MS_ShortLongRollingQuarterNames].[LongName] AS [LongName]
+      FROM [dbo].[Lkp_MS_ShortLongRollingQuarterNames] AS [Lkp_MS_ShortLongRollingQuarterNames]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_Territory_Levels" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_Territory_Levels" store:Type="Tables" Schema="tr" />
+          <EntitySet Name="MS_Monthly_Base" EntityType="PathfinderMarketplaceAnalyticsModel.Store.MS_Monthly_Base" store:Type="Tables" Schema="tr" />
+          <EntitySet Name="MS_Rolling_Quarterly_Base" EntityType="PathfinderMarketplaceAnalyticsModel.Store.MS_Rolling_Quarterly_Base" store:Type="Tables" Schema="tr" />
+          <EntitySet Name="Physicians" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Physicians" store:Type="Tables" Schema="tr" />
+          <EntitySet Name="Prescribers_TopN" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Prescribers_TopN" store:Type="Tables" store:Schema="tr" store:Name="Prescribers_TopN">
+            <DefiningQuery>SELECT 
+      [Prescribers_TopN].[Prescribers_TopN_ID] AS [Prescribers_TopN_ID], 
+      [Prescribers_TopN].[Prescribers_TopN_Name] AS [Prescribers_TopN_Name]
+      FROM [tr].[Prescribers_TopN] AS [Prescribers_TopN]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_FH_MonthYears" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_FH_MonthYears" store:Type="Views" store:Schema="fhr" store:Name="Lkp_MS_FH_MonthYears">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_FH_MonthYears].[Name] AS [Name], 
+      [Lkp_MS_FH_MonthYears].[ID] AS [ID], 
+      [Lkp_MS_FH_MonthYears].[Data_Month] AS [Data_Month], 
+      [Lkp_MS_FH_MonthYears].[Data_Year] AS [Data_Year]
+      FROM [fhr].[Lkp_MS_FH_MonthYears] AS [Lkp_MS_FH_MonthYears]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_FH_QuarterYears" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_FH_QuarterYears" store:Type="Views" store:Schema="fhr" store:Name="Lkp_MS_FH_QuarterYears">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_FH_QuarterYears].[Name] AS [Name], 
+      [Lkp_MS_FH_QuarterYears].[ID] AS [ID], 
+      [Lkp_MS_FH_QuarterYears].[Data_Quarter] AS [Data_Quarter], 
+      [Lkp_MS_FH_QuarterYears].[Data_Year] AS [Data_Year]
+      FROM [fhr].[Lkp_MS_FH_QuarterYears] AS [Lkp_MS_FH_QuarterYears]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_ProductFormularyHistoryData" EntityType="PathfinderMarketplaceAnalyticsModel.Store.V_ProductFormularyHistoryData" store:Type="Views" store:Schema="fhr" store:Name="V_ProductFormularyHistoryData">
+            <DefiningQuery>SELECT 
+      [V_ProductFormularyHistoryData].[Product_ID] AS [Product_ID], 
+      [V_ProductFormularyHistoryData].[Product_Name] AS [Product_Name], 
+      [V_ProductFormularyHistoryData].[Thera_ID] AS [Thera_ID], 
+      [V_ProductFormularyHistoryData].[Plan_ID] AS [Plan_ID], 
+      [V_ProductFormularyHistoryData].[Plan_Name] AS [Plan_Name], 
+      [V_ProductFormularyHistoryData].[Section_ID] AS [Section_ID], 
+      [V_ProductFormularyHistoryData].[Section_Name] AS [Section_Name], 
+      [V_ProductFormularyHistoryData].[Segment_ID] AS [Segment_ID], 
+      [V_ProductFormularyHistoryData].[Segment_Name] AS [Segment_Name], 
+      [V_ProductFormularyHistoryData].[Drug_ID] AS [Drug_ID], 
+      [V_ProductFormularyHistoryData].[Drug_Name] AS [Drug_Name], 
+      [V_ProductFormularyHistoryData].[Coverage_Status_ID] AS [Coverage_Status_ID], 
+      [V_ProductFormularyHistoryData].[Coverage_Status_Name] AS [Coverage_Status_Name], 
+      [V_ProductFormularyHistoryData].[Formulary_Status_ID] AS [Formulary_Status_ID], 
+      [V_ProductFormularyHistoryData].[Formulary_Status_Name] AS [Formulary_Status_Name], 
+      [V_ProductFormularyHistoryData].[Formulary_Status_Abbr] AS [Formulary_Status_Abbr], 
+      [V_ProductFormularyHistoryData].[Tier_No] AS [Tier_No], 
+      [V_ProductFormularyHistoryData].[Tier_Name] AS [Tier_Name], 
+      [V_ProductFormularyHistoryData].[PA] AS [PA], 
+      [V_ProductFormularyHistoryData].[QL] AS [QL], 
+      [V_ProductFormularyHistoryData].[ST] AS [ST], 
+      [V_ProductFormularyHistoryData].[Co_Pay] AS [Co_Pay], 
+      [V_ProductFormularyHistoryData].[Formulary_Lives] AS [Formulary_Lives], 
+      [V_ProductFormularyHistoryData].[Is_Predominant] AS [Is_Predominant], 
+      [V_ProductFormularyHistoryData].[Data_Year] AS [Data_Year], 
+      [V_ProductFormularyHistoryData].[Data_Month] AS [Data_Month], 
+      [V_ProductFormularyHistoryData].[Data_Quarter] AS [Data_Quarter], 
+      [V_ProductFormularyHistoryData].[Data_Year_Month] AS [Data_Year_Month], 
+      [V_ProductFormularyHistoryData].[Data_Year_Quarter] AS [Data_Year_Quarter], 
+      [V_ProductFormularyHistoryData].[Changed_FormularyStatus] AS [Changed_FormularyStatus], 
+      [V_ProductFormularyHistoryData].[Changed_Tier] AS [Changed_Tier], 
+      [V_ProductFormularyHistoryData].[Changed_PA] AS [Changed_PA], 
+      [V_ProductFormularyHistoryData].[Changed_QL] AS [Changed_QL], 
+      [V_ProductFormularyHistoryData].[Changed_ST] AS [Changed_ST], 
+      [V_ProductFormularyHistoryData].[Changed_CoPay] AS [Changed_CoPay], 
+      [V_ProductFormularyHistoryData].[Changed_Overall] AS [Changed_Overall]
+      FROM [fhr].[V_ProductFormularyHistoryData] AS [V_ProductFormularyHistoryData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_MonthYears" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_MonthYears" store:Type="Views" store:Schema="tr" store:Name="Lkp_MS_MonthYears">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_MonthYears].[MonthYear] AS [MonthYear], 
+      [Lkp_MS_MonthYears].[Data_Year] AS [Data_Year], 
+      [Lkp_MS_MonthYears].[Data_Month] AS [Data_Month], 
+      [Lkp_MS_MonthYears].[MonthName] AS [MonthName]
+      FROM [tr].[Lkp_MS_MonthYears] AS [Lkp_MS_MonthYears]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_QuarterYears" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_QuarterYears" store:Type="Views" store:Schema="tr" store:Name="Lkp_MS_QuarterYears">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_QuarterYears].[Data_Quarter] AS [Data_Quarter], 
+      [Lkp_MS_QuarterYears].[Data_Year] AS [Data_Year]
+      FROM [tr].[Lkp_MS_QuarterYears] AS [Lkp_MS_QuarterYears]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_MS_Years" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_MS_Years" store:Type="Views" store:Schema="tr" store:Name="Lkp_MS_Years">
+            <DefiningQuery>SELECT 
+      [Lkp_MS_Years].[Year] AS [Year]
+      FROM [tr].[Lkp_MS_Years] AS [Lkp_MS_Years]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_Physician_Region_District_Terr" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_Physician_Region_District_Terr" store:Type="Views" store:Schema="tr" store:Name="Lkp_Physician_Region_District_Terr">
+            <DefiningQuery>SELECT 
+      [Lkp_Physician_Region_District_Terr].[Region_ID] AS [Region_ID], 
+      [Lkp_Physician_Region_District_Terr].[District_ID] AS [District_ID], 
+      [Lkp_Physician_Region_District_Terr].[Territory_ID] AS [Territory_ID]
+      FROM [tr].[Lkp_Physician_Region_District_Terr] AS [Lkp_Physician_Region_District_Terr]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Lkp_Physicians" EntityType="PathfinderMarketplaceAnalyticsModel.Store.Lkp_Physicians" store:Type="Views" store:Schema="tr" store:Name="Lkp_Physicians">
+            <DefiningQuery>SELECT 
+      [Lkp_Physicians].[Physician_ID] AS [Physician_ID], 
+      [Lkp_Physicians].[First_Name] AS [First_Name], 
+      [Lkp_Physicians].[Last_Name] AS [Last_Name], 
+      [Lkp_Physicians].[Full_Name] AS [Full_Name]
+      FROM [tr].[Lkp_Physicians] AS [Lkp_Physicians]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MS_Rank" EntityType="PathfinderMarketplaceAnalyticsModel.Store.MS_Rank" store:Type="Views" store:Schema="tr" store:Name="MS_Rank">
+            <DefiningQuery>SELECT 
+      [MS_Rank].[Plan_ID] AS [Plan_ID], 
+      [MS_Rank].[Geography_ID] AS [Geography_ID], 
+      [MS_Rank].[Section_ID] AS [Section_ID], 
+      [MS_Rank].[Thera_ID] AS [Thera_ID], 
+      [MS_Rank].[TRx] AS [TRx], 
+      [MS_Rank].[NRx] AS [NRx], 
+      [MS_Rank].[Item_Rank] AS [Item_Rank]
+      FROM [tr].[MS_Rank] AS [MS_Rank]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MS_Rank_By_Territory" EntityType="PathfinderMarketplaceAnalyticsModel.Store.MS_Rank_By_Territory" store:Type="Views" store:Schema="tr" store:Name="MS_Rank_By_Territory">
+            <DefiningQuery>SELECT 
+      [MS_Rank_By_Territory].[Plan_ID] AS [Plan_ID], 
+      [MS_Rank_By_Territory].[Geography_ID] AS [Geography_ID], 
+      [MS_Rank_By_Territory].[Section_ID] AS [Section_ID], 
+      [MS_Rank_By_Territory].[Thera_ID] AS [Thera_ID], 
+      [MS_Rank_By_Territory].[TRx] AS [TRx], 
+      [MS_Rank_By_Territory].[NRx] AS [NRx], 
+      [MS_Rank_By_Territory].[Territory_ID] AS [Territory_ID], 
+      [MS_Rank_By_Territory].[Item_Rank] AS [Item_Rank]
+      FROM [tr].[MS_Rank_By_Territory] AS [MS_Rank_By_Territory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MS_Rolling_Quarterly" EntityType="PathfinderMarketplaceAnalyticsModel.Store.MS_Rolling_Quarterly" store:Type="Views" store:Schema="tr" store:Name="MS_Rolling_Quarterly">
+            <DefiningQuery>SELECT 
+      [MS_Rolling_Quarterly].[Plan_ID] AS [Plan_ID], 
+      [MS_Rolling_Quarterly].[Plan_Name] AS [Plan_Name], 
+      [MS_Rolling_Quarterly].[Section_ID] AS [Section_ID], 
+      [MS_Rolling_Quarterly].[Segment_ID] AS [Segment_ID], 
+      [MS_Rolling_Quarterly].[Segment_Name] AS [Segment_Name], 
+      [MS_Rolling_Quarterly].[Product_ID] AS [Product_ID], 
+      [MS_Rolling_Quarterly].[Drug_ID] AS [Drug_ID], 
+      [MS_Rolling_Quarterly].[Drug_Name] AS [Drug_Name], 
+      [MS_Rolling_Quarterly].[Product_Name] AS [Product_Name], 
+      [MS_Rolling_Quarterly].[Thera_ID] AS [Thera_ID], 
+      [MS_Rolling_Quarterly].[Data_Quarter] AS [Data_Quarter], 
+      [MS_Rolling_Quarterly].[Product_TRx] AS [Product_TRx], 
+      [MS_Rolling_Quarterly].[Product_NRx] AS [Product_NRx], 
+      [MS_Rolling_Quarterly].[Product_MST] AS [Product_MST], 
+      [MS_Rolling_Quarterly].[Product_MSN] AS [Product_MSN], 
+      [MS_Rolling_Quarterly].[MB_TRx] AS [MB_TRx], 
+      [MS_Rolling_Quarterly].[MB_NRx] AS [MB_NRx], 
+      [MS_Rolling_Quarterly].[Geography_ID] AS [Geography_ID], 
+      [MS_Rolling_Quarterly].[Geography_Name] AS [Geography_Name], 
+      [MS_Rolling_Quarterly].[Total_Covered] AS [Total_Covered]
+      FROM [tr].[MS_Rolling_Quarterly] AS [MS_Rolling_Quarterly]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_MS_Territory" EntityType="PathfinderMarketplaceAnalyticsModel.Store.v_MS_Territory" store:Type="Views" store:Schema="tr" store:Name="v_MS_Territory">
+            <DefiningQuery>SELECT 
+      [v_MS_Territory].[T3_Id] AS [T3_Id], 
+      [v_MS_Territory].[T3_Name] AS [T3_Name], 
+      [v_MS_Territory].[T2_Id] AS [T2_Id], 
+      [v_MS_Territory].[T2_Name] AS [T2_Name], 
+      [v_MS_Territory].[T1_Id] AS [T1_Id], 
+      [v_MS_Territory].[T1_Name] AS [T1_Name]
+      FROM [tr].[v_MS_Territory] AS [v_MS_Territory]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.dbo.Lkp_MS_ShortLongMonthNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_ShortLongMonthNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="ShortName" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="LongName" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.dbo.Lkp_MS_ShortLongQuarterNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_ShortLongQuarterNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="ShortName" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="LongName" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.dbo.Lkp_MS_ShortLongRollingQuarterNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_ShortLongRollingQuarterNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="ShortName" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="LongName" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Lkp_MS_Territory_Levels">
+          <Key>
+            <PropertyRef Name="MS_Territory_Level_ID" />
+          </Key>
+          <Property Name="MS_Territory_Level_ID" Type="int" Nullable="false" />
+          <Property Name="MS_Territory_Level_Name" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="MS_Monthly_Base">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Data_Year" Type="int" Nullable="false" />
+          <Property Name="Data_Month" Type="int" Nullable="false" />
+          <Property Name="Data_Month_Revolving" Type="int" />
+          <Property Name="Product_TRx" Type="decimal" Scale="3" />
+          <Property Name="Product_NRx" Type="decimal" Scale="3" />
+          <Property Name="Product_MST" Type="decimal" Scale="3" />
+          <Property Name="Product_MSN" Type="decimal" Scale="3" />
+          <Property Name="MB_TRx" Type="decimal" Scale="3" />
+          <Property Name="MB_NRx" Type="decimal" Scale="3" />
+        </EntityType>
+        <EntityType Name="MS_Rolling_Quarterly_Base">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Quarter" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Data_Quarter" Type="int" Nullable="false" />
+          <Property Name="Product_TRx" Type="decimal" Scale="3" />
+          <Property Name="Product_NRx" Type="decimal" Scale="3" />
+          <Property Name="Product_MST" Type="decimal" Scale="3" />
+          <Property Name="Product_MSN" Type="decimal" Scale="3" />
+          <Property Name="MB_TRx" Type="decimal" Scale="3" />
+          <Property Name="MB_NRx" Type="decimal" Scale="3" />
+        </EntityType>
+        <EntityType Name="Physicians">
+          <Key>
+            <PropertyRef Name="Physician_ID" />
+          </Key>
+          <Property Name="Physician_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Prefix" Type="varchar" MaxLength="50" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Middle_Initial" Type="varchar" MaxLength="1" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Suffix" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="255" />
+          <Property Name="Zip" Type="char" MaxLength="5" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Prescribers_TopN' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Prescribers_TopN">
+          <Key>
+            <PropertyRef Name="Prescribers_TopN_ID" />
+          </Key>
+          <Property Name="Prescribers_TopN_ID" Type="int" Nullable="false" />
+          <Property Name="Prescribers_TopN_Name" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.fhr.Lkp_MS_FH_MonthYears' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_FH_MonthYears">
+          <Key>
+            <PropertyRef Name="Data_Month" />
+            <PropertyRef Name="Data_Year" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="34" />
+          <Property Name="ID" Type="int" />
+          <Property Name="Data_Month" Type="int" Nullable="false" />
+          <Property Name="Data_Year" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.fhr.Lkp_MS_FH_QuarterYears' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_FH_QuarterYears">
+          <Key>
+            <PropertyRef Name="Data_Quarter" />
+            <PropertyRef Name="Data_Year" />
+          </Key>
+          <Property Name="Name" Type="varchar" MaxLength="62" />
+          <Property Name="ID" Type="int" />
+          <Property Name="Data_Quarter" Type="int" Nullable="false" />
+          <Property Name="Data_Year" Type="bigint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.fhr.V_ProductFormularyHistoryData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_ProductFormularyHistoryData">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" />
+            <PropertyRef Name="Data_Quarter" />
+          </Key>
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Product_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Thera_ID" Type="int" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Coverage_Status_ID" Type="int" />
+          <Property Name="Coverage_Status_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Formulary_Status_ID" Type="int" />
+          <Property Name="Formulary_Status_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Formulary_Status_Abbr" Type="varchar" MaxLength="2" />
+          <Property Name="Tier_No" Type="int" />
+          <Property Name="Tier_Name" Type="varchar" MaxLength="50" />
+          <Property Name="PA" Type="bit" />
+          <Property Name="QL" Type="bit" />
+          <Property Name="ST" Type="bit" />
+          <Property Name="Co_Pay" Type="varchar" MaxLength="50" />
+          <Property Name="Formulary_Lives" Type="int" />
+          <Property Name="Is_Predominant" Type="bit" />
+          <Property Name="Data_Year" Type="int" Nullable="false" />
+          <Property Name="Data_Month" Type="int" Nullable="false" />
+          <Property Name="Data_Quarter" Type="int" Nullable="false" />
+          <Property Name="Data_Year_Month" Type="int" />
+          <Property Name="Data_Year_Quarter" Type="int" />
+          <Property Name="Changed_FormularyStatus" Type="int" />
+          <Property Name="Changed_Tier" Type="int" />
+          <Property Name="Changed_PA" Type="int" />
+          <Property Name="Changed_QL" Type="int" />
+          <Property Name="Changed_ST" Type="int" />
+          <Property Name="Changed_CoPay" Type="int" />
+          <Property Name="Changed_Overall" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Lkp_MS_MonthYears' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_MonthYears">
+          <Key>
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" />
+          </Key>
+          <Property Name="MonthYear" Type="nvarchar" MaxLength="61" />
+          <Property Name="Data_Year" Type="int" Nullable="false" />
+          <Property Name="Data_Month" Type="int" Nullable="false" />
+          <Property Name="MonthName" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Lkp_MS_QuarterYears' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_QuarterYears">
+          <Key>
+            <PropertyRef Name="Data_Quarter" />
+            <PropertyRef Name="Data_Year" />
+          </Key>
+          <Property Name="Data_Quarter" Type="int" Nullable="false" />
+          <Property Name="Data_Year" Type="bigint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Lkp_MS_Years' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_MS_Years">
+          <Key>
+            <PropertyRef Name="Year" />
+          </Key>
+          <Property Name="Year" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Lkp_Physician_Region_District_Terr' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_Physician_Region_District_Terr">
+          <Key>
+            <PropertyRef Name="Region_ID" />
+            <PropertyRef Name="District_ID" />
+            <PropertyRef Name="Territory_ID" />
+          </Key>
+          <Property Name="Region_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="District_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Territory_ID" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.Lkp_Physicians' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Lkp_Physicians">
+          <Key>
+            <PropertyRef Name="Physician_ID" />
+          </Key>
+          <Property Name="Physician_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Full_Name" Type="varchar" MaxLength="101" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.MS_Rank' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="MS_Rank">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Thera_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="TRx" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="NRx" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="Item_Rank" Type="bigint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.MS_Rank_By_Territory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="MS_Rank_By_Territory">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Territory_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="TRx" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="NRx" Type="decimal" Precision="12" Scale="3" />
+          <Property Name="Territory_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Item_Rank" Type="bigint" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.MS_Rolling_Quarterly' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="MS_Rolling_Quarterly">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Segment_Name" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Quarter" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Product_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Thera_ID" Type="int" />
+          <Property Name="Data_Quarter" Type="int" Nullable="false" />
+          <Property Name="Product_TRx" Type="decimal" Scale="3" />
+          <Property Name="Product_NRx" Type="decimal" Scale="3" />
+          <Property Name="Product_MST" Type="decimal" Scale="3" />
+          <Property Name="Product_MSN" Type="decimal" Scale="3" />
+          <Property Name="MB_TRx" Type="decimal" Scale="3" />
+          <Property Name="MB_NRx" Type="decimal" Scale="3" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Total_Covered" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Pinso.tr.v_MS_Territory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="v_MS_Territory">
+          <Key>
+            <PropertyRef Name="T3_Id" />
+            <PropertyRef Name="T3_Name" />
+            <PropertyRef Name="T2_Id" />
+            <PropertyRef Name="T2_Name" />
+            <PropertyRef Name="T1_Id" />
+            <PropertyRef Name="T1_Name" />
+          </Key>
+          <Property Name="T3_Id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="T3_Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="T2_Id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="T2_Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="T1_Id" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="T1_Name" Type="varchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PathfinderMarketplaceAnalyticsModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="PathfinderMarketplaceAnalyticsEntities">
+          <EntitySet Name="LkpMarketplaceShortLongMonthNamesSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongMonthNames" />
+          <EntitySet Name="LkpMarketplaceShortLongQuarterNamesSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongQuarterNames" />
+          <EntitySet Name="LkpMarketplaceShortLongRollingQuarterNamesSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongRollingQuarterNames" />
+          <EntitySet Name="LkpMarketplaceMonthYearsSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceMonthYears" />
+          <EntitySet Name="LkpMarketplaceQuarterYearsSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceQuarterYears" />
+          <EntitySet Name="LkpMarketplaceYearsSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceYears" />
+          <EntitySet Name="MSMonthSet" EntityType="PathfinderMarketplaceAnalyticsModel.MSMonth" />
+          <EntitySet Name="MSRankSet" EntityType="PathfinderMarketplaceAnalyticsModel.MSRank" />
+          <EntitySet Name="MSRollingQuarterlySet" EntityType="PathfinderMarketplaceAnalyticsModel.MSRollingQuarterly" />
+          <EntitySet Name="MSRollingQuarterlyBaseSet" EntityType="PathfinderMarketplaceAnalyticsModel.MSRollingQuarterlyBase" />
+          <EntitySet Name="PrescribersTopNSet" EntityType="PathfinderMarketplaceAnalyticsModel.PrescribersTopN" />
+          <EntitySet Name="MSRankByTerritorySet" EntityType="PathfinderMarketplaceAnalyticsModel.MSRankByTerritory" />
+          <EntitySet Name="FHMonthYearsSet" EntityType="PathfinderMarketplaceAnalyticsModel.FHMonthYears" />
+          <EntitySet Name="FHQuarterYearsSet" EntityType="PathfinderMarketplaceAnalyticsModel.FHQuarterYears" />
+          <EntitySet Name="ProductFormularyHistoryDataSet" EntityType="PathfinderMarketplaceAnalyticsModel.ProductFormularyHistoryData" />
+          <EntitySet Name="PrescribersRegionDistrictTerrSet" EntityType="PathfinderMarketplaceAnalyticsModel.PrescribersRegionDistrictTerr" />
+          <EntitySet Name="LkpMSTerritoryLevelsSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpMSTerritoryLevels" />
+          <EntitySet Name="LkpPhysiciansSet" EntityType="PathfinderMarketplaceAnalyticsModel.LkpPhysicians" /></EntityContainer>
+        <EntityType Name="LkpMarketplaceShortLongMonthNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LongName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LkpMarketplaceShortLongQuarterNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LongName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LkpMarketplaceShortLongRollingQuarterNames">
+          <Key>
+            <PropertyRef Name="Number" />
+            <PropertyRef Name="ShortName" />
+            <PropertyRef Name="LongName" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="ShortName" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LongName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LkpMarketplaceMonthYears">
+          <Key>
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" />
+          </Key>
+          <Property Name="MonthYear" Type="String" MaxLength="61" Unicode="true" FixedLength="false" />
+          <Property Name="Data_Year" Type="Int32" Nullable="false" />
+          <Property Name="Data_Month" Type="Int32" Nullable="false" />
+          <Property Name="MonthName" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="LkpMarketplaceQuarterYears">
+          <Key>
+            <PropertyRef Name="Data_Quarter" />
+            <PropertyRef Name="Data_Year" />
+          </Key>
+          <Property Name="Data_Quarter" Type="Int32" Nullable="false" />
+          <Property Name="Data_Year" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LkpMarketplaceYears">
+          <Key>
+            <PropertyRef Name="Year" /></Key>
+          <Property Name="Year" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="MSMonth">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Data_Year" Type="Int32" Nullable="false" />
+          <Property Name="Data_Month" Type="Int32" Nullable="false" />
+          <Property Name="Data_Month_Revolving" Type="Int32" Nullable="true" />
+          <Property Name="Product_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MST" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MSN" Type="Decimal" Nullable="true" />
+          <Property Name="MB_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="MB_NRx" Type="Decimal" Nullable="true" /></EntityType>
+        <EntityType Name="MSRank">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Thera_ID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="TRx" Type="Decimal" Nullable="true" />
+          <Property Name="NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Item_Rank" Type="Int64" Nullable="true" /></EntityType>
+        <EntityType Name="MSRollingQuarterly">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Segment_Name" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Quarter" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_Name" Type="String" Nullable="false" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Product_Name" Type="String" Nullable="true" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="true" />
+          <Property Name="Data_Quarter" Type="Int32" Nullable="false" />
+          <Property Name="Product_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MST" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MSN" Type="Decimal" Nullable="true" />
+          <Property Name="MB_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="MB_NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Total_Covered" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="MSRollingQuarterlyBase">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Data_Quarter" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Data_Quarter" Type="Int32" Nullable="false" />
+          <Property Name="Product_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MST" Type="Decimal" Nullable="true" />
+          <Property Name="Product_MSN" Type="Decimal" Nullable="true" />
+          <Property Name="MB_TRx" Type="Decimal" Nullable="true" />
+          <Property Name="MB_NRx" Type="Decimal" Nullable="true" /></EntityType>
+        <EntityType Name="PrescribersTopN">
+          <Key>
+            <PropertyRef Name="Prescribers_TopN_ID" /></Key>
+          <Property Name="Prescribers_TopN_ID" Type="Int32" Nullable="false" />
+          <Property Name="Prescribers_TopN_Name" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="MSRankByTerritory">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Territory_ID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="TRx" Type="Decimal" Nullable="true" />
+          <Property Name="NRx" Type="Decimal" Nullable="true" />
+          <Property Name="Territory_ID" Type="String" Nullable="false" />
+          <Property Name="Item_Rank" Type="Int64" Nullable="true" /></EntityType>
+        <EntityType Name="FHMonthYears">
+          <Key>
+            <PropertyRef Name="Data_Month" />
+            <PropertyRef Name="Data_Year" /></Key>
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="ID" Type="Int32" Nullable="true" />
+          <Property Name="Data_Month" Type="Int32" Nullable="false" />
+          <Property Name="Data_Year" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="FHQuarterYears">
+          <Key>
+            <PropertyRef Name="Data_Quarter" />
+            <PropertyRef Name="Data_Year" /></Key>
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="ID" Type="Int32" Nullable="true" />
+          <Property Name="Data_Quarter" Type="Int32" Nullable="false" />
+          <Property Name="Data_Year" Type="Int64" Nullable="false" /></EntityType>
+        <EntityType Name="ProductFormularyHistoryData">
+          <Key>
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Data_Year" />
+            <PropertyRef Name="Data_Month" />
+            <PropertyRef Name="Data_Quarter" /></Key>
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Product_Name" Type="String" Nullable="true" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="true" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_Name" Type="String" Nullable="true" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Coverage_Status_ID" Type="Int32" Nullable="true" />
+          <Property Name="Coverage_Status_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Status_ID" Type="Int32" Nullable="true" />
+          <Property Name="Formulary_Status_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Status_Abbr" Type="String" Nullable="true" />
+          <Property Name="Tier_No" Type="Int32" Nullable="true" />
+          <Property Name="Tier_Name" Type="String" Nullable="true" />
+          <Property Name="PA" Type="Boolean" Nullable="true" />
+          <Property Name="QL" Type="Boolean" Nullable="true" />
+          <Property Name="ST" Type="Boolean" Nullable="true" />
+          <Property Name="Co_Pay" Type="String" Nullable="true" />
+          <Property Name="Formulary_Lives" Type="Int32" Nullable="true" />
+          <Property Name="Is_Predominant" Type="Boolean" Nullable="true" />
+          <Property Name="Data_Year" Type="Int32" Nullable="false" />
+          <Property Name="Data_Month" Type="Int32" Nullable="false" />
+          <Property Name="Data_Quarter" Type="Int32" Nullable="false" />
+          <Property Name="Data_Year_Month" Type="Int32" Nullable="true" />
+          <Property Name="Data_Year_Quarter" Type="Int32" Nullable="true" />
+          <Property Name="Changed_FormularyStatus" Type="Int32" Nullable="true" />
+          <Property Name="Changed_Tier" Type="Int32" Nullable="true" />
+          <Property Name="Changed_PA" Type="Int32" Nullable="true" />
+          <Property Name="Changed_QL" Type="Int32" Nullable="true" />
+          <Property Name="Changed_ST" Type="Int32" Nullable="true" />
+          <Property Name="Changed_CoPay" Type="Int32" Nullable="true" />
+          <Property Name="Changed_Overall" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="PrescribersRegionDistrictTerr">
+          <Key>
+            <PropertyRef Name="Territory_ID" />
+            <PropertyRef Name="Territory_Name" />
+            <PropertyRef Name="District_ID" />
+            <PropertyRef Name="District_Name" />
+            <PropertyRef Name="Region_ID" />
+            <PropertyRef Name="Region_Name" /></Key>
+          <Property Name="Territory_ID" Type="String" Nullable="false" />
+          <Property Name="Territory_Name" Type="String" Nullable="false" />
+          <Property Name="District_ID" Type="String" Nullable="false" />
+          <Property Name="District_Name" Type="String" Nullable="false" />
+          <Property Name="Region_ID" Type="String" Nullable="false" />
+          <Property Name="Region_Name" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="LkpMSTerritoryLevels">
+          <Key>
+            <PropertyRef Name="MS_Territory_Level_ID" /></Key>
+          <Property Name="MS_Territory_Level_ID" Type="Int32" Nullable="false" />
+          <Property Name="MS_Territory_Level_Name" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="LkpPhysicians">
+          <Key>
+            <PropertyRef Name="Physician_ID" /></Key>
+          <Property Name="Physician_ID" Type="String" Nullable="false" />
+          <Property Name="First_Name" Type="String" Nullable="true" />
+          <Property Name="Last_Name" Type="String" Nullable="true" />
+          <Property Name="Full_Name" Type="String" Nullable="true" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="PathfinderMarketplaceAnalyticsModelStoreContainer" CdmEntityContainer="PathfinderMarketplaceAnalyticsEntities">
+          <EntitySetMapping Name="LkpMarketplaceShortLongMonthNamesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongMonthNames)">
+              <MappingFragment StoreEntitySet="Lkp_MS_ShortLongMonthNames">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="LongName" ColumnName="LongName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMarketplaceShortLongQuarterNamesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongQuarterNames)">
+              <MappingFragment StoreEntitySet="Lkp_MS_ShortLongQuarterNames">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="LongName" ColumnName="LongName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMarketplaceShortLongRollingQuarterNamesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongRollingQuarterNames)">
+              <MappingFragment StoreEntitySet="Lkp_MS_ShortLongRollingQuarterNames">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+                <ScalarProperty Name="LongName" ColumnName="LongName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMarketplaceMonthYearsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceMonthYears)">
+              <MappingFragment StoreEntitySet="Lkp_MS_MonthYears">
+                <ScalarProperty Name="MonthYear" ColumnName="MonthYear" />
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+                <ScalarProperty Name="Data_Month" ColumnName="Data_Month" />
+                <ScalarProperty Name="MonthName" ColumnName="MonthName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMarketplaceQuarterYearsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceQuarterYears)">
+              <MappingFragment StoreEntitySet="Lkp_MS_QuarterYears">
+                <ScalarProperty Name="Data_Quarter" ColumnName="Data_Quarter" />
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMarketplaceYearsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMarketplaceYears)">
+              <MappingFragment StoreEntitySet="Lkp_MS_Years">
+                <ScalarProperty Name="Year" ColumnName="Year" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSMonthSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.MSMonth)">
+              <MappingFragment StoreEntitySet="MS_Monthly_Base">
+                <ScalarProperty Name="MB_NRx" ColumnName="MB_NRx" />
+                <ScalarProperty Name="MB_TRx" ColumnName="MB_TRx" />
+                <ScalarProperty Name="Product_MSN" ColumnName="Product_MSN" />
+                <ScalarProperty Name="Product_MST" ColumnName="Product_MST" />
+                <ScalarProperty Name="Product_NRx" ColumnName="Product_NRx" />
+                <ScalarProperty Name="Product_TRx" ColumnName="Product_TRx" />
+                <ScalarProperty Name="Data_Month_Revolving" ColumnName="Data_Month_Revolving" />
+                <ScalarProperty Name="Data_Month" ColumnName="Data_Month" />
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSRankSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.MSRank)">
+              <MappingFragment StoreEntitySet="MS_Rank">
+                <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" />
+                <ScalarProperty Name="NRx" ColumnName="NRx" />
+                <ScalarProperty Name="TRx" ColumnName="TRx" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSRollingQuarterlySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.MSRollingQuarterly)">
+              <MappingFragment StoreEntitySet="MS_Rolling_Quarterly">
+                <ScalarProperty Name="Total_Covered" ColumnName="Total_Covered" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="MB_NRx" ColumnName="MB_NRx" />
+                <ScalarProperty Name="MB_TRx" ColumnName="MB_TRx" />
+                <ScalarProperty Name="Product_MSN" ColumnName="Product_MSN" />
+                <ScalarProperty Name="Product_MST" ColumnName="Product_MST" />
+                <ScalarProperty Name="Product_NRx" ColumnName="Product_NRx" />
+                <ScalarProperty Name="Product_TRx" ColumnName="Product_TRx" />
+                <ScalarProperty Name="Data_Quarter" ColumnName="Data_Quarter" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Segment_Name" ColumnName="Segment_Name" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSRollingQuarterlyBaseSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.MSRollingQuarterlyBase)">
+              <MappingFragment StoreEntitySet="MS_Rolling_Quarterly_Base">
+                <ScalarProperty Name="MB_NRx" ColumnName="MB_NRx" />
+                <ScalarProperty Name="MB_TRx" ColumnName="MB_TRx" />
+                <ScalarProperty Name="Product_MSN" ColumnName="Product_MSN" />
+                <ScalarProperty Name="Product_MST" ColumnName="Product_MST" />
+                <ScalarProperty Name="Product_NRx" ColumnName="Product_NRx" />
+                <ScalarProperty Name="Product_TRx" ColumnName="Product_TRx" />
+                <ScalarProperty Name="Data_Quarter" ColumnName="Data_Quarter" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PrescribersTopNSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.PrescribersTopN)">
+              <MappingFragment StoreEntitySet="Prescribers_TopN">
+                <ScalarProperty Name="Prescribers_TopN_Name" ColumnName="Prescribers_TopN_Name" />
+                <ScalarProperty Name="Prescribers_TopN_ID" ColumnName="Prescribers_TopN_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSRankByTerritorySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.MSRankByTerritory)">
+              <MappingFragment StoreEntitySet="MS_Rank_By_Territory">
+                <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" />
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="NRx" ColumnName="NRx" />
+                <ScalarProperty Name="TRx" ColumnName="TRx" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FHMonthYearsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.FHMonthYears)">
+              <MappingFragment StoreEntitySet="Lkp_MS_FH_MonthYears">
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+                <ScalarProperty Name="Data_Month" ColumnName="Data_Month" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FHQuarterYearsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.FHQuarterYears)">
+              <MappingFragment StoreEntitySet="Lkp_MS_FH_QuarterYears">
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+                <ScalarProperty Name="Data_Quarter" ColumnName="Data_Quarter" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ProductFormularyHistoryDataSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.ProductFormularyHistoryData)">
+              <MappingFragment StoreEntitySet="V_ProductFormularyHistoryData">
+                <ScalarProperty Name="Changed_Overall" ColumnName="Changed_Overall" />
+                <ScalarProperty Name="Changed_CoPay" ColumnName="Changed_CoPay" />
+                <ScalarProperty Name="Changed_ST" ColumnName="Changed_ST" />
+                <ScalarProperty Name="Changed_QL" ColumnName="Changed_QL" />
+                <ScalarProperty Name="Changed_PA" ColumnName="Changed_PA" />
+                <ScalarProperty Name="Changed_Tier" ColumnName="Changed_Tier" />
+                <ScalarProperty Name="Changed_FormularyStatus" ColumnName="Changed_FormularyStatus" />
+                <ScalarProperty Name="Data_Year_Quarter" ColumnName="Data_Year_Quarter" />
+                <ScalarProperty Name="Data_Year_Month" ColumnName="Data_Year_Month" />
+                <ScalarProperty Name="Data_Quarter" ColumnName="Data_Quarter" />
+                <ScalarProperty Name="Data_Month" ColumnName="Data_Month" />
+                <ScalarProperty Name="Data_Year" ColumnName="Data_Year" />
+                <ScalarProperty Name="Is_Predominant" ColumnName="Is_Predominant" />
+                <ScalarProperty Name="Formulary_Lives" ColumnName="Formulary_Lives" />
+                <ScalarProperty Name="Co_Pay" ColumnName="Co_Pay" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Tier_Name" ColumnName="Tier_Name" />
+                <ScalarProperty Name="Tier_No" ColumnName="Tier_No" />
+                <ScalarProperty Name="Formulary_Status_Abbr" ColumnName="Formulary_Status_Abbr" />
+                <ScalarProperty Name="Formulary_Status_Name" ColumnName="Formulary_Status_Name" />
+                <ScalarProperty Name="Formulary_Status_ID" ColumnName="Formulary_Status_ID" />
+                <ScalarProperty Name="Coverage_Status_Name" ColumnName="Coverage_Status_Name" />
+                <ScalarProperty Name="Coverage_Status_ID" ColumnName="Coverage_Status_ID" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Segment_Name" ColumnName="Segment_Name" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PrescribersRegionDistrictTerrSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.PrescribersRegionDistrictTerr)">
+              <MappingFragment StoreEntitySet="v_MS_Territory">
+                <ScalarProperty Name="Region_Name" ColumnName="T1_Name" />
+                <ScalarProperty Name="Region_ID" ColumnName="T1_Id" />
+                <ScalarProperty Name="District_Name" ColumnName="T2_Name" />
+                <ScalarProperty Name="District_ID" ColumnName="T2_Id" />
+                <ScalarProperty Name="Territory_Name" ColumnName="T3_Name" />
+                <ScalarProperty Name="Territory_ID" ColumnName="T3_Id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpMSTerritoryLevelsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpMSTerritoryLevels)">
+              <MappingFragment StoreEntitySet="Lkp_MS_Territory_Levels">
+                <ScalarProperty Name="MS_Territory_Level_Name" ColumnName="MS_Territory_Level_Name" />
+                <ScalarProperty Name="MS_Territory_Level_ID" ColumnName="MS_Territory_Level_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpPhysiciansSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMarketplaceAnalyticsModel.LkpPhysicians)">
+              <MappingFragment StoreEntitySet="Lkp_Physicians">
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Physician_ID" ColumnName="Physician_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PathfinderMarketplaceAnalyticsModel" ZoomLevel="75">
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongMonthNames" Width="1.5" PointX="0.75" PointY="0.75" Height="1.578837890625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongQuarterNames" Width="1.5" PointX="2.75" PointY="0.75" Height="1.578837890625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceShortLongRollingQuarterNames" Width="1.5" PointX="0.75" PointY="3.75" Height="1.5788378906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceMonthYears" Width="1.5" PointX="2.75" PointY="3.75" Height="1.7683317057291674" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceQuarterYears" Width="1.5" PointX="4.75" PointY="0.75" Height="1.3893440755208333" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMarketplaceYears" Width="1.5" PointX="4.75" PointY="3.75" Height="1.1998502604166674" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.MSMonth" Width="1.5" PointX="5.375" PointY="5.75" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.MSRank" Width="1.5" PointX="0.75" PointY="6" Height="2.3368131510416674" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.MSRollingQuarterly" Width="1.5" PointX="7.375" PointY="0.75" Height="4.8002327473958326" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.MSRollingQuarterlyBase" Width="1.5" PointX="7.375" PointY="5.75" Height="2.5783902994791674" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.PrescribersTopN" Width="3" PointX="9.375" PointY="0.75" Height="1.4033821614583331" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.MSRankByTerritory" Width="1.5" PointX="2.75" PointY="6.125" Height="2.5263069661458317" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.FHMonthYears" Width="1.5" PointX="9.625" PointY="3.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.FHQuarterYears" Width="1.5" PointX="9.625" PointY="5.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.ProductFormularyHistoryData" Width="1.5" PointX="7.375" PointY="9.75" Height="7.941630859375" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.PrescribersRegionDistrictTerr" Width="2.5" PointX="0.75" PointY="9.75" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpMSTerritoryLevels" Width="1.5" PointX="3.375" PointY="9.75" Height="1.2636116536458317" />
+        <EntityTypeShape EntityType="PathfinderMarketplaceAnalyticsModel.LkpPhysicians" Width="1.5" PointX="9.375" PointY="8.75" Height="1.7879850260416674" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

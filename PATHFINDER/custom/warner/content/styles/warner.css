@@ -1,0 +1,19 @@
+.formularyhistoryreporting #divTile4Container
+{
+    border: 0px!important;
+}
+
+.formularyhistoryreporting .marketplaceanalytics #divTile4Container .tileContainerHeader
+{
+    display: none;
+}
+.formularyhistoryreporting #divTile4, .formularyhistoryreporting .drillDownContainer
+{
+    overflow-x: hidden!important;
+    overflow-y: hidden!important;
+}
+.formularyhistoryreporting .drillDownContainer
+{
+    /*overflow-x: auto!important;*/
+    overflow-y: auto!important;
+}

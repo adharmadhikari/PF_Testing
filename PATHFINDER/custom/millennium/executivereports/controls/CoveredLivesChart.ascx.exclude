@@ -1,0 +1,47 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CoveredLivesChart.ascx.cs" Inherits="custom_millennium_executivereports_controls_CoveredLivesChart" %>
+<DCWC:Chart CssClass="coveredLivesReport" runat="server" ID="ChartCoveredLives" 
+    Height="400px" Width="900px" ImageStorageMode="UseHttpHandler" 
+    EnableTheming="True" ImageType="Flash"
+    BackColor="Transparent" RepeatDelay="0">
+            <Legends>
+                <DCWC:Legend AutoFitText="False" BackColor="Transparent" 
+                    BorderStyle="NotSet" Font="Arial, 12pt" Name="Default" 
+                    ShadowColor="Transparent" LegendStyle="Column">
+                </DCWC:Legend>
+            </Legends>
+            <Titles>
+                <DCWC:Title Color="DarkBlue" Font="Arial, 12pt" Name="Title1">
+                </DCWC:Title>
+            </Titles>
+            <Series>
+                <DCWC:Series ChartArea="series2" 
+                    CustomAttributes="DrawingStyle=Cylinder" 
+                    Font="Arial, 12pt" FontColor="DarkBlue" Label="#PERCENT" 
+                    LabelFormat="P2" Name="s" ShadowColor="Transparent" ShowInLegend="False" 
+                    ShowLabelAsValue="True" XValueIndexed="True" XValueType="String" >
+                </DCWC:Series>
+            </Series>
+            <ChartAreas>
+                <DCWC:ChartArea BackColor="Transparent"  
+                    BackGradientType="DiagonalRight" BorderColor="Transparent" BorderStyle="Solid" 
+                    Name="series2">
+                    <AxisY LabelsAutoFit="False" Minimum="0" Title="Lives (Millions)" 
+                        TitleFont="Arial, 11pt, style=Bold">
+                        <MajorGrid LineColor="65, 0, 0, 0" />
+                        <MinorGrid LineColor="30, 0, 0, 0" />
+                        <MinorTickMark Size="2" />
+                        <LabelStyle Font="Arial, 9pt" />
+                    </AxisY>
+                    <AxisX Enabled="False" TitleFont="Arial, 10pt">
+                        <MajorGrid LineColor="65, 0, 0, 0" />
+                        <MinorGrid LineColor="30, 0, 0, 0" />
+                        <MinorTickMark Size="2" />
+                    </AxisX>
+                    
+                </DCWC:ChartArea>
+            </ChartAreas>
+            
+            <BorderSkin PageColor="AliceBlue" />
+            
+    </DCWC:Chart>
+ 

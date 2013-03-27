@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/SingleSection.master" AutoEventWireup="true" CodeFile="CustomerContactReport.master.cs" Inherits="custom_MasterPages_CustomerContactReport" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptContainer" Runat="Server">
+      <asp:ContentPlaceHolder ID ="scrptContainer" runat ="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Tile3Title" Runat="Server">
+    Customer Contact Entry
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Tile3Tools" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="Tile3" Runat="Server">
+<%--    <div  class ="title"></div>
+   <table style="text-align:center; width:100%; overflow: hidden;">
+   <tr>
+     <td>--%>
+     <div>
+     <div id="tile8" class="ccrPlanSelectView">            
+            <div id="divTile8Container">
+                <div id="tile8ContainerHeader" class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder ID ="Tile8Title" runat ="server"></asp:ContentPlaceHolder></div>
+                    <div class="pagination"></div>
+                    <div class="tools"><asp:ContentPlaceHolder runat="server" ID="Tile8Tools"></asp:ContentPlaceHolder></div>
+                    <div class="clearAll"></div>
+                </div>
+                 <div id="divTile8">
+                    <asp:ContentPlaceHolder id="Tile8" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+           </div>
+      </div>
+      
+      <div id="tile7" class="ccrBusinessPlans">            
+        <div id="divTile7Container">
+            <div id = "tile7ContainerHeader" class="tileContainerHeader">
+                <div class="title"><asp:ContentPlaceHolder id="Tile7Title" runat="server"></asp:ContentPlaceHolder></div>
+                <div class="pagination"></div>
+                <div class="tools"><asp:ContentPlaceHolder runat="server" ID="Tile7Tools"></asp:ContentPlaceHolder></div>
+                <div class="clearAll"></div>
+            </div>
+            <div id="divTile7">
+                <asp:ContentPlaceHolder id="Tile7" runat="server">                    
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+      </div>
+ <div class="clearAll"></div>
+ </div>
+<%--      </td>
+   </tr>
+   <tr>
+     <td>--%>
+          <div id="tile6" class="ccrMeetings">            
+            <div id="divTile6Container">
+                <div id="tile6ContainerHeader" class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder id="Tile6Title" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="pagination"></div>
+                    <div class="tools"><asp:ContentPlaceHolder runat="server" ID="Tile6Tools"></asp:ContentPlaceHolder></div>
+                    <div class="clearAll"></div>
+                </div>
+                <div id="divTile6">
+                    <asp:ContentPlaceHolder id="Tile6" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+          </div>
+          
+</asp:Content>
+

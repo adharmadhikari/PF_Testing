@@ -1,0 +1,1050 @@
+
+/* CSS Document - OVER ALL STRUCTURE - No color or theme styles */
+/* GENERAL */
+
+html 
+{
+    	background: url(images/impact/gry_tile.jpg) left repeat-y;
+
+}
+
+body, input, textarea, label {
+	font-family: Arial;
+	font-size: 11px;  
+
+}
+body {
+	font-family: Arial;
+	background: #fff;
+	color: #333333;
+    	background: url(images/impact/gry_tile.jpg) right repeat-y;
+}
+
+a, .links {
+	color: #2d58a7;
+	text-decoration:none;
+	outline: none;
+	
+}
+a:hover {
+	text-decoration:none !important;
+}
+table
+{
+	font-family: Arial;
+	
+}
+.navbar input, .navbar a.button, .navbar .textBox, .navbar .favLabel 
+{
+    font-size: 12px;
+} 
+
+/* STRUCTURE */
+.impactLogo /*theme specific*/
+{
+    position:absolute;
+    top:0px;
+    left:20px;
+    z-index:100;
+}
+div.wrapper {
+}
+div.header {
+	background:#215FA0;
+	height:41px;/*theme specific*/
+}
+div.welcomeMenu {
+	color:#fff;
+	padding-top:10px;/*theme specific*/
+}
+div.welcomeMenu a {
+	color:#fff;
+}
+div.welcomeMenu a:hover {
+	color:#fff;
+}
+div.logo {
+}
+div.contentWrapper 
+{
+}
+.login div.contentWrapper 
+{
+	background:none;
+}
+div.footer a
+{
+	color:#215FA0;
+}
+div.footer a:hover
+{
+	color:#ccc;
+}
+div.footer .inside {
+	background:#C0C8E3;
+	color:#215FA0;
+	font-size:10px;
+	
+}
+/*.footer 
+{
+    display: none!important;
+}
+.header
+{
+    display: none!important;
+}
+.topLeft
+{
+    top: -49px!important;
+}
+.topRight
+{
+    top: -49px!important;
+}*/
+
+
+div.tileContainer
+{
+	background-color:#fff;
+
+}
+div.navbar2 
+{
+    padding-left:0px;/*theme specific*/
+    padding-right:0px;/*theme specific*/
+}
+
+
+/* LOG IN PAGE */
+body.login {
+	background:#fff url(images/login_bg.jpg) center repeat-y;
+	border-left:4px solid #c0c8e3;
+	border-right:4px solid #c0c8e3;
+}
+body.login .footer .inside {
+}
+div.signIn {
+	background: url(images/login.jpg) no-repeat top left;
+	border-top:150px solid #215fa0;
+}
+.optionLinks
+{
+    color: #2d58a7;
+    line-height:25px;
+    text-align:left;
+}
+div.signIn .top{
+}
+div.signIn .btm{
+}
+div.signIn .inside{
+}
+div.signIn p {
+}
+div.signIn input {
+}
+div.signIn .inside .userIcon {
+}
+div.signIn .loginBox .box
+{
+	background-image:url(images/loginBg.jpg) ;
+	background-position:left top ;
+	background-repeat:no-repeat ;
+	background-color:Transparent;
+	padding:4px 4px 4px 8px;
+}
+input.formButton 
+{
+color: #1a4b9e;
+
+}
+
+.button 
+{
+	color:#1a4b9e;
+}
+
+
+
+/*TILES*/
+
+div.title, div.title a, div.title a:hover
+{
+	color:#fff;
+}
+div.tileContainerHeader, .tileContainerHeader
+{
+	background:#bcbdc0 url(images/grytile.jpg) repeat-x top;
+	color:#fff
+/*	border-bottom:1px solid #CCC; */
+}
+.CampaignInfo
+{
+    font-weight:bold;
+    }
+div.tileSubHeader
+{
+    background:#215FA0;
+    color:#fff;
+    font-weight:bold;
+    }
+.rgDataDiv .rgHeader, .MC_Results .rgMasterTable .rgHeader, .table1 .rgHeader, .topGrid .rgHeader, .btmGrid .rgHeader
+{
+    background:#cccccc;
+    }
+
+.MC_Results .rgMasterTable .rgRow td table td, .MC_Results .rgMasterTable .rgAltRow td table td, .rgDataDiv .rgRow td table td, .rgDataDiv .rgAltRow td table td 
+{
+    border:none;
+ }
+.rgDataDiv .rgRow td, .rgDataDiv .rgAltRow td, .MC_Results .rgMasterTable .rgRow td, .MC_Results .rgMasterTable .rgAltRow td
+{
+    border-bottom:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+    }
+.rgHeader 
+{
+    border-right:1px solid #fff;
+}
+.lastCol
+{
+    border-right: 0px !important;
+}
+.formPlanInfo
+{
+    color:#215FA0;
+    }
+.formPlanInfo td
+{
+    border-bottom:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+    }
+.formProdList
+{
+    color:#215FA0;
+}
+.formProdList td
+{
+    border-bottom:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+}
+.formCampaignTeam
+{
+    color:#215FA0;
+    }
+.formCampaignTeam td
+{
+    border-bottom:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+    }
+.CampProdInfo div, .CampProdInfo table
+{
+    border-right:solid 2px #ccc;
+    }
+div.tileContainerHeader a 
+{
+	color:#fff
+}
+
+
+/* GRID */
+
+.rgSelectedRow td
+{
+	background: #acc7ff;
+}
+
+.min 
+{
+	width:15px;
+	background:url(images/collapsefff.gif) no-repeat 0px 7px;
+	margin:0 0 0 6px !important;
+	padding: 0 4px;
+}
+.minRt
+{
+	width:15px;
+	background:url(images/collapsefffRt.gif) no-repeat 0px 5px;
+	margin:0 0 0 6px !important;
+	padding: 0 4px;
+}
+.close 
+{
+	width:10px;
+	height:10px;
+	background:url(images/closefff.gif) no-repeat left top;
+	overflow:hidden;
+	display:none;
+}
+.max 
+{
+	width:10px;
+	height:10px;
+	background:url(images/maximizefff.gif) no-repeat;
+}
+
+
+
+.coreTextBox span {
+	background-image:url(images/textBoxRt.gif);
+}
+.coreTextBox {
+	background:transparent url(images/textBoxLf.gif) no-repeat scroll 0 0;
+}
+.coreTextBox .textBox 
+{
+	background-image:url(images/searchBoxBg.gif) !important;
+	background-repeat:no-repeat !important;
+	color:#666;
+	padding:3px 3px 3px 15px !important;
+	*
+	margin:-1px !important;
+	border: 0px !important;
+	background-color: Transparent !important;
+
+}
+.login .coreTextBox span, .modalForm .coreTextBox span {
+	background-image:url(images/signInRt.gif);
+}
+.login .coreTextBox, .modalForm .coreTextBox {
+	background:transparent url(images/signInLf.gif) no-repeat scroll 0 0;
+}
+.login .coreTextBox .textBox, .modalForm .coreTextBox .textBox 
+{
+	background-image:url(images/signInBg.gif) !important;
+	background-repeat:repeat-x !important;
+	color:#666;
+	padding:3px !important;
+	*
+	margin:-1px;
+}
+.login span.readOnlyBox span {
+	background-image:none;
+}
+.login span.readOnlyBox  {
+	background:none;
+}
+.login span.readOnlyBox .textBoxReadOnly 
+{
+	background-image:none !important;
+	color:#1a4b9e;
+	padding:3px 0 3px 0;
+}
+.cell.last input 
+{
+    border: none;
+}
+.cell.last 
+{
+    border-right: none;
+}
+.goSearch a 
+{
+	background:url(images/arwRtGray.png) no-repeat 2px 2px;
+}
+.arwRt, .arwDw
+{
+	width:11px;
+	height:11px;
+	margin:0 2px 0 0;
+}
+
+.arwRt
+{
+		background: url(images/arwRtfff.png) no-repeat 4px 4px;
+
+}
+.arwDw
+{
+		background: url(images/arwDwnfff.png) no-repeat 3px 4px;
+		display:none;
+		
+
+}
+
+#htmlModalWindow
+{
+	margin:0 !important;
+	background: none !important;
+	overflow:hidden !important;
+}
+
+ 
+.coreBtn span {
+	background-image:url(images/btnRt.gif);
+}
+.coreBtn {
+	background-image: url(images/btnLf.gif);
+    background-position: left bottom;
+    background-repeat:no-repeat;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-left: 7px !important;
+}
+.coreBtn input
+{
+	background:url(images/btnBg.gif) !important;
+}
+
+/*date popup */
+#ui-datepicker-div 
+{
+    background-color: #fff;
+	border: solid 1px #2d58a8;
+	width:129px;
+	padding: 2px;
+	display:none;
+    }
+.ui-datepicker-prev
+{
+    float: left;
+    cursor:pointer;
+    
+    }
+.ui-datepicker-next
+{
+    float:right;
+    cursor:pointer;
+    }
+.ui-datepicker-calendar
+{
+    margin-right:auto;
+    margin-left:auto;
+    }
+
+
+.impactModules {
+	background:#C0C8E3;
+    position:relative;
+}
+
+div.navbar2
+{
+	padding-top:0px;	
+}
+
+div.navbar2 .navbar 
+{
+	padding-top:10px;
+	height:29px;
+}
+
+
+.stepArea {
+	background:#C0C8E3 url(images/impact/rt_curv.jpg) right top no-repeat;
+	width:720px;
+}
+#mainTab {
+	padding: 0px 5px 0 20px;
+}
+.ui-tabs-nav {
+	list-style: none;
+	list-style-type:none;
+	list-style-image:none;
+	position: relative;
+	padding:0;
+	margin:0;
+}
+.ui-tabs-nav li {
+	float: left;
+	border-bottom-width: 0 !important;
+	list-style: none;
+	list-style-type:none;
+	list-style-image:none;
+}
+.ui-tabs-nav li a {
+	text-decoration: none;
+	padding:5px 5px 4px 5px;
+	font-weight:bold;
+	color:#fff;
+	text-align:center;
+	display:block;
+
+}
+#impactSubmodules .ui-tabs-nav li a {
+	padding:0 12px 0 0;
+	border-right:1px solid #215FA0;
+
+}
+#impactSubmodules .ui-tabs-nav li {
+    padding: 7px 10px 0px 0;
+}
+.impactModules .ui-tabs-nav li a {
+	padding:10px 10px 4px 10px;
+
+}
+.impactModules .ui-tabs-nav li.selected {
+	border-bottom-width: 0;
+}
+
+#mainTab .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	background: url(images/impact/gry_tile.jpg) bottom repeat-x;
+	text-align:left;
+	width:1258px; /* remove after setting below width in UI */
+
+}
+.impactModules .ui-tabs-panel {
+	display: block;
+	border-right: 3px #C0C8E3 solid;
+	border-left: 3px #C0C8E3 solid;
+	border-bottom: 3px #C0C8E3 solid;
+	background: none;
+	text-align:left;
+	position:absolute;
+	width:1253px; /*set with UI.js instead - remove */
+	left:8px;
+}
+.impactModules .ui-tabs-panel .inside {
+	padding:10px;
+}
+.ui-tabs-hide {
+	display: none !important;
+}
+.impactModules .default, .impactModules .selected {
+	padding-left:12px;
+}
+#mainTab .default, #mainTab .selected {
+	padding-left:10px;
+}
+.impactModules .default span, .impactModules .selected span {
+	padding-right:12px;
+	display:inline-block;
+
+}
+#mainTab .default span, #mainTab .selected span {
+	padding-right:10px;
+	display:inline-block;
+}
+#mainTab .selected {
+	background:url(images/impact/lft_smGry.jpg) no-repeat left top !important;
+}
+#mainTab .selected span {
+	background:url(images/impact/rt_smGry.jpg) no-repeat right top !important;
+}
+#mainTab .selected a {
+	background:url(images/impact/smGry_bg.jpg) repeat-x top !important;
+	color:#2d58a7 !important;
+
+}
+.impactModules .selected {
+	background:url(images/impact/lft_wht.jpg) no-repeat left top !important;
+}
+.impactModules .selected span {
+	background:url(images/impact/rt_wht.jpg) no-repeat right top !important;
+}
+.impactModules .selected a {
+	background:url(images/impact/wht_bg.jpg) repeat-x top !important;
+	color:#2d58a7 !important;
+
+}
+#mainTab .default {
+	background:url(images/impact/lft_smBlu.jpg) no-repeat left top;
+}
+#mainTab .default span {
+	background:url(images/impact/rt_smBlu.jpg) no-repeat right top;
+}
+#mainTab .default a {
+	background:url(images/impact/smBlu_bg.jpg) repeat-x top;
+}
+.impactModules .step0 {
+	background:url(images/impact/lft_blu2.jpg) no-repeat left top;
+}
+.impactModules .step0 span {
+	background:url(images/impact/rt_blu2.jpg) no-repeat right top;
+}
+.impactModules .step0 a {
+	background:url(images/impact/blu_bg2.jpg) repeat-x top;
+}
+.impactModules .step4 {
+	background:url(images/impact/lft_blu.jpg) no-repeat left top;
+}
+.impactModules .step4 span {
+	background:url(images/impact/rt_blu.jpg) no-repeat right top;
+}
+.impactModules .step4 a {
+	background:url(images/impact/blu_bg.jpg) repeat-x top;
+}
+.impactModules .step1.selected a {
+	color:#FBB714 !important;
+}
+.impactModules .step2.selected a {
+	color:#EB6E1F !important;
+}
+.impactModules .step3.selected a {
+	color:#6C9D31 !important;
+}
+.impactModules .step1 {
+	background:url(images/impact/lft_yel.jpg) no-repeat left top;
+}
+.impactModules .step1 span {
+	background:url(images/impact/rt_yel.jpg) no-repeat right top;
+}
+.impactModules .step1 a {
+	background:url(images/impact/yel_bg.jpg) repeat-x top;
+}
+.impactModules .step2 {
+	background:url(images/impact/lft_org.jpg) no-repeat left top;
+}
+.impactModules .step2 span {
+	background:url(images/impact/rt_org.jpg) no-repeat right top;
+}
+.impactModules .step2 a {
+	background:url(images/impact/org_bg.jpg) repeat-x top;
+}
+.impactModules .step3 {
+	background:url(images/impact/lft_grn.jpg) no-repeat left top;
+}
+.impactModules .step3 span {
+	background:url(images/impact/rt_grn.jpg) no-repeat right top;
+}
+.impactModules .step3 a {
+	background:url(images/impact/grn_bg.jpg) repeat-x top;
+}
+
+
+/*module sub menu css*/
+.sub
+{
+	float:left;
+	clear:both;
+}
+#impactSubmodules .ui-tabs-nav li a
+{
+	color:#000;
+}
+#impactSubmodules .ui-tabs-nav li
+{
+	margin-right:5px;
+}
+#impactSubmodules .ui-tabs-nav .selected a 
+{
+	color:#f00;
+}
+#impactSubmodules .selected 
+{
+	background-image:none;
+}
+#impactSubmodules .ui-tabs-nav .selected span 
+{
+	background-image:none;
+}
+/* STATUS BOX IMPACE SPECIFIC */
+/*home page/default */
+.impactHomeText1
+{
+	font-size:12pt;
+	color:#000;
+	padding:25px 25px 25px 25px;
+	text-align:left;
+	font-weight:bold;
+}
+
+.impactHomeText2
+{
+	float: left;
+	width: 30%;
+	color: #000;
+	font-size: 10pt;
+	padding: 0px 0px 0px 25px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.impactHomeImg
+{	
+	background: url(images/impact/steps.jpg) no-repeat left top;
+	width:100%;
+	height:400px;
+	float:right;
+	width:60%;
+	padding:0px 25px 0px 25px;
+}
+
+.impactStatusBox
+{
+	right: 0px;
+    bottom: 0px;
+	/*top: 70px;
+	top: 64px;
+    z-index:101;*/
+	position: absolute;
+	width:420px;
+	padding-right:10px;
+	background:#fff url(images/impact/rt_curv.jpg) no-repeat left bottom;
+}
+.impactStatusTextBox
+{
+    float:right;
+    width:210px;
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+    margin:7px 10px 0 25px;
+}
+.ie6 .impactStatusTextBox
+{
+    margin:7px 10px 0 15px;
+}
+.impactStatusImgBox
+{
+	height:105px;
+	width:210px;
+	float:left;
+	display:none;
+}
+.impactStatusHdr, .impactStatusLast, .impactStatusCurrent
+{
+    border-bottom:1px solid #ccc;
+    padding:5px;
+
+}
+.impactStatusHdr
+{
+    background:#215FA0;
+    font-weight:bold;
+    color:#fff;
+
+}
+
+.impactStatusImg_step1
+{
+	background: url(images/impact/IMPACT_1BLUE.png) no-repeat left top;
+}
+
+.impactStatusImg_step2
+{
+	background: url(images/impact/IMPACT_2YELLOW.png) no-repeat left top;
+}
+
+.impactStatusImg_step3
+{
+	background: url(images/impact/IMPACT_3ORANGE.png) no-repeat left top;
+}
+
+.impactStatusImg_step4
+{
+	background: url(images/impact/IMPACT_4GREEN.png) no-repeat left top;
+}
+.ui-widget-header .ui-icon {
+	BACKGROUND: url(images/closefff.gif) no-repeat 4px 4px !important; 
+}
+.ui-widget-header {
+	background:#bcbdc0 url(images/grytile.jpg) repeat-x top !important;
+	color: #fff !important;
+	BORDER: none !important;
+}
+.ui-widget-content .textBox 
+{
+    border: 1px solid #ccc;
+    margin-top:20px;
+}
+input.textBox 
+{
+    border: 1px solid #ccc;
+    padding:2px;
+}
+#btnSubmitEmail 
+{
+    background:none;
+    border:none;
+    font-family:Arial;
+}
+.impactBtns 
+{
+    float:right;
+    padding:5px 10px 0px 10px;
+    }
+.impactBtns .coreBtn
+{
+    margin-left:10px;
+    }
+    
+ /* paging*/
+ .pagerImpact table 
+ {
+     position:absolute;
+     top:0px;
+     right:0px;
+     width:300px !important;
+     text-align:right;
+ }
+ .rgPagerCell 
+ {
+     padding:3px 10px 5px 0;
+     color:#fff;
+     }
+    
+     .rgNumPart 
+ {
+     float:right;
+              }
+ .rgNumPart a
+ {
+     color:#fff;
+     padding:1px;
+              }
+ .rgNumPart a.rgCurrentPage 
+ {
+     color:#215fa0;
+     font-weight:bold;
+  }
+ .rgPagerCell div 
+ {
+     display:inline-block;
+     }
+ .rgInfoPart 
+ {
+     float:right;
+     margin:2px 5px 0 0;
+     }
+ 
+.rgArrPart1
+{
+    padding:5px;
+    
+    }
+.rgArrPart2
+{
+    padding:5px;
+    }
+.rgPagerLabel
+{
+    padding:5px;
+    }
+.rgPageFirst
+{
+    background: url(images/arwLFlastfff.png) no-repeat left top;
+    width:9px;
+    height:8px;
+    border:0;
+    cursor:pointer;
+    }
+.rgPagePrev 
+{
+    background: url(images/arwLFfff.png) no-repeat left top;
+    width:7px;
+    height:7px;
+    border:0;
+    cursor:pointer;
+    
+    }
+.rgPageNext
+{
+    background: url(images/arwRTfff.png) no-repeat left top;
+    width:7px;
+    height:7px;
+    border:0;
+    cursor:pointer;
+    }
+.rgPageLast
+{
+    background: url(images/arwRTlastfff.png) no-repeat left top;
+    width:9px;
+    height:7px;
+    border:0;
+    cursor:pointer;
+}
+.rgNumPart 
+{
+    padding:2px 0 0 5px ;
+}
+
+.rgNumPart a
+{
+    padding:0 3px ;
+}
+.btnEmailTeam 
+{
+    background: url(images/mailwhite.png) no-repeat;
+    border:none;
+    height:20px;
+    width:20px;
+    cursor:pointer;
+    }
+   .ie6 .btnEmailTeam 
+{
+    background: url(images/mailwhite.gif) no-repeat;
+    }
+.btnInfo 
+{
+    background: url(images/infowhite.png) no-repeat;
+    height:20px;
+    width:20px;
+    border:none;
+    cursor:pointer;
+    }
+.ie6 .btnInfo 
+{
+    background: url(images/infowhite.gif) no-repeat;
+    }
+
+.FunctionAreas th 
+{
+   
+    background-color:#c0c8e3;
+    color:#215FA0;
+    text-align:left;
+    padding:5px;
+}
+.FunctionAreas td 
+{
+   
+    padding:3px;
+    }
+    
+.addButton 
+{
+    border:none;
+    background: #fff url(images/plus.gif) right no-repeat;
+    padding:2px 20px 2px 2px;
+    cursor:pointer;
+}
+.exportControls .excel
+{
+    background:url(images/excelIcon.gif) right no-repeat;
+}
+.exportControls .pdf
+{
+    background:url(images/PDF_icon.gif) right no-repeat;
+}
+.exportControls .print
+{
+    background:url(images/printIcon.gif) right no-repeat;
+}
+.headerList 
+{
+    padding:5px;
+    background:#215fa0;
+    font-weight:bold;
+    color:#fff;    
+}
+.physListHeader
+{
+	padding:5px;
+    background:#215fa0;
+    font-weight:bold;
+    color:#fff;  
+	text-align:center;
+}
+.itemList 
+{
+    padding:5px;    
+}
+.terrHeader 
+{
+    padding:5px;
+    text-align:left;
+    background:#215fa0;
+    font-weight:bold;
+    color:#fff;
+}
+.rgSortAsc 
+{
+    background: url(images/arwUp.png) 3px no-repeat;
+    width:15px;
+    height:15px;
+    border:none;
+}
+.rgSortDesc 
+{
+    background: url(images/arwDwn.png) 3px no-repeat;
+    width:15px;
+    height:15px;
+    border:none;
+}
+
+/* tool tip */
+
+.toolTipInfo 
+{
+    display:none;
+    position:absolute;
+    width: 200px;
+    height: auto !important;
+    background:#c0c8e3;
+    padding: 10px;
+    z-index:100;
+    border: 1px solid #215fa0;
+    color: #215fa0;
+}
+#instructions1 
+{
+        top:42px;
+    right:15px;
+
+}
+#instructions2 
+{
+        top:42px;
+    right:40px;
+
+}
+.upperSpace 
+{
+    margin-top:10px;
+}
+.notice 
+{
+    padding:5px;
+    border-bottom:1px solid #ccc;
+    color:#215fa0;
+}
+.bestpractices textarea 
+{
+    width:100%;
+    padding:3px 0px 3px 3px;
+    border:solid 1px #ccc;
+}
+/*reports links */
+.impactLink 
+{
+    display:block;
+    padding:5px 0 5px 25px;
+    width:100%;
+}
+.selected .impactLink
+{    background: url(images/srBtnArw.jpg) no-repeat 0px 1px;
+
+}
+.reportsBtn.selected  
+{
+    background: url(images/srBtn.jpg) repeat-x top;
+
+}
+.adminBtn.selected  
+{
+    background: url(images/srBtn.jpg) repeat-x top;
+
+}
+
+.rspHelperBarDrag
+{
+	filter:alpha(opacity=60); 
+	background-color: #ccc;
+	opacity:0.6;
+	-moz-opacity: 0.6;
+}
+
+/* District Profile Grid Popup */
+.districtProfileGrid
+{
+    margin-left:auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.districtProfileChart
+{
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.requiredRed
+{
+    padding-left: 2px;
+    color: Red;
+}

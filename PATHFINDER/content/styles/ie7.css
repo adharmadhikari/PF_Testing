@@ -1,0 +1,13 @@
+#ctl00_Tile4_gridFDSummary_gridNational_gridformularystatus_ctl00_Header, #ctl00_Tile4_gridFDSummary_gridNational_gridformularystatus_ctl00,
+#ctl00_Tile4_gridFDSummary_gridRegional_gridformularystatus_ctl00_Header, #ctl00_Tile4_gridFDSummary_gridRegional_gridformularystatus_ctl00,
+#ctl00_Tile3_gridLivesDistribution_gridLDReport_ctl00_Header, #ctl00_Tile3_gridLivesDistribution_gridLDReport_ctl00,
+#ctl00_Tile4_tiercoveragedata1_dataUS_gridtiercoverage_ctl00_Header, #ctl00_Tile4_tiercoveragedata1_dataUS_gridtiercoverage_ctl00,
+#ctl00_Tile4_tiercoveragedata1_dataStateTerr_gridtiercoverage_ctl00_Header, #ctl00_Tile4_tiercoveragedata1_dataStateTerr_gridtiercoverage_ctl00
+{
+    width: 100%;
+}
+
+.changePassword
+{
+    margin-left: 0px!important;
+}

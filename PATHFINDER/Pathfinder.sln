@@ -1,0 +1,252 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Pathfinder", "..\Pathfinder", "{22EAE025-A679-47F1-98C0-F0079E02B3E2}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{D4B6AB23-9C4F-4690-A506-8146C1925B5E}|Pinsonault.Application.Alcon.dll;{339FD152-FE08-4420-98C5-A8ED38BB67BF}|Pinsonault.Application.FormularyHistoryReporting.dll;{202D7919-0B1C-4314-83B7-4505C96FB3BB}|Pinsonault.Application.Millennium.dll;{19F0877E-AD43-4A44-9F94-E28BB5C8E268}|Pinsonault.Application.Sandoz.dll;{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}|Pinsonault.Application.CSL.dll;{F776CBAE-92BA-4E71-81B1-73FA18CA0898}|Pinsonault.Application.Genzyme.dll;{78651BC3-CAE7-4D7C-86AA-AA9651383E95}|Pinsonault.Application.GSK.dll;{C3FD4074-71D1-4699-89AB-D33F7B03F63D}|Pinsonault.Application.MarketplaceAnalytics.dll;{3D429574-4381-4C28-8CAC-4F07D191A23E}|Pinsonault.Application.Merz.dll;{5DFE9C69-7476-47C5-BF3C-78679051F56C}|Pinsonault.Application.Nipro.dll;{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}|Pinsonault.Application.PrescriberReporting.dll;{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}|Pinsonault.Application.Reckitt.dll;{953451F6-12E7-4805-8D30-AE104D3E6031}|Pinsonault.Application.UnitedThera.dll;{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}|PathfinderModel.dll;{14C7A577-1B81-4F21-832B-72AA2BC5E39D}|Pinsonault.Application.dll;{00156E6A-2873-49BE-9441-9C1D1909CC74}|Pinsonault.Core.dll;{EBECCA6B-101A-460A-AAB7-D46595074B08}|PathfinderClientModel.dll;{4C210090-43AE-4D3D-9661-EC14872226EC}|Pinsonault.Application.Dey.dll;{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}|Pinsonault.Application.PowerPlanRx.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Pathfinder"
+		Debug.AspNetCompiler.PhysicalPath = "..\Pathfinder\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Pathfinder\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Pathfinder"
+		Release.AspNetCompiler.PhysicalPath = "..\Pathfinder\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Pathfinder\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53210"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderClientModel", "..\PATHFINDERCLIENTMODEL\PathfinderClientModel.csproj", "{EBECCA6B-101A-460A-AAB7-D46595074B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathfinderModel", "..\PATHFINDERMODEL\PathfinderModel.csproj", "{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application", "..\PINSONAULT.APPLICATION\Pinsonault.Application.csproj", "{14C7A577-1B81-4F21-832B-72AA2BC5E39D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Core", "..\PINSONAULT.CORE\Pinsonault.Core.csproj", "{00156E6A-2873-49BE-9441-9C1D1909CC74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Alcon", "..\PINSONAULT.APPLICATION.ALCON\Pinsonault.Application.Alcon.csproj", "{D4B6AB23-9C4F-4690-A506-8146C1925B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.FormularyHistoryReporting", "..\PINSONAULT.APPLICATION.FORMULARYHISTORYREPORTING\Pinsonault.Application.FormularyHistoryReporting.csproj", "{339FD152-FE08-4420-98C5-A8ED38BB67BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Millennium", "..\PINSONAULT.APPLICATION.MILLENNIUM\Pinsonault.Application.Millennium.csproj", "{202D7919-0B1C-4314-83B7-4505C96FB3BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Sandoz", "..\PINSONAULT.APPLICATION.SANDOZ\Pinsonault.Application.Sandoz.csproj", "{19F0877E-AD43-4A44-9F94-E28BB5C8E268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.CSL", "..\PINSONAULT.APPLICATION.CSL\Pinsonault.Application.CSL.csproj", "{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Auxilium", "..\PINSONAULT.APPLICATION.AUXILIUM\Pinsonault.Application.Auxilium.csproj", "{4367C8AE-06DB-4278-8ECC-B4FA3BC403F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Genzyme", "..\PINSONAULT.APPLICATION.GENZYME\Pinsonault.Application.Genzyme.csproj", "{F776CBAE-92BA-4E71-81B1-73FA18CA0898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.GSK", "..\PINSONAULT.APPLICATION.GSK\Pinsonault.Application.GSK.csproj", "{78651BC3-CAE7-4D7C-86AA-AA9651383E95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.MarketplaceAnalytics", "..\PINSONAULT.APPLICATION.MARKETPLACEANALYTICS\Pinsonault.Application.MarketplaceAnalytics.csproj", "{C3FD4074-71D1-4699-89AB-D33F7B03F63D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Merz", "..\PINSONAULT.APPLICATION.MERZ\Pinsonault.Application.Merz.csproj", "{3D429574-4381-4C28-8CAC-4F07D191A23E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Nipro", "..\PINSONAULT.APPLICATION.NIPRO\Pinsonault.Application.Nipro.csproj", "{5DFE9C69-7476-47C5-BF3C-78679051F56C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.PrescriberReporting", "..\PINSONAULT.APPLICATION.PRESCRIBERREPORTING\Pinsonault.Application.PrescriberReporting.csproj", "{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Reckitt", "..\PINSONAULT.APPLICATION.RECKITT\Pinsonault.Application.Reckitt.csproj", "{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.UnitedThera", "..\PINSONAULT.APPLICATION.UNITEDTHERA\Pinsonault.Application.UnitedThera.csproj", "{953451F6-12E7-4805-8D30-AE104D3E6031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Dey", "..\Pathfinder.Application.Dey\Pinsonault.Application.Dey.csproj", "{4C210090-43AE-4D3D-9661-EC14872226EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.Labopharm", "..\PINSONAULT.APPLICATION.LABOPHARM\Pinsonault.Application.Labopharm.csproj", "{7DACB7A8-C85A-4713-85C9-904B6DDFADFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pinsonault.Application.PowerPlanRx", "..\Pinsonault.Application.PowerPlanRx\Pinsonault.Application.PowerPlanRx.csproj", "{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 21
+		SccProjectUniqueName0 = ..\\PATHFINDERCLIENTMODEL\\PathfinderClientModel.csproj
+		SccProjectName0 = \u0022$/PF_Development/PathfinderClientModel\u0022,\u0020QVFAAAAA
+		SccLocalPath0 = ..\\PATHFINDERCLIENTMODEL
+		SccProvider0 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName1 = ..\\PATHFINDERMODEL\\PathfinderModel.csproj
+		SccProjectName1 = \u0022$/PF_Development/PathfinderModel\u0022,\u0020PVFAAAAA
+		SccLocalPath1 = ..\\PATHFINDERMODEL
+		SccProvider1 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName2 = ..\\PINSONAULT.APPLICATION\\Pinsonault.Application.csproj
+		SccProjectName2 = \u0022$/PF_Development/Pinsonault.Application\u0022,\u0020ADHAAAAA
+		SccLocalPath2 = ..\\PINSONAULT.APPLICATION
+		SccProvider2 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName3 = ..\\PINSONAULT.CORE\\Pinsonault.Core.csproj
+		SccProjectName3 = \u0022$/PF_Development/Pinsonault.Core\u0022,\u0020ZCHAAAAA
+		SccLocalPath3 = ..\\PINSONAULT.CORE
+		SccProvider3 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName4 = ..\\PINSONAULT.APPLICATION.ALCON\\Pinsonault.Application.Alcon.csproj
+		SccProjectName4 = \u0022$/PF_Development/Pinsonault.Application.Alcon\u0022,\u0020GCLBAAAA
+		SccLocalPath4 = ..\\PINSONAULT.APPLICATION.ALCON
+		SccProvider4 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName5 = ..\\PINSONAULT.APPLICATION.FORMULARYHISTORYREPORTING\\Pinsonault.Application.FormularyHistoryReporting.csproj
+		SccProjectName5 = \u0022$/PF_Development/Pinsonault.Application.FormularyHistoryReporting\u0022,\u0020HUBBAAAA
+		SccLocalPath5 = ..\\PINSONAULT.APPLICATION.FORMULARYHISTORYREPORTING
+		SccProvider5 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName6 = ..\\PINSONAULT.APPLICATION.MILLENNIUM\\Pinsonault.Application.Millennium.csproj
+		SccProjectName6 = \u0022$/PF_Development/Pinsonault.Application.Millennium\u0022,\u0020PLTBAAAA
+		SccLocalPath6 = ..\\PINSONAULT.APPLICATION.MILLENNIUM
+		SccProvider6 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName7 = ..\\PINSONAULT.APPLICATION.SANDOZ\\Pinsonault.Application.Sandoz.csproj
+		SccProjectName7 = \u0022$/PF_Development/Pinsonault.Application.Sandoz\u0022,\u0020ZDOAAAAA
+		SccLocalPath7 = ..\\PINSONAULT.APPLICATION.SANDOZ
+		SccProvider7 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName8 = ..\\PINSONAULT.APPLICATION.CSL\\Pinsonault.Application.CSL.csproj
+		SccProjectName8 = \u0022$/PF_Development/Pinsonault.Application.CSL\u0022,\u0020YXNAAAAA
+		SccLocalPath8 = ..\\PINSONAULT.APPLICATION.CSL
+		SccProvider8 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName9 = ..\\PINSONAULT.APPLICATION.AUXILIUM\\Pinsonault.Application.Auxilium.csproj
+		SccProjectName9 = \u0022$/PF_Development/Pinsonault.Application.Auxilium\u0022,\u0020PNBBAAAA
+		SccLocalPath9 = ..\\PINSONAULT.APPLICATION.AUXILIUM
+		SccProvider9 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName10 = ..\\PINSONAULT.APPLICATION.GENZYME\\Pinsonault.Application.Genzyme.csproj
+		SccProjectName10 = \u0022$/PF_Development/Pinsonault.Application.Genzyme\u0022,\u0020YFABAAAA
+		SccLocalPath10 = ..\\PINSONAULT.APPLICATION.GENZYME
+		SccProvider10 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName11 = ..\\PINSONAULT.APPLICATION.GSK\\Pinsonault.Application.GSK.csproj
+		SccProjectName11 = \u0022$/PF_Development/Pinsonault.Application.GSK\u0022,\u0020TNXAAAAA
+		SccLocalPath11 = ..\\PINSONAULT.APPLICATION.GSK
+		SccProvider11 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName12 = ..\\PINSONAULT.APPLICATION.MARKETPLACEANALYTICS\\Pinsonault.Application.MarketplaceAnalytics.csproj
+		SccProjectName12 = \u0022$/PF_Development/Pinsonault.Application.MarketplaceAnalytics\u0022,\u0020PBJAAAAA
+		SccLocalPath12 = ..\\PINSONAULT.APPLICATION.MARKETPLACEANALYTICS
+		SccProvider12 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName13 = ..\\PINSONAULT.APPLICATION.MERZ\\Pinsonault.Application.Merz.csproj
+		SccProjectName13 = \u0022$/PF_Development/Pinsonault.Application.Merz\u0022,\u0020RRGAAAAA
+		SccLocalPath13 = ..\\PINSONAULT.APPLICATION.MERZ
+		SccProvider13 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName14 = ..\\PINSONAULT.APPLICATION.NIPRO\\Pinsonault.Application.Nipro.csproj
+		SccProjectName14 = \u0022$/PF_Development/Pinsonault.Application.Nipro\u0022,\u0020LANAAAAA
+		SccLocalPath14 = ..\\PINSONAULT.APPLICATION.NIPRO
+		SccProvider14 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName15 = ..\\PINSONAULT.APPLICATION.PRESCRIBERREPORTING\\Pinsonault.Application.PrescriberReporting.csproj
+		SccProjectName15 = \u0022$/PF_Development/Pinsonault.Application.PrescriberReporting\u0022,\u0020CRLBAAAA
+		SccLocalPath15 = ..\\PINSONAULT.APPLICATION.PRESCRIBERREPORTING
+		SccProvider15 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName16 = ..\\PINSONAULT.APPLICATION.RECKITT\\Pinsonault.Application.Reckitt.csproj
+		SccProjectName16 = \u0022$/PF_Development/Pinsonault.Application.Reckitt\u0022,\u0020SRGAAAAA
+		SccLocalPath16 = ..\\PINSONAULT.APPLICATION.RECKITT
+		SccProvider16 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName17 = ..\\PINSONAULT.APPLICATION.UNITEDTHERA\\Pinsonault.Application.UnitedThera.csproj
+		SccProjectName17 = \u0022$/PF_Development/Pinsonault.Application.UnitedThera\u0022,\u0020IPKBAAAA
+		SccLocalPath17 = ..\\PINSONAULT.APPLICATION.UNITEDTHERA
+		SccProvider17 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName18 = ..\\Pathfinder.Application.Dey\\Pinsonault.Application.Dey.csproj
+		SccProjectName18 = \u0022$/PF_Development/Pinsonault.Application.Dey\u0022,\u0020BTCDAAAA
+		SccLocalPath18 = ..\\Pathfinder.Application.Dey
+		SccProvider18 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName19 = ..\\PINSONAULT.APPLICATION.LABOPHARM\\Pinsonault.Application.Labopharm.csproj
+		SccProjectName19 = \u0022$/PF_Development/Pinsonault.Application.Labopharm\u0022,\u0020MESAAAAA
+		SccLocalPath19 = ..\\PINSONAULT.APPLICATION.LABOPHARM
+		SccProvider19 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+		SccProjectUniqueName20 = ..\\Pinsonault.Application.PowerPlanRx\\Pinsonault.Application.PowerPlanRx.csproj
+		SccProjectName20 = \u0022$/PF_Development/Pinsonault.Application.PowerPlanRx\u0022,\u0020EKRDAAAA
+		SccLocalPath20 = ..\\Pinsonault.Application.PowerPlanRx
+		SccProvider20 = MSSCCI:Microsoft\u0020Visual\u0020SourceSafe
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22EAE025-A679-47F1-98C0-F0079E02B3E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EAE025-A679-47F1-98C0-F0079E02B3E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EAE025-A679-47F1-98C0-F0079E02B3E2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EAE025-A679-47F1-98C0-F0079E02B3E2}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{EBECCA6B-101A-460A-AAB7-D46595074B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBECCA6B-101A-460A-AAB7-D46595074B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBECCA6B-101A-460A-AAB7-D46595074B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBECCA6B-101A-460A-AAB7-D46595074B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C7A577-1B81-4F21-832B-72AA2BC5E39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C7A577-1B81-4F21-832B-72AA2BC5E39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C7A577-1B81-4F21-832B-72AA2BC5E39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C7A577-1B81-4F21-832B-72AA2BC5E39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00156E6A-2873-49BE-9441-9C1D1909CC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00156E6A-2873-49BE-9441-9C1D1909CC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00156E6A-2873-49BE-9441-9C1D1909CC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00156E6A-2873-49BE-9441-9C1D1909CC74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B6AB23-9C4F-4690-A506-8146C1925B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B6AB23-9C4F-4690-A506-8146C1925B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B6AB23-9C4F-4690-A506-8146C1925B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B6AB23-9C4F-4690-A506-8146C1925B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{339FD152-FE08-4420-98C5-A8ED38BB67BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339FD152-FE08-4420-98C5-A8ED38BB67BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{339FD152-FE08-4420-98C5-A8ED38BB67BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339FD152-FE08-4420-98C5-A8ED38BB67BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{202D7919-0B1C-4314-83B7-4505C96FB3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{202D7919-0B1C-4314-83B7-4505C96FB3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{202D7919-0B1C-4314-83B7-4505C96FB3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{202D7919-0B1C-4314-83B7-4505C96FB3BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19F0877E-AD43-4A44-9F94-E28BB5C8E268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F0877E-AD43-4A44-9F94-E28BB5C8E268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F0877E-AD43-4A44-9F94-E28BB5C8E268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F0877E-AD43-4A44-9F94-E28BB5C8E268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0CB066-667D-4DC4-9736-8A9466A1BA7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4367C8AE-06DB-4278-8ECC-B4FA3BC403F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4367C8AE-06DB-4278-8ECC-B4FA3BC403F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4367C8AE-06DB-4278-8ECC-B4FA3BC403F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4367C8AE-06DB-4278-8ECC-B4FA3BC403F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F776CBAE-92BA-4E71-81B1-73FA18CA0898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F776CBAE-92BA-4E71-81B1-73FA18CA0898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F776CBAE-92BA-4E71-81B1-73FA18CA0898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F776CBAE-92BA-4E71-81B1-73FA18CA0898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78651BC3-CAE7-4D7C-86AA-AA9651383E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78651BC3-CAE7-4D7C-86AA-AA9651383E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78651BC3-CAE7-4D7C-86AA-AA9651383E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78651BC3-CAE7-4D7C-86AA-AA9651383E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FD4074-71D1-4699-89AB-D33F7B03F63D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FD4074-71D1-4699-89AB-D33F7B03F63D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FD4074-71D1-4699-89AB-D33F7B03F63D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FD4074-71D1-4699-89AB-D33F7B03F63D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D429574-4381-4C28-8CAC-4F07D191A23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D429574-4381-4C28-8CAC-4F07D191A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D429574-4381-4C28-8CAC-4F07D191A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D429574-4381-4C28-8CAC-4F07D191A23E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFE9C69-7476-47C5-BF3C-78679051F56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFE9C69-7476-47C5-BF3C-78679051F56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFE9C69-7476-47C5-BF3C-78679051F56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFE9C69-7476-47C5-BF3C-78679051F56C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7039FC6F-FBFC-4EB2-9AD1-52814AF0A182}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC9EF86-09A1-47DF-82A0-5F7C21D541BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{953451F6-12E7-4805-8D30-AE104D3E6031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{953451F6-12E7-4805-8D30-AE104D3E6031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{953451F6-12E7-4805-8D30-AE104D3E6031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{953451F6-12E7-4805-8D30-AE104D3E6031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C210090-43AE-4D3D-9661-EC14872226EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C210090-43AE-4D3D-9661-EC14872226EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C210090-43AE-4D3D-9661-EC14872226EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C210090-43AE-4D3D-9661-EC14872226EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DACB7A8-C85A-4713-85C9-904B6DDFADFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DACB7A8-C85A-4713-85C9-904B6DDFADFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DACB7A8-C85A-4713-85C9-904B6DDFADFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DACB7A8-C85A-4713-85C9-904B6DDFADFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71EF5F3-104E-42AD-9C5B-AD67230CAB7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

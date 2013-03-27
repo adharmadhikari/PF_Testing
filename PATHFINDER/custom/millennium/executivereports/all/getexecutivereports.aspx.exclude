@@ -1,0 +1,70 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/SingleSection.master" AutoEventWireup="true" CodeFile="getexecutivereports.aspx.cs" Inherits="custom_millennium_executivereports_all_getexecutivereports" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptContainer" Runat="Server">
+<style>
+    #executivereportslink 
+    {     
+        line-height: 250%; 
+        font-family:Arial;
+        font-size:12;       
+    } 
+</style>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Tile3Title" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Tile3Tools" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="Tile3" Runat="Server">
+<div id="executivereportslink" >
+<!-- Add report links here-->
+    <ul>
+      <!-- sample for providing link, put the appropriate report name in the querystring, same as in reporting services project -->
+        <%--<li>
+            <a target="_blank" href="custom/millennium/executivereports/all/executivereports.ashx?reportname=BulkFormularyStatusReport">Formulary Status Report By NAM/FAM</a>
+        </li>--%>
+        
+        <li>      
+            <a target="_blank" href="">Covered Lives Report - National</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Covered Lives Report By NAM/FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Parent Affiliations Report By NAM/FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Formulary Coverage Report By NAM/FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Formulary Status Report By NAM/FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Corportate Key Contacts Report By NAM - National Report</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Corportate Key Contacts Report By NAM - Regional Report</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Corportate Key Contacts Report By FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Customer Contact Report By NAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Customer Contact Report By FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Business Plan Report By NAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Business Plan Report By FAM</a>
+        </li>
+        <li>
+            <a target="_blank" href="">Geographic Coverage Report By NAM/FAM</a>
+        </li>
+    </ul> 
+    </div>
+</asp:Content>
+

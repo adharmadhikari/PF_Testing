@@ -1,0 +1,90 @@
+﻿.busPlanAddress, .busPlanCoveredLives, .busPlanAccountSummary, .busPlanKeyContacts
+{
+    border: solid 1px #2d58a7!important;
+}
+
+#ctl00_Tile3_pnlCoveredLives, #ctl00_Tile3_pnlStateMedicaid
+{
+    overflow: auto;
+}
+
+#divTile6
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#divTile6 .textBox
+{
+    border: solid 1px #cccccc;
+}
+
+.keyContactsTable
+{
+    border-collapse:collapse;
+}
+
+.borderLeft
+{
+    border-left: 1px solid #cccccc; 
+}
+
+.borderBottom
+{
+    border-bottom: 1px solid #cccccc; 
+}
+
+.listItemWidth label 
+{  
+    margin-right: 15px; 
+    margin-left: 5px;
+}
+
+.keyContactsTable td
+{
+    border-bottom: 1px solid #cccccc;    
+    border-left: 1px solid #cccccc;
+    border-right:1px solid #cccccc;
+    padding:2px;
+}
+.keyContactsTable th
+{
+    background-color: #e8e8e8;
+    border-left: solid 1px white;
+    padding:2px;
+}
+
+.busPlanTriSectionLeft
+{
+    width: 54.5%;
+    float: left;
+}
+
+.busPlanTriSection1
+{
+    width: 48.6%;
+    float: left;
+}
+
+.busPlanTriSection2
+{
+    width: 50.5%;
+    float: right;
+}
+
+.busPlanTriSectionRight
+{
+    width: 45%;
+    float: right;
+}
+
+.topSection, .bottomSection
+{
+    padding: 5px;
+}
+
+.tile9Content, .tile8Content, .kcView
+{
+    overflow-y: auto;
+    overflow-x: auto;
+}

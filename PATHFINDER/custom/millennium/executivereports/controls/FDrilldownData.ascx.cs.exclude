@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Pinsonault.Application.Millennium;
+public partial class custom_millennium_executivereports_controls_FDrilldownData : System.Web.UI.UserControl
+{
+    public int role_id { get; set; }
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (role_id == 31)
+            gridF.ClientSettings.DataBinding.DataService.TableName = "FormularyCoverageRptNAMSet";
+        else
+            gridF.ClientSettings.DataBinding.DataService.TableName = "FormularyCoverageRptFAMSet";
+    }
+}

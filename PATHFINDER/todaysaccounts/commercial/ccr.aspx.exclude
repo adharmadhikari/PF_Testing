@@ -1,0 +1,43 @@
+﻿<%@ Page Title="" Language="C#" Theme="pathfinder" MasterPageFile="~/MasterPages/SplitSection.master" AutoEventWireup="true" CodeFile="ccr.aspx.cs" Inherits="todaysaccounts_commercial_ccr" %>
+<%@ Register src="~/todaysaccounts/controls/PlanInfoDetailsCP.ascx" tagname="PlanInfoDetails" tagprefix="pinso" %>
+<%@ Register src="~/todaysaccounts/controls/PlanInfoAddress.ascx" tagname="PlanInfoAddress" tagprefix="pinso" %>
+
+
+<%-- Today's Accounts - Commercial -  Plan Information --%>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptContainer" Runat="Server">
+    <script type="text/javascript">
+
+        clientManager.add_pageLoaded(pageLoaded);
+        clientManager.add_pageUnloaded(pageUnloaded);
+
+        function pageLoaded(sender, args)
+        {
+            $openWindow("custom/" + sender.get_ClientKey() + "/all/ccrentry.aspx", null, null, 450, 550, "ccrentry");
+        }
+        function pageUnloaded(sender, args)
+        {
+            sender.remove_pageLoaded(pageLoaded);
+            sender.remove_pageUnloaded(pageUnloaded);
+        }       
+    </script>
+</asp:Content>
+
+<asp:Content ID="Content6" ContentPlaceHolderID="Tile3Title" Runat="Server">
+    <asp:Literal runat="server" ID="titleText3" Text='<%$ Resources:Resource, SectionTitle_PlanInfo %>' />
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="Tile3Tools" Runat="Server">
+    <pinso:TileOptionsMenu runat="server" ID="planDetailsTileOptions" UserRole="export"/>
+</asp:Content>
+<asp:Content ID="Content8" ContentPlaceHolderID="Tile3" Runat="Server">
+    <pinso:PlanInfoDetails ID="PlanInfoDetails" runat="server" />
+</asp:Content>
+<asp:Content ID="Content9" ContentPlaceHolderID="Tile4Title" Runat="Server">
+    <asp:Literal runat="server" ID="titleText4" Text='<%$ Resources:Resource, SectionTitle_PlanInfoAddress %>' />
+</asp:Content>
+<asp:Content ID="Content10" ContentPlaceHolderID="Tile4Tools" Runat="Server">
+    <pinso:TileOptionsMenu runat="server" ID="planAddressTileOptions" UserRole="export"/>
+</asp:Content>
+<asp:Content ID="Content11" ContentPlaceHolderID="Tile4" Runat="Server">
+    <pinso:PlanInfoAddress ID="PlanInfoAddress" runat="server" /> 
+</asp:Content>

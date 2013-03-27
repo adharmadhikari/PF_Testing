@@ -1,0 +1,46 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:Image SkinId="lf_cover"  AlternateText="" ImageUrl="images/lf_cover.jpg" runat="server" CssClass="topLeft" />
+<asp:Image SkinId="rt_cover"  AlternateText="" ImageUrl="images/rt_cover.jpg" runat="server" CssClass="topRight" />
+
+
+<asp:Image SkinId="mainLogo"  AlternateText="Pathfinder" ImageUrl="images/logo.jpg" runat="server" CssClass="impactLogo" />
+<asp:Image SkinId="loginLogo"  AlternateText="IMPACT" ImageUrl="images/logo.jpg" runat="server" />
+<asp:Image SkinId="btmImage"  AlternateText="" ImageUrl="images/btm.jpg" CssClass="btm" runat="server" />
+<asp:Image SkinId="topImage"  AlternateText="" ImageUrl="images/top.jpg" CssClass="top" runat="server" />
+
+<asp:HyperLink runat="server" SkinId="addFav" CssClass="addFav" />
+<asp:HyperLink runat="server" SkinId="addFavDropDn" CssClass="addFavDropDn" ImageUrl="~/content/images/spacer.gif" />
+
+<telerik:RadGrid runat="server" SkinID="table1" CssClass="table1" Width="100%" MasterTableView-PagerStyle-Mode="NumericPages" MasterTableView-PageSize="50"  PageSize="50"  />
+
+<asp:Login runat="server" SkinID="loginBox" LoginButtonType="Link" CssClass="loginBox" 
+            TextLayout="TextOnTop" TitleText="" UserNameLabelText="" PasswordLabelText=""></asp:Login>
+<asp:Button SkinID="formButton" CssClass="formButton" runat="server" />
+
+<telerik:RadComboBox SkinID="MarketBasket" CssClass="RadComboBox_impact" runat="server" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000"/>
+<telerik:RadComboBox SkinID="impactGen" CssClass="RadComboBox_impact" runat="server" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000" width="180"/>
+<telerik:RadComboBox SkinID="impactGenNOSIZE" CssClass="RadComboBox_impact" runat="server" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000" />
+<telerik:RadComboBox SkinID="impactGenLarge" CssClass="RadComboBox_impact" runat="server" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000" width="220"/>
+<telerik:RadSplitter SkinID="ImpactradSplitter" CssClass="RadSplitter_impact" runat="server" />
+
+<asp:FormView runat="server" SkinID="resultsTable" Cssclass="resultsTable" />
+<asp:TextBox runat="server" CssClass="textBox" />
+<asp:TextBox runat="server" SkinID="textBoxRight" CssClass="textBox alignRight" />
+<asp:TextBox runat="server" SkinID="datePicker" CssClass="textBox datePicker" />
+
+<asp:Button SkinID="addButton" CssClass="addButton" runat="server" />

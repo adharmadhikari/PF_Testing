@@ -1,0 +1,54 @@
+<areas>
+  <area id='us_az' category='ss' statename='Arizona' state='AZ'  />
+  <area id='us_ca' category='ss' statename='California' state='CA'   />
+  <area id='us_co' category='ss' statename='Colorado' state='CO'   />
+  <area id='us_dc' category='ss' statename='D. Columbia' state='DC'   />
+  <area id='us_fl' category='ss' statename='Florida' state='FL'   />
+  <area id='us_ga' category='ss' statename='Georgia' state='GA'   />
+  <area id='us_il' category='ss' statename='Illinois' state='IL'   />
+  <area id='us_in' category='ss' statename='Indiana' state='IN'  />
+  <area id='us_ma' category='ss' statename='Massachusetts' state='MA'  />
+  <area id='us_mi' category='ss' statename='Michigan' state='MI'  />
+  <area id='us_mn' category='ss' statename='Minnesota' state='MN'  />
+  <area id='us_nc' category='ss' statename='North Carolina' state='NC'  />
+  <area id='us_nj' category='ss' statename='New Jersey' state='NJ'  />
+  <area id='us_ny' category='ss' statename='New York' state='NY'  />
+  <area id='us_oh' category='ss' statename='Ohio' state='OH'  />
+  <area id='us_ok' category='ss' statename='Oklahoma' state='OK'  />
+  <area id='us_or' category='ss' statename='Oregon' state='OR'  />
+  <area id='us_pa' category='ss' statename='Pennsylvania' state='PA'  />
+  <area id='us_tn' category='ss' statename='Tennessee' state='TN'  />
+  <area id='us_tx' category='ss' statename='Texas' state='TX'  />
+  <area id='us_ut' category='ss' statename='Utah' state='UT'  />
+  <area id='us_wa' category='ss' statename='Washington' state='WA'  />
+  <area id='us_wi' category='ss' statename='Wisconsin' state='WI'  />
+  <area id='us_ak' category='ss' statename='Alaska' state='AK'  />
+  <area id='us_al' category='ss' statename='Alabama' state='AL'  />
+  <area id='us_ar' category='ss' statename='Arkansas' state='AR'  />
+  <area id='us_ct' category='ss' statename='Connecticut' state='CT'  />
+  <area id='us_de' category='ss' statename='Delaware' state='DE'  />
+  <area id='us_hi' category='ss' statename='Hawaii' state='HI'  />
+  <area id='us_ia' category='ss' statename='Iowa' state='IA'  />
+  <area id='us_id' category='ss' statename='Idaho' state='ID'  />
+  <area id='us_ks' category='ss' statename='Kansas' state='KS'  />
+  <area id='us_ky' category='ss' statename='Kentucky' state='KY'  />
+  <area id='us_la' category='ss' statename='Louisiana' state='LA'  />
+  <area id='us_md' category='ss' statename='Maryland' state='MD'  />
+  <area id='us_me' category='ss' statename='Maine' state='ME'  />
+  <area id='us_mo' category='ss' statename='Missouri' state='MO'  />
+  <area id='us_ms' category='ss' statename='Mississippi' state='MS'  />
+  <area id='us_mt' category='ss' statename='Montana' state='MT'  />
+  <area id='us_nd' category='ss' statename='North Dakota' state='ND'  />
+  <area id='us_ne' category='ss' statename='Nebraska' state='NE'  />
+  <area id='us_nh' category='ss' statename='New Hampshire' state='NH'  />
+  <area id='us_nm' category='ss' statename='New Mexico' state='NM'  />
+  <area id='us_nv' category='ss' statename='Nevada' state='NV'  />
+  <area id='us_pr' category='ss' statename='Puerto Rico' state='PR'  />
+  <area id='us_ri' category='ss' statename='Rhode Island' state='RI'  />
+  <area id='us_sc' category='ss' statename='South Carolina' state='SC'  />
+  <area id='us_sd' category='ss' statename='South Dakota' state='SD'  />
+  <area id='us_va' category='ss' statename='Virginia' state='VA'  />
+  <area id='us_vt' category='ss' statename='Vermont' state='VT'  />
+  <area id='us_wv' category='ss' statename='West Virginia' state='WV'  />
+  <area id='us_wy' category='ss' statename='Wyoming' state='WY'  />
+</areas>

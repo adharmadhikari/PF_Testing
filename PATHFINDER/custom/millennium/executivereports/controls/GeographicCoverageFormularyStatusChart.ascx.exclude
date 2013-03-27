@@ -1,0 +1,11 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GeographicCoverageFormularyStatusChart.ascx.cs" Inherits="custom_millennium_executivereports_controls_GeographicCoverageFormularyStatusChart" %>
+<%--<%@ Register src="~/custom/millennnium/executivereports/controls/GeographicCoverageFormularyUpdateDate.ascx" tagname="FormularyUpdateDate" tagprefix="pinso" %>--%>
+<%@ Register src="~/custom/millennium/executivereports/controls/GeographicCoverageFormularyStatusChartTemplate.ascx" tagname="FormularyStatusChart" tagprefix="pinso" %>
+
+<%--<pinso:FormularyUpdateDate runat="server" ID="formularyUpdateDate" />--%>
+
+    <pinso:FormularyStatusChart runat="server" id="chartNational" Thumbnail="true" Visible="false" />
+    <pinso:FormularyStatusChart runat="server" id="chartRegional" Thumbnail="true" Visible="false" />
+
+    
+

@@ -1,0 +1,94 @@
+/*REPLACEMENTS FOR PNG GRAPHICS */
+/* All rules on this page must have !important added to the end to override previously loaded CSS classes */
+
+.rmLeftImage 
+{
+	background: url(../../App_Themes/pathfinder/images/arwDwnfff.gif) no-repeat 0px 0px !important;
+}
+.rmExpanded .rmLeftImage 
+{
+	background: url(../../App_Themes/pathfinder/images/arwDwnGray.gif) no-repeat 0px 0px !important;
+}
+.dashboardTable div.RadComboBox_pathfinder .rcbInputCell .rcbInput {
+	background:url(../../App_Themes/pathfinder/images/arwDwnGray.gif) 3px center no-repeat !important;
+
+}
+div.dashboardTable .rgFilterBox 
+{
+	background:#fff url(../../App_Themes/pathfinder/images/arwDwnGray.gif) 3px center no-repeat !important;
+}
+div.navbar .RadComboBox_pathfinder TD.rcbArrowCell {
+	background-image:url(../../App_Themes/pathfinder/images/arwDwn.gif)!important;
+}
+div.navbar .RadComboBox_pathfinder .rcbHovered TD.rcbArrowCell, div.navbar .RadComboBox_pathfinder .rcbFocused TD.rcbArrowCell
+{
+	background-image:url(../../App_Themes/pathfinder/images/arwDwnGray.gif) !important;
+}
+.RadComboBox_pathfinder TD.rcbArrowCell {
+	background-image:url(../../App_Themes/pathfinder/images/arwDwnfff.gif)!important;
+}
+.RadComboBox_pathfinder .rcbHovered TD.rcbArrowCell, .RadComboBox_pathfinder .rcbFocused TD.rcbArrowCell
+{
+	background-image:url(../../App_Themes/pathfinder/images/arwDwnHover.gif) !important;
+}
+.goSearch a 
+{
+	background:url(../../App_Themes/pathfinder/images/arwRtGray.gif) no-repeat 2px 2px !important;
+}
+.arwRt
+{
+		background: url(../../App_Themes/pathfinder/images/arwRtSmfff.gif) no-repeat 4px 4px !important;
+}
+.arwDw
+{
+		background: url(../../App_Themes/pathfinder/images/arwDwnfff.gif) no-repeat 3px 4px !important;
+}
+.mapArrow 
+{
+	background:url(../../App_Themes/pathfinder/images/mapArrow.gif) no-repeat !important;
+
+}
+.mapArrowTop
+{
+	background:url(../../App_Themes/pathfinder/images/mapArrowTop.gif) no-repeat !important;
+
+}
+a.addFav 
+{
+		background:url(../../App_Themes/pathfinder/images/addFav.gif) left center no-repeat !important;
+
+}
+.dashboardTable div.RadComboBox_pathfinder .rcbInputCell .rcbInput {
+	background:url(../../App_Themes/pathfinder/images/arwDwnGray.gif) 3px center no-repeat !important;
+}
+div.mainMenu .rmHorizontal .rmItem, div.channel .rmHorizontal .rmItem, div.drugMenu .rmHorizontal .rmItem  {
+	background-image:url(../../App_Themes/pathfinder/images/arwDwn.gif) !important;
+}
+div.drugMenu .rmHorizontal .rmItem  {
+	background-image:url(../../App_Themes/pathfinder/images/arwDwnfff.gif) !important;
+}
+div.mainMenu .rmVertical .rmItem  {
+	background-image:none !important;
+}
+div.channel .rmVertical .rmItem  {
+	background-image:none !important;
+}
+div.dashboardTable .rgHeader .rgSortAsc 
+{
+	background:url(../../App_Themes/pathfinder/images/arwDwn.gif) no-repeat center !important;
+}
+div.dashboardTable .rgHeader .rgSortDesc 
+{
+	background:url(../../App_Themes/pathfinder/images/arwUp.gif) no-repeat center !important;
+}
+.moreInfo 
+{
+	background:url(../../App_Themes/pathfinder/images/info.gif) no-repeat !important;
+}
+.dashboardTable div.RadComboBox_pathfinder .rcbInputCell .rcbInput {
+	background:url(../../App_Themes/pathfinder/images/arwDwnGray.gif) 3px center no-repeat !important;
+}
+#filtersContainer .RadComboBox_pathfinder TD.rcbArrowCell 
+{
+    background:url(../../App_Themes/pathfinder/images/arwDwnSR.gif) 3px center no-repeat !important;
+    }

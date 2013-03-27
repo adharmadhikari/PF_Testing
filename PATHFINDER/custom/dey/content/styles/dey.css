@@ -1,0 +1,48 @@
+.restrictionsreport .rgMasterTable
+{
+    width: 100%;
+}
+
+.restrictionsreport #tile4
+{
+    width: 35%;
+}
+
+.restrictionsreport #tile5
+{
+    width: 65%;
+}
+
+.sellsheets .selectedStateOption
+{
+    color: #2d58a7!important;
+    font-weight: bold;
+    background-image: url(images/btnDown.jpg)!important;
+}
+
+.sellsheets .chkBoxDiv
+{
+	margin:0px !important;
+	padding:0px !important;
+}
+
+.sellsheets .states label
+{
+    margin: 2px 1px 1px 1px;
+    padding: 4px 2px 2px 1px;
+    cursor: pointer;
+    background-image: url(images/btnUp.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+	color: #2d58a7;
+	width: 112px;
+	height: 20px;
+	display: block;
+}
+
+
+.sellsheets .states input
+{
+    position: absolute;    
+    top: -5000px;
+}

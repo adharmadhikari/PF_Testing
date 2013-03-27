@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PathfinderMerzModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PathfinderMerzModelStoreContainer">
+          <EntitySet Name="Business_Plan_Coverage" EntityType="PathfinderMerzModel.Store.Business_Plan_Coverage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plan_Medical_Policy_Doc" EntityType="PathfinderMerzModel.Store.Business_Plan_Medical_Policy_Doc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plan_Preferred_SPP" EntityType="PathfinderMerzModel.Store.Business_Plan_Preferred_SPP" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plans" EntityType="PathfinderMerzModel.Store.Business_Plans" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Benefit" EntityType="PathfinderMerzModel.Store.Lkp_Business_Plan_Benefit" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Document_Types" EntityType="PathfinderMerzModel.Store.Lkp_Business_Plan_Document_Types" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Drug" EntityType="PathfinderMerzModel.Store.Lkp_Business_Plan_Drug" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Medical_Policy" EntityType="PathfinderMerzModel.Store.Lkp_Business_Plan_Medical_Policy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sell_Sheet_Mast" EntityType="PathfinderMerzModel.Store.Sell_Sheet_Mast" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_BP_Medical_Policy_Docs" EntityType="PathfinderMerzModel.Store.V_BP_Medical_Policy_Docs" store:Type="Views" store:Schema="dbo" store:Name="V_BP_Medical_Policy_Docs">
+            <DefiningQuery>SELECT 
+      [V_BP_Medical_Policy_Docs].[Medical_Policy_ID] AS [Medical_Policy_ID], 
+      [V_BP_Medical_Policy_Docs].[Business_Plan_ID] AS [Business_Plan_ID], 
+      [V_BP_Medical_Policy_Docs].[Medical_Policy_Name] AS [Medical_Policy_Name], 
+      [V_BP_Medical_Policy_Docs].[Upload_BY] AS [Upload_BY], 
+      [V_BP_Medical_Policy_Docs].[Upload_DT] AS [Upload_DT], 
+      [V_BP_Medical_Policy_Docs].[File_Path] AS [File_Path], 
+      [V_BP_Medical_Policy_Docs].[Med_Policy_Status_ID] AS [Med_Policy_Status_ID]
+      FROM [dbo].[V_BP_Medical_Policy_Docs] AS [V_BP_Medical_Policy_Docs]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Business_Plans_Merz" EntityType="PathfinderMerzModel.Store.V_Business_Plans_Merz" store:Type="Views" store:Schema="dbo" store:Name="V_Business_Plans_Merz">
+            <DefiningQuery>SELECT 
+      [V_Business_Plans_Merz].[Business_Plan_ID] AS [Business_Plan_ID], 
+      [V_Business_Plans_Merz].[Section_ID] AS [Section_ID], 
+      [V_Business_Plans_Merz].[Section_Name] AS [Section_Name], 
+      [V_Business_Plans_Merz].[Plan_ID] AS [Plan_ID], 
+      [V_Business_Plans_Merz].[Plan_Name] AS [Plan_Name], 
+      [V_Business_Plans_Merz].[Thera_ID] AS [Thera_ID], 
+      [V_Business_Plans_Merz].[Thera_Name] AS [Thera_Name], 
+      [V_Business_Plans_Merz].[Created_DT] AS [Created_DT], 
+      [V_Business_Plans_Merz].[User_ID] AS [User_ID], 
+      [V_Business_Plans_Merz].[User_F_Name] AS [User_F_Name], 
+      [V_Business_Plans_Merz].[User_M_Name] AS [User_M_Name], 
+      [V_Business_Plans_Merz].[User_L_Name] AS [User_L_Name], 
+      [V_Business_Plans_Merz].[FullName] AS [FullName], 
+      [V_Business_Plans_Merz].[Document_Type_Flag] AS [Document_Type_Flag], 
+      [V_Business_Plans_Merz].[doc] AS [doc], 
+      [V_Business_Plans_Merz].[docs] AS [docs], 
+      [V_Business_Plans_Merz].[Med_Policy_Status_ID] AS [Med_Policy_Status_ID]
+      FROM [dbo].[V_Business_Plans_Merz] AS [V_Business_Plans_Merz]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_BusinessPlanning_Coverage" EntityType="PathfinderMerzModel.Store.V_BusinessPlanning_Coverage" store:Type="Views" store:Schema="dbo" store:Name="V_BusinessPlanning_Coverage">
+            <DefiningQuery>SELECT 
+      [V_BusinessPlanning_Coverage].[Business_Plan_ID] AS [Business_Plan_ID], 
+      [V_BusinessPlanning_Coverage].[Drug_ID] AS [Drug_ID], 
+      [V_BusinessPlanning_Coverage].[Drug_Name] AS [Drug_Name], 
+      [V_BusinessPlanning_Coverage].[Benefit_ID] AS [Benefit_ID], 
+      [V_BusinessPlanning_Coverage].[Benefit_Name] AS [Benefit_Name], 
+      [V_BusinessPlanning_Coverage].[Medical_Policy_ID] AS [Medical_Policy_ID], 
+      [V_BusinessPlanning_Coverage].[Medical_Policy_Name] AS [Medical_Policy_Name], 
+      [V_BusinessPlanning_Coverage].[Formulary_Status_ID] AS [Formulary_Status_ID], 
+      [V_BusinessPlanning_Coverage].[Formulary_Status_Name] AS [Formulary_Status_Name], 
+      [V_BusinessPlanning_Coverage].[PA] AS [PA], 
+      [V_BusinessPlanning_Coverage].[QL] AS [QL], 
+      [V_BusinessPlanning_Coverage].[ST] AS [ST], 
+      [V_BusinessPlanning_Coverage].[Num_Allocations] AS [Num_Allocations], 
+      [V_BusinessPlanning_Coverage].[Copay_Coinsurance] AS [Copay_Coinsurance], 
+      [V_BusinessPlanning_Coverage].[Market_Share] AS [Market_Share], 
+      [V_BusinessPlanning_Coverage].[Gross_Sales] AS [Gross_Sales], 
+      [V_BusinessPlanning_Coverage].[Contact_with_Manufacturer] AS [Contact_with_Manufacturer], 
+      [V_BusinessPlanning_Coverage].[Other_Restrictions] AS [Other_Restrictions]
+      FROM [dbo].[V_BusinessPlanning_Coverage] AS [V_BusinessPlanning_Coverage]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_BusinessPlanning_SectionList" EntityType="PathfinderMerzModel.Store.V_BusinessPlanning_SectionList" store:Type="Views" store:Schema="dbo" store:Name="V_BusinessPlanning_SectionList">
+            <DefiningQuery>SELECT 
+      [V_BusinessPlanning_SectionList].[Section_ID] AS [Section_ID], 
+      [V_BusinessPlanning_SectionList].[Section_Name] AS [Section_Name], 
+      [V_BusinessPlanning_SectionList].[Thera_ID] AS [Thera_ID], 
+      [V_BusinessPlanning_SectionList].[Sort_Order] AS [Sort_Order]
+      FROM [dbo].[V_BusinessPlanning_SectionList] AS [V_BusinessPlanning_SectionList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_BusinessPlanning_TheraList" EntityType="PathfinderMerzModel.Store.V_BusinessPlanning_TheraList" store:Type="Views" store:Schema="dbo" store:Name="V_BusinessPlanning_TheraList">
+            <DefiningQuery>SELECT 
+      [V_BusinessPlanning_TheraList].[Thera_ID] AS [Thera_ID], 
+      [V_BusinessPlanning_TheraList].[Thera_Name] AS [Thera_Name]
+      FROM [dbo].[V_BusinessPlanning_TheraList] AS [V_BusinessPlanning_TheraList]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Plan_Search" EntityType="PathfinderMerzModel.Store.V_Plan_Search" store:Type="Views" store:Schema="dbo" store:Name="V_Plan_Search">
+            <DefiningQuery>SELECT 
+      [V_Plan_Search].[Plan_ID] AS [Plan_ID], 
+      [V_Plan_Search].[Plan_Name] AS [Plan_Name], 
+      [V_Plan_Search].[Section_ID] AS [Section_ID]
+      FROM [dbo].[V_Plan_Search] AS [V_Plan_Search]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_PlanAffiliations" EntityType="PathfinderMerzModel.Store.V_PlanAffiliations" store:Type="Views" store:Schema="dbo" store:Name="V_PlanAffiliations">
+            <DefiningQuery>SELECT 
+      [V_PlanAffiliations].[Child_ID] AS [Child_ID], 
+      [V_PlanAffiliations].[Section_ID] AS [Section_ID], 
+      [V_PlanAffiliations].[Plan_Name] AS [Plan_Name], 
+      [V_PlanAffiliations].[Plan_State] AS [Plan_State], 
+      [V_PlanAffiliations].[Total_Covered] AS [Total_Covered], 
+      [V_PlanAffiliations].[Total_Pharmacy] AS [Total_Pharmacy], 
+      [V_PlanAffiliations].[Plan_WebSite] AS [Plan_WebSite], 
+      [V_PlanAffiliations].[Plan_Type_Name] AS [Plan_Type_Name], 
+      [V_PlanAffiliations].[Affil_Type_ID] AS [Affil_Type_ID], 
+      [V_PlanAffiliations].[PBM_Function] AS [PBM_Function], 
+      [V_PlanAffiliations].[Parent_ID] AS [Parent_ID]
+      FROM [dbo].[V_PlanAffiliations] AS [V_PlanAffiliations]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_PlanAffiliations_ForPBM" EntityType="PathfinderMerzModel.Store.V_PlanAffiliations_ForPBM" store:Type="Views" store:Schema="dbo" store:Name="V_PlanAffiliations_ForPBM">
+            <DefiningQuery>SELECT 
+      [V_PlanAffiliations_ForPBM].[Child_ID] AS [Child_ID], 
+      [V_PlanAffiliations_ForPBM].[Section_ID] AS [Section_ID], 
+      [V_PlanAffiliations_ForPBM].[Plan_Name] AS [Plan_Name], 
+      [V_PlanAffiliations_ForPBM].[Plan_State] AS [Plan_State], 
+      [V_PlanAffiliations_ForPBM].[Total_Covered] AS [Total_Covered], 
+      [V_PlanAffiliations_ForPBM].[Total_Pharmacy] AS [Total_Pharmacy], 
+      [V_PlanAffiliations_ForPBM].[Plan_WebSite] AS [Plan_WebSite], 
+      [V_PlanAffiliations_ForPBM].[Plan_Type_Name] AS [Plan_Type_Name], 
+      [V_PlanAffiliations_ForPBM].[Affil_Type_ID] AS [Affil_Type_ID], 
+      [V_PlanAffiliations_ForPBM].[PBM_Function] AS [PBM_Function], 
+      [V_PlanAffiliations_ForPBM].[Parent_ID] AS [Parent_ID]
+      FROM [dbo].[V_PlanAffiliations_ForPBM] AS [V_PlanAffiliations_ForPBM]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_PlanAffiliations_ForSPP" EntityType="PathfinderMerzModel.Store.V_PlanAffiliations_ForSPP" store:Type="Views" store:Schema="dbo" store:Name="V_PlanAffiliations_ForSPP">
+            <DefiningQuery>SELECT 
+      [V_PlanAffiliations_ForSPP].[Child_ID] AS [Child_ID], 
+      [V_PlanAffiliations_ForSPP].[Section_ID] AS [Section_ID], 
+      [V_PlanAffiliations_ForSPP].[Plan_Name] AS [Plan_Name], 
+      [V_PlanAffiliations_ForSPP].[Plan_State] AS [Plan_State], 
+      [V_PlanAffiliations_ForSPP].[Total_Covered] AS [Total_Covered], 
+      [V_PlanAffiliations_ForSPP].[Total_Pharmacy] AS [Total_Pharmacy], 
+      [V_PlanAffiliations_ForSPP].[Plan_WebSite] AS [Plan_WebSite], 
+      [V_PlanAffiliations_ForSPP].[Plan_Type_Name] AS [Plan_Type_Name], 
+      [V_PlanAffiliations_ForSPP].[Affil_Type_ID] AS [Affil_Type_ID], 
+      [V_PlanAffiliations_ForSPP].[PBM_Function] AS [PBM_Function], 
+      [V_PlanAffiliations_ForSPP].[SPP_ID] AS [SPP_ID], 
+      [V_PlanAffiliations_ForSPP].[Preferred_SPP] AS [Preferred_SPP], 
+      [V_PlanAffiliations_ForSPP].[Business_Plan_ID] AS [Business_Plan_ID]
+      FROM [dbo].[V_PlanAffiliations_ForSPP] AS [V_PlanAffiliations_ForSPP]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_PlanDrugFormulary" EntityType="PathfinderMerzModel.Store.V_PlanDrugFormulary" store:Type="Views" store:Schema="dbo" store:Name="V_PlanDrugFormulary">
+            <DefiningQuery>SELECT 
+      [V_PlanDrugFormulary].[Plan_ID] AS [Plan_ID], 
+      [V_PlanDrugFormulary].[Plan_Name] AS [Plan_Name], 
+      [V_PlanDrugFormulary].[Section_ID] AS [Section_ID], 
+      [V_PlanDrugFormulary].[Segment_ID] AS [Segment_ID], 
+      [V_PlanDrugFormulary].[Drug_ID] AS [Drug_ID], 
+      [V_PlanDrugFormulary].[Drug_Name] AS [Drug_Name], 
+      [V_PlanDrugFormulary].[Product_ID] AS [Product_ID], 
+      [V_PlanDrugFormulary].[Formulary_ID] AS [Formulary_ID], 
+      [V_PlanDrugFormulary].[Benefit_Plan_Product] AS [Benefit_Plan_Product], 
+      [V_PlanDrugFormulary].[Formulary_Lives] AS [Formulary_Lives], 
+      [V_PlanDrugFormulary].[Percentage_Lives] AS [Percentage_Lives], 
+      [V_PlanDrugFormulary].[Tier_Name] AS [Tier_Name], 
+      [V_PlanDrugFormulary].[Formulary_Status_Name] AS [Formulary_Status_Name], 
+      [V_PlanDrugFormulary].[PA] AS [PA], 
+      [V_PlanDrugFormulary].[QL] AS [QL], 
+      [V_PlanDrugFormulary].[ST] AS [ST], 
+      [V_PlanDrugFormulary].[Co_Pay] AS [Co_Pay], 
+      [V_PlanDrugFormulary].[Restrictions_Comments] AS [Restrictions_Comments]
+      FROM [dbo].[V_PlanDrugFormulary] AS [V_PlanDrugFormulary]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID">
+            <End Role="Lkp_Business_Plan_Benefit" EntitySet="Lkp_Business_Plan_Benefit" />
+            <End Role="Business_Plan_Coverage" EntitySet="Business_Plan_Coverage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID">
+            <End Role="Business_Plans" EntitySet="Business_Plans" />
+            <End Role="Business_Plan_Coverage" EntitySet="Business_Plan_Coverage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID">
+            <End Role="Lkp_Business_Plan_Drug" EntitySet="Lkp_Business_Plan_Drug" />
+            <End Role="Business_Plan_Coverage" EntitySet="Business_Plan_Coverage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID">
+            <End Role="Lkp_Business_Plan_Medical_Policy" EntitySet="Lkp_Business_Plan_Medical_Policy" />
+            <End Role="Business_Plan_Coverage" EntitySet="Business_Plan_Coverage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID">
+            <End Role="Business_Plans" EntitySet="Business_Plans" />
+            <End Role="Business_Plan_Medical_Policy_Doc" EntitySet="Business_Plan_Medical_Policy_Doc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID">
+            <End Role="Lkp_Business_Plan_Document_Types" EntitySet="Lkp_Business_Plan_Document_Types" />
+            <End Role="Business_Plan_Medical_Policy_Doc" EntitySet="Business_Plan_Medical_Policy_Doc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" Association="PathfinderMerzModel.Store.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID">
+            <End Role="Business_Plans" EntitySet="Business_Plans" />
+            <End Role="Business_Plan_Preferred_SPP" EntitySet="Business_Plan_Preferred_SPP" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Business_Plan_Coverage">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Drug_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Benefit_ID" Type="int" />
+          <Property Name="Medical_Policy_ID" Type="int" />
+          <Property Name="Formulary_Status_ID" Type="int" />
+          <Property Name="PA" Type="bit" Nullable="false" />
+          <Property Name="QL" Type="bit" Nullable="false" />
+          <Property Name="ST" Type="bit" Nullable="false" />
+          <Property Name="Num_Allocations" Type="int" />
+          <Property Name="Copay_Coinsurance" Type="varchar" MaxLength="50" />
+          <Property Name="Market_Share" Type="decimal" Scale="3" />
+          <Property Name="Gross_Sales" Type="decimal" Scale="3" />
+          <Property Name="Contact_with_Manufacturer" Type="varchar" MaxLength="50" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Business_Plan_Medical_Policy_Doc">
+          <Key>
+            <PropertyRef Name="Medical_Policy_ID" />
+          </Key>
+          <Property Name="Medical_Policy_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Document_Type_ID" Type="int" Nullable="false" />
+          <Property Name="Medical_Policy_Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Upload_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Upload_DT" Type="datetime" />
+          <Property Name="File_Path" Type="varchar" MaxLength="256" />
+          <Property Name="Med_Policy_Status_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Business_Plan_Preferred_SPP">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="SPP_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="SPP_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Business_Plans">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="Account_Overview" Type="varchar" MaxLength="2500" />
+          <Property Name="Current_Status" Type="varchar" MaxLength="2500" />
+          <Property Name="Strategies" Type="varchar" MaxLength="2500" />
+          <Property Name="Issues" Type="varchar" MaxLength="2500" />
+          <Property Name="Tactics" Type="varchar" MaxLength="2500" />
+          <Property Name="Notes" Type="varchar" MaxLength="2500" />
+          <Property Name="Med_Policy_Development" Type="varchar" MaxLength="2500" />
+          <Property Name="P_and_T" Type="varchar" MaxLength="2500" />
+          <Property Name="Medicare_PartB_Enrollment" Type="int" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Benefit">
+          <Key>
+            <PropertyRef Name="Benefit_ID" />
+          </Key>
+          <Property Name="Benefit_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Benefit_Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Document_Types">
+          <Key>
+            <PropertyRef Name="Document_Type_ID" />
+          </Key>
+          <Property Name="Document_Type_ID" Type="int" Nullable="false" />
+          <Property Name="Document_Type_Name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Drug">
+          <Key>
+            <PropertyRef Name="Drug_ID" />
+          </Key>
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Medical_Policy">
+          <Key>
+            <PropertyRef Name="Medical_Policy_ID" />
+          </Key>
+          <Property Name="Medical_Policy_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Medical_Policy_Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Sell_Sheet_Mast">
+          <Key>
+            <PropertyRef Name="Sell_Sheet_ID" />
+          </Key>
+          <Property Name="Sell_Sheet_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Sell_Sheet_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Territory_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Include_Territory_Name" Type="bit" Nullable="false" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Type_ID" Type="int" />
+          <Property Name="Current_Step" Type="varchar" MaxLength="50" />
+          <Property Name="Thera_ID" Type="int" />
+          <Property Name="Use_PA" Type="bit" />
+          <Property Name="Use_QL" Type="bit" />
+          <Property Name="Use_ST" Type="bit" />
+          <Property Name="Use_Copay" Type="bit" />
+          <Property Name="Segment_CP" Type="bit" />
+          <Property Name="Segment_MD" Type="bit" />
+          <Property Name="Segment_SM" Type="bit" />
+          <Property Name="Message_ID" Type="int" />
+          <Property Name="Template_ID" Type="int" />
+          <Property Name="Status_ID" Type="int" Nullable="false" />
+          <Property Name="Is_Highlighted" Type="bit" Nullable="false" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_BP_Medical_Policy_Docs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_BP_Medical_Policy_Docs">
+          <Key>
+            <PropertyRef Name="Medical_Policy_ID" />
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Medical_Policy_Name" />
+          </Key>
+          <Property Name="Medical_Policy_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Medical_Policy_Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Upload_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Upload_DT" Type="datetime" />
+          <Property Name="File_Path" Type="varchar" MaxLength="256" />
+          <Property Name="Med_Policy_Status_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_Business_Plans_Merz' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Business_Plans_Merz">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Thera_Name" />
+            <PropertyRef Name="doc" />
+            <PropertyRef Name="docs" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="User_ID" Type="int" />
+          <Property Name="User_F_Name" Type="varchar" MaxLength="50" />
+          <Property Name="User_M_Name" Type="varchar" MaxLength="50" />
+          <Property Name="User_L_Name" Type="varchar" MaxLength="50" />
+          <Property Name="FullName" Type="varchar" MaxLength="101" />
+          <Property Name="Document_Type_Flag" Type="int" />
+          <Property Name="doc" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="docs" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="Med_Policy_Status_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_BusinessPlanning_Coverage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_BusinessPlanning_Coverage">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Drug_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Benefit_ID" Type="int" />
+          <Property Name="Benefit_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Medical_Policy_ID" Type="int" />
+          <Property Name="Medical_Policy_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Formulary_Status_ID" Type="int" />
+          <Property Name="Formulary_Status_Name" Type="varchar" MaxLength="255" />
+          <Property Name="PA" Type="bit" />
+          <Property Name="QL" Type="bit" />
+          <Property Name="ST" Type="bit" />
+          <Property Name="Num_Allocations" Type="int" />
+          <Property Name="Copay_Coinsurance" Type="varchar" MaxLength="50" />
+          <Property Name="Market_Share" Type="decimal" Scale="3" />
+          <Property Name="Gross_Sales" Type="decimal" Scale="3" />
+          <Property Name="Contact_with_Manufacturer" Type="varchar" MaxLength="50" />
+          <Property Name="Other_Restrictions" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_BusinessPlanning_SectionList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_BusinessPlanning_SectionList">
+          <Key>
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Sort_Order" />
+          </Key>
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Section_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="Sort_Order" Type="smallint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_BusinessPlanning_TheraList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_BusinessPlanning_TheraList">
+          <Key>
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Thera_Name" />
+          </Key>
+          <Property Name="Thera_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Thera_Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_Plan_Search' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Plan_Search">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_PlanAffiliations' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_PlanAffiliations">
+          <Key>
+            <PropertyRef Name="Child_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Parent_ID" />
+          </Key>
+          <Property Name="Child_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Plan_State" Type="char" MaxLength="2" />
+          <Property Name="Total_Covered" Type="int" />
+          <Property Name="Total_Pharmacy" Type="int" />
+          <Property Name="Plan_WebSite" Type="varchar" MaxLength="255" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Affil_Type_ID" Type="int" />
+          <Property Name="PBM_Function" Type="varchar" MaxLength="1000" />
+          <Property Name="Parent_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_PlanAffiliations_ForPBM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_PlanAffiliations_ForPBM">
+          <Key>
+            <PropertyRef Name="Child_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Parent_ID" />
+          </Key>
+          <Property Name="Child_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Plan_State" Type="char" MaxLength="2" />
+          <Property Name="Total_Covered" Type="int" />
+          <Property Name="Total_Pharmacy" Type="int" />
+          <Property Name="Plan_WebSite" Type="varchar" MaxLength="255" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Affil_Type_ID" Type="int" />
+          <Property Name="PBM_Function" Type="varchar" MaxLength="1000" />
+          <Property Name="Parent_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_PlanAffiliations_ForSPP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_PlanAffiliations_ForSPP">
+          <Key>
+            <PropertyRef Name="Child_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="SPP_ID" />
+            <PropertyRef Name="Business_Plan_ID" />
+          </Key>
+          <Property Name="Child_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Plan_State" Type="char" MaxLength="2" />
+          <Property Name="Total_Covered" Type="int" />
+          <Property Name="Total_Pharmacy" Type="int" />
+          <Property Name="Plan_WebSite" Type="varchar" MaxLength="255" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Affil_Type_ID" Type="int" />
+          <Property Name="PBM_Function" Type="varchar" MaxLength="1000" />
+          <Property Name="SPP_ID" Type="int" Nullable="false" />
+          <Property Name="Preferred_SPP" Type="bit" />
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Merz.dbo.V_PlanDrugFormulary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_PlanDrugFormulary">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Formulary_ID" />
+            <PropertyRef Name="PA" />
+            <PropertyRef Name="QL" />
+            <PropertyRef Name="ST" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Formulary_ID" Type="int" Nullable="false" />
+          <Property Name="Benefit_Plan_Product" Type="varchar" MaxLength="255" />
+          <Property Name="Formulary_Lives" Type="int" />
+          <Property Name="Percentage_Lives" Type="numeric" Precision="27" Scale="13" />
+          <Property Name="Tier_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Formulary_Status_Name" Type="varchar" MaxLength="255" />
+          <Property Name="PA" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="QL" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="ST" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Co_Pay" Type="varchar" MaxLength="50" />
+          <Property Name="Restrictions_Comments" Type="varchar(max)" />
+        </EntityType>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID">
+          <End Role="Lkp_Business_Plan_Benefit" Type="PathfinderMerzModel.Store.Lkp_Business_Plan_Benefit" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Coverage" Type="PathfinderMerzModel.Store.Business_Plan_Coverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Benefit">
+              <PropertyRef Name="Benefit_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Coverage">
+              <PropertyRef Name="Benefit_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID">
+          <End Role="Business_Plans" Type="PathfinderMerzModel.Store.Business_Plans" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Coverage" Type="PathfinderMerzModel.Store.Business_Plan_Coverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Coverage">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID">
+          <End Role="Lkp_Business_Plan_Drug" Type="PathfinderMerzModel.Store.Lkp_Business_Plan_Drug" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Coverage" Type="PathfinderMerzModel.Store.Business_Plan_Coverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Drug">
+              <PropertyRef Name="Drug_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Coverage">
+              <PropertyRef Name="Drug_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID">
+          <End Role="Lkp_Business_Plan_Medical_Policy" Type="PathfinderMerzModel.Store.Lkp_Business_Plan_Medical_Policy" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Coverage" Type="PathfinderMerzModel.Store.Business_Plan_Coverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Medical_Policy">
+              <PropertyRef Name="Medical_Policy_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Coverage">
+              <PropertyRef Name="Medical_Policy_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID">
+          <End Role="Business_Plans" Type="PathfinderMerzModel.Store.Business_Plans" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Medical_Policy_Doc" Type="PathfinderMerzModel.Store.Business_Plan_Medical_Policy_Doc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Medical_Policy_Doc">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID">
+          <End Role="Lkp_Business_Plan_Document_Types" Type="PathfinderMerzModel.Store.Lkp_Business_Plan_Document_Types" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Medical_Policy_Doc" Type="PathfinderMerzModel.Store.Business_Plan_Medical_Policy_Doc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Document_Types">
+              <PropertyRef Name="Document_Type_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Medical_Policy_Doc">
+              <PropertyRef Name="Document_Type_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID">
+          <End Role="Business_Plans" Type="PathfinderMerzModel.Store.Business_Plans" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Preferred_SPP" Type="PathfinderMerzModel.Store.Business_Plan_Preferred_SPP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Preferred_SPP">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" Namespace="PathfinderMerzModel" Alias="Self">
+        <EntityContainer Name="PathfinderMerzEntities" >
+          <EntitySet Name="BPTheraListSet" EntityType="PathfinderMerzModel.BPTheraList" />
+          <EntitySet Name="BPSectionListSet" EntityType="PathfinderMerzModel.BPSectionList" />
+          <EntitySet Name="BusinessPlanCoverageSet" EntityType="PathfinderMerzModel.BusinessPlanCoverage" />
+          <EntitySet Name="BusinessPlanMedicalPolicyDocSet" EntityType="PathfinderMerzModel.BusinessPlanMedicalPolicyDoc" />
+          <EntitySet Name="BusinessPlanPreferredSPPSet" EntityType="PathfinderMerzModel.BusinessPlanPreferredSPP" />
+          <EntitySet Name="BusinessPlansSet" EntityType="PathfinderMerzModel.BusinessPlans" />
+          <EntitySet Name="BusinessPlanBenefitSet" EntityType="PathfinderMerzModel.BusinessPlanBenefit" />
+          <EntitySet Name="BusinessPlanDrugSet" EntityType="PathfinderMerzModel.BusinessPlanDrug" />
+          <EntitySet Name="BusinessPlanMedicalPolicySet" EntityType="PathfinderMerzModel.BusinessPlanMedicalPolicy" />
+          <AssociationSet Name="FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" Association="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID">
+            <End Role="Business_Plans" EntitySet="BusinessPlansSet" />
+            <End Role="Business_Plan_Medical_Policy_Doc" EntitySet="BusinessPlanMedicalPolicyDocSet" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" Association="PathfinderMerzModel.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID">
+            <End Role="Business_Plans" EntitySet="BusinessPlansSet" />
+            <End Role="Business_Plan_Preferred_SPP" EntitySet="BusinessPlanPreferredSPPSet" /></AssociationSet>
+          <EntitySet Name="BusinessPlansMerzSet" EntityType="PathfinderMerzModel.BusinessPlansMerz" />
+          <EntitySet Name="PlanAffiliationsForPBMSet" EntityType="PathfinderMerzModel.PlanAffiliationsForPBM" />
+          <EntitySet Name="PlanAffiliationsForSPPSet" EntityType="PathfinderMerzModel.PlanAffiliationsForSPP" />
+          <EntitySet Name="BusinessPlanningCoverageSet" EntityType="PathfinderMerzModel.BusinessPlanningCoverage" />
+          <EntitySet Name="MerzSellSheetSet" EntityType="PathfinderMerzModel.MerzSellSheet" />
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1" Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1">
+            <End EntitySet="BusinessPlanBenefitSet" Role="BusinessPlanBenefit" />
+            <End EntitySet="BusinessPlanCoverageSet" Role="BusinessPlanCoverage" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1">
+            <End Role="BusinessPlans" EntitySet="BusinessPlansSet" />
+            <End Role="BusinessPlanCoverage" EntitySet="BusinessPlanCoverageSet" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1">
+            <End Role="BusinessPlanDrug" EntitySet="BusinessPlanDrugSet" />
+            <End Role="BusinessPlanCoverage" EntitySet="BusinessPlanCoverageSet" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1">
+            <End Role="BusinessPlanMedicalPolicy" EntitySet="BusinessPlanMedicalPolicySet" />
+            <End Role="BusinessPlanCoverage" EntitySet="BusinessPlanCoverageSet" /></AssociationSet>
+          <EntitySet Name="VWBPMedicalPolicyDocsSet" EntityType="PathfinderMerzModel.VWBPMedicalPolicyDocs" />
+          <EntitySet Name="PlanDrugFormularySet" EntityType="PathfinderMerzModel.PlanDrugFormulary" />
+          <EntitySet Name="PlanSearch1Set" EntityType="PathfinderMerzModel.PlanSearch1" />
+          <EntitySet Name="BusinessPlanDocumentTypesSet" EntityType="PathfinderMerzModel.BusinessPlanDocumentTypes" />
+          <AssociationSet Name="FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" Association="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID">
+            <End Role="Lkp_Business_Plan_Document_Types" EntitySet="BusinessPlanDocumentTypesSet" />
+            <End Role="BusinessPlanMedicalPolicyDoc" EntitySet="BusinessPlanMedicalPolicyDocSet" /></AssociationSet></EntityContainer>
+        <EntityType Name="BPTheraList">
+          <Key>
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Thera_Name" /></Key>
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_Name" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="BPSectionList">
+          <Key>
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Sort_Order" /></Key>
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sort_Order" Type="Int16" Nullable="false" /></EntityType>
+        <EntityType Name="BusinessPlanCoverage">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Drug_ID" />
+            </Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Formulary_Status_ID" Type="Int32" Nullable="true" />
+          <Property Name="PA" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="QL" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="ST" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Num_Allocations" Type="Int32" Nullable="true" />
+          <Property Name="Copay_Coinsurance" Type="String" Nullable="true" />
+          <Property Name="Market_Share" Type="Decimal" Nullable="true" />
+          <Property Name="Gross_Sales" Type="Decimal" Nullable="true" />
+          <Property Name="Contact_with_Manufacturer" Type="String" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="BusinessPlanBenefit" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1" FromRole="BusinessPlanCoverage" ToRole="BusinessPlanBenefit" />
+          <NavigationProperty Name="BusinessPlans" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" FromRole="BusinessPlanCoverage" ToRole="BusinessPlans" />
+          <NavigationProperty Name="BusinessPlanDrug" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" FromRole="BusinessPlanCoverage" ToRole="BusinessPlanDrug" />
+          <NavigationProperty Name="BusinessPlanMedicalPolicy" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" FromRole="BusinessPlanCoverage" ToRole="BusinessPlanMedicalPolicy" /></EntityType>
+        <EntityType Name="BusinessPlanMedicalPolicyDoc">
+          <Key>
+            <PropertyRef Name="Medical_Policy_ID" /></Key>
+          <Property Name="Medical_Policy_ID" Type="Int32" Nullable="false" />
+          <Property Name="Medical_Policy_Name" Type="String" Nullable="false" />
+          <Property Name="Upload_BY" Type="String" Nullable="true" />
+          <Property Name="Upload_DT" Type="DateTime" Nullable="true" />
+          <Property Name="File_Path" Type="String" Nullable="true" />
+          <Property Name="Med_Policy_Status_ID" Type="Int32" Nullable="true" />
+          <NavigationProperty Name="BusinessPlan" Relationship="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" FromRole="Business_Plan_Medical_Policy_Doc" ToRole="Business_Plans" />
+          <NavigationProperty Name="BusinessPlanDocumentTypes" Relationship="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" FromRole="BusinessPlanMedicalPolicyDoc" ToRole="Lkp_Business_Plan_Document_Types" /></EntityType>
+        <EntityType Name="BusinessPlanPreferredSPP">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="SPP_ID" /></Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="SPP_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BusinessPlan" Relationship="PathfinderMerzModel.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" FromRole="Business_Plan_Preferred_SPP" ToRole="Business_Plans" /></EntityType>
+        <EntityType Name="BusinessPlans">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" /></Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Account_Overview" Type="String" Nullable="true" />
+          <Property Name="Current_Status" Type="String" Nullable="true" />
+          <Property Name="Strategies" Type="String" Nullable="true" />
+          <Property Name="Issues" Type="String" Nullable="true" />
+          <Property Name="Tactics" Type="String" Nullable="true" />
+          <Property Name="Notes" Type="String" Nullable="true" />
+          <Property Name="Med_Policy_Development" Type="String" Nullable="true" />
+          <Property Name="P_and_T" Type="String" Nullable="true" />
+          <Property Name="Medicare_PartB_Enrollment" Type="Int32" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="BusinessPlanMedicalPolicyDocuments" Relationship="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" FromRole="Business_Plans" ToRole="Business_Plan_Medical_Policy_Doc" />
+          <NavigationProperty Name="BusinessPlanPreferredSPP" Relationship="PathfinderMerzModel.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" FromRole="Business_Plans" ToRole="Business_Plan_Preferred_SPP" />
+          <NavigationProperty Name="Business_Plan_Coverage" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" FromRole="BusinessPlans" ToRole="BusinessPlanCoverage" /></EntityType>
+        <EntityType Name="BusinessPlanBenefit">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Business_Plan_Coverage" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1" FromRole="BusinessPlanBenefit" ToRole="BusinessPlanCoverage" /></EntityType>
+        <EntityType Name="BusinessPlanDrug">
+          <Key>
+            <PropertyRef Name="Drug_ID" /></Key>
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <NavigationProperty Name="Business_Plan_Coverage" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" FromRole="BusinessPlanDrug" ToRole="BusinessPlanCoverage" /></EntityType>
+        <EntityType Name="BusinessPlanMedicalPolicy">
+          <Key>
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Business_Plan_Coverage" Relationship="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" FromRole="BusinessPlanMedicalPolicy" ToRole="BusinessPlanCoverage" /></EntityType>
+        <Association Name="FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID">
+          <End Type="PathfinderMerzModel.BusinessPlans" Role="Business_Plans" Multiplicity="1" />
+          <End Type="PathfinderMerzModel.BusinessPlanMedicalPolicyDoc" Role="Business_Plan_Medical_Policy_Doc" Multiplicity="*" /></Association>
+        <Association Name="FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID">
+          <End Type="PathfinderMerzModel.BusinessPlans" Role="Business_Plans" Multiplicity="1" />
+          <End Type="PathfinderMerzModel.BusinessPlanPreferredSPP" Role="Business_Plan_Preferred_SPP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" /></Principal>
+            <Dependent Role="Business_Plan_Preferred_SPP">
+              <PropertyRef Name="Business_Plan_ID" /></Dependent></ReferentialConstraint></Association>
+        <EntityType Name="BusinessPlansMerz">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Thera_Name" />
+            <PropertyRef Name="docs" />
+            <PropertyRef Name="doc" />
+            </Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="true" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="true" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_Name" Type="String" Nullable="false" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="User_ID" Type="Int32" Nullable="true" />
+          <Property Name="User_F_Name" Type="String" Nullable="true" />
+          <Property Name="User_M_Name" Type="String" Nullable="true" />
+          <Property Name="User_L_Name" Type="String" Nullable="true" />
+          <Property Name="docs" Type="String" Nullable="false" />
+          <Property Name="doc" Type="String" Nullable="false" />
+          <Property Name="Med_Policy_Status_ID" Type="Int32" Nullable="true" />
+          <Property Name="FullName" Type="String" Nullable="true" />
+          <Property Name="Document_Type_Flag" Type="Int32" Nullable="true" />
+          </EntityType>
+        <EntityType Name="PlanAffiliationsForPBM">
+          <Key>
+            <PropertyRef Name="Child_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Parent_ID" /></Key>
+          <Property Name="Child_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Total_Covered" Type="Int32" Nullable="true" />
+          <Property Name="Total_Pharmacy" Type="Int32" Nullable="true" />
+          <Property Name="Plan_WebSite" Type="String" Nullable="true" />
+          <Property Name="Plan_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Affil_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="PBM_Function" Type="String" Nullable="true" />
+          <Property Name="Parent_ID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="PlanAffiliationsForSPP">
+          <Key>
+            <PropertyRef Name="Child_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="SPP_ID" />
+            <PropertyRef Name="Business_Plan_ID" /></Key>
+          <Property Name="Child_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Total_Covered" Type="Int32" Nullable="true" />
+          <Property Name="Total_Pharmacy" Type="Int32" Nullable="true" />
+          <Property Name="Plan_WebSite" Type="String" Nullable="true" />
+          <Property Name="Plan_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Affil_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="PBM_Function" Type="String" Nullable="true" />
+          <Property Name="SPP_ID" Type="Int32" Nullable="false" />
+          <Property Name="Preferred_SPP" Type="Boolean" Nullable="true" />
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="BusinessPlanningCoverage">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Drug_ID" />
+            </Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Benefit_ID" Type="Int32" Nullable="true" />
+          <Property Name="Benefit_Name" Type="String" Nullable="true" />
+          <Property Name="Medical_Policy_ID" Type="Int32" Nullable="true" />
+          <Property Name="Medical_Policy_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Status_ID" Type="Int32" Nullable="true" />
+          <Property Name="Formulary_Status_Name" Type="String" Nullable="true" />
+          <Property Name="PA" Type="Boolean" Nullable="true" />
+          <Property Name="QL" Type="Boolean" Nullable="true" />
+          <Property Name="ST" Type="Boolean" Nullable="true" />
+          <Property Name="Num_Allocations" Type="Int32" Nullable="true" />
+          <Property Name="Copay_Coinsurance" Type="String" Nullable="true" />
+          <Property Name="Market_Share" Type="Decimal" Nullable="true" />
+          <Property Name="Gross_Sales" Type="Decimal" Nullable="true" />
+          <Property Name="Contact_with_Manufacturer" Type="String" Nullable="true" />
+          <Property Name="Other_Restrictions" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="MerzSellSheet">
+          <Key>
+            <PropertyRef Name="Sell_Sheet_ID" /></Key>
+          <Property Name="Sell_Sheet_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sell_Sheet_Name" Type="String" Nullable="false" />
+          <Property Name="Territory_ID" Type="String" Nullable="true" />
+          <Property Name="Include_Territory_Name" Type="Boolean" Nullable="false" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Current_Step" Type="String" Nullable="true" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="true" />
+          <Property Name="Use_PA" Type="Boolean" Nullable="true" />
+          <Property Name="Use_QL" Type="Boolean" Nullable="true" />
+          <Property Name="Use_ST" Type="Boolean" Nullable="true" />
+          <Property Name="Use_Copay" Type="Boolean" Nullable="true" />
+          <Property Name="Segment_CP" Type="Boolean" Nullable="true" />
+          <Property Name="Segment_MD" Type="Boolean" Nullable="true" />
+          <Property Name="Segment_SM" Type="Boolean" Nullable="true" />
+          <Property Name="Message_ID" Type="Int32" Nullable="true" />
+          <Property Name="Template_ID" Type="Int32" Nullable="true" />
+          <Property Name="Status_ID" Type="Int32" Nullable="false" />
+          <Property Name="Is_Highlighted" Type="Boolean" Nullable="false" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1">
+          <End Type="PathfinderMerzModel.BusinessPlanBenefit" Multiplicity="0..1" Role="BusinessPlanBenefit" />
+          <End Type="PathfinderMerzModel.BusinessPlanCoverage" Multiplicity="*" Role="BusinessPlanCoverage" />
+          </Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1">
+          <End Type="PathfinderMerzModel.BusinessPlans" Role="BusinessPlans" Multiplicity="1" />
+          <End Type="PathfinderMerzModel.BusinessPlanCoverage" Role="BusinessPlanCoverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BusinessPlans">
+              <PropertyRef Name="Business_Plan_ID" /></Principal>
+            <Dependent Role="BusinessPlanCoverage">
+              <PropertyRef Name="Business_Plan_ID" /></Dependent></ReferentialConstraint></Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1">
+          <End Type="PathfinderMerzModel.BusinessPlanDrug" Role="BusinessPlanDrug" Multiplicity="1" />
+          <End Type="PathfinderMerzModel.BusinessPlanCoverage" Role="BusinessPlanCoverage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BusinessPlanDrug">
+              <PropertyRef Name="Drug_ID" /></Principal>
+            <Dependent Role="BusinessPlanCoverage">
+              <PropertyRef Name="Drug_ID" /></Dependent></ReferentialConstraint></Association>
+        <Association Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1">
+          <End Type="PathfinderMerzModel.BusinessPlanMedicalPolicy" Role="BusinessPlanMedicalPolicy" Multiplicity="0..1" />
+          <End Type="PathfinderMerzModel.BusinessPlanCoverage" Role="BusinessPlanCoverage" Multiplicity="*" /></Association>
+        <EntityType Name="VWBPMedicalPolicyDocs">
+          <Key>
+            <PropertyRef Name="Medical_Policy_ID" />
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Medical_Policy_Name" /></Key>
+          <Property Name="Medical_Policy_ID" Type="Int32" Nullable="false" />
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Medical_Policy_Name" Type="String" Nullable="false" />
+          <Property Name="Upload_BY" Type="String" Nullable="true" />
+          <Property Name="Upload_DT" Type="DateTime" Nullable="true" />
+          <Property Name="File_Path" Type="String" Nullable="true" />
+          <Property Name="Med_Policy_Status_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="PlanDrugFormulary">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="PA" />
+            <PropertyRef Name="QL" />
+            <PropertyRef Name="ST" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Formulary_ID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="false" />
+          <Property Name="Benefit_Plan_Product" Type="String" Nullable="true" />
+          <Property Name="Formulary_Lives" Type="Int32" Nullable="true" />
+          <Property Name="Percentage_Lives" Type="Decimal" Nullable="true" />
+          <Property Name="Tier_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Status_Name" Type="String" Nullable="true" />
+          <Property Name="PA" Type="String" Nullable="false" />
+          <Property Name="QL" Type="String" Nullable="false" />
+          <Property Name="ST" Type="String" Nullable="false" />
+          <Property Name="Co_Pay" Type="String" Nullable="true" />
+          <Property Name="Restrictions_Comments" Type="String" Nullable="true" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Formulary_ID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="PlanSearch1">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Section_ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="BusinessPlanDocumentTypes">
+          <Key>
+            <PropertyRef Name="Document_Type_ID" /></Key>
+          <Property Name="Document_Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="Document_Type_Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="BusinessPlanMedicalPolicyDoc" Relationship="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" FromRole="Lkp_Business_Plan_Document_Types" ToRole="BusinessPlanMedicalPolicyDoc" /></EntityType>
+        <Association Name="FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID">
+          <End Type="PathfinderMerzModel.BusinessPlanDocumentTypes" Role="Lkp_Business_Plan_Document_Types" Multiplicity="1" />
+          <End Type="PathfinderMerzModel.BusinessPlanMedicalPolicyDoc" Role="BusinessPlanMedicalPolicyDoc" Multiplicity="*" /></Association></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS" Space="C-S">
+        <Alias Key="Model" Value="PathfinderMerzModel" />
+        <Alias Key="Target" Value="PathfinderMerzModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="PathfinderMerzEntities" StorageEntityContainer="PathfinderMerzModelStoreContainer">
+          <EntitySetMapping Name="BPTheraListSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BPTheraList)">
+              <MappingFragment StoreEntitySet="V_BusinessPlanning_TheraList">
+                <ScalarProperty Name="Thera_Name" ColumnName="Thera_Name" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BPSectionListSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BPSectionList)">
+              <MappingFragment StoreEntitySet="V_BusinessPlanning_SectionList">
+                <ScalarProperty Name="Sort_Order" ColumnName="Sort_Order" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanCoverageSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanCoverage)">
+              <MappingFragment StoreEntitySet="Business_Plan_Coverage">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Contact_with_Manufacturer" ColumnName="Contact_with_Manufacturer" />
+                <ScalarProperty Name="Gross_Sales" ColumnName="Gross_Sales" />
+                <ScalarProperty Name="Market_Share" ColumnName="Market_Share" />
+                <ScalarProperty Name="Copay_Coinsurance" ColumnName="Copay_Coinsurance" />
+                <ScalarProperty Name="Num_Allocations" ColumnName="Num_Allocations" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Formulary_Status_ID" ColumnName="Formulary_Status_ID" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanMedicalPolicyDocSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanMedicalPolicyDoc)">
+              <MappingFragment StoreEntitySet="Business_Plan_Medical_Policy_Doc">
+                <ScalarProperty Name="Med_Policy_Status_ID" ColumnName="Med_Policy_Status_ID" />
+                <ScalarProperty Name="File_Path" ColumnName="File_Path" />
+                <ScalarProperty Name="Upload_DT" ColumnName="Upload_DT" />
+                <ScalarProperty Name="Upload_BY" ColumnName="Upload_BY" />
+                <ScalarProperty Name="Medical_Policy_Name" ColumnName="Medical_Policy_Name" />
+                <ScalarProperty Name="Medical_Policy_ID" ColumnName="Medical_Policy_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanPreferredSPPSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanPreferredSPP)">
+              <MappingFragment StoreEntitySet="Business_Plan_Preferred_SPP">
+                <ScalarProperty Name="SPP_ID" ColumnName="SPP_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlansSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlans)">
+              <MappingFragment StoreEntitySet="Business_Plans">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Medicare_PartB_Enrollment" ColumnName="Medicare_PartB_Enrollment" />
+                <ScalarProperty Name="P_and_T" ColumnName="P_and_T" />
+                <ScalarProperty Name="Med_Policy_Development" ColumnName="Med_Policy_Development" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Tactics" ColumnName="Tactics" />
+                <ScalarProperty Name="Issues" ColumnName="Issues" />
+                <ScalarProperty Name="Strategies" ColumnName="Strategies" />
+                <ScalarProperty Name="Current_Status" ColumnName="Current_Status" />
+                <ScalarProperty Name="Account_Overview" ColumnName="Account_Overview" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanBenefitSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanBenefit)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Benefit">
+                <ScalarProperty Name="Name" ColumnName="Benefit_Name" />
+                <ScalarProperty Name="ID" ColumnName="Benefit_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanDrugSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanDrug)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Drug">
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanMedicalPolicySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanMedicalPolicy)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Medical_Policy">
+                <ScalarProperty Name="Name" ColumnName="Medical_Policy_Name" />
+                <ScalarProperty Name="ID" ColumnName="Medical_Policy_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" TypeName="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" StoreEntitySet="Business_Plan_Medical_Policy_Doc">
+            <EndProperty Name="Business_Plan_Medical_Policy_Doc">
+              <ScalarProperty Name="Medical_Policy_ID" ColumnName="Medical_Policy_ID" /></EndProperty>
+            <EndProperty Name="Business_Plans">
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" TypeName="PathfinderMerzModel.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" StoreEntitySet="Business_Plan_Preferred_SPP">
+            <EndProperty Name="Business_Plan_Preferred_SPP">
+              <ScalarProperty Name="SPP_ID" ColumnName="SPP_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <EndProperty Name="Business_Plans">
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty></AssociationSetMapping>
+          <EntitySetMapping Name="BusinessPlansMerzSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlansMerz)">
+              <MappingFragment StoreEntitySet="V_Business_Plans_Merz">
+                <ScalarProperty Name="Document_Type_Flag" ColumnName="Document_Type_Flag" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Med_Policy_Status_ID" ColumnName="Med_Policy_Status_ID" />
+                <ScalarProperty Name="doc" ColumnName="doc" />
+                <ScalarProperty Name="docs" ColumnName="docs" />
+                <ScalarProperty Name="User_L_Name" ColumnName="User_L_Name" />
+                <ScalarProperty Name="User_M_Name" ColumnName="User_M_Name" />
+                <ScalarProperty Name="User_F_Name" ColumnName="User_F_Name" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Thera_Name" ColumnName="Thera_Name" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanAffiliationsForPBMSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.PlanAffiliationsForPBM)">
+              <MappingFragment StoreEntitySet="V_PlanAffiliations_ForPBM">
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="PBM_Function" ColumnName="PBM_Function" />
+                <ScalarProperty Name="Affil_Type_ID" ColumnName="Affil_Type_ID" />
+                <ScalarProperty Name="Plan_Type_Name" ColumnName="Plan_Type_Name" />
+                <ScalarProperty Name="Plan_WebSite" ColumnName="Plan_WebSite" />
+                <ScalarProperty Name="Total_Pharmacy" ColumnName="Total_Pharmacy" />
+                <ScalarProperty Name="Total_Covered" ColumnName="Total_Covered" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Child_ID" ColumnName="Child_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanAffiliationsForSPPSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.PlanAffiliationsForSPP)">
+              <MappingFragment StoreEntitySet="V_PlanAffiliations_ForSPP">
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" />
+                <ScalarProperty Name="Preferred_SPP" ColumnName="Preferred_SPP" />
+                <ScalarProperty Name="SPP_ID" ColumnName="SPP_ID" />
+                <ScalarProperty Name="PBM_Function" ColumnName="PBM_Function" />
+                <ScalarProperty Name="Affil_Type_ID" ColumnName="Affil_Type_ID" />
+                <ScalarProperty Name="Plan_Type_Name" ColumnName="Plan_Type_Name" />
+                <ScalarProperty Name="Plan_WebSite" ColumnName="Plan_WebSite" />
+                <ScalarProperty Name="Total_Pharmacy" ColumnName="Total_Pharmacy" />
+                <ScalarProperty Name="Total_Covered" ColumnName="Total_Covered" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Child_ID" ColumnName="Child_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanningCoverageSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanningCoverage)">
+              <MappingFragment StoreEntitySet="V_BusinessPlanning_Coverage">
+                <ScalarProperty Name="Other_Restrictions" ColumnName="Other_Restrictions" />
+                <ScalarProperty Name="Contact_with_Manufacturer" ColumnName="Contact_with_Manufacturer" />
+                <ScalarProperty Name="Gross_Sales" ColumnName="Gross_Sales" />
+                <ScalarProperty Name="Market_Share" ColumnName="Market_Share" />
+                <ScalarProperty Name="Copay_Coinsurance" ColumnName="Copay_Coinsurance" />
+                <ScalarProperty Name="Num_Allocations" ColumnName="Num_Allocations" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Formulary_Status_Name" ColumnName="Formulary_Status_Name" />
+                <ScalarProperty Name="Formulary_Status_ID" ColumnName="Formulary_Status_ID" />
+                <ScalarProperty Name="Medical_Policy_Name" ColumnName="Medical_Policy_Name" />
+                <ScalarProperty Name="Medical_Policy_ID" ColumnName="Medical_Policy_ID" />
+                <ScalarProperty Name="Benefit_Name" ColumnName="Benefit_Name" />
+                <ScalarProperty Name="Benefit_ID" ColumnName="Benefit_ID" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MerzSellSheetSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.MerzSellSheet)">
+              <MappingFragment StoreEntitySet="Sell_Sheet_Mast">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Is_Highlighted" ColumnName="Is_Highlighted" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" />
+                <ScalarProperty Name="Template_ID" ColumnName="Template_ID" />
+                <ScalarProperty Name="Message_ID" ColumnName="Message_ID" />
+                <ScalarProperty Name="Segment_SM" ColumnName="Segment_SM" />
+                <ScalarProperty Name="Segment_MD" ColumnName="Segment_MD" />
+                <ScalarProperty Name="Segment_CP" ColumnName="Segment_CP" />
+                <ScalarProperty Name="Use_Copay" ColumnName="Use_Copay" />
+                <ScalarProperty Name="Use_ST" ColumnName="Use_ST" />
+                <ScalarProperty Name="Use_QL" ColumnName="Use_QL" />
+                <ScalarProperty Name="Use_PA" ColumnName="Use_PA" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Current_Step" ColumnName="Current_Step" />
+                <ScalarProperty Name="Type_ID" ColumnName="Type_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Include_Territory_Name" ColumnName="Include_Territory_Name" />
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="Sell_Sheet_Name" ColumnName="Sell_Sheet_Name" />
+                <ScalarProperty Name="Sell_Sheet_ID" ColumnName="Sell_Sheet_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" TypeName="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" StoreEntitySet="Business_Plan_Coverage">
+            <EndProperty Name="BusinessPlanCoverage">
+              <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlans">
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" TypeName="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" StoreEntitySet="Business_Plan_Coverage">
+            <EndProperty Name="BusinessPlanCoverage">
+              <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlanDrug">
+              <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" TypeName="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" StoreEntitySet="Business_Plan_Coverage">
+            <EndProperty Name="BusinessPlanCoverage">
+              <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlanMedicalPolicy">
+              <ScalarProperty Name="ID" ColumnName="Medical_Policy_ID" /></EndProperty>
+            <Condition ColumnName="Medical_Policy_ID" IsNull="false" /></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1" TypeName="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1" StoreEntitySet="Business_Plan_Coverage">
+            <EndProperty Name="BusinessPlanBenefit">
+              <ScalarProperty Name="ID" ColumnName="Benefit_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlanCoverage">
+              <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <Condition ColumnName="Benefit_ID" IsNull="false" /></AssociationSetMapping>
+          <EntitySetMapping Name="VWBPMedicalPolicyDocsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.VWBPMedicalPolicyDocs)">
+              <MappingFragment StoreEntitySet="V_BP_Medical_Policy_Docs">
+                <ScalarProperty Name="Med_Policy_Status_ID" ColumnName="Med_Policy_Status_ID" />
+                <ScalarProperty Name="File_Path" ColumnName="File_Path" />
+                <ScalarProperty Name="Upload_DT" ColumnName="Upload_DT" />
+                <ScalarProperty Name="Upload_BY" ColumnName="Upload_BY" />
+                <ScalarProperty Name="Medical_Policy_Name" ColumnName="Medical_Policy_Name" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" />
+                <ScalarProperty Name="Medical_Policy_ID" ColumnName="Medical_Policy_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanDrugFormularySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.PlanDrugFormulary)">
+              <MappingFragment StoreEntitySet="V_PlanDrugFormulary">
+                <ScalarProperty Name="Formulary_ID" ColumnName="Formulary_ID" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Restrictions_Comments" ColumnName="Restrictions_Comments" />
+                <ScalarProperty Name="Co_Pay" ColumnName="Co_Pay" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Formulary_Status_Name" ColumnName="Formulary_Status_Name" />
+                <ScalarProperty Name="Tier_Name" ColumnName="Tier_Name" />
+                <ScalarProperty Name="Percentage_Lives" ColumnName="Percentage_Lives" />
+                <ScalarProperty Name="Formulary_Lives" ColumnName="Formulary_Lives" />
+                <ScalarProperty Name="Benefit_Plan_Product" ColumnName="Benefit_Plan_Product" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanSearch1Set">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.PlanSearch1)">
+              <MappingFragment StoreEntitySet="V_Plan_Search">
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanDocumentTypesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderMerzModel.BusinessPlanDocumentTypes)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Document_Types">
+                <ScalarProperty Name="Document_Type_Name" ColumnName="Document_Type_Name" />
+                <ScalarProperty Name="Document_Type_ID" ColumnName="Document_Type_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" TypeName="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" StoreEntitySet="Business_Plan_Medical_Policy_Doc">
+            <EndProperty Name="BusinessPlanMedicalPolicyDoc">
+              <ScalarProperty Name="Medical_Policy_ID" ColumnName="Medical_Policy_ID" /></EndProperty>
+            <EndProperty Name="Lkp_Business_Plan_Document_Types">
+              <ScalarProperty Name="Document_Type_ID" ColumnName="Document_Type_ID" /></EndProperty>
+            </AssociationSetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PathfinderMerzModel" ZoomLevel="100" >
+        <EntityTypeShape EntityType="PathfinderMerzModel.BPTheraList" Width="1.5" PointX="0.75" PointY="0.75" Height="1.2636116536458335" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BPSectionList" Width="1.5" PointX="0.5" PointY="2.625" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanCoverage" Width="1.5" PointX="7" PointY="0.5" Height="4.0575162760416656" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanMedicalPolicyDoc" Width="1.5" PointX="4.5" PointY="4.375" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanPreferredSPP" Width="1.5" PointX="4.5" PointY="2.5" Height="1.4279589843749996" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlans" Width="1.5" PointX="2.25" PointY="2.5" Height="4.3862109375" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanBenefit" Width="1.5" PointX="5.125" PointY="0.5" Height="1.4279589843749996" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanDrug" Width="1.5" PointX="10.25" PointY="3" Height="1.7566536458333326" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanMedicalPolicy" Width="1.5" PointX="7.125" PointY="6" Height="1.5923063151041657" />
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Business_Plan_Medical_Policy_Doc_Business_Plan_ID" >
+          <ConnectorPoint PointX="3.75" PointY="5.4662581380208328" />
+          <ConnectorPoint PointX="4.5" PointY="5.4662581380208328" />
+          </AssociationConnector>
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Preferred_SPP_Business_Plan_Preferred_SPP_Business_Plan_ID" >
+          <ConnectorPoint PointX="3.75" PointY="3.2139794921875" />
+          <ConnectorPoint PointX="4.5" PointY="3.2139794921875" /></AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlansMerz" Width="1.5" PointX="3.375" PointY="7.75" Height="3.7288216145833335" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.PlanAffiliationsForPBM" Width="1.5" PointX="0.75" PointY="7.75" Height="2.7427376302083326" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.PlanAffiliationsForSPP" Width="1.5" PointX="5.75" PointY="7.75" Height="3.0714322916666674" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanningCoverage" Width="1.5" PointX="8.375" PointY="7.75" Height="3.7288216145833317" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.MerzSellSheet" Width="1.5" PointX="10.375" PointY="5.75" Height="4.7149055989583317" />
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Benefit_ID1">
+          <ConnectorPoint PointX="6.625" PointY="1.2139794921875" />
+          <ConnectorPoint PointX="7" PointY="1.2139794921875" /></AssociationConnector>
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Business_Plan_ID1" >
+          <ConnectorPoint PointX="3.75" PointY="4.1514794921875" />
+          <ConnectorPoint PointX="7" PointY="4.1514794921875" />
+          </AssociationConnector>
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Drug_ID1" >
+          <ConnectorPoint PointX="10.25" PointY="3.7787581380208328" />
+          <ConnectorPoint PointX="8.5" PointY="3.7787581380208328" />
+          </AssociationConnector>
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Coverage_Business_Plan_Coverage_Medical_Policy_ID1" >
+          <ConnectorPoint PointX="7.8125" PointY="6" />
+          <ConnectorPoint PointX="7.8125" PointY="4.5575162760416656" />
+          </AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderMerzModel.VWBPMedicalPolicyDocs" Width="1.5" PointX="0.75" PointY="11.75" Height="2.0853483072916674" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.PlanDrugFormulary" Width="1.5" PointX="5.375" PointY="11.75" Height="3.5644742838541674" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.PlanSearch1" Width="1.5" PointX="2.625" PointY="0.5" Height="1.4279589843750005" />
+        <EntityTypeShape EntityType="PathfinderMerzModel.BusinessPlanDocumentTypes" Width="1.5" PointX="10.375" PointY="11.875" Height="1.4279589843749996" />
+        <AssociationConnector Association="PathfinderMerzModel.FK_Business_Plan_Medical_Policy_Doc_Document_Type_ID" >
+          <ConnectorPoint PointX="10.375" PointY="12.5889794921875" />
+          <ConnectorPoint PointX="7.125" PointY="12.5889794921875" />
+          <ConnectorPoint PointX="7.125" PointY="11.5" />
+          <ConnectorPoint PointX="5.3125" PointY="11.5" />
+          <ConnectorPoint PointX="5.3125" PointY="6.6246956380208326" /></AssociationConnector></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

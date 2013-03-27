@@ -1,0 +1,24 @@
+<fmEngine>
+	<version>003.004.002</version>
+	<mapSize>63074184-36925814-51739517-25702580</mapSize>
+	<serialNumber>fmAS-0020-2999</serialNumber>
+	<affiliateID></affiliateID>
+	<theme>areas/fm-us.xml</theme>
+	<map mapWidth="500" mapHeight="300" mapScale="20100000" mapScaleMax="100000" mapScaleArea="100" centerLat="-0.31" centerLon="0.47" transactionSteps="5" projection="" />
+	<mapInitial initialX="1090" initialY="414" initialScale="81" />
+	<mapSelect color="0x2d58a7" divider="," />
+	<mapConfig backLabel="Back to US" showLabel="true" areasAlpha="40" popupCloseWhenClick="true" />
+	<mapZoom zoom="true" zoomMouse="true" pan="true" />
+	<levels areasSendParams="true" poisSendParams="true" randomLoad="false" sendJavascript="false" poisCollision="false" >
+		<level id="1" showPOIText="true" showAreaTooltip="true" showAreaSelectedTooltip="true" showPOITooltip="true" areasRefreshOnViewChange="false" poisLoad="true" poisShow="true" poisRefreshOnViewChange="false" polylinesLoad="true" polylinesShow="true" poisDelay="0" filterId="" />
+		<level id="2" showPOIText="true" showAreaTooltip="true" showAreaSelectedTooltip="true" showPOITooltip="true" areasRefreshOnViewChange="false" poisLoad="true" poisShow="false" poisRefreshOnViewChange="false" polylinesLoad="true" polylinesShow="true" poisDelay="0" filterId="glow" />
+	</levels>
+	<categories>
+		<filter id="glow"   filterType="glow"   alpha="8" blurX="20" blurY="20" color="0x000000" quality="2" strength="1.25" />
+		<filter id="shadow" filterType="shadow" angle="60" distance="6" alpha="0.7" blurX="4" blurY="4" color="0x333333" />
+		<filter id="blur"   filterType="blur"   blurX="4" blurY="4" quality="1" />
+		<filter id="bevel"  filterType="bevel"  distance="4" angle="90" highlightColor="0xFFFFFF" highlightAlpha="0.5" shadowColor="0x666666" shadowAlpha="0.5" blurX="4" blurY="4" type="outer" />
+		<text   id="label"  filterId="none" fontName="_sans" fontSize="11" fontBold="no" fontItalic="no" fontAlign="left" fontColor="0x999999" />
+    <text   id="state"  filterId="" fontName="_sans" fontSize="8" fontBold="no" fontItalic="no" fontAlign="left" fontColor="0x333333" />
+	</categories>
+</fmEngine>

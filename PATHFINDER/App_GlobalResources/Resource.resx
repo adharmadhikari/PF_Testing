@@ -1,0 +1,757 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Assembly_ApplicationName" xml:space="preserve">
+    <value>PathfinderRx</value>
+  </data>
+  <data name="DialogTitle_AddFavorite" xml:space="preserve">
+    <value>Add Favorite</value>
+  </data>
+  <data name="DialogTitle_ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="DialogTitle_ContactSearch" xml:space="preserve">
+    <value>Contact Search</value>
+  </data>
+  <data name="DialogTitle_Favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
+  <data name="Favorite_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Favorite_Save" xml:space="preserve">
+    <value>Save Favorite</value>
+  </data>
+  <data name="ForgotPassword_Instructions" xml:space="preserve">
+    <value>Please enter your email address and press 'Submit' or contact Customer Support at 800.372.9009.&lt;br /&gt;</value>
+  </data>
+  <data name="ForgotPassword_InvalidEmailError" xml:space="preserve">
+    <value>The email address you have entered does not match any records in our system.</value>
+  </data>
+  <data name="ForgotPassword_MessageFormat" xml:space="preserve">
+    <value>{0} {1} has requested a password change.
+
+Client: {2}
+E-Mail: {3}</value>
+  </data>
+  <data name="ForgotPassword_ServerError" xml:space="preserve">
+    <value>Sorry, we are unable to submit your request at this time.  Please try again later or call customer support.</value>
+  </data>
+  <data name="ForgotPassword_Submitted" xml:space="preserve">
+    <value>Your request for a new password has been submitted.</value>
+  </data>
+  <data name="ForgotPassword_Validation_EmailRequired" xml:space="preserve">
+    <value>Please enter your email address.</value>
+  </data>
+  <data name="Label_Account_Name" xml:space="preserve">
+    <value>Account Name</value>
+  </data>
+  <data name="Label_Account_Type" xml:space="preserve">
+    <value>Account Type</value>
+  </data>
+  <data name="Label_Affiliation" xml:space="preserve">
+    <value>Affiliation</value>
+  </data>
+  <data name="Label_ParentName" xml:space="preserve">
+    <value>Parent Name</value>
+  </data>
+  <data name="Label_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Label_Contact_Type" xml:space="preserve">
+    <value>Contact Type</value>
+  </data>
+  <data name="Label_Designation" xml:space="preserve">
+    <value>Designation</value>
+  </data>
+  <data name="Label_Drug_Utilization_Review" xml:space="preserve">
+    <value>Drug Utilization Review</value>
+  </data>
+  <data name="Label_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Label_First_Name" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Label_Fortune_500_Rank" xml:space="preserve">
+    <value>Fortune 500 Rank</value>
+  </data>
+  <data name="Label_Last_Name" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Label_MAC_Jurisdictions" xml:space="preserve">
+    <value>MAC Jurisdiction</value>
+  </data>
+  <data name="Label_Medicaid_Enrollment" xml:space="preserve">
+    <value>Medicaid Enrollment</value>
+  </data>
+  <data name="Label_Medicaid_Managed_Care_Enrollment" xml:space="preserve">
+    <value>Managed Medicaid Lives</value>
+  </data>
+  <data name="Label_MMISFAS" xml:space="preserve">
+    <value>Medicaid Management Information Systems Fiscal Agent Services</value>
+  </data>
+  <data name="SectionTitle_ProdInfo" xml:space="preserve">
+    <value>Product Information</value>
+  </data>
+  <data name="Label_Product_Type" xml:space="preserve">
+    <value>Product Type</value>
+  </data>
+  <data name="Label_Product_Name" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="Label_Product_State_Enrollment" xml:space="preserve">
+    <value>Product State Enrollment</value>
+  </data>
+  <data name="Label_ProductNational_Enrollment" xml:space="preserve">
+    <value>Product National Enrollment</value>
+  </data>
+  <data name="Label_Total_MedD_State_Enrollment" xml:space="preserve">
+    <value>Total State Medicare Part D Enrollment</value>
+  </data>
+  <data name="Label_Total_Pharmacy_Lives" xml:space="preserve">
+    <value>Total Pharmacy Lives</value>
+  </data>
+  <data name="SectionTitle_BenefitDesign_DrugLevel" xml:space="preserve">
+    <value>Benefit Design - Drug Level</value>
+  </data>
+  <data name="Message_No_Records" xml:space="preserve">
+    <value>There are no records to display.</value>
+  </data>
+  <data name="Label_Number_of_Employees" xml:space="preserve">
+    <value>Number of Employees</value>
+  </data>
+  <data name="Label_Other_Name" xml:space="preserve">
+    <value>Other Name</value>
+  </data>
+  <data name="Label_Percentage_In_Managed_Care" xml:space="preserve">
+    <value>Percentage in Managed Care</value>
+  </data>
+  <data name="Label_Plan_Name" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Label_Plan_Type" xml:space="preserve">
+    <value>Plan Type</value>
+  </data>
+  <data name="Label_Plan_AccreditationStatus" xml:space="preserve">
+    <value>Accreditation Status</value>
+  </data>
+  <data name="Label_Preferred_Drug_List" xml:space="preserve">
+    <value>State Medicaid Preferred Drug List</value>
+  </data>
+  <data name="Label_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Label_Section_Name" xml:space="preserve">
+    <value>Account Type</value>
+  </data>
+  <data name="Label_SMHCM" xml:space="preserve">
+    <value>State Medicaid Health Care Management</value>
+  </data>
+  <data name="Label_SMPBM" xml:space="preserve">
+    <value>State Medical Pharmacy Benefit Administration</value>
+  </data>
+  <data name="Label_States_Serviced" xml:space="preserve">
+    <value>States Serviced</value>
+  </data>
+  <data name="Label_Total_Covered_Lives" xml:space="preserve">
+    <value>Total Covered Lives</value>
+  </data>
+  <data name="Label_Website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="SectionTitle_BenefitDesign" xml:space="preserve">
+    <value>Benefit Design</value>
+  </data>
+  <data name="SectionTitle_CoveredLives" xml:space="preserve">
+    <value>Covered Lives</value>
+  </data>
+  <data name="SectionTitle_KeyContacts" xml:space="preserve">
+    <value>Key Contacts</value>
+  </data>
+  <data name="SectionTitle_MyKeyContacts" xml:space="preserve">
+    <value>My Key Contacts</value>
+  </data>
+  <data name="SectionTitle_PlanAffiliations" xml:space="preserve">
+    <value>Affiliations</value>
+  </data>
+  <data name="SectionTitle_PlanInfo" xml:space="preserve">
+    <value>Plan Information</value>
+  </data>
+  <data name="SectionTitle_PlanInfoAddress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Label_Add_To_Favorites" xml:space="preserve">
+    <value>Favorites:</value>
+  </data>
+  <data name="Label_Add_To_Favorites_Tooltip" xml:space="preserve">
+    <value>Add Current View to Favorites</value>
+  </data>
+  <data name="Label_Covered_Lives" xml:space="preserve">
+    <value>Total Lives</value>
+  </data>
+  <data name="Label_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Label_Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Label_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Label_Key_Contact" xml:space="preserve">
+    <value>Key Contact</value>
+  </data>
+  <data name="Label_ListItem_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Label_Pharmacy_Lives" xml:space="preserve">
+    <value>Pharmacy Lives</value>
+  </data>
+  <data name="Label_Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="Label_Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="Label_Plan_Classification" xml:space="preserve">
+    <value>Classification</value>
+  </data>
+  <data name="Label_Quick_Home_View" xml:space="preserve">
+    <value>Quick Home View</value>
+  </data>
+  <data name="Label_Sign_Out" xml:space="preserve">
+    <value>Sign Out</value>
+  </data>
+  <data name="Label_State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Label_View_Favorites" xml:space="preserve">
+    <value>View Favorites</value>
+  </data>
+  <data name="Message_No_Favorites_Added" xml:space="preserve">
+    <value>You do not have any saved favorites.</value>
+  </data>
+  <data name="ForgotPassword_MessageSubject" xml:space="preserve">
+    <value>PathfinderRx: Forgot Password Request for {0} {1} of {2}</value>
+  </data>
+  <data name="Label_ListItem_Drug_All" xml:space="preserve">
+    <value>All - Drug List</value>
+  </data>
+  <data name="Label_ListItem_Therapeutic_Class_All" xml:space="preserve">
+    <value>All - Therapeutic Class</value>
+  </data>
+  <data name="Label_Geography" xml:space="preserve">
+    <value>Geography</value>
+  </data>
+  <data name="Label_ListItem_State_All" xml:space="preserve">
+    <value>All States</value>
+  </data>
+  <data name="Label_ListItem_Territory_All" xml:space="preserve">
+    <value>All Territories</value>
+  </data>
+  <data name="Label_Commercial_Plan" xml:space="preserve">
+    <value>Commercial Plan</value>
+  </data>
+  <data name="Label_Tier" xml:space="preserve">
+    <value>Tier</value>
+  </data>
+  <data name="Label_Territory_Name" xml:space="preserve">
+    <value>Territory Name</value>
+  </data>
+  <data name="Label_Territory_No" xml:space="preserve">
+    <value>Territory #</value>
+  </data>
+  <data name="Label_Drug_Name" xml:space="preserve">
+    <value>Drug Name</value>
+  </data>
+  <data name="Label_FormularyType" xml:space="preserve">
+    <value>Formulary Type</value>
+  </data>
+  <data name="Label_PA" xml:space="preserve">
+    <value>PA</value>
+  </data>
+  <data name="DialogTitle_SellSheet" xml:space="preserve">
+    <value>Sell Sheet</value>
+  </data>
+  <data name="Label_Address_Line1" xml:space="preserve">
+    <value>Address Line 1</value>
+  </data>
+  <data name="Label_Address_Line2" xml:space="preserve">
+    <value>Address Line 2</value>
+  </data>
+  <data name="Label_Address_Type" xml:space="preserve">
+    <value>Address Type</value>
+  </data>
+  <data name="Label_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Label_Lives" xml:space="preserve">
+    <value>Lives</value>
+  </data>
+  <data name="Label_TierCoverage_PharmacyLives" xml:space="preserve">
+    <value>Pharmacy Lives\n(Millions)</value>
+  </data>
+  <data name="Label_ZIP" xml:space="preserve">
+    <value>ZIP</value>
+  </data>
+  <data name="Message_No_Addresses" xml:space="preserve">
+    <value>There are no addresses available for this account.</value>
+  </data>
+  <data name="Message_Tier_Coverage_DrillDown" xml:space="preserve">
+    <value>&lt;div class="drillDownInstruct"&gt;(Click part of the grid or bar chart to view drill down details)&lt;/div&gt;</value>
+  </data>
+  <data name="SectionTitle_TierCoverage" xml:space="preserve">
+    <value>Tier Coverage</value>
+  </data>
+  <data name="Message_Formulary_Status_DrillDown" xml:space="preserve">
+    <value>&lt;div class="drillDownInstruct"&gt;(Click part of the grid or bar chart to view drill down details)&lt;/div&gt;</value>
+  </data>
+  <data name="SectionTitle_FormularyStatus" xml:space="preserve">
+    <value>Formulary Restrictions</value>
+  </data>
+  <data name="PopupTitle_Website_Selection" xml:space="preserve">
+    <value>Select a website</value>
+  </data>
+  <data name="HTML_PlanWebsite_Link" xml:space="preserve">
+    <value>&lt;span UNSELECTABLE="on" title="Press Ctrl+Click to follow link" class="planLink" onmousemove="this.style.cursor=(event.ctrlKey ? Cursor.Pointer : Cursor.None);" onclick="return $openPlanWebsite(this, event)"&gt;{0}&amp;nbsp;&lt;/span&gt;</value>
+    <comment>Not the best way to render html but need to share accross multiple controls</comment>
+  </data>
+  <data name="Label_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Label_National" xml:space="preserve">
+    <value>National</value>
+  </data>
+  <data name="Message_Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="Label_Assistant_Name" xml:space="preserve">
+    <value>Assistant</value>
+  </data>
+  <data name="Label_Assistant_Phone" xml:space="preserve">
+    <value>Office Phone</value>
+  </data>
+  <data name="Label_Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Label_Tier_Coverage_DrillDown" xml:space="preserve">
+    <value>All &lt;span style='font-weight:bold'&gt;{0}&lt;/span&gt; Accounts having &lt;span style='font-weight:bold'&gt;{1}&lt;/span&gt; on Tier Status: &lt;span style='font-weight:bold'&gt;{2}&lt;/span&gt;</value>
+  </data>
+  <data name="Message_Required_Designation" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;Designation is Required</value>
+  </data>
+  <data name="Message_Required_FirstName" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;First Name is Required</value>
+  </data>
+  <data name="Message_Required_LastName" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;Last Name is Required</value>
+  </data>
+  <data name="Message_VerifyingUser" xml:space="preserve">
+    <value>Verifying user name and password...</value>
+  </data>
+  <data name="SectionTitle_ServicesOffered" xml:space="preserve">
+    <value>Services Offered</value>
+    <comment>PBMs</comment>
+  </data>
+  <data name="Label_PBM_Service" xml:space="preserve">
+    <value>Services Offered</value>
+  </data>
+  <data name="Label_All_Tiers" xml:space="preserve">
+    <value>All Tiers</value>
+  </data>
+  <data name="Label_DrugSelection" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="Label_Restrictions" xml:space="preserve">
+    <value>Restrictions</value>
+  </data>
+  <data name="Label_Section_Last_Updated" xml:space="preserve">
+    <value>Information in this section was last updated on {0:d}</value>
+  </data>
+  <data name="Label_DrugID" xml:space="preserve">
+    <value>Drug Selection</value>
+  </data>
+  <data name="Label_TierCoverage" xml:space="preserve">
+    <value>Tier Coverage</value>
+  </data>
+  <data name="Message_Required_DrugSelection" xml:space="preserve">
+    <value>Please select at least one drug.</value>
+  </data>
+  <data name="Message_Required_ProductSelection" xml:space="preserve">
+    <value>Please select at least one product.</value>
+  </data>
+  <data name="Label_Report_Filters" xml:space="preserve">
+    <value>Report Filters</value>
+  </data>
+  <data name="Label_TierOption" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Label_Plan_Product" xml:space="preserve">
+    <value>Plan Product</value>
+  </data>
+  <data name="Label_VISN" xml:space="preserve">
+    <value>VISN</value>
+  </data>
+  <data name="Label_Chart_Thumbnail_Instruct" xml:space="preserve">
+    <value>To export drag chart icon into desired application (right click icon for more options)</value>
+  </data>
+  <data name="Label_Channel" xml:space="preserve">
+    <value>Channel</value>
+  </data>
+  <data name="SectionTitle_SellSheets" xml:space="preserve">
+    <value>Formulary Sell Sheets</value>
+  </data>
+  <data name="Label_Formulary_Status_1" xml:space="preserve">
+    <value>Covered Without Restriction(s)</value>
+  </data>
+  <data name="Label_Formulary_Status_2" xml:space="preserve">
+    <value>Covered With Selected Restriction(s)</value>
+  </data>
+  <data name="Label_Formulary_Status_3" xml:space="preserve">
+    <value>Not Covered</value>
+  </data>
+  <data name="Label_Formulary_Status_5" xml:space="preserve">
+    <value>Covered with Unselected Restriction(s)</value>
+  </data>
+  <data name="Label_Formulary_Status_DrillDown" xml:space="preserve">
+    <value>All &lt;span style='font-weight:bold'&gt;{0}&lt;/span&gt; Accounts having &lt;span style='font-weight:bold'&gt;{1}&lt;/span&gt; with formulary status &lt;span style='font-weight:bold'&gt;{2}&lt;/span&gt;.</value>
+  </data>
+  <data name="Label_Formulary_Coverage_DrillDown" xml:space="preserve">
+    <value>All &lt;span style='font-weight:bold'&gt;{0}&lt;/span&gt; Accounts having &lt;span style='font-weight:bold'&gt;{1}&lt;/span&gt; with formulary status &lt;span style='font-weight:bold'&gt;{2}&lt;/span&gt;.</value>
+  </data>
+  <data name="Message_Favorites_Permission" xml:space="preserve">
+    <value>You are not authorized to access Favorites.</value>
+  </data>
+  <data name="RegularExpression_Email" xml:space="preserve">
+    <value>[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?</value>
+  </data>
+  <data name="Label_Multiple_Selection" xml:space="preserve">
+    <value>--Change Selection--</value>
+  </data>
+  <data name="Label_No_Selection" xml:space="preserve">
+    <value>--No Selection--</value>
+  </data>
+  <data name="Message_DataService_Request_Failed" xml:space="preserve">
+    <value>Request Failed: Please contact Pinsonault support with error code {0}</value>
+  </data>
+  <data name="Message_DataService_Request_Failed_InvalidHost" xml:space="preserve">
+    <value>Data Service request failed because the host of the Referring URL does not match the data service's host name.</value>
+  </data>
+  <data name="Message_DataService_Request_Failed_NotBrowser" xml:space="preserve">
+    <value>Data Service request failed because the User-Agent and/or Referring URL could not be verified.</value>
+  </data>
+  <data name="Label_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Label_CCR_Add_Instructions" xml:space="preserve">
+    <value>Select an account and then press Continue to add a Customer Contact Report</value>
+  </data>
+  <data name="Label_Customer_Support" xml:space="preserve">
+    <value>Customer Support</value>
+  </data>
+  <data name="Subject_Submit_Key_Contact_Update" xml:space="preserve">
+    <value>PathfinderRx: {0} - {1} Key Contact</value>
+  </data>
+  <data name="Label_Covered_Lives_Report" xml:space="preserve">
+    <value>Covered Lives</value>
+  </data>
+  <data name="Assembly_CompanyName" xml:space="preserve">
+    <value>Pinsonault Associates, LLC</value>
+  </data>
+  <data name="Label_BD_FormularyName" xml:space="preserve">
+    <value>Formulary</value>
+  </data>
+  <data name="Label_BD_Lives" xml:space="preserve">
+    <value>Lives</value>
+  </data>
+  <data name="Label_BD_PercentLives" xml:space="preserve">
+    <value>% of Lives</value>
+  </data>
+  <data name="Label_Chart_No_Data" xml:space="preserve">
+    <value>No Data</value>
+  </data>
+  <data name="Label_SellSheet_Step_Title" xml:space="preserve">
+    <value>{0} - {1}</value>
+  </data>
+  <data name="Message_Required_Addr1" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;Addr1 is required.</value>
+  </data>
+  <data name="Message_Required_NoSellSheets" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;No. of Sell Sheets field is required.</value>
+  </data>
+  <data name="Message_Required_PrinterEmail" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;Printer Email is required.</value>
+  </data>
+  <data name="Message_Required_ShipLocation" xml:space="preserve">
+    <value>&amp;bull;&amp;nbsp;Ship Location is required.</value>
+  </data>
+  <data name="Message_Correct_NoSellSheets" xml:space="preserve">
+    <value>Please enter No. of Sell Sheets properly.</value>
+  </data>
+  <data name="DialogTitle_Export_Confirmation" xml:space="preserve">
+    <value>Terms of Export</value>
+  </data>
+  <data name="Message_Export_Confirmation" xml:space="preserve">
+    <value>This is a reminder that: (i) the PathfinderRx data that you have downloaded is the property of Pinsonault Associates; and that (ii) pursuant to a contract between Pinsonault Associates and {0}, you may not disclose this data, in whole or in part, to any third party.</value>
+  </data>
+  <data name="Message_FormularySellSheets_Step_Error" xml:space="preserve">
+    <value>All previous steps must be completed prior to selecting this step. The next step to complete is "{0}".</value>
+  </data>
+  <data name="DialogTitle_AddMeeting" xml:space="preserve">
+    <value>Add Meeting</value>
+  </data>
+  <data name="Label_CR_Date" xml:space="preserve">
+    <value>Report Date</value>
+  </data>
+  <data name="Label_Meeting_Activity" xml:space="preserve">
+    <value>Meeting Activity</value>
+  </data>
+  <data name="Label_Meeting_Type" xml:space="preserve">
+    <value>Meeting Type</value>
+  </data>
+  <data name="Label_Products_Discussed" xml:space="preserve">
+    <value>Products Discussed</value>
+  </data>
+  <data name="Label_SM_FFS_Lives" xml:space="preserve">
+    <value>FFS Lives</value>
+  </data>
+  <data name="Label_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="SectionTitle_BusinessPlanning" xml:space="preserve">
+    <value>Business Planning</value>
+  </data>
+  <data name="Label_Search_Filters" xml:space="preserve">
+    <value>Search Filters</value>
+  </data>
+  <data name="Label_Therapeutic_Class" xml:space="preserve">
+    <value>Therapeutic Area</value>
+  </data>
+  <data name="Message_CCR_Delete_Document" xml:space="preserve">
+    <value>Please select a document to delete.</value>
+  </data>
+  <data name="Message_CCR_Select_Plan" xml:space="preserve">
+    <value>Please select a plan.</value>
+  </data>
+  <data name="Label_Account_Manager" xml:space="preserve">
+    <value>Account Manager</value>
+  </data>
+  <data name="SectionTitle_BusinessPlanReport" xml:space="preserve">
+    <value>Business Plans Report</value>
+  </data>
+  <data name="Label_Medical_Policy_Uploaded" xml:space="preserve">
+    <value>Medical Policy Uploaded</value>
+  </data>
+  <data name="Label_Invalid_Date" xml:space="preserve">
+    <value>Please enter a valid date format (xx/xx/xxxx)</value>
+  </data>
+  <data name="SectionTitle_LivesDistributionReport" xml:space="preserve">
+    <value>Lives Distribution Report</value>
+  </data>
+  <data name="SectionTitle_AffiliationFormularyReport" xml:space="preserve">
+    <value>Affiliation Formulary Report</value>
+  </data>
+  <data name="Label_PBM" xml:space="preserve">
+    <value>Pharmacy Benefit Managers</value>
+  </data>
+  <data name="Label_SPP" xml:space="preserve">
+    <value>Specialty Pharmacy Providers</value>
+  </data>
+  <data name="Label_Report_Type" xml:space="preserve">
+    <value>Report Type</value>
+  </data>
+  <data name="SectionTitle_ParentPlan" xml:space="preserve">
+    <value>Parent Plan</value>
+  </data>
+  <data name="SectionTitle_ChildPlan" xml:space="preserve">
+    <value>Child Plans</value>
+  </data>
+  <data name="Label_Document_Type" xml:space="preserve">
+    <value>Document Type</value>
+  </data>
+  <data name="Label_Detailed_View" xml:space="preserve">
+    <value>Detailed View</value>
+  </data>
+  <data name="Label_Plan_Level" xml:space="preserve">
+    <value>Plan Level</value>
+  </data>
+  <data name="Label_Plan_Comments" xml:space="preserve">
+    <value>Plan Comments</value>
+  </data>
+  <data name="Label_File_Upload_Validator" xml:space="preserve">
+    <value>Please browse for a file to be uploaded.</value>
+  </data>
+  <data name="Label_Upload_Document_Name_Validator" xml:space="preserve">
+    <value>Please enter a document name.</value>
+  </data>
+  <data name="Label_FHR_Note" xml:space="preserve">
+    <value>Yellow highlight represents a formulary change</value>
+  </data>
+  <data name="SectionTitle_HxReport" xml:space="preserve">
+    <value>Historical Formulary</value>
+  </data>
+  <data name="SectionTitle_FormularyCoverage" xml:space="preserve">
+    <value>Formulary Status</value>
+  </data>
+  <data name="ForgotPassword_Instructions_Auto" xml:space="preserve">
+    <value>Please enter your email address and press 'Submit' or contact Customer Support at 800.372.9009.&lt;br /&gt;A temporary password will be emailed to you. &lt;br /&gt; Please check your email and follow the instructions to reset your password.</value>
+  </data>
+  <data name="ForgotPassword_MessageFormat_Auto" xml:space="preserve">
+    <value>{0}</value>
+  </data>
+  <data name="ForgotPassword_MessageSubject_Auto" xml:space="preserve">
+    <value>PathfinderRx: Forgot Password Request</value>
+  </data>
+  <data name="ForgotPassword_Submitted_Auto" xml:space="preserve">
+    <value>A temporary password has been emailed to you.</value>
+  </data>
+  <data name="EMailBody_CampaignCreateRequest" xml:space="preserve">
+    <value>
+      Please remove the existing campaign for the below campaign id-
+    </value>
+  </data>
+  <data name="EMailBody_MeetingRequest" xml:space="preserve">
+    <value>Please plan to attend an important planning meeting to develop a pull-through campaign for</value>
+  </data>
+  <data name="EMailBody_MeetingRequest2" xml:space="preserve">
+    <value>During the meeting we will use the Impact website to:</value>
+  </data>
+  <data name="EMailBody_NextSteps" xml:space="preserve">
+    <value>Next steps and team member roles and responsibilities in executing the campaign will also be discussed.</value>
+  </data>
+  <data name="EMailBody_Review" xml:space="preserve">
+    <value>You may review the pull-through Opportunity Assessment for</value>
+  </data>
+  <data name="EMailBody_Review2" xml:space="preserve">
+    <value>in advance of the meeting by clicking on this link to the Impact website:</value>
+  </data>
+  <data name="EMailSignature_CampaignCreateRequest" xml:space="preserve">
+    <value>Thanks and Regards,</value>
+  </data>
+  <data name="EMailSignature_MeetingRequest" xml:space="preserve">
+    <value>Thank you in advance for helping to make the campaign a success!</value>
+  </data>
+  <data name="EMailSubject_CampaignCreateRequest" xml:space="preserve">
+    <value>Campaign Create Request</value>
+  </data>
+  <data name="EmailSubject_MeetingRequest" xml:space="preserve">
+    <value>Pull-Through Campaign Planning Meeting for</value>
+  </data>
+</root>

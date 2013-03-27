@@ -1,0 +1,159 @@
+﻿/* GO THROUGH AND MERGE */
+
+
+#fullheight {height:100%; }            
+.HWtable{height:100%;} 
+.iT-footer{height:30px;}
+
+.CIPrintCss
+  {
+    width: 25px;
+    background:url(/images/print.gif);
+    background-repeat:no-repeat;
+    background-position:center center!important;  
+  }
+  .CIExcelCss
+  {
+    width: 25px;
+    background:url(/images/excel.gif);
+    background-repeat:no-repeat;
+     background-position:center center!important;  
+  }
+   .CIMaximize
+  {
+    width: 25px;
+    background:url(/images/Maximize.gif);
+    background-repeat:no-repeat;
+     background-position:center center!important;  
+  }
+
+
+
+/*===========================  Filter Page Styles =============================================================*/
+
+
+
+/*===================================   Xtra styles  ===============================================*/
+
+
+
+.btn {
+	font-family:Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #29519f;
+}
+
+/*===========================  Text styles =============================================================*/
+
+/***************************************************************************************************************
+AJAX CSS Settings 
+***************************************************************************************************************/
+/* Accordion */
+
+.accordionHeader
+{
+    color: #2f59a8;
+    background-color: Transparent;
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	padding-left: 0px;
+    margin-top: 0px;
+    cursor: pointer;  
+
+}
+.accordionHeaderSelected
+{
+    color: #2f59a8;
+    background-color: Transparent;
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	padding-left: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+   
+
+}
+.accordionContent
+{
+	color: #818181;
+    background-color: Transparent;
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	padding: 0px;
+    margin-top: 0px;
+}
+
+.confirm
+{
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	width:400px;
+	color: #5e5e5e;
+	font: normal 12px Trebuchet MS;
+	background-color:White;
+	padding:10px;
+	width:370px;
+ }
+
+.validatorCalloutHighlight
+{
+    background-color:  #FFFFCC;
+    text-align:left;
+    
+}
+
+.modalPopup {
+	background-color:#dedede;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:400px;
+}
+.modalPopup2 {
+	background-color: #ffffff;
+	border-width:3px;
+	border-style:solid;
+	border-color:Gray;
+	padding:3px;
+	width:400px;
+	color: #5e5e5e;
+	font: normal 12px Trebuchet MS;
+	
+}
+/*========================================   Link Styles  ========================================================================*/
+
+a.login:link{ font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; color: #ffffff;	text-decoration: underline;	line-height: 12px}
+a.login:active { font-family:Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; color: #ffffff; text-decoration: underline}
+a.login:visited { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px;	font-style: normal;	color: #ffffff;	text-decoration: underline}
+a.login:hover {	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;	font-size: 11px; font-style: normal; color: #ffcf00; text-decoration: underline}
+
+a.forgotpw:link { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 12px;	font-style: normal;	color: #ffffff; font-weight:bold; text-decoration: none;	}
+a.forgotpw:active { font-family: Trebuchet MS, Arial, Helvetica, sans-serif;	font-size: 12px; font-style: normal; color: #ffffff; font-weight:bold; text-decoration: none;}
+a.forgotpw:visited { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; color: #ffffff; font-weight:bold; text-decoration: none;}
+a.forgotpw:hover { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 12px;	font-style: normal;	color: #2f59a8; font-weight:bold;	text-decoration: none;}
+
+a.RightNav:link { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; color: #BAE29D; font-weight: 600; text-decoration:none; border: none; text-indent: 6pt;	cursor:pointer ; }
+a.RightNav:active { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; color: #BAE29D; font-weight: 600;	text-decoration:none; border: none; text-indent: 6pt; cursor:pointer;}
+a.RightNav:visited { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; color: #BAE29D; font-weight: 600;	text-decoration:none; border: none; text-indent: 6pt; cursor:pointer;}
+a.RightNav:hover { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px;	color: #ffcf00;	font-weight: 600; text-decoration:none;	border: none; text-indent: 6pt;	cursor:pointer;}
+
+a.navbar:link {	font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-weight:bold; font-size: 12px; font-style: normal; color: #ffffff; text-decoration: none; margin-left:10px; margin-right:10px; }
+a.navbar:active { font-family: Trebuchet MS, Arial, Helvetica, sans-serif;font-weight:bold; font-size: 12px; font-style: normal;	color: #ffffff;	text-decoration: none; margin-left:10px; margin-right:10px;}
+a.navbar:visited { font-family: Trebuchet MS, Arial, Helvetica, sans-serif;font-weight:bold;font-size: 12px; font-style: normal; color: #ffffff; text-decoration: none; margin-left:10px; margin-right:10px;}
+a.navbar:hover { font-family: Trebuchet MS, Arial, Helvetica, sans-serif;font-weight:bold; font-size: 12px; font-style: normal; color: #b2b2b2; text-decoration: none; margin-left:10px; margin-right:10px;}
+
+a.footerbar:link {	font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; color: #ffffff; text-decoration: none; }
+a.footerbar:active { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal;	color: #ffffff;	text-decoration: none;}
+a.footerbar:visited { font-family: Trebuchet MS, Arial, Helvetica, sans-serif;font-size: 11px; font-style: normal; color: #ffffff; text-decoration: none;}
+a.footerbar:hover { font-family: Trebuchet MS, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; color: #afafaf; text-decoration: none;}
+
+/*==================================================================================================*/
+
+/*=============================== REPORT STYLES=============================================*/
+
+
+
+

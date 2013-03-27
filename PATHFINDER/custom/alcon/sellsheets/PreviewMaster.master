@@ -1,0 +1,275 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PreviewMaster.master.cs" Inherits="custom_pinso_sellsheets_PreviewMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+       <style type="text/css" >
+        .Highlighter .PlanNMHighlight, .Highlighter .yourProduct, .Highlighter .yourProductRight
+        {
+	        font-weight: bold;  
+        }  
+ 
+        .UnHighlighter
+        {
+	        font-weight: normal;  
+        }        
+        
+        /* CSS Document - Look and feel - for Theme */
+        /* GENERAL */
+
+        p, h1, h2, h3, h4, iframe, input {
+	        margin:0;
+	        padding:0;
+	        font-weight:normal;
+        }
+
+        div.tileContainerHeader 
+        {
+	        padding: 0 5px 0 0;
+	        height:26px;
+	        text-align:left;
+        }
+
+        div.tileContainerHeader .title input
+        {
+	        background:none;
+        }
+
+        body, input, textarea, label 
+        {
+	        font-family: Arial;
+	        font-size: 11px;  
+        }
+
+        body 
+        {
+	        font-family: Arial;
+	        background: #fff;
+	        color: #333333;
+        }
+        
+        table
+        {
+	        font-family: Arial;
+	        color: #2d58a7;
+	        font-size: 11px;  
+        }
+        
+        .alignRight, td.alignRight
+        {
+	        text-align:right !important;
+        }
+        
+        .alignCenter, td.alignCenter
+        {
+	        text-align:center !important;
+        }
+                
+        .reviewPlans
+        {
+            border-style: none;
+            border-collapse: collapse;
+        }
+
+        .reviewPlans th
+        {
+            border-width: 1px;
+            padding: 5px;
+            border-style: solid;
+            border-color: #bbbfc2;
+            text-align: center;
+        }
+        .reviewPlans tr.antiallergy
+        {
+            color:White;
+            background-color : #0055a5;
+        }
+        
+        .reviewPlans tr.infective
+        {
+            color:White;
+            background-color : #C60651;
+        }
+        
+         .reviewPlans tr.combination 
+        {
+            color:White;
+            background-color : #005199;
+        }
+         .reviewPlans tr.glaucoma  
+        {
+            color:White;
+            background-color : #0055a5;
+        }
+        .reviewPlans tr.nsaid 
+        {
+            color:White;
+            background-color : #231f20;
+        }
+         .reviewPlans tr.otic
+        {
+            color:White;
+            background-color : #652d8a;
+        }
+          .reviewPlans tr.steroid
+        {
+            color:White;
+            background-color : #26328c;
+        }
+        .reviewPlans tr.patanase  
+        {
+            color:White;
+            background-color : #0055a5;
+        }
+        .reviewPlans th a
+        {
+            color: White;
+            font-weight: bold;
+        }
+
+        .reviewPlans th.yourProductSingle
+        {
+            border-left: solid 2px #f9b711; 
+            border-right: solid 2px #f9b711; 
+        }
+
+        .reviewPlans th.yourProductRight
+        {
+            border-right: solid 2px #f9b711; 
+        }
+
+        .reviewPlans th.yourProductLeft
+        {
+            border-left: solid 2px #f9b711; 
+        }
+
+        .reviewPlans td.content
+        {
+            border-width: 1px;
+            padding: 5px;
+            border-style: solid;
+            border-color: #bbbfc2;
+            background-color: white;
+            color: #2d58a7;
+            text-align: left;
+        }
+        .gridHdr th
+        {
+	        text-align:center;
+	        color:#fff;
+	        background-color:#652d8a;
+	        font-weight: bold;
+        }
+        
+        .gridHdr td
+        {
+	        text-align:center;
+	        color:#fff;
+	        background-color:#2d58a8;
+	        font-weight: bold;
+        }
+        
+        .gridHdr .primary
+        {
+	        border-top: solid 2px #f9b711;  
+	        border-right: solid 2px #f9b711;  
+	        border-left: solid 2px #f9b711;  
+        }
+
+        .reviewPlans td.yourProductSingle
+        {
+            border-left: solid 2px #f9b711;   
+            border-right: solid 2px #f9b711;   
+            background-color: white;
+            padding: 5px;
+            border-top: solid 1px #bbbfc2;
+            border-bottom: solid 1px #bbbfc2;
+        }
+
+        .reviewPlans td.yourProductLeft
+        {
+            border-left: solid 2px #f9b711;   
+            background-color: white;
+            padding: 5px;
+            border-top: solid 1px #bbbfc2;
+            border-bottom: solid 1px #bbbfc2;
+            border-right: solid 1px #bbbfc2;
+        }
+
+        .reviewPlans td.yourProductRight
+        {
+            border-right: solid 2px #f9b711;  
+            text-align: right;
+            background-color: white;
+            border-top: solid 1px #bbbfc2;
+            border-bottom: solid 1px #bbbfc2;
+            border-left: solid 1px #bbbfc2;
+        }
+        
+        .gridFooter td
+        {
+	        border-left: none;
+            border-right: none;
+            border-bottom: none;
+            height: 2px;
+        }
+        
+        .gridFooter .primary
+        {
+	        border-top: solid 2px #f9b711;  
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            height: 2px;
+        }
+
+        .reviewPlans td.right
+        {	        
+            text-align: right;
+        }
+
+        .reviewPlans th.left
+        {	        
+            text-align: left;
+        }
+        
+        .pnlFooterPortrait
+        {
+            position: absolute; 
+            top: 990px; 
+            left: 45px;
+            font-size: 8;
+        }
+        
+        .pnlFooterLandscape
+        {
+            position: absolute; 
+            top: 750px; 
+            left: 55px;
+            font-size: 8;
+        }
+        
+        .pnlFooter
+        {
+            font-size:8;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+        </asp:ScriptManager>
+        
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+        
+        <div id="divTile3">
+            <asp:ContentPlaceHolder id="Tile3" runat="server">                    
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SingleSection.master.cs" Inherits="MasterPages_SingleSection" %>
+<%@ Register Src="~/controls/googleanalytics.ascx" TagName="analytics" TagPrefix="google" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+        </asp:ScriptManager>
+        
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+        
+        <div id="tile3" class="singleSection tile">            
+            <div id="divTile3Container" class="tileContainer">
+                <div class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder id="Tile3Title" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="tools"><asp:ContentPlaceHolder id="Tile3Tools" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="pagination"></div>
+                    <div class="clearAll"></div>
+                </div>
+                <div id="divTile3" class="tileContent">
+                    <asp:ContentPlaceHolder id="Tile3" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <google:analytics runat="server" ID="googleScript" />
+</body>
+</html>

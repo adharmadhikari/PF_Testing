@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/SingleSection.master" AutoEventWireup="true" CodeFile="Alcon_SellSheetStep.master.cs" Inherits="custom_MasterPages_SellSheetStep" %>
+<%@ Register Src="~/custom/alcon/sellsheets/controls/sellsheetsteps.ascx" TagName="SellSheetSteps" TagPrefix="pinso" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+ 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptContainer" Runat="Server">
+    <!--[if IE 7]>
+        <style type="text/css">
+        .sellsheets #ssStepBodyContainer
+        {
+            overflow: visible !important;
+        }
+        </style>
+    <![endif]--> 
+    <!--[if lt IE 8]>
+        <style type="text/css">
+        .sellSheetSteps .step2 .stepText
+        {
+            float: left !important;
+        }
+        </style>
+    <![endif]--> 
+     
+    <script type="text/javascript">
+        clientManager.add_pageLoaded(sellsheetstep_pageLoaded);
+        clientManager.add_pageUnloaded(sellsheetstep_pageUnloaded);
+
+        function sellsheetstep_pageLoaded(sender, args)
+        {
+            $("#customInfoArea .tip").html($("#stepTip").html());
+            //Get the sidebar carousel list item index to load selected template
+            var templateid = $("#sidebarTemplateID").text();
+            var theraid = $("#sidebarTheraID").text();
+            var items = $('#templateSidebar li');
+            var selectedTemplate = $('#templateSidebar li').filter('[rel=' + templateid + ']');
+            var index = items.index(selectedTemplate);
+
+            //            $('#templateSidebar li').css({ display: "none" });
+            //            $('#templateSidebar li').filter('[thera_id =' + theraid + ']').removeAttr('style');
+
+            $('#templateSidebar li').filter('[rel=' + templateid + ']').removeAttr('style');
+            $('#templateSidebar li').find('img').removeClass("selectedTemplate");
+
+            //Since the jQuery reflector creates an image below the template image, we need to apply 'selectedTemplate' only to the template image and not the reflection
+            $('#templateSidebar li').filter('[rel=' + templateid + ']').find("img[id*='ctl00']").addClass('selectedTemplate');
+
+            //Initialize Sidebar Carousel
+            if (!sender.get_ApplicationManager().get_carousel())
+            {
+                //Remove style attribute because image has default border 0 style
+                //style attribute can only be removed when first initialized and before reflection or else it will mess up reflection
+                $('#templateSidebar li').find('img').removeAttr("style");
+
+                //$("#templateSidebar li").find('img').reflect(25);                
+
+                initializeSideBarCarousel(index);
+            }
+            else
+            {
+
+                var carousel = sender.get_ApplicationManager().get_carousel();
+                //carousel.scroll(index);
+            }
+
+        }
+
+        function sellsheetstep_pageUnloaded(sender, args)
+        {
+            sender.remove_pageLoaded(sellsheetstep_pageLoaded);
+            sender.remove_pageUnloaded(sellsheetstep_pageUnloaded);
+        }    
+    </script>
+    <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="Tile3Title" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="Tile3Tools" Runat="Server">
+    <a href='javascript:void(0)' onclick='clientManager.set_Module("mysellsheets")'>View Sell Sheet Dashboard</a>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="Tile3" Runat="Server">
+    <div id="ssStepBodyContainer">    
+    <pinso:SellSheetSteps runat="server" ID="steps" InvalidStepAsException="true" />
+    <asp:ContentPlaceHolder runat="server" ID="StepBody" />    
+    <asp:ContentPlaceHolder runat="server" ID="StepError" Visible="false">
+        <div runat="server" id="errorMsg"></div> 
+    </asp:ContentPlaceHolder>
+</div>
+</asp:Content>
+

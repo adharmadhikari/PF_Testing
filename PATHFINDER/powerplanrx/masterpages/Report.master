@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/powerplanrx/MasterPages/MasterPage.master" AutoEventWireup="true" CodeFile="Report.master.cs" Inherits="Report" %>
+<%@ Register TagPrefix="pinso" TagName="pprxfilters" Src="~/powerplanrx/controls/PowerPlanRxReportFilters.ascx" %>
+<%@ Register TagPrefix="pinso" TagName="districtregionbrandfilters" Src="~/powerplanrx/controls/DistrictRegionBrandReportFilters.ascx" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="main" Runat="Server"> 
+    <div class="reportsPage">
+    <asp:ContentPlaceHolder runat="server" ID="main">
+        <telerik:RadSplitter EnableEmbeddedBaseStylesheet="false" SkinID="ImpactradSplitter" runat="server" ID="radSplit" 
+            Width="100%" 
+            Height="1000px" >                
+            <telerik:RadPane runat="server" ID="radPaneNav" Width="20%" Scrolling="None" style="overflow:hidden">     
+                
+              <div class="reportsBtn">
+                 <asp:LinkButton CssClass="impactLink" runat="server" id="pprxReport" Text="PowerPlanRx Report" ></asp:LinkButton></div>
+              <div class="reportsBtn">
+                  <asp:LinkButton CssClass="impactLink" runat="server" id="districtdrilldownReport" Text="Region/District Drill Down Report" ></asp:LinkButton></div>
+
+                <div class="title"><asp:Literal runat="server" ID="literalTitle" Text='<%$ Resources:Resource, Label_Report_Filters %>' />
+                </div>
+                <div id="reportFilters">
+                    <div id="pprxReportfilters">
+                        <pinso:pprxfilters id="pprxfilters" runat="server" />                  
+                    </div>
+                    <div id="districtdrilldownReportfilters">
+                          <pinso:districtregionbrandfilters id="districtregionbrandfilters" runat="server" />          
+                    </div>
+                </div>
+                <telerik:RadAjaxManager ID="AjaxManager1" runat="server" DefaultLoadingPanelID="RadAjaxLoadingPanel1">  
+                    </telerik:RadAjaxManager> 
+                    <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" />
+            </telerik:RadPane>
+            <telerik:RadSplitBar ID="RadSplitBar1" runat="server" CollapseMode="Forward" />
+            <telerik:RadPane runat="server" ID="radPaneContent" Width="80%" Scrolling="None">
+                <asp:ContentPlaceHolder runat="server" ID="content">
+                </asp:ContentPlaceHolder>
+            </telerik:RadPane>
+        </telerik:RadSplitter>        
+    </asp:ContentPlaceHolder>    
+        </div>
+</asp:Content>

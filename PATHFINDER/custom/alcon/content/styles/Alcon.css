@@ -1,0 +1,89 @@
+.activityreporting #tile4
+{
+    width: 35%;
+}
+
+.activityreporting #tile5
+{
+    width: 65%;
+}
+
+.activityreporting #divTile3Container .enlarge
+{
+    display: none!important;
+}
+
+.activityreporting #ctl00_Tile4_activityReportingData1_dataType1_gridActivityType_ctl00
+{
+	cursor: pointer;
+}
+
+.activityreporting #filtersContainer .datePicker
+{
+	border:#2d58a8 1px solid;
+	color: #1a4b9e;
+	padding:2px 3px 0px 3px;
+	height: 18px;
+}
+
+.activityreporting .textBox 
+{
+	border:0px;
+	background-color:#eaeaea;
+	margin:0 0 0 10px;
+	padding:2px 4px;
+	color:#2d58a8;
+	vertical-align:baseline;
+	display:inline;
+}
+
+.activityreporting .dateEntry 
+{
+    padding: 4px;
+    background-color: #acc7ff;
+}
+
+.activityreporting .chartThumb
+{
+    display: none;
+}
+
+.sellsheets .selectedStateOption
+{
+    color: #2d58a7!important;
+    font-weight: bold;
+    background-image: url(images/btnDown.jpg)!important;
+}
+
+.sellsheets .chkBoxDiv
+{
+	margin:0px !important;
+	padding:0px !important;
+}
+
+.sellsheets .states label
+{
+    margin: 2px 1px 1px 1px;
+    padding: 4px 2px 2px 1px;
+    cursor: pointer;
+    background-image: url(images/btnUp.jpg);
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+	color: #2d58a7;
+	width: 112px;
+	height: 20px;
+	display: block;
+}
+
+
+.sellsheets .states input
+{
+    position: absolute;    
+    top: -5000px;
+}
+
+.disableimg
+{
+ opacity:0.4;
+ filter:alpha(opacity=40); /* For IE8 and earlier */
+}

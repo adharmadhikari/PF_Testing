@@ -1,0 +1,79 @@
+﻿.executivereports #tile3 #divTile3 
+{
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.executivereports #tile3T .title
+{
+    padding:5px!important;
+}
+
+.customercontactreports #tile7
+{
+	display: none!important;
+}
+
+.customercontactreports #tile8
+{
+	width:100%!important;
+}
+.PlanInfoContainer #spanState,.PlanInfoContainer #spanJurisditionsCovered
+{
+    height: 60px;
+    width: 343px;
+    border: solid 1px #cccccc;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 5px;
+    margin-left:5px;
+}
+
+.PlanInfoContainer #spanState ul,.PlanInfoContainer #spanspanJurisditionsCovered{
+    padding: 0px 0px 0px 15px;
+    margin: 0px;
+}
+#AddPlanInfoMain .RadComboBox_pathfinder
+{
+    margin-bottom:5px;
+    margin-left:5px;
+    border: solid 1px #2d58a8;
+    padding:0 0 0 0;
+}
+
+.PlanInfoContainer label 
+{
+	padding-left:5px;
+}
+.PlanInfoContainer input 
+{
+	
+	border: solid 1px #2d58a8;
+	padding:2px 4px;
+	color:#2d58a8;
+	vertical-align:baseline;
+	display:inline;
+}
+#spanCustomTitle, #spanCredentials, #spanCustomCAC, #spanCustomSpecialty, #spanCustomJobFunction
+{
+    width:100%;
+    height:75px;
+    border: 1px solid #CCC;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: 5px;
+   
+}
+ #spanCustomCAC
+ {
+     height: 50px;
+ }
+ /*
+ #kcView
+ {
+    height: 150px;
+    overflow: auto;
+    
+ }
+ */

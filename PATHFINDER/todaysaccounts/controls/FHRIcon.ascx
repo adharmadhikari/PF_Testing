@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FHRIcon.ascx.cs" Inherits="todaysaccounts_controls_FHRIcon" %>
+<div id="fhrModalButton" class="fhrModalButton" title="Historical Formulary" onclick="OpenFHRComparison();" runat="server"></div>

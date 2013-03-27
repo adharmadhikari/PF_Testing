@@ -1,0 +1,159 @@
+
+/* Genzyme: Profile  */
+.profile .profilePlanSelectView, .profile #divLowerContent
+{
+	float:left;
+	width:100% !important;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+
+.profile #divTile3Container .profilePlanSelectView .tileContainerHeader .tools a, 
+.profile #divTile3Container .profileContentView .tileContainerHeader .tools a
+{
+	margin:0px 8px 0px 8px;
+}
+
+.profile #tile8ContainerHeader
+{
+	border-top: solid 1px white;
+}
+
+.profile div.RadComboBox_pathfinder .rcbArrowCellRight
+{
+	background-position: right!important;
+	width:3%!important;  	
+}
+
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1
+{
+	padding-top: 0px!important;
+}
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmText
+{
+	color: #2d58a7; 	
+}
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmItem
+{
+	display: inline-block;
+	border-right: solid 1px #cccccc;
+	text-align: center !important;
+}
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmLast
+{
+	border-right: none!important;
+}
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmItem a
+{
+	padding-right:4px!important;
+}
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmText
+{
+	padding-right:0px!important;
+}
+
+.profile #tile3 div.navbar
+{
+	height: 37px !important;
+}
+
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmItem .rmSelected 
+{
+	background-color: #999999 !important;
+}
+
+#ctl00_ctl00_Tile3_TileMenu_RadMenu1 .rmSelected .rmText
+{	
+	color:#fff !important;  
+}
+
+.profile #divAddEditProfile .profileModalContainer input
+{
+	border: solid 1px #2d58a8;
+	padding:2px 4px;
+	color:#2d58a8;
+	vertical-align:baseline;
+	display:inline;
+}
+
+/*
+.profile .profileModalContainer
+{
+	padding: 15px; 
+}
+*/
+
+.profile .profileModalContainer label
+{
+	padding-left:5px;
+	text-align: left;
+}
+
+
+.profile #divFormScroll 
+{
+	height: 360px!important;  
+	/* overflow: auto; */
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+
+.profile .genTable
+{
+	width: 100% !important;
+	padding: 3px;
+
+}
+
+.profile .genTable td
+{
+	width: 25%!important;	
+}
+
+.profile .genTable .header
+{
+	background-color: #cecece!important;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.profile .noBorder
+{
+	border: 0!important;
+}
+
+.profile #divAddEditProfile .genTable textbox
+{
+	padding-left: 0px !important;	
+}
+
+
+.profile #divTile3Container .tools a
+{
+	color:#fff !important;
+}
+
+.profile #divLowerContent #partialPageContainer
+{
+	border: 0!important;
+}
+
+.profile .clearAll2 {
+	clear:both;
+	height:4px;
+	line-height:4px;
+	font-size:0px;
+	overflow:hidden;
+}
+
+
+/* Genzyme: Profile  end  */

@@ -1,0 +1,1436 @@
+
+/* CSS Document - Look and feel - for Theme */
+/* GENERAL */
+
+html {
+	height:100%;
+	margin:0;
+	padding:0;
+	min-height:100%;
+	overflow:hidden;
+}
+
+body {
+	margin:0; 
+	padding: 0;
+	text-align: center; 
+	height:100%;
+
+}
+img {
+	border:none;
+}
+.clearAll {
+	clear:both;
+	height:0px;
+	line-height:0px;
+	font-size:0px;
+	overflow:hidden;
+}
+p, h1, h2, h3, h4, iframe, input {
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+td, th, thead
+{
+	padding:0;
+	margin:0;
+}
+.error 
+{
+	color:#ff0000;
+}
+/* MARGIN / PADDING ADJUSTMENTS */
+
+.alignRight, td.alignRight
+{
+	text-align:right !important;
+}
+.alignLeft 
+{
+	text-align:left;
+}
+.tip 
+{
+    font-size:10px;
+    font-style:italic;
+}
+/* STRUCTURE */
+div.wrapper {
+	width: 100%;  
+	margin: 0 auto; 
+	text-align: left; 
+}
+div.header {
+	padding:8px 16px 0 16px;
+}
+div.contentWrapper 
+{
+    position:relative;
+}
+div.contentArea 
+{
+    position:relative;
+    /*overflow-x:hidden;*/
+    overflow-y:auto;
+    overflow-x:hidden;
+    margin:10px;
+    padding:0;
+    border:1px solid #ccc;
+    overflow:auto;
+}
+div.footer {
+	position: fixed;
+	width:100%;
+	text-align:center;
+	bottom:0px;
+	left:0px;
+	z-index:200;
+}
+.ie6 .footer 
+{
+    position:absolute;
+    left:4px;
+    bottom:-1px;
+}
+div.footer .inside{
+	padding:6px 4px;
+	
+}
+div.disclaimer 
+{
+	padding:40px;
+}
+div.terms 
+{
+	padding:40px;
+}
+div.terms p
+{
+	padding:10px 0;
+}
+
+/* NAVIGATION */
+div.welcomeMenu {
+	float:right;
+	padding:4px 14px;
+	text-align:right;
+}
+div.welcomeMenu a {
+	text-decoration:none;
+	padding:0 10px;
+}
+div.welcomeMenu a:hover {
+	text-decoration:underline;
+}
+div.logo {
+	float:left;
+	width:50%;
+}
+div.logo a { 
+	text-indent:-1000px;
+	width:300px;
+	height:30px;
+	display:block;
+}
+.headerLogo 
+{
+	float:left;
+	margin:0 0 8px 0;
+}
+.tagLine 
+{
+	padding:8px 20px;
+	color:#fff;
+	font-size:11px;
+	float:left;
+}
+
+
+
+.topLeft 
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:100;
+}
+.topRight 
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    z-index:100;
+}
+.impactStatusTextBox 
+{
+    text-align:center;
+}
+/* LOG IN PAGE */
+body.login 
+{
+	overflow:hidden;
+}
+#spanProgress 
+{
+	margin:15px 0px;
+	display:none;
+}
+div.signIn {
+	width:722px;
+	margin: 0 auto;
+	position:relative;
+}
+div.signIn .top{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+div.signIn .btm{
+}
+div.signIn .inside{
+	padding:100px 20px 0 20px;
+	
+}
+div.signIn .inside .userIcon {
+	float:left;
+	padding:11px 2px 0px 35px;
+}
+div.signIn .logos{
+	position:absolute;
+	top:-19px;
+	left:50px;
+    z-index:100;
+}
+div.signIn .inside .welcome{
+	padding-bottom:10px;
+	width:250px;
+	margin: 0 auto 20px auto;
+}
+div.signIn .inside .userInfo{
+	width:300px;
+	float:left
+}
+.loginBox td 
+{
+    text-align: left
+}
+div.signIn .loginBox input
+{
+	border:none;
+}
+div.signIn p {
+	padding: 5px 0;
+	float:left;
+}
+input.formButton 
+{
+	background:none;
+	border:none;
+	display:inline-block;
+}
+.login .coreTextBox, .modalForm .coreTextBox {
+	background-position:0 0;
+	padding-left:5px;
+	margin-bottom:3px;
+}
+.login span.readOnlyBox {
+	padding-left:2px;
+}
+
+.login .coreTextBox, .login .coreTextBox *, .modalForm .coreTextBox, .modalForm .coreTextBox * {
+	display:inline-block;
+	height:22px;
+}
+.login .coreTextBox .bg, .modalForm .coreTextBox .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:5px;
+}
+.login .coreTextBox .bg2, .modalForm .coreTextBox .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.login .coreTextBox input, .modalForm .coreTextBox input
+{
+	border:none 0px;
+	background:none;
+	height:18px;
+	width:160px;
+}
+.login INPUT.textBoxReadOnly 
+{
+		width:167px;
+}
+.login .rightCol
+{
+	height:20px;
+}
+.mt30 
+{
+    color: #2d58a7;
+    line-height:25px;
+    }
+    
+.titleSelectLeft 
+{float:left; text-align:right; width:55%;
+}
+.titleSelectRight 
+{float:right; text-align:left; width:45%; padding-top:5px;
+}
+/* DASH BOARD HOME */
+/*div.home {
+	width:540px;
+	margin:40px auto;
+	text-align:center;
+}
+#sortable  {
+	list-style-type: none; 
+	margin: 50px 0 0 0; 
+	padding: 0; 
+}
+#sortable li{
+	margin: 3px 3px 10px 0; 
+	padding: 1px; 
+	float: left; 
+	width: 172px; 
+	height: 200px; 
+	text-align: center; 
+	cursor:move;
+	background:#fff;
+	border:1px dashed #ffffff;
+}
+.oldPlace
+{
+	border:1px dashed #cccccc !important;
+	float: left; 
+	width: 172px; 
+	height: 200px; 
+}
+#sortable a 
+{
+	display:block;
+}
+#sortable img{
+	padding:10px 0;
+	display:block;
+	margin:0 auto;
+	width:106px;
+}*/
+/* DASHBOARD */
+div.navbar 
+{
+	width:100%;
+	height:23px;
+	padding-top:28px;
+}
+/* BUTTONS */
+.coreBtn {
+	background-position:0 0;
+	padding-left:7px;
+}
+
+.coreBtn, .coreBtn * {
+	cursor:pointer;
+	display:inline-block;
+	height:18px;
+}
+.coreBtn .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:8px;
+}
+.coreBtn .bg .bg2 span{
+	height:17px;
+
+}
+.coreBtn .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.coreBtn input
+{
+	border:none;
+	background:none;
+}
+.button 
+{
+	padding:1px 3px;
+	line-height:15px;
+}
+.centerBtn 
+{
+    padding: 5px;
+    text-align:right;
+}
+/*reports links */
+.impactLink 
+{
+    display:block;
+    padding:10px;
+    width:100%;
+}
+/*TILES*/
+#fauxModal 
+{
+	background-color: #999;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+div.tileContainerHeader, .tileContainerHeader 
+{
+	padding: 5px 5px 0 5px;
+	height:20px;
+	text-align:left;
+	width:100%;
+}
+.ie6 div.tileContainerHeader, .ie6 .tileContainerHeader 
+{
+    width:auto
+}
+
+.mycampaigns .tileContainerHeader 
+{
+	width:  auto;
+}
+.AP_timeline
+{
+    width:100%;
+    }
+div.tileSubHeader
+{
+    padding: 5px 0 0 5px;
+	height:20px;
+	text-align:left;
+    }
+div.tileSubHeader .toolTipControls 
+{
+    float:right;
+    
+    height:20px;
+    width:30%;
+    text-align:right;
+    } 
+  div.tileSubHeader  .labelSubHeader 
+  {
+       float:left;
+    
+    height:20px;
+     width:30%;
+  
+  }
+.CampaignInfo
+{
+    float:left;
+    display:inline;
+    }
+ .CampProdInfo td 
+{
+    }
+.CampaignOpp
+{
+    float:right;
+    }
+
+.formPlanInfo 
+{
+    padding:5px;
+    overflow:auto;
+    width:100%;
+    border-collapse:collapse;
+    }
+   
+.formPlanInfo td
+{
+    width:25%;
+    padding:3px;
+}
+.formProdList
+{
+    padding:5px;
+    overflow:auto;
+    width:100%;
+    table-layout: fixed;
+    border-collapse:collapse;
+    }
+   
+.formProdList td
+{
+    width:auto;
+    padding:3px;
+}
+.formRight
+{
+    text-align:right;
+    }
+.CampProdInfo
+{
+    width:100%;
+    padding:5px;
+    }
+.CampaignTeamExtended .inside
+{
+    padding:5px;
+    }
+table.TimelineContent, table.CampaignTeamExtended, table.CampaignTeam
+{
+    
+    width:100%;
+    padding:0;
+    margin:0;
+    }
+.CampaignTeam .label 
+{
+    width: 120px;
+    padding:5px;
+}
+.TimelineContent .cell 
+{
+    border-right:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+
+    padding:5px;
+    vertical-align:middle;
+    }
+    .TimelineContent td
+{
+    vertical-align:middle;
+    }
+.TimelineContent .TLcol1
+{
+    padding-top:5px;
+    } 
+
+/*
+.title 
+{
+	float:left;
+	white-space:nowrap;
+}
+.textResize 
+{
+	display:none;
+	padding: 0 5px;
+}
+#htmlModalWindow .textResize 
+{
+	display:inline;
+}
+.textResize span
+{
+	padding:0 3px;
+}
+.textSm 
+{
+	font-size:10px;
+}
+.textMd 
+{
+	font-size:12px;
+}
+.textLg 
+{
+	font-size:14px;
+}
+.showHideBtn 
+{
+	display:none;
+	cursor:pointer;
+	margin:7px 2px 0 2px;
+}
+.normBtn 
+{
+	cursor:pointer;
+	margin:7px 2px 0 2px;
+}
+.resetBtnDiv 
+{
+	cursor:pointer;
+	margin:4px 2px 0 8px;
+}
+
+.coreTextBox {
+	background-position:0 0;
+	padding-left:9px;
+}
+
+.coreTextBox, .coreTextBox * {
+	display:inline-block;
+}
+.coreTextBox .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:10px;
+}
+.coreTextBox .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.coreTextBox input
+{
+	border:none 0px;
+	background:none;
+	height:17px;
+}*/
+/* #JT_arrow_left{
+	background-image: url(../images/arrow_left.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	left:-12px;
+	height:23px;
+	width:10px;
+    top:-3px;
+}
+#JT_arrow_right{
+	position: absolute;
+	z-index:101;
+	height:23px;
+	width:11px;
+    top:-2px;
+}
+#JT {
+	position: absolute;
+	z-index:1;
+	text-align:left;
+}
+#JT_copy{
+	padding:10px 10px 10px 10px;
+}
+
+.JT_loader{
+	width:100%;
+	height:12px;
+}
+
+#JT_close_left{
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+
+#JT_close_right{
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+
+#JT_copy p{
+  margin:3px 0;
+}
+
+#JT_copy img{
+	padding: 1px;
+}
+
+.jTip img
+{
+	margin:7px 8px 0 2px;
+}
+.instructions 
+{
+	padding:20px 0;
+}
+.modalForm 
+{
+	padding:20px 60px;
+	text-align:left;
+}
+.debug table
+{
+	color: #000;
+	border: solid 1px #000;
+	background-color: #FFFF00;
+}
+
+.debug td 
+{
+	padding: 3px 3px 3px 3px;
+}
+
+
+#popupContentContainer 
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+}
+.sectionDisclaimer
+{
+   	text-align:center !important;
+   	border-right-style:none !important;
+   	font-size:9px;
+}
+.validator
+{
+	display:none;
+}
+*/
+.invalid
+{
+	background-color: #FFFF00;
+	border:1px solid #ccc;
+}
+/*
+.ui-effects-transfer  
+{
+    border: 2px dotted gray; 
+} 
+#tooltip 
+{
+    position:absolute;
+    border:1px solid #2d58a7;
+    background:#fff;
+    padding:5px;
+    font-size:10px;
+    text-align:left;
+    width:200px;
+    font-weight:bold;
+}
+*/
+
+/* JQUERY UI POP UP CSS OVERIDES */
+#loading-dialog
+{
+    width: 50px !important;
+    height: 50px !important;
+    min-height: 50px !important;
+    min-width: 50px !important;
+    background-color: #2D58A7 !important;
+    background-image: url(../images/loader.gif) !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+.ui-widget {
+	FONT-FAMILY: Arial !important;
+}
+.ui-dialog {
+	PADDING: 0 !important; 
+}
+
+.ui-state-hover {
+	BORDER: none !important; 
+	BACKGROUND:  none !important; 
+}
+.ui-widget-overlay  
+{
+    background: #333 !important; 
+    opacity: .5 !important;
+    filter:Alpha(Opacity=50) !important; }
+.ui-dialog-content 
+{
+    padding:0px !important;
+}
+.hiddencolumn
+{
+    display:none;
+}
+
+
+
+/* home and campain page */
+.impactModules {
+	padding: 25px 5px 0 7px;
+	background:#C0C8E3;
+}
+.campaigns .impactModules, .mycampaigns .impactModules {
+	padding: 10px 5px 0 7px;
+}
+#impactSubmodules 
+{
+    padding-left:15px;
+    
+}
+.ie6 .campaignopportunities #impactSubmodules 
+{
+    padding:0;
+}
+.mycampaigns #impactSubmodules 
+{
+    float:left;
+    
+}
+.campaigns .contentArea, .campaignopportunities .contentArea{
+	overflow:hidden;
+}
+
+/* Telerik Grid General */
+.MC_Results 
+{
+    height:auto;
+    }
+.MC_Results .rgMasterTable .rgHeader
+{
+    padding:3px;
+    }
+.MC_Results .rgMasterTable .rgRow td, .MC_Results .rgMasterTable .rgAltRow td {padding:3px;}
+.rgDataDiv .rgHeader, .table1 .rgHeader{
+    padding:5px;
+    }
+    
+.rgDataDiv .rgRow td, .rgDataDiv .rgAltRow td
+{
+    padding:5px;
+    }
+.MC_Opportunity
+{
+    border:solid 1px #ccc;
+    margin:5px;
+    padding:0;
+    
+    position:relative;
+ }
+ .MC_Opportunity table 
+ {
+     width:100%;
+     
+     }
+ .MC_Opportunity table td
+ {
+     padding:5px;
+     
+     }
+.MC_Opportunity table tr
+ {
+     height:20px;
+     
+     }
+ .MC_Results
+ {
+    border:solid 1px #ccc;
+    margin:5px;
+    padding:0; 
+     
+     }
+ .MC_Results div.RadGrid
+ {
+     width:100%;
+     overflow:auto;
+     }
+     
+
+.btmGrid .rgDataDiv .rgRow td, .rightPane .rgDataDiv .rgRow td, .rightPane .rgDataDiv .rgAltRow td, .btmGrid .rgDataDiv .rgAltRow td, .topGrid .rgDataDiv .rgRow td, .topGrid .rgDataDiv .rgAltRow td
+{
+    padding:0px;
+    }
+    /* 
+.btmGrid .rgDataDiv td table td, .topGrid .rgDataDiv td table td, .rightPane .rgDataDiv td table td 
+{
+    padding: 5px 5px 5px 5px !important;
+    width:50%;
+}
+.btmGrid .rgHeaderDiv .rgHeader table td, .rightPane .rgHeaderDiv .rgHeader table td, .topGrid .rgHeaderDiv .rgHeader table td, .btmGrid .rgHeaderDiv .rightScroll table td, .topGrid .rgHeaderDiv .rightScroll table td , .rightPane .rgHeaderDiv .rightScroll table td
+{
+    padding: 3px 15px !important;
+    width:50%;
+}
+.btmGrid .merged, .btmGrid .brand, .topGrid .merged, .topGrid .brand, .rightPane .merged
+{
+    padding:5px !important; 
+    white-space:nowrap;
+    width: 50px;
+}
+.btmGrid .merged a 
+{
+    display:inline;
+}
+.btmGrid .rightScroll, .topGrid .rightScroll
+{
+    border-right: 5px solid #ccc !important;
+}
+.btmGrid th.rightScroll, .topGrid th.rightScroll, .rightPane th.rightScroll
+{
+    border-right: 5px solid #fff !important;
+    background:#999;
+    color:#fff;
+    text-align:center;
+}
+.btmGrid .rgHeaderDiv .left, .rightPane .rgHeaderDiv .left, .rightPane .rgHeaderDiv .right, .btmGrid .rgHeaderDiv .right, .topGrid .rgHeaderDiv .left, .topGrid .rgHeaderDiv .right
+{
+    border-top:1px solid #fff;
+}
+.btmGrid .rgHeaderDiv .left, .topGrid .rgHeaderDiv .left, .rightPane .rgHeaderDiv .left
+{
+    border-right:1px solid #fff;
+}
+.campaignresults .btmGrid .rgDataDiv td table td, .campaignresults .topGrid .rgDataDiv td table td 
+{
+    border-right: 1px solid #ccc;
+}
+.rightPane .rgDataDiv td 
+{
+    border-right: 1px solid #ccc !important;
+}
+.topGrid .headerTh, .btmGrid .headerTh, .rightPane .headerTh
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+}
+*/
+.ie6 .topGrid .headerTh, .ie6 .btmGrid .headerTh, .ie6 .rightPane .headerTh
+{
+   padding:5px;
+}
+.topGrid .headerTh a, .btmGrid .headerTh a, .rightPane .headerTh a
+{
+    color:#fff;
+}
+.ie6 .rgHeader table td 
+{
+    text-align:center;
+}
+.rightPane td.rightScroll
+{
+    border-right: 5px solid #ccc !important;
+    padding-left:5px !important;
+}
+.exportControls 
+{
+    text-align:right;
+    padding:5px 10px;
+}
+.exportControls .pdf, .exportControls .excel , .exportControls .print 
+{
+    padding: 5px 15px 5px 5px;
+    display:inline-block;
+    margin-right:5px;
+}
+.physList, .DistrictProfile, .campaignrationale
+{
+    width:100%;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+.DistrictProfileDiv
+{
+	padding:20px;
+	margin-bottom:20px;	
+	text-align:Left;   
+}
+.ReportDiv
+{
+	padding:5px;
+	margin-bottom:5px;	
+	text-align:Left;
+	border:1px solid #ccc;
+	FONT-FAMILY: Arial !important;
+	font-size:12px;
+    font-style:italic; 
+}
+.BrandComparison
+{
+	padding:20px;
+	margin-bottom:20px;	
+	text-align:center;   
+}
+.DistrictProfileModal 
+{
+    width:100%;
+}
+.redtext
+{
+    color:#ff0000;
+    }
+.table1 th.rgHeader 
+{
+    text-align:center;
+}
+.ie6 .campaigns .rgMasterTable
+{
+	width: auto !important;
+}
+.ie6 .campaigns .table1 .rgDataDiv
+{
+    overflow-y: auto !important;
+	overflow-x: hidden !important;
+
+}
+
+.ie6 .currentcampaigns .table1 .rgDataDiv
+{
+    overflow-y: auto !important;
+	overflow-x: hidden !important;
+
+}
+.ie6 .contentArea table 
+{
+    table-layout:inherit !important;
+}
+/* reports page */
+
+div .title
+{
+    height: 26px;
+    margin-bottom:10px;
+    margin-top: 10px;
+    padding-left:10px;
+    background:#2d58a7;
+	color:#fff
+}
+div #reportFilters
+{
+    padding-left:10px;
+}
+.reportsPage .label 
+{
+    width:140px;
+    float:left;
+    display:block;
+    padding:10px 10px 0 0;
+}
+.reportsPage,.districtsReportsPage  
+{
+    padding:0 10px 10px 0px;    
+    margin:0px;
+}
+.reportsPage .RadComboBox_impact 
+{
+    float:left;
+    width:300px;
+}
+.districtsReportsPage td 
+{
+}
+
+.rationale
+{
+	text-align:left;
+}
+
+
+.rationale td
+{
+	padding:2px 2px 2px 2px;
+}
+
+.rationale label
+{
+	padding-left:3px;
+}
+/* Goals: hierarchy grid  */
+.DTable
+{
+	/* padding:5px;  */
+	margin-bottom:5px;	
+	text-align:Left;
+	border:1px solid #000;
+	overflow: auto;
+		
+}
+
+.TTable
+{
+	/* padding:5px;  */
+	margin-bottom:5px;	
+	text-align:Left;
+	border:1px solid #ccc;
+	background-color: #f0f0f0;
+	overflow: auto;
+}
+/* Plan Name column: header  */	
+.topGrid .headerTh_plan
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 147px !important;
+}
+
+/* Plan Name column: item  */	
+.topGrid .headerTh_item_plan
+{
+    width: 147px !important;
+}
+
+.topGrid .headerTh_Comp, .btmGrid  .headerTh_Comp
+{
+	 background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 80px;
+
+}
+/* Brand: item  */
+.topGrid .headerTh_item_Comp
+{
+	width: 80px !important;
+}
+
+/* Region/District/Territory Name column: header  */
+.btmGrid .headerTh_D
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 65px !important;
+}
+.btmGrid .headerTh_R
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 121px !important;
+}
+/* Region Name: item  */
+.btmGrid .headerTh_item_R
+{
+	padding:2px !important;
+    white-space:nowrap;
+    border-right: 1px solid #ccc !important;
+	width: 121px !important;  
+}
+.btmGrid .headerTh_T
+{
+    /* background:#999;  */
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 181px !important;
+}
+
+/* Region/District: Brand Column: header  */
+.btmGrid .headerTh_D_Brand
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 80px !important;
+}
+.btmGrid .headerTh_R_Brand
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 80px !important;
+}
+
+
+/* Region/District/Territory Name column: item  */
+.btmGrid .merged_D,  .topGrid .merged   
+{
+    padding:2px !important;
+    white-space:nowrap;
+    border-right: 1px solid #ccc !important;
+}
+.btmGrid .merged_R
+{
+    padding:2px !important;
+    white-space:nowrap;
+    border-right: 1px solid #ccc !important;
+
+}
+.btmGrid .merged_T
+{
+    padding:2px !important;
+    white-space:nowrap;
+    border-right: 1px solid #ccc !important;
+    
+}
+/*  Plan: HeaderStyle-CssClass="baseline_header_plan"  */
+.topGrid .baseline_header_plan
+{
+	background:#999;
+    color:#fff;
+    text-align:center;
+    border-right: 5px solid #ccc !important;
+    width:80px !important;
+	
+}
+/*  Plan: ItemStyle-CssClass= "baseline_item_plan"  */
+.topGrid .baseline_item_plan   
+{
+    border-right: 5px solid #ccc !important;
+
+    padding-right:2px !important;
+    width:80px !important;
+}
+
+
+/*  HeaderStyle-CssClass="baseline_header_T"  */
+ .btmGrid .baseline_header_D, .btmGrid .baseline_header_R, .topGrid .baseline_header 
+{
+    background:#999;
+    color:#fff;
+    text-align:center;
+    border-right: 5px solid #ccc !important;
+    width:80px !important; 
+    
+}
+.btmGrid .baseline_header_T  
+{
+    /* background:#999;  */
+    color:#fff;
+    text-align:center;
+    border-right: 5px solid #ccc !important;
+    width:80px !important; 
+    
+}
+
+/* ItemStyle-CssClass= "baseline_item_T"  */
+.btmGrid .baseline_item_T, .btmGrid .baseline_item_D, .btmGrid .baseline_item_R, .topGrid .baseline_item   
+{
+    border-right: 5px solid #ccc !important;
+    padding-right:2px !important;
+    width: 80px !important;
+}
+
+/* ItemStyle: month0, month1, ....  */
+.topGrid .rightScroll, .btmGrid .rightScroll
+{
+	border-right: 1px solid #ccc !important;
+}
+
+
+.R_ItemStyle
+{
+	  background-color: #4C88BE;   
+}
+
+.R_ItemStyle_Alt
+{
+	 background-color: #8DC3E9;   
+}
+
+
+.btmGrid .RadInput_Default .riTextBox
+{
+	/* background-color: Yellow;	*/
+}
+.rgSelectedRow td, .rgSelectedRow
+{
+	background: #acc7ff;
+}
+
+/*
+.TextBoxAsLabel 
+{    
+	border: none;    
+	background-color: #fff;    
+	background: transparent; 
+}
+*/ 
+
+.tblBG {
+	background-color: #FFFF66;          /* #F7F6F6; */
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	text-align: center;
+	font-weight: bold;
+	
+}
+
+.tblBG_2 
+{
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	text-align: center;
+	
+}
+
+.UserInputBox {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold; 
+	color: Red  !important; 
+	/* background-color: #FFFFD7 !important;  */
+	/* border: solid 1px #ccc !important;  */
+	}
+	
+.UserInputBoxEdit {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: Red  !important;  
+	background-color: #FFFFD7 !important;   
+	border: solid 1px #999 !important;
+	padding: 2px !important;
+	width: 50px;
+
+	}
+	
+.UserInputBoxHighlight {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: Red  !important;  
+	background-color: #FBB36B !important; 
+	border: solid 1px #999 !important;
+	padding: 2px !important;
+	width: 50px;
+
+	}
+
+.textboxFocus
+{
+	background-color: #FBB36B;
+	color: White;
+	font-weight: bold;
+}
+
+.instruction
+{
+	color:#990000;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+}
+
+
+.alignRight, td.alignRight
+{
+	text-align:right !important;
+	padding: 5px !important;
+}
+.alignLeft 
+{
+	text-align:left;
+	padding: 5px !important;
+}
+
+.btmGrid th.rightScroll, .topGrid th.rightScroll, .rightPane th.rightScroll
+{
+    border-right: 5px solid #fff !important;
+    background:#999;
+    color:#fff;
+    text-align:center;
+}
+
+.btmGrid th.rightScroll_T
+{
+	border-right: 5px solid #fff !important;
+    /* background:#999; */
+    color:#fff;
+    text-align:center;
+	
+	
+	
+}
+.btmGrid .merged
+{
+	padding:5px !important; 
+    white-space:nowrap;
+    width: 25px;
+}
+
+.btmGrid .merged a 
+{
+     /* display:inline; */
+    display:block;
+    padding: 1px 0;
+}
+
+.btmGrid .headerTh_imageLink
+{
+    background:#999;
+    border-right:1px solid #fff;
+    color:#fff;
+    text-align:center;
+    width: 25px;
+}
+
+.textBox .textDiff
+{
+	float: right;
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: Red  !important;  
+	background-color: #FF7900 !important;             /* #FFFFD7;    */ 
+	border: solid 1px #999 !important;
+	padding: 2px !important;
+}
+
+.textBox
+{
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: Red  !important;  
+	background-color: #FFFFD7 ;             /* #FFFFD7;    */ 
+	border: solid 1px #999 !important;
+	padding: 2px !important;
+}
+
+.nontargetedrow
+{
+	background-color: #D8F3C9 !important ;	
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+	font-size: 8pt;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+}
+
+.loadingWheelGoals 
+{     
+    position: absolute;     
+    display: none;     
+    padding: 10px 20px 20px 20px;    
+    background-color: rgb(45, 88, 167);     
+    color: #ffffff; 
+    opacity: 0.90;
+    width: 35px;
+    height: 30px;
+    text-align: center;
+    z-index: 100000;  
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.territoryHeader
+{
+	 background-color: #d1b37f !important;
+}
+.chartContainer
+{
+	cursor: pointer;
+}
+.chartThumb IMG
+{
+	width: 40px!important;	
+}
+
+.chartThumb
+{
+	/*width: 40px!important;
+	height: 25px!important;*/
+	width: 32px!important;
+	height: 19px!important;
+	bottom: 5px!important;
+	right: 5px!important;
+	background-color: White!important;
+	overflow:hidden!important;
+	float:right;
+}
+.rgExpandCol
+{
+	width: 12px !important;
+}

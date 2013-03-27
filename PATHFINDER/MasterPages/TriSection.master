@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TriSection.master.cs" Inherits="TriSection" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server"></head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+        </asp:ScriptManager>
+        
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+        <div class="TriSectionLft">
+        <div id="tile3" class="TriSection1">            
+            <div id="divTile3Container" class="tileContainer">
+                <div class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder id="Tile3Title" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="tools"><asp:ContentPlaceHolder id="Tile3Tools" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="pagination"></div>
+                    <div class="clearAll"></div>
+                </div>
+                <div id="divTile3">
+                    <asp:ContentPlaceHolder id="Tile3" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="tile4" class="TriSection2">
+            <div id="divTile4Container" class="tileContainer">
+                <div class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder id="Tile4Title" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="tools">
+                        <asp:ContentPlaceHolder id="Tile4Tools" runat="server"></asp:ContentPlaceHolder>
+<%--                        <img class="moreInfo genBtn" src="content/images/spacer.gif" onclick="try{moreInfo(4)}catch(ex){}" />
+--%>                        <%--<img class="moreInfo genBtn" src="content/images/spacer.gif" onmouseover="try{moreInfo(4)}catch(ex){}" onmouseout="$('#infoPopup').hide()" />--%>
+                    </div>
+                    <div class="pagination"></div>
+                    <div class="clearAll"></div>
+                </div>
+                <div id="divTile4">
+                    <asp:ContentPlaceHolder id="Tile4" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>   
+        </div>
+        <div id="tile5" class="TriSection3">
+            <div id="divTile5Container" class="tileContainer">
+                <div class="tileContainerHeader">
+                    <div class="title"><asp:ContentPlaceHolder id="Tile5Title" runat="server"></asp:ContentPlaceHolder></div>
+                    <div class="tools">
+                        <asp:ContentPlaceHolder id="Tile5Tools" runat="server"></asp:ContentPlaceHolder>
+                        <img class="showHideBtn enlarge" alt="enlarge" title="enlarge" src="content/images/spacer.gif" onclick="maxCL();" />
+                        <img class="showHideBtn close" alt="close" title="close" src="content/images/spacer.gif" onclick="minCL();" />                            
+                    </div>
+                    <div class="pagination"></div>
+                    <div class="clearAll"></div>
+                </div>
+                <div id="divTile5">
+                    <asp:ContentPlaceHolder id="Tile5" runat="server">                    
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>     
+    </form>
+</body>
+</html>

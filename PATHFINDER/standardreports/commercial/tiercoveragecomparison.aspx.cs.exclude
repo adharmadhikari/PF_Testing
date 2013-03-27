@@ -1,0 +1,225 @@
+﻿using System;
+using PathfinderClientModel;
+using Pinsonault.Application.StandardReports;
+
+public partial class standardreports_commercial_tiercoveragecomparison : PageBase
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        ReportPageLoader.LoadReport<PathfinderModel.ReportsTierCoverage, TierCoverageQueryDefinition>(Request.QueryString, Tiercoveragechart1, tiercoveragedata1);
+    }
+}
+//        string val = Request["Geography_ID"];
+//        //Charts
+//        Tiercoveragechart1.FindControl("chartRegional").Visible = false;
+//        Tiercoveragechart1.FindControl("chartNational").Visible = false;
+//        Chart chart1 = (Chart)Tiercoveragechart1.FindControl("chartRegional").FindControl("chart");
+//        Chart chart1National = (Chart)Tiercoveragechart1.FindControl("chartNational").FindControl("chart");
+
+
+//        //Data Grids
+//        tiercoveragedata1.FindControl("dataStateTerr").Visible = false;
+//        tiercoveragedata1.FindControl("dataUS").Visible = false;
+//        RadGrid grid1 = (RadGrid)tiercoveragedata1.FindControl("dataStateTerr").FindControl("gridtiercoverage");
+//        RadGrid grid1National = (RadGrid)tiercoveragedata1.FindControl("dataUS").FindControl("gridtiercoverage");
+       
+       
+//        //StandardReportsProvider rp = new StandardReportsProvider();
+//        NameValueCollection queryValues = new NameValueCollection(Request.QueryString);
+
+//        //Instantiate helper class
+//        //queryValues.Add("__aggr", TierCoverageQueryDefinition.AggrFields);
+//        //queryValues.Add("__select", TierCoverageQueryDefinition.SelectFields );
+//        //queryValues.Add("__expr", TierCoverageQueryDefinition.ExprFields);
+
+//        //// Sort_Index not needed because 2 separate query call for region/state & US 
+//        //queryValues.Add("__sort", "Sort_Index,Drug_Name");   
+
+//        using (PathfinderClientModel.PathfinderClientEntities clientContext = new PathfinderClientModel.PathfinderClientEntities(Pinsonault.Web.Session.ClientConnectionString))
+//        {
+//            IList<DbDataRecord> TierCoverageFilterStateTerr = null;
+//            IList<DbDataRecord> TierCoverageFilterUS = null;
+
+//            string drugID = Request.QueryString["Drug_ID"].ToString();
+
+                        
+            
+//            //Create Entity Query based on State/Terr or US
+//            if (drugID.Count() >= 1)
+//            {
+//                    if (string.Compare(Request.QueryString["Geography_ID"], "US", true) != 0)
+//                    {
+
+//                        // Regional data & chart
+//                        TierCoverageFilterStateTerr = Pinsonault.Data.Generic.CreateGenericEntityQuery<PathfinderClientModel.ReportsTierCoverage>(clientContext, new TierCoverageQueryDefinition("ReportsTierCoverage", queryValues)).ToList();
+//                        if (TierCoverageFilterStateTerr.Count() > 0)
+//                        {
+
+//                            Tiercoveragechart1.FindControl("chartRegional").Visible = true;
+//                            tiercoveragedata1.FindControl("dataStateTerr").Visible = true;
+
+//                            ProcessChart(chart1, val, TierCoverageFilterStateTerr.ToList());
+//                            ProcessGrid(grid1, TierCoverageFilterStateTerr);
+//                        }
+
+//                    }
+//                    else
+//                    {
+//                            Tiercoveragechart1.FindControl("chartRegional").Visible = false;
+//                            tiercoveragedata1.FindControl("dataStateTerr").Visible = false;
+
+//                    }
+
+
+//                        // National data & chart
+//                        NameValueCollection queryValueUS = new NameValueCollection(queryValues);
+//                        queryValueUS.Remove("Geography_ID");
+//                        queryValueUS.Add("Geography_ID", "US");
+
+//                        TierCoverageFilterUS = Pinsonault.Data.Generic.CreateGenericEntityQuery<PathfinderClientModel.ReportsTierCoverage>(clientContext, new TierCoverageQueryDefinition("ReportsTierCoverage",queryValueUS)).ToList();
+//                        if (TierCoverageFilterUS.Count() > 0)
+//                        {
+//                            Tiercoveragechart1.FindControl("chartNational").Visible = true;
+//                            tiercoveragedata1.FindControl("dataUS").Visible = true;
+
+//                            ProcessChart(chart1National, "US", TierCoverageFilterUS.ToList());
+//                            //ProcessGrid(grid1National, TierCoverageFilterUS);
+
+//                            ProcessGrid(grid1National, TierCoverageFilterUS);
+//                        }
+
+//                        //queryValues.Remove("Geography_ID");
+//                        //queryValues.Add("Geography_ID", "" + Request.QueryString["Geography_ID"] + ",US");
+                  
+//            }
+//        }
+//    }
+
+//    public void ProcessGrid(Telerik.Web.UI.RadGrid grid, IList<DbDataRecord> TierCoverageFilter)
+//    {
+//        using (PathfinderClientModel.PathfinderClientEntities clientContext = new PathfinderClientModel.PathfinderClientEntities(Pinsonault.Web.Session.ClientConnectionString))
+//        {
+//            grid.MasterTableView.DataSource = TierCoverageFilter;
+//            grid.MasterTableView.DataBind();
+//        }
+//    }
+
+
+//    public void ProcessChart(Chart chart, string region, List<DbDataRecord> TierCoverageFilterDrug1)
+//    {
+//        Dictionary<string, string> options = new Dictionary<string, string>();
+//        string opts = Request.QueryString["__options"];
+
+//        if (!string.IsNullOrEmpty(opts))
+//        {
+//            string[] a = opts.Trim('{', '}').Split(',');
+//            string[] vals;
+//            string name;
+//            foreach (string s in a)
+//            {
+//                vals = s.Split(':');
+//                name = vals[0].Trim('"').ToUpper();
+//                if (string.Compare(name, "T0", true) != 0)
+//                    options.Add(name, vals[1].Trim('"').ToLower());
+//            }
+//        }
+
+
+//        string chartTitle;
+
+//        using (PathfinderModel.PathfinderEntities context = new PathfinderModel.PathfinderEntities())
+//        {
+//            IList<PathfinderModel.Tier> tierName = context.TierSet.OrderByDescending(t => t.ID).ToList();
+
+//            if (region == "US")
+//            {
+//                chartTitle = Resources.Resource.Label_National;
+//                System.Web.UI.WebControls.Label geoName1 = (System.Web.UI.WebControls.Label)tiercoveragedata1.FindControl("dataUS").FindControl("geoName");
+//                geoName1.Text = chartTitle;
+//            }
+//            else
+//            {
+//                if (context.StateSet.Count(s => s.ID == region) > 0)  //State
+//                {
+//                    chartTitle = context.StateSet.FirstOrDefault(s => s.ID == region).Name;
+//                }
+//                else  //Territory
+//                {
+//                    using (PathfinderClientModel.PathfinderClientEntities clientContext = new PathfinderClientModel.PathfinderClientEntities(Pinsonault.Web.Session.ClientConnectionString))
+//                    {
+//                        PathfinderClientModel.Territory territory = clientContext.TerritorySet.FirstOrDefault(t => t.ID == region);
+
+//                        chartTitle = territory != null ? territory.Name : "";
+
+//                    }
+//                }
+
+//                System.Web.UI.WebControls.Label geoName2 = (System.Web.UI.WebControls.Label)tiercoveragedata1.FindControl("dataStateTerr").FindControl("geoName");
+//                geoName2.Text = chartTitle;
+
+//            }
+
+//            chart.Titles[0].Text = chartTitle;
+//            chart.Attributes["_title"] = chartTitle; //for exporter
+           
+            
+            
+//            string drillDownRegion = region;
+
+//            int noColumn = 0;
+//            int index = 0;
+//            string id;
+//            foreach (var r in TierCoverageFilterDrug1)
+//            {
+//                // .GetOrdinal returns position of data so should be interger
+//                int drugID = r.GetOrdinal("Drug_ID");
+//                int drugName = r.GetOrdinal("Drug_Name");
+
+//                chart.PaletteCustomColors = new System.Drawing.Color[tierName.Count()];
+
+//                int dID = Convert.ToInt32(r.GetValue(drugID));
+//                string dName = Convert.ToString(r.GetValue(drugName));
+//                index = 0;
+
+
+//                foreach (Tier tier in tierName)
+//                {
+//                    id = string.Format("T{0}", tier.ID);
+//                    int iTierID = r.GetOrdinal(string.Format("T{0}_Lives", tier.ID));
+
+//                    if (options.Count == 0 || (options.ContainsKey(id) && options[id] == "true"))
+//                    {
+//                        chart.PaletteCustomColors[index] = ReportColors.StandardReports.GetColor(tier.ID - 1);
+//                        addPoint(chart, drillDownRegion, dID, dName, tier.Name, tier.ID, (int)r.GetValue(iTierID), index++, noColumn);
+//                        //addPoint(chart, drillDownRegion, dID, dName, tier.Name, tier.ID, (int)r.GetValue(id), index++, noColumn);
+//                    }
+//                }
+
+//                //hide the rest
+//                while (index < 8)
+//                {
+//                    chart.Series[index].ShowInLegend = false;
+//                    index++;
+//                }
+
+//                noColumn++;
+//            }
+
+//        }
+//    }
+
+//    void addPoint(Chart chart, string region, int drugID, string drugName, string tierName, int tierID, int lives, int index, int noColumn)
+//    {
+//        chart.Series[index].ShowInLegend = true;
+//        chart.Series[index].Points.AddY(lives / 1000000.0);
+//        chart.Series[index].CustomAttributes = "DrawingStyle=Cylinder";
+//        chart.Series[index]["MaxPixelPointWidth"] = "45";
+//        chart.Series[index].Name = tierName;
+//        //chart.Series[index].Points[noColumn].ToolTip = chart.Series[index].Name + ": " + String.Format("{0:N0}", lives);
+//        chart.Series[index].Points[noColumn].AxisLabel = drugName;
+//        chart.Series[index].Points[noColumn].Color = ReportColors.StandardReports.GetColor(tierID - 1);
+//        //Chart1.Series[index].Points[noColumn].Href = string.Format("javascript:clientManager.set_SelectionData({0}Drug_ID:{1}, Tier_ID:{2}, __options:{3}drugName:'{4}', tierName:'{5}', chartTitle:'{6}'{7}{8}, 1)", "{", drugID, tierID, "{", drugName, tierName, Chart1.Titles[0].Text, "}","}");
+//        chart.Series[index].Points[noColumn].Href = string.Format("javascript:tierCoverageDrilldown('{0}',{1},{2},'{3}','{4}')", region, drugID, tierID, drugName, tierName);
+//    }
+
+//}

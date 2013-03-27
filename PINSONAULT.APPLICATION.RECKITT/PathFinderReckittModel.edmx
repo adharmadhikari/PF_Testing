@@ -1,0 +1,1937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PathfinderReckittModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PathfinderReckittModelStoreContainer">
+          <EntitySet Name="Business_Plan_Goals" EntityType="PathfinderReckittModel.Store.Business_Plan_Goals" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plan_Key_Contacts" EntityType="PathfinderReckittModel.Store.Business_Plan_Key_Contacts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plan_Tactics" EntityType="PathfinderReckittModel.Store.Business_Plan_Tactics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Business_Plans" EntityType="PathfinderReckittModel.Store.Business_Plans" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Reports" EntityType="PathfinderReckittModel.Store.Contact_Reports" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Key_Contacts" EntityType="PathfinderReckittModel.Store.Key_Contacts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Schedule_Periods" EntityType="PathfinderReckittModel.Store.Lkp_Business_Plan_Schedule_Periods" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Business_Plan_Status" EntityType="PathfinderReckittModel.Store.Lkp_Business_Plan_Status" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Followup_Notes" EntityType="PathfinderReckittModel.Store.Lkp_Followup_Notes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Activity" EntityType="PathfinderReckittModel.Store.Lkp_Meeting_Activity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Outcome" EntityType="PathfinderReckittModel.Store.Lkp_Meeting_Outcome" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Type" EntityType="PathfinderReckittModel.Store.Lkp_Meeting_Type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Products_Discussed" EntityType="PathfinderReckittModel.Store.Lkp_Products_Discussed" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OTC_Coverage" EntityType="PathfinderReckittModel.Store.OTC_Coverage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Plans_Client" EntityType="PathfinderReckittModel.Store.Plans_Client" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_Business_Plan_Goals" EntityType="PathfinderReckittModel.Store.V_Business_Plan_Goals" store:Type="Views" store:Schema="dbo" store:Name="V_Business_Plan_Goals">
+            <DefiningQuery>SELECT 
+      [V_Business_Plan_Goals].[Goal_ID] AS [Goal_ID], 
+      [V_Business_Plan_Goals].[Business_Plan_ID] AS [Business_Plan_ID], 
+      [V_Business_Plan_Goals].[Goal_Description] AS [Goal_Description], 
+      [V_Business_Plan_Goals].[Goal_Status_ID] AS [Goal_Status_ID], 
+      [V_Business_Plan_Goals].[Goal_Status_Other] AS [Goal_Status_Other], 
+      [V_Business_Plan_Goals].[Goal_Completion_DT] AS [Goal_Completion_DT], 
+      [V_Business_Plan_Goals].[Goal_Status] AS [Goal_Status]
+      FROM [dbo].[V_Business_Plan_Goals] AS [V_Business_Plan_Goals]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Business_Plan_Tactics" EntityType="PathfinderReckittModel.Store.V_Business_Plan_Tactics" store:Type="Views" store:Schema="dbo" store:Name="V_Business_Plan_Tactics">
+            <DefiningQuery>SELECT 
+      [V_Business_Plan_Tactics].[Goal_ID] AS [Goal_ID], 
+      [V_Business_Plan_Tactics].[Tactic_ID] AS [Tactic_ID], 
+      [V_Business_Plan_Tactics].[Tactic_Description] AS [Tactic_Description], 
+      [V_Business_Plan_Tactics].[Tactic_Status_ID] AS [Tactic_Status_ID], 
+      [V_Business_Plan_Tactics].[Tactic_Status_Other] AS [Tactic_Status_Other], 
+      [V_Business_Plan_Tactics].[Tactic_Completion_Date] AS [Tactic_Completion_Date], 
+      [V_Business_Plan_Tactics].[Tactic_Status] AS [Tactic_Status]
+      FROM [dbo].[V_Business_Plan_Tactics] AS [V_Business_Plan_Tactics]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Business_Plans" EntityType="PathfinderReckittModel.Store.V_Business_Plans" store:Type="Views" store:Schema="dbo" store:Name="V_Business_Plans">
+            <DefiningQuery>SELECT 
+      [V_Business_Plans].[Plan_ID] AS [Plan_ID], 
+      [V_Business_Plans].[Acct_Summary] AS [Acct_Summary], 
+      [V_Business_Plans].[OTC_Coverage_YN] AS [OTC_Coverage_YN], 
+      [V_Business_Plans].[OTC_Opportunities_YN] AS [OTC_Opportunities_YN], 
+      [V_Business_Plans].[O_Cough_Cold_Kits_YN] AS [O_Cough_Cold_Kits_YN], 
+      [V_Business_Plans].[O_Health_Fairs_YN] AS [O_Health_Fairs_YN], 
+      [V_Business_Plans].[O_Education_Brochures_YN] AS [O_Education_Brochures_YN], 
+      [V_Business_Plans].[O_Other_YN] AS [O_Other_YN], 
+      [V_Business_Plans].[O_Other_Explanation] AS [O_Other_Explanation], 
+      [V_Business_Plans].[PT_Review_YN] AS [PT_Review_YN], 
+      [V_Business_Plans].[NO_PT_Explanation] AS [NO_PT_Explanation], 
+      [V_Business_Plans].[Product_Review_Period] AS [Product_Review_Period], 
+      [V_Business_Plans].[NA_Schedule_Period] AS [NA_Schedule_Period], 
+      [V_Business_Plans].[Timeframe_Reduced_YN] AS [Timeframe_Reduced_YN]
+      FROM [dbo].[V_Business_Plans] AS [V_Business_Plans]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Business_Plans_Key_Contacts" EntityType="PathfinderReckittModel.Store.V_Business_Plans_Key_Contacts" store:Type="Views" store:Schema="dbo" store:Name="V_Business_Plans_Key_Contacts">
+            <DefiningQuery>SELECT 
+      [V_Business_Plans_Key_Contacts].[KC_ID] AS [KC_ID], 
+      [V_Business_Plans_Key_Contacts].[KC_Type_ID] AS [KC_Type_ID], 
+      [V_Business_Plans_Key_Contacts].[KC_F_Name] AS [KC_F_Name], 
+      [V_Business_Plans_Key_Contacts].[KC_L_Name] AS [KC_L_Name], 
+      [V_Business_Plans_Key_Contacts].[KC_Title_Name] AS [KC_Title_Name], 
+      [V_Business_Plans_Key_Contacts].[KC_Email] AS [KC_Email], 
+      [V_Business_Plans_Key_Contacts].[KC_Phone] AS [KC_Phone], 
+      [V_Business_Plans_Key_Contacts].[Plan_ID] AS [Plan_ID], 
+      [V_Business_Plans_Key_Contacts].[Business_Plan_ID] AS [Business_Plan_ID]
+      FROM [dbo].[V_Business_Plans_Key_Contacts] AS [V_Business_Plans_Key_Contacts]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Data" EntityType="PathfinderReckittModel.Store.V_Contact_Report_Data" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Data">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Data].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Data].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report_Data].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report_Data].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report_Data].[User_ID] AS [User_ID], 
+      [V_Contact_Report_Data].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report_Data].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report_Data].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report_Data].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report_Data].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report_Data].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_Data].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report_Data].[Followup_Notes_Name] AS [Followup_Notes_Name], 
+      [V_Contact_Report_Data].[Followup_Notes_ID] AS [Followup_Notes_ID], 
+      [V_Contact_Report_Data].[Meeting_Outcome_ID] AS [Meeting_Outcome_ID], 
+      [V_Contact_Report_Data].[Meeting_Outcome_Name] AS [Meeting_Outcome_Name], 
+      [V_Contact_Report_Data].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report_Data].[Geography_Name] AS [Geography_Name], 
+      [V_Contact_Report_Data].[Section_ID] AS [Section_ID], 
+      [V_Contact_Report_Data].[Plan_Name] AS [Plan_Name], 
+      [V_Contact_Report_Data].[Section_Name] AS [Section_Name], 
+      [V_Contact_Report_Data].[Is_National] AS [Is_National], 
+      [V_Contact_Report_Data].[Account_Manager] AS [Account_Manager], 
+      [V_Contact_Report_Data].[Persons_Met] AS [Persons_Met]
+      FROM [dbo].[V_Contact_Report_Data] AS [V_Contact_Report_Data]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Data_Summary" EntityType="PathfinderReckittModel.Store.V_Contact_Report_Data_Summary" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Data_Summary">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Data_Summary].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Data_Summary].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report_Data_Summary].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report_Data_Summary].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report_Data_Summary].[User_ID] AS [User_ID], 
+      [V_Contact_Report_Data_Summary].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report_Data_Summary].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report_Data_Summary].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report_Data_Summary].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report_Data_Summary].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report_Data_Summary].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_Data_Summary].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report_Data_Summary].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report_Data_Summary].[Geography_Name] AS [Geography_Name], 
+      [V_Contact_Report_Data_Summary].[Section_ID] AS [Section_ID], 
+      [V_Contact_Report_Data_Summary].[Plan_Name] AS [Plan_Name], 
+      [V_Contact_Report_Data_Summary].[Section_Name] AS [Section_Name], 
+      [V_Contact_Report_Data_Summary].[Is_National] AS [Is_National], 
+      [V_Contact_Report_Data_Summary].[Account_Manager] AS [Account_Manager]
+      FROM [dbo].[V_Contact_Report_Data_Summary] AS [V_Contact_Report_Data_Summary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_DrillDownFilter" EntityType="PathfinderReckittModel.Store.V_Contact_Report_DrillDownFilter" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_DrillDownFilter">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_DrillDownFilter].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_DrillDownFilter].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_DrillDownFilter].[Outcome_ID] AS [Outcome_ID], 
+      [V_Contact_Report_DrillDownFilter].[Followup_ID] AS [Followup_ID]
+      FROM [dbo].[V_Contact_Report_DrillDownFilter] AS [V_Contact_Report_DrillDownFilter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Filter" EntityType="PathfinderReckittModel.Store.V_Contact_Report_Filter" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Filter">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Filter].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Filter].[Outcome_ID] AS [Outcome_ID], 
+      [V_Contact_Report_Filter].[Followup_ID] AS [Followup_ID]
+      FROM [dbo].[V_Contact_Report_Filter] AS [V_Contact_Report_Filter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Search" EntityType="PathfinderReckittModel.Store.V_Contact_Report_Search" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Search">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Search].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Search].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report_Search].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report_Search].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report_Search].[User_ID] AS [User_ID], 
+      [V_Contact_Report_Search].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report_Search].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report_Search].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report_Search].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report_Search].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report_Search].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_Search].[Followup_Notes_ID] AS [Followup_Notes_ID], 
+      [V_Contact_Report_Search].[Meeting_Outcome_ID] AS [Meeting_Outcome_ID], 
+      [V_Contact_Report_Search].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report_Search].[Geography_Name] AS [Geography_Name], 
+      [V_Contact_Report_Search].[Section_ID] AS [Section_ID], 
+      [V_Contact_Report_Search].[Plan_Name] AS [Plan_Name], 
+      [V_Contact_Report_Search].[Section_Name] AS [Section_Name], 
+      [V_Contact_Report_Search].[Is_National] AS [Is_National], 
+      [V_Contact_Report_Search].[Account_Manager] AS [Account_Manager], 
+      [V_Contact_Report_Search].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report_Search].[Persons_Met] AS [Persons_Met], 
+      [V_Contact_Report_Search].[Followup_Notes_Name] AS [Followup_Notes_Name], 
+      [V_Contact_Report_Search].[Meeting_Outcome_Name] AS [Meeting_Outcome_Name]
+      FROM [dbo].[V_Contact_Report_Search] AS [V_Contact_Report_Search]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_OTC_Coverage" EntityType="PathfinderReckittModel.Store.V_OTC_Coverage" store:Type="Views" store:Schema="dbo" store:Name="V_OTC_Coverage">
+            <DefiningQuery>SELECT 
+      [V_OTC_Coverage].[OTC_Coverage_Id] AS [OTC_Coverage_Id], 
+      [V_OTC_Coverage].[Section_Id] AS [Section_Id], 
+      [V_OTC_Coverage].[Plan_ID] AS [Plan_ID], 
+      [V_OTC_Coverage].[Is_OTC_Coverage] AS [Is_OTC_Coverage], 
+      [V_OTC_Coverage].[Product_PPI] AS [Product_PPI], 
+      [V_OTC_Coverage].[Product_Antihistamines] AS [Product_Antihistamines], 
+      [V_OTC_Coverage].[Product_Pediatric_OTC] AS [Product_Pediatric_OTC], 
+      [V_OTC_Coverage].[Product_Smoking] AS [Product_Smoking], 
+      [V_OTC_Coverage].[Product_Obesity] AS [Product_Obesity], 
+      [V_OTC_Coverage].[Product_Other] AS [Product_Other], 
+      [V_OTC_Coverage].[Product_Other_Text] AS [Product_Other_Text], 
+      [V_OTC_Coverage].[Rx_Require] AS [Rx_Require], 
+      [V_OTC_Coverage].[OTC_Co_Pay_Level] AS [OTC_Co_Pay_Level], 
+      [V_OTC_Coverage].[Is_Customer_Contracting] AS [Is_Customer_Contracting], 
+      [V_OTC_Coverage].[Is_Opportunities_Exist] AS [Is_Opportunities_Exist], 
+      [V_OTC_Coverage].[Is_CoughCold] AS [Is_CoughCold], 
+      [V_OTC_Coverage].[Desc_CoughCold_Kits] AS [Desc_CoughCold_Kits], 
+      [V_OTC_Coverage].[Is_Health_Fairs] AS [Is_Health_Fairs], 
+      [V_OTC_Coverage].[Desc_Health_Fairs] AS [Desc_Health_Fairs], 
+      [V_OTC_Coverage].[Is_Education_Brochures] AS [Is_Education_Brochures], 
+      [V_OTC_Coverage].[Desc_Education_Brochures] AS [Desc_Education_Brochures], 
+      [V_OTC_Coverage].[Is_Other] AS [Is_Other], 
+      [V_OTC_Coverage].[Desc_Other] AS [Desc_Other], 
+      [V_OTC_Coverage].[Created_DT] AS [Created_DT], 
+      [V_OTC_Coverage].[Created_BY] AS [Created_BY], 
+      [V_OTC_Coverage].[Modified_DT] AS [Modified_DT], 
+      [V_OTC_Coverage].[Modified_BY] AS [Modified_BY], 
+      [V_OTC_Coverage].[Person_Responsible_ForValueadd_Prgms] AS [Person_Responsible_ForValueadd_Prgms], 
+      [V_OTC_Coverage].[Person_Responsible_ForEducational_Prgms] AS [Person_Responsible_ForEducational_Prgms], 
+      [V_OTC_Coverage].[Is_CoughCold_EduProgram_ForEmps] AS [Is_CoughCold_EduProgram_ForEmps], 
+      [V_OTC_Coverage].[Person_Responsible_ForDecision] AS [Person_Responsible_ForDecision], 
+      [V_OTC_Coverage].[Person_Responsible_ForAntibiotic_Education] AS [Person_Responsible_ForAntibiotic_Education], 
+      [V_OTC_Coverage].[Type_of_Programs] AS [Type_of_Programs], 
+      [V_OTC_Coverage].[Is_ClinicPharmacy_Associated] AS [Is_ClinicPharmacy_Associated], 
+      [V_OTC_Coverage].[ClinicPharmacy] AS [ClinicPharmacy], 
+      [V_OTC_Coverage].[Person_Managing_ClinicPharmacy] AS [Person_Managing_ClinicPharmacy], 
+      [V_OTC_Coverage].[Plan_Name] AS [Plan_Name], 
+      [V_OTC_Coverage].[Segment_ID] AS [Segment_ID], 
+      [V_OTC_Coverage].[Plan_State] AS [Plan_State], 
+      [V_OTC_Coverage].[Section_Name] AS [Section_Name], 
+      [V_OTC_Coverage].[AE_Name] AS [AE_Name], 
+      [V_OTC_Coverage].[AE_UserID] AS [AE_UserID]
+      FROM [dbo].[V_OTC_Coverage] AS [V_OTC_Coverage]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Plan_List" EntityType="PathfinderReckittModel.Store.V_Plan_List" store:Type="Views" store:Schema="dbo" store:Name="V_Plan_List">
+            <DefiningQuery>SELECT 
+      [V_Plan_List].[Plan_ID] AS [Plan_ID], 
+      [V_Plan_List].[Plan_Name] AS [Plan_Name], 
+      [V_Plan_List].[Section_ID] AS [Section_ID], 
+      [V_Plan_List].[Plan_Type_ID] AS [Plan_Type_ID], 
+      [V_Plan_List].[Plan_Type_Name] AS [Plan_Type_Name], 
+      [V_Plan_List].[Plan_State] AS [Plan_State], 
+      [V_Plan_List].[Section_Name] AS [Section_Name], 
+      [V_Plan_List].[Territory_ID] AS [Territory_ID], 
+      [V_Plan_List].[AE_UserID] AS [AE_UserID]
+      FROM [dbo].[V_Plan_List] AS [V_Plan_List]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Plan_Search" EntityType="PathfinderReckittModel.Store.V_Plan_Search" store:Type="Views" store:Schema="dbo" store:Name="V_Plan_Search">
+            <DefiningQuery>SELECT 
+      [V_Plan_Search].[Plan_ID] AS [Plan_ID], 
+      [V_Plan_Search].[Plan_Name] AS [Plan_Name], 
+      [V_Plan_Search].[Section_ID] AS [Section_ID]
+      FROM [dbo].[V_Plan_Search] AS [V_Plan_Search]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Plan_Search_OTC" EntityType="PathfinderReckittModel.Store.V_Plan_Search_OTC" store:Type="Views" store:Schema="dbo" store:Name="V_Plan_Search_OTC">
+            <DefiningQuery>SELECT 
+      [V_Plan_Search_OTC].[Plan_ID] AS [Plan_ID], 
+      [V_Plan_Search_OTC].[Plan_Name] AS [Plan_Name], 
+      [V_Plan_Search_OTC].[Section_ID] AS [Section_ID], 
+      [V_Plan_Search_OTC].[AE_UserID] AS [AE_UserID]
+      FROM [dbo].[V_Plan_Search_OTC] AS [V_Plan_Search_OTC]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Business_Plan_Goals_Business_Plans" Association="PathfinderReckittModel.Store.FK_Business_Plan_Goals_Business_Plans">
+            <End Role="Business_Plans" EntitySet="Business_Plans" />
+            <End Role="Business_Plan_Goals" EntitySet="Business_Plan_Goals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Goals_Status" Association="PathfinderReckittModel.Store.FK_Business_Plan_Goals_Status">
+            <End Role="Lkp_Business_Plan_Status" EntitySet="Lkp_Business_Plan_Status" />
+            <End Role="Business_Plan_Goals" EntitySet="Business_Plan_Goals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Key_Contacts_Business_Plans" Association="PathfinderReckittModel.Store.FK_Business_Plan_Key_Contacts_Business_Plans">
+            <End Role="Business_Plans" EntitySet="Business_Plans" />
+            <End Role="Business_Plan_Key_Contacts" EntitySet="Business_Plan_Key_Contacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Tactics_Status" Association="PathfinderReckittModel.Store.FK_Business_Plan_Tactics_Status">
+            <End Role="Lkp_Business_Plan_Status" EntitySet="Lkp_Business_Plan_Status" />
+            <End Role="Business_Plan_Tactics" EntitySet="Business_Plan_Tactics" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Business_Plan_Goals">
+          <Key>
+            <PropertyRef Name="Goal_ID" />
+          </Key>
+          <Property Name="Goal_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Goal_Description" Type="varchar" MaxLength="250" />
+          <Property Name="Goal_Status_ID" Type="int" Nullable="false" />
+          <Property Name="Goal_Status_Other" Type="varchar" MaxLength="50" />
+          <Property Name="Goal_Completion_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Business_Plan_Key_Contacts">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Key_Contact_ID" />
+            <PropertyRef Name="Key_Contact_Type_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Key_Contact_ID" Type="int" Nullable="false" />
+          <Property Name="Key_Contact_Type_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Business_Plan_Tactics">
+          <Key>
+            <PropertyRef Name="Tactic_ID" />
+          </Key>
+          <Property Name="Tactic_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Goal_ID" Type="int" Nullable="false" />
+          <Property Name="Tactic_Description" Type="varchar" MaxLength="250" />
+          <Property Name="Tactic_Status_ID" Type="int" />
+          <Property Name="Tactic_Status_Other" Type="varchar" MaxLength="50" />
+          <Property Name="Tactic_Completion_Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Business_Plans">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+          </Key>
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Acct_Summary" Type="varchar" MaxLength="500" />
+          <Property Name="OTC_Coverage_YN" Type="int" />
+          <Property Name="OTC_Opportunities_YN" Type="int" />
+          <Property Name="O_Cough_Cold_Kits_YN" Type="bit" />
+          <Property Name="O_Health_Fairs_YN" Type="bit" />
+          <Property Name="O_Education_Brochures_YN" Type="bit" />
+          <Property Name="O_Other_YN" Type="bit" />
+          <Property Name="O_Other_Explanation" Type="varchar" MaxLength="100" />
+          <Property Name="PT_Review_YN" Type="int" />
+          <Property Name="NO_PT_Explanation" Type="varchar" MaxLength="100" />
+          <Property Name="Product_Review_Period" Type="int" />
+          <Property Name="NA_Schedule_Period" Type="varchar" MaxLength="50" />
+          <Property Name="Timeframe_Reduced_YN" Type="int" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Contact_Reports">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Meeting_Type_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Meeting_Activity_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Followup_Notes_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Meeting_Outcome_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" Nullable="false" />
+          <Property Name="Key_Contacts_Other" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Key_Contacts">
+          <Key>
+            <PropertyRef Name="KC_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="KC_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="KC_F_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_M_Name" Type="varchar" MaxLength="50" />
+          <Property Name="KC_L_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Prefix" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Suffix" Type="varchar" MaxLength="50" />
+          <Property Name="Is_Primary" Type="bit" />
+          <Property Name="KC_Type_ID" Type="int" />
+          <Property Name="Website_URL" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Title_ID" Type="int" />
+          <Property Name="KC_Title_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Role" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Address1" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Address2" Type="varchar" MaxLength="255" />
+          <Property Name="KC_City" Type="varchar" MaxLength="50" />
+          <Property Name="KC_State" Type="varchar" MaxLength="2" />
+          <Property Name="KC_Zip" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Fax" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Email" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Address_Type" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Admin_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Admin_PH" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Admin_Email" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Admin_Fax" Type="varchar" MaxLength="50" />
+          <Property Name="KC_Comments" Type="varchar" MaxLength="1000" />
+          <Property Name="Last_Update_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Last_Update_DT" Type="datetime" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Schedule_Periods">
+          <Key>
+            <PropertyRef Name="Schedule_Period_ID" />
+          </Key>
+          <Property Name="Schedule_Period_ID" Type="int" Nullable="false" />
+          <Property Name="Schedule_Period" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lkp_Business_Plan_Status">
+          <Key>
+            <PropertyRef Name="Status_ID" />
+          </Key>
+          <Property Name="Status_ID" Type="int" Nullable="false" />
+          <Property Name="Status_Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Lkp_Followup_Notes">
+          <Key>
+            <PropertyRef Name="Followup_Notes_ID" />
+          </Key>
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Activity">
+          <Key>
+            <PropertyRef Name="Meeting_Activity_ID" />
+          </Key>
+          <Property Name="Meeting_Activity_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Outcome">
+          <Key>
+            <PropertyRef Name="Meeting_Outcome_ID" />
+          </Key>
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="255" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Type">
+          <Key>
+            <PropertyRef Name="Meeting_Type_ID" />
+          </Key>
+          <Property Name="Meeting_Type_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Products_Discussed">
+          <Key>
+            <PropertyRef Name="Products_Discussed_ID" />
+          </Key>
+          <Property Name="Products_Discussed_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Drug_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="OTC_Coverage">
+          <Key>
+            <PropertyRef Name="OTC_Coverage_Id" />
+          </Key>
+          <Property Name="OTC_Coverage_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Section_Id" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Is_OTC_Coverage" Type="int" />
+          <Property Name="Product_PPI" Type="bit" Nullable="false" />
+          <Property Name="Product_Antihistamines" Type="bit" Nullable="false" />
+          <Property Name="Product_Pediatric_OTC" Type="bit" Nullable="false" />
+          <Property Name="Product_Smoking" Type="bit" Nullable="false" />
+          <Property Name="Product_Obesity" Type="bit" Nullable="false" />
+          <Property Name="Product_Other" Type="bit" Nullable="false" />
+          <Property Name="Product_Other_Text" Type="varchar" MaxLength="100" />
+          <Property Name="Rx_Require" Type="int" />
+          <Property Name="OTC_Co_Pay_Level" Type="int" />
+          <Property Name="Is_Customer_Contracting" Type="int" />
+          <Property Name="Is_Opportunities_Exist" Type="int" />
+          <Property Name="Is_CoughCold" Type="bit" Nullable="false" />
+          <Property Name="Desc_CoughCold_Kits" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Health_Fairs" Type="bit" Nullable="false" />
+          <Property Name="Desc_Health_Fairs" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Education_Brochures" Type="bit" Nullable="false" />
+          <Property Name="Desc_Education_Brochures" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Other" Type="bit" Nullable="false" />
+          <Property Name="Desc_Other" Type="varchar" MaxLength="100" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="100" />
+          <Property Name="Modified_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForValueadd_Prgms" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForEducational_Prgms" Type="varchar" MaxLength="100" />
+          <Property Name="Is_CoughCold_EduProgram_ForEmps" Type="int" />
+          <Property Name="Person_Responsible_ForDecision" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForAntibiotic_Education" Type="varchar" MaxLength="100" />
+          <Property Name="Type_of_Programs" Type="varchar" MaxLength="100" />
+          <Property Name="Is_ClinicPharmacy_Associated" Type="int" />
+          <Property Name="ClinicPharmacy" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Managing_ClinicPharmacy" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Plans_Client">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+          </Key>
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Outlet_Number" Type="varchar" MaxLength="255" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Address1" Type="varchar" MaxLength="255" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="Plan_State" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Is_Profiled" Type="bit" Nullable="false" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Business_Plan_Goals' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Business_Plan_Goals">
+          <Key>
+            <PropertyRef Name="Goal_ID" />
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Goal_Status_ID" />
+            <PropertyRef Name="Goal_Status" />
+          </Key>
+          <Property Name="Goal_ID" Type="int" Nullable="false" />
+          <Property Name="Business_Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Goal_Description" Type="varchar" MaxLength="250" />
+          <Property Name="Goal_Status_ID" Type="int" Nullable="false" />
+          <Property Name="Goal_Status_Other" Type="varchar" MaxLength="50" />
+          <Property Name="Goal_Completion_DT" Type="datetime" />
+          <Property Name="Goal_Status" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Business_Plan_Tactics' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Business_Plan_Tactics">
+          <Key>
+            <PropertyRef Name="Goal_ID" />
+            <PropertyRef Name="Tactic_ID" />
+            <PropertyRef Name="Tactic_Status" />
+          </Key>
+          <Property Name="Goal_ID" Type="int" Nullable="false" />
+          <Property Name="Tactic_ID" Type="int" Nullable="false" />
+          <Property Name="Tactic_Description" Type="varchar" MaxLength="250" />
+          <Property Name="Tactic_Status_ID" Type="int" />
+          <Property Name="Tactic_Status_Other" Type="varchar" MaxLength="50" />
+          <Property Name="Tactic_Completion_Date" Type="datetime" />
+          <Property Name="Tactic_Status" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Business_Plans' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Business_Plans">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Acct_Summary" Type="varchar" MaxLength="500" />
+          <Property Name="OTC_Coverage_YN" Type="int" />
+          <Property Name="OTC_Opportunities_YN" Type="int" />
+          <Property Name="O_Cough_Cold_Kits_YN" Type="bit" />
+          <Property Name="O_Health_Fairs_YN" Type="bit" />
+          <Property Name="O_Education_Brochures_YN" Type="bit" />
+          <Property Name="O_Other_YN" Type="bit" />
+          <Property Name="O_Other_Explanation" Type="varchar" MaxLength="100" />
+          <Property Name="PT_Review_YN" Type="int" />
+          <Property Name="NO_PT_Explanation" Type="varchar" MaxLength="100" />
+          <Property Name="Product_Review_Period" Type="int" />
+          <Property Name="NA_Schedule_Period" Type="varchar" MaxLength="50" />
+          <Property Name="Timeframe_Reduced_YN" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Business_Plans_Key_Contacts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Business_Plans_Key_Contacts">
+          <Key>
+            <PropertyRef Name="KC_ID" />
+            <PropertyRef Name="KC_Type_ID" />
+            <PropertyRef Name="Plan_ID" />
+          </Key>
+          <Property Name="KC_ID" Type="int" Nullable="false" />
+          <Property Name="KC_Type_ID" Type="int" Nullable="false" />
+          <Property Name="KC_F_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_L_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Title_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Email" Type="varchar" MaxLength="255" />
+          <Property Name="KC_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Business_Plan_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Contact_Report_Data' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Data">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Is_National" Type="int" Nullable="false" />
+          <Property Name="Account_Manager" Type="varchar" MaxLength="102" />
+          <Property Name="Persons_Met" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Contact_Report_Data_Summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Data_Summary">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Is_National" Type="int" Nullable="false" />
+          <Property Name="Account_Manager" Type="varchar" MaxLength="102" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Contact_Report_DrillDownFilter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_DrillDownFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+          <Property Name="Outcome_ID" Type="int" />
+          <Property Name="Followup_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Contact_Report_Filter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Filter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Outcome_ID" Type="int" />
+          <Property Name="Followup_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Contact_Report_Search' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Search">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Products_Discussed_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Products_Discussed_ID" Type="int" Nullable="false" />
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Is_National" Type="int" Nullable="false" />
+          <Property Name="Account_Manager" Type="varchar" MaxLength="102" />
+          <Property Name="Drug_Name" Type="varchar(max)" />
+          <Property Name="Persons_Met" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_OTC_Coverage' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_OTC_Coverage">
+          <Key>
+            <PropertyRef Name="OTC_Coverage_Id" />
+            <PropertyRef Name="Section_Id" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Product_PPI" />
+            <PropertyRef Name="Product_Antihistamines" />
+            <PropertyRef Name="Product_Pediatric_OTC" />
+            <PropertyRef Name="Product_Smoking" />
+            <PropertyRef Name="Product_Obesity" />
+            <PropertyRef Name="Product_Other" />
+            <PropertyRef Name="Is_CoughCold" />
+            <PropertyRef Name="Is_Health_Fairs" />
+            <PropertyRef Name="Is_Education_Brochures" />
+            <PropertyRef Name="Is_Other" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_Name" />
+          </Key>
+          <Property Name="OTC_Coverage_Id" Type="int" Nullable="false" />
+          <Property Name="Section_Id" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Is_OTC_Coverage" Type="int" />
+          <Property Name="Product_PPI" Type="bit" Nullable="false" />
+          <Property Name="Product_Antihistamines" Type="bit" Nullable="false" />
+          <Property Name="Product_Pediatric_OTC" Type="bit" Nullable="false" />
+          <Property Name="Product_Smoking" Type="bit" Nullable="false" />
+          <Property Name="Product_Obesity" Type="bit" Nullable="false" />
+          <Property Name="Product_Other" Type="bit" Nullable="false" />
+          <Property Name="Product_Other_Text" Type="varchar" MaxLength="100" />
+          <Property Name="Rx_Require" Type="int" />
+          <Property Name="OTC_Co_Pay_Level" Type="int" />
+          <Property Name="Is_Customer_Contracting" Type="int" />
+          <Property Name="Is_Opportunities_Exist" Type="int" />
+          <Property Name="Is_CoughCold" Type="bit" Nullable="false" />
+          <Property Name="Desc_CoughCold_Kits" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Health_Fairs" Type="bit" Nullable="false" />
+          <Property Name="Desc_Health_Fairs" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Education_Brochures" Type="bit" Nullable="false" />
+          <Property Name="Desc_Education_Brochures" Type="varchar" MaxLength="100" />
+          <Property Name="Is_Other" Type="bit" Nullable="false" />
+          <Property Name="Desc_Other" Type="varchar" MaxLength="100" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="100" />
+          <Property Name="Modified_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForValueadd_Prgms" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForEducational_Prgms" Type="varchar" MaxLength="100" />
+          <Property Name="Is_CoughCold_EduProgram_ForEmps" Type="int" />
+          <Property Name="Person_Responsible_ForDecision" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Responsible_ForAntibiotic_Education" Type="varchar" MaxLength="100" />
+          <Property Name="Type_of_Programs" Type="varchar" MaxLength="100" />
+          <Property Name="Is_ClinicPharmacy_Associated" Type="int" />
+          <Property Name="ClinicPharmacy" Type="varchar" MaxLength="100" />
+          <Property Name="Person_Managing_ClinicPharmacy" Type="varchar" MaxLength="100" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Segment_ID" Type="int" />
+          <Property Name="Plan_State" Type="char" MaxLength="2" />
+          <Property Name="Section_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="AE_Name" Type="varchar" MaxLength="101" />
+          <Property Name="AE_UserID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Plan_List' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Plan_List">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Territory_ID" />
+            <PropertyRef Name="AE_UserID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Type_ID" Type="int" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Plan_State" Type="varchar" MaxLength="50" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Territory_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="AE_UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Plan_Search' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Plan_Search">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Reckitt.dbo.V_Plan_Search_OTC' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Plan_Search_OTC">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="AE_UserID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="AE_UserID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Business_Plan_Goals_Business_Plans">
+          <End Role="Business_Plans" Type="PathfinderReckittModel.Store.Business_Plans" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Goals" Type="PathfinderReckittModel.Store.Business_Plan_Goals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Goals">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Goals_Status">
+          <End Role="Lkp_Business_Plan_Status" Type="PathfinderReckittModel.Store.Lkp_Business_Plan_Status" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Goals" Type="PathfinderReckittModel.Store.Business_Plan_Goals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Status">
+              <PropertyRef Name="Status_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Goals">
+              <PropertyRef Name="Goal_Status_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Key_Contacts_Business_Plans">
+          <End Role="Business_Plans" Type="PathfinderReckittModel.Store.Business_Plans" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Key_Contacts" Type="PathfinderReckittModel.Store.Business_Plan_Key_Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Business_Plans">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Key_Contacts">
+              <PropertyRef Name="Business_Plan_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Business_Plan_Tactics_Status">
+          <End Role="Lkp_Business_Plan_Status" Type="PathfinderReckittModel.Store.Lkp_Business_Plan_Status" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Business_Plan_Tactics" Type="PathfinderReckittModel.Store.Business_Plan_Tactics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Lkp_Business_Plan_Status">
+              <PropertyRef Name="Status_ID" />
+            </Principal>
+            <Dependent Role="Business_Plan_Tactics">
+              <PropertyRef Name="Tactic_Status_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2006/04/edm" Namespace="PathfinderReckittModel" Alias="Self">
+        <EntityContainer Name="PathfinderReckittEntities" >
+          <EntitySet Name="tblOTCCoverageSet" EntityType="PathfinderReckittModel.tblOTCCoverage" />
+          <EntitySet Name="OTCCoverageSet" EntityType="PathfinderReckittModel.OTCCoverage" />
+          <EntitySet Name="PlanSearchSet" EntityType="PathfinderReckittModel.PlanSearch" />
+          <EntitySet Name="PlansClientSet" EntityType="PathfinderReckittModel.PlansClient" />
+          <EntitySet Name="BusinessPlanningKeyContactsSet" EntityType="PathfinderReckittModel.BusinessPlanningKeyContacts" />
+          <EntitySet Name="V_Business_PlansSet" EntityType="PathfinderReckittModel.V_Business_Plans" />
+          <EntitySet Name="BusinessPlanGoalSet" EntityType="PathfinderReckittModel.BusinessPlanGoal" />
+          <EntitySet Name="BusinessPlanTacticSet" EntityType="PathfinderReckittModel.BusinessPlanTactic" />
+          <EntitySet Name="BusinessPlanSet" EntityType="PathfinderReckittModel.BusinessPlan" />
+          <AssociationSet Name="FK_Business_Plan_Goals_Business_Plans" Association="PathfinderReckittModel.FK_Business_Plan_Goals_Business_Plans">
+            <End Role="Business_Plans" EntitySet="BusinessPlanSet" />
+            <End Role="Business_Plan_Goals" EntitySet="BusinessPlanGoalSet" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Tactics_Business_Plan_Goals" Association="PathfinderReckittModel.FK_Business_Plan_Tactics_Business_Plan_Goals">
+            <End Role="Business_Plan_Goals" EntitySet="BusinessPlanGoalSet" />
+            <End Role="Business_Plan_Tactics" EntitySet="BusinessPlanTacticSet" /></AssociationSet>
+          <EntitySet Name="BusinessPlanSchedulePeriodSet" EntityType="PathfinderReckittModel.BusinessPlanSchedulePeriod" />
+          <EntitySet Name="BusinessPlanStatusSet" EntityType="PathfinderReckittModel.BusinessPlanStatus" />
+          <EntitySet Name="BusinessPlanTacticsViewSet" EntityType="PathfinderReckittModel.BusinessPlanTacticsView" />
+          <EntitySet Name="BusinessPlanGoalsViewSet" EntityType="PathfinderReckittModel.BusinessPlanGoalsView" />
+          <AssociationSet Name="FK_Business_Plan_Goals_Lkp_Business_Plan_Status" Association="PathfinderReckittModel.FK_Business_Plan_Goals_Lkp_Business_Plan_Status">
+            <End Role="BusinessPlanStatus" EntitySet="BusinessPlanStatusSet" />
+            <End Role="BusinessPlanGoal" EntitySet="BusinessPlanGoalSet" /></AssociationSet>
+          <AssociationSet Name="FK_Business_Plan_Tactics_Tactic_Status" Association="PathfinderReckittModel.FK_Business_Plan_Tactics_Tactic_Status">
+            <End Role="BusinessPlanStatus" EntitySet="BusinessPlanStatusSet" />
+            <End Role="BusinessPlanTactic" EntitySet="BusinessPlanTacticSet" /></AssociationSet>
+          <EntitySet Name="tblBusinessPlanKeyContactsSet" EntityType="PathfinderReckittModel.tblBusinessPlanKeyContacts" />
+          <AssociationSet Name="FK_Business_Plan_Key_Contacts_Business_Plans" Association="PathfinderReckittModel.FK_Business_Plan_Key_Contacts_Business_Plans">
+            <End Role="BusinessPlan" EntitySet="BusinessPlanSet" />
+            <End Role="Business_Plan_Key_Contacts" EntitySet="tblBusinessPlanKeyContactsSet" /></AssociationSet>
+          <EntitySet Name="PlanListSet" EntityType="PathfinderReckittModel.PlanList" />
+          <EntitySet Name="LkpMeetingTypeSet" EntityType="PathfinderReckittModel.Lkp_Meeting_Type" />
+          <EntitySet Name="LkpMeetingActivitySet" EntityType="PathfinderReckittModel.Lkp_Meeting_Activity" />
+          <EntitySet Name="LkpProductsDiscussedSet" EntityType="PathfinderReckittModel.Lkp_Products_Discussed" />
+          <EntitySet Name="ContactReportSet" EntityType="PathfinderReckittModel.Contact_Reports" />
+          <EntitySet Name="LkpFollowupNotesSet" EntityType="PathfinderReckittModel.Lkp_Followup_Notes" />
+          <EntitySet Name="LkpMeetingOutcomeSet" EntityType="PathfinderReckittModel.Lkp_Meeting_Outcome" />
+          <EntitySet Name="PlanSearchOTCSet" EntityType="PathfinderReckittModel.PlanSearchOTC" />
+          <EntitySet Name="ContactReportDataSet" EntityType="PathfinderReckittModel.ContactReportData" />
+          <EntitySet Name="ContactReportFilterSet" EntityType="PathfinderReckittModel.ContactReportFilter" />
+          <EntitySet Name="ContactReportDrillDownFilterSet" EntityType="PathfinderReckittModel.ContactReportDrillDownFilter" />
+          <EntitySet Name="ContactReportProductDataSet" EntityType="PathfinderReckittModel.ContactReportProductData" />
+          <EntitySet Name="ContactReportDataSummarySet" EntityType="PathfinderReckittModel.ContactReportDataSummary" /></EntityContainer>
+        <EntityType Name="tblOTCCoverage">
+          <Key>
+            <PropertyRef Name="OTC_Coverage_Id" />
+            </Key>
+          <Property Name="OTC_Coverage_Id" Type="Int32" Nullable="false" />
+          <Property Name="Section_Id" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Is_OTC_Coverage" Type="Int32" Nullable="true" />
+          <Property Name="Product_PPI" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Antihistamines" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Pediatric_OTC" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Smoking" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Obesity" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Other" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Rx_Require" Type="Int32" Nullable="true" />
+          <Property Name="OTC_Co_Pay_Level" Type="Int32" Nullable="true" />
+          <Property Name="Is_Customer_Contracting" Type="Int32" Nullable="true" />
+          <Property Name="Is_Opportunities_Exist" Type="Int32" Nullable="true" />
+          <Property Name="Desc_CoughCold_Kits" Type="String" Nullable="true" />
+          <Property Name="Desc_Health_Fairs" Type="String" Nullable="true" />
+          <Property Name="Desc_Education_Brochures" Type="String" Nullable="true" />
+          <Property Name="Desc_Other" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Person_Responsible_ForValueadd_Prgms" Type="String" Nullable="true" />
+          <Property Name="Person_Responsible_ForEducational_Prgms" Type="String" Nullable="true" />
+          <Property Name="Is_CoughCold_EduProgram_ForEmps" Type="Int32" Nullable="true" />
+          <Property Name="Person_Responsible_ForDecision" Type="String" Nullable="true" />
+          <Property Name="Person_Responsible_ForAntibiotic_Education" Type="String" Nullable="true" />
+          <Property Name="Type_of_Programs" Type="String" Nullable="true" />
+          <Property Name="Is_ClinicPharmacy_Associated" Type="Int32" Nullable="true" />
+          <Property Name="ClinicPharmacy" Type="String" Nullable="true" />
+          <Property Name="Person_Managing_ClinicPharmacy" Type="String" Nullable="true" />
+          <Property Name="Product_Other_Text" Type="String" Nullable="true" />
+          <Property Name="Is_CoughCold" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Health_Fairs" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Education_Brochures" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Other" Type="Boolean" Nullable="false" DefaultValue="false" /></EntityType>
+        <EntityType Name="OTCCoverage">
+          <Key>
+            <PropertyRef Name="OTC_Coverage_Id" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Product_PPI" />
+            <PropertyRef Name="Product_Antihistamines" />
+            <PropertyRef Name="Product_Pediatric_OTC" />
+            <PropertyRef Name="Product_Smoking" />
+            <PropertyRef Name="Product_Obesity" />
+            <PropertyRef Name="Product_Other" />
+            <PropertyRef Name="Is_CoughCold" />
+            <PropertyRef Name="Is_Health_Fairs" />
+            <PropertyRef Name="Is_Education_Brochures" />
+            <PropertyRef Name="Is_Other" />
+            <PropertyRef Name="Section_Id" />
+            <PropertyRef Name="Plan_ID" />
+            </Key>
+          <Property Name="OTC_Coverage_Id" Type="Int32" Nullable="false" />
+          <Property Name="Section_Id" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Is_OTC_Coverage" Type="Int32" Nullable="true" />
+          <Property Name="Product_PPI" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Antihistamines" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Pediatric_OTC" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Smoking" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Obesity" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Product_Other" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Rx_Require" Type="Int32" Nullable="true" />
+          <Property Name="OTC_Co_Pay_Level" Type="Int32" Nullable="true" />
+          <Property Name="Is_Customer_Contracting" Type="Int32" Nullable="true" />
+          <Property Name="Is_Opportunities_Exist" Type="Int32" Nullable="true" />
+          <Property Name="Desc_CoughCold_Kits" Type="String" Nullable="true" />
+          <Property Name="Desc_Health_Fairs" Type="String" Nullable="true" />
+          <Property Name="Desc_Education_Brochures" Type="String" Nullable="true" />
+          <Property Name="Desc_Other" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Section_Name" Type="String" Nullable="false" />
+          <Property Name="Person_Responsible_ForValueadd_Prgms" Type="String" Nullable="true" />
+          <Property Name="Person_Responsible_ForEducational_Prgms" Type="String" Nullable="true" />
+          <Property Name="Is_CoughCold_EduProgram_ForEmps" Type="Int32" Nullable="true" />
+          <Property Name="Person_Responsible_ForDecision" Type="String" Nullable="true" />
+          <Property Name="Person_Responsible_ForAntibiotic_Education" Type="String" Nullable="true" />
+          <Property Name="Type_of_Programs" Type="String" Nullable="true" />
+          <Property Name="Is_ClinicPharmacy_Associated" Type="Int32" Nullable="true" />
+          <Property Name="ClinicPharmacy" Type="String" Nullable="true" />
+          <Property Name="Person_Managing_ClinicPharmacy" Type="String" Nullable="true" />
+          <Property Name="Product_Other_Text" Type="String" Nullable="true" />
+          <Property Name="Is_CoughCold" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Health_Fairs" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Education_Brochures" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="Is_Other" Type="Boolean" Nullable="false" DefaultValue="false" />
+          <Property Name="AE_Name" Type="String" Nullable="true" />
+          <Property Name="AE_UserID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="PlanSearch">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Section_ID" />
+            </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          </EntityType>
+        <EntityType Name="PlansClient">
+          <Key>
+            <PropertyRef Name="Plan_ID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Outlet_Number" Type="String" Nullable="true" />
+          <Property Name="Plan_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Address1" Type="String" Nullable="true" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Is_Profiled" Type="Boolean" Nullable="false" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="City" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="BusinessPlanningKeyContacts">
+          <Key>
+            <PropertyRef Name="KC_ID" />
+            <PropertyRef Name="KC_Type_ID" />
+            <PropertyRef Name="Plan_ID" /></Key>
+          <Property Name="KC_ID" Type="Int32" Nullable="false" />
+          <Property Name="KC_Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="KC_F_Name" Type="String" Nullable="true" />
+          <Property Name="KC_L_Name" Type="String" Nullable="true" />
+          <Property Name="KC_Title_Name" Type="String" Nullable="true" />
+          <Property Name="KC_Email" Type="String" Nullable="true" />
+          <Property Name="KC_Phone" Type="String" Nullable="true" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="V_Business_Plans">
+          <Key>
+            <PropertyRef Name="Plan_ID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Acct_Summary" Type="String" Nullable="true" />
+          <Property Name="OTC_Coverage_YN" Type="Int32" Nullable="true" />
+          <Property Name="OTC_Opportunities_YN" Type="Int32" Nullable="true" />
+          <Property Name="O_Cough_Cold_Kits_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Health_Fairs_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Education_Brochures_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Other_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Other_Explanation" Type="String" Nullable="true" />
+          <Property Name="PT_Review_YN" Type="Int32" Nullable="true" />
+          <Property Name="NO_PT_Explanation" Type="String" Nullable="true" />
+          <Property Name="Product_Review_Period" Type="Int32" Nullable="true" />
+          <Property Name="NA_Schedule_Period" Type="String" Nullable="true" />
+          <Property Name="Timeframe_Reduced_YN" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="BusinessPlanGoal">
+          <Key>
+            <PropertyRef Name="Goal_ID" /></Key>
+          <Property Name="Goal_ID" Type="Int32" Nullable="false" />
+          <Property Name="Goal_Description" Type="String" Nullable="true" />
+          <Property Name="Goal_Status_Other" Type="String" Nullable="true" />
+          <Property Name="Goal_Completion_DT" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="BusinessPlan" Relationship="PathfinderReckittModel.FK_Business_Plan_Goals_Business_Plans" FromRole="Business_Plan_Goals" ToRole="Business_Plans" />
+          <NavigationProperty Name="BusinessPlanTactic" Relationship="PathfinderReckittModel.FK_Business_Plan_Tactics_Business_Plan_Goals" FromRole="Business_Plan_Goals" ToRole="Business_Plan_Tactics" />
+          <NavigationProperty Name="Status" Relationship="PathfinderReckittModel.FK_Business_Plan_Goals_Lkp_Business_Plan_Status" FromRole="BusinessPlanGoal" ToRole="BusinessPlanStatus" /></EntityType>
+        <EntityType Name="BusinessPlanTactic">
+          <Key>
+            <PropertyRef Name="Tactic_ID" /></Key>
+          <Property Name="Tactic_ID" Type="Int32" Nullable="false" />
+          <Property Name="Tactic_Description" Type="String" Nullable="true" />
+          <Property Name="Tactic_Status_Other" Type="String" Nullable="true" />
+          <Property Name="Tactic_Completion_Date" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="BusinessPlanGoal" Relationship="PathfinderReckittModel.FK_Business_Plan_Tactics_Business_Plan_Goals" FromRole="Business_Plan_Tactics" ToRole="Business_Plan_Goals" />
+          <NavigationProperty Name="Status" Relationship="PathfinderReckittModel.FK_Business_Plan_Tactics_Tactic_Status" FromRole="BusinessPlanTactic" ToRole="BusinessPlanStatus" /></EntityType>
+        <EntityType Name="BusinessPlan">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" /></Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Acct_Summary" Type="String" Nullable="true" />
+          <Property Name="OTC_Coverage_YN" Type="Int32" Nullable="true" />
+          <Property Name="OTC_Opportunities_YN" Type="Int32" Nullable="true" />
+          <Property Name="O_Cough_Cold_Kits_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Health_Fairs_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Education_Brochures_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Other_YN" Type="Boolean" Nullable="true" />
+          <Property Name="O_Other_Explanation" Type="String" Nullable="true" />
+          <Property Name="PT_Review_YN" Type="Int32" Nullable="true" />
+          <Property Name="NO_PT_Explanation" Type="String" Nullable="true" />
+          <Property Name="Product_Review_Period" Type="Int32" Nullable="true" />
+          <Property Name="NA_Schedule_Period" Type="String" Nullable="true" />
+          <Property Name="Timeframe_Reduced_YN" Type="Int32" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <NavigationProperty Name="BusinessPlanGoal" Relationship="PathfinderReckittModel.FK_Business_Plan_Goals_Business_Plans" FromRole="Business_Plans" ToRole="Business_Plan_Goals" />
+          <NavigationProperty Name="Business_Plan_Key_Contacts" Relationship="PathfinderReckittModel.FK_Business_Plan_Key_Contacts_Business_Plans" FromRole="BusinessPlan" ToRole="Business_Plan_Key_Contacts" /></EntityType>
+        <Association Name="FK_Business_Plan_Goals_Business_Plans">
+          <End Type="PathfinderReckittModel.BusinessPlan" Role="Business_Plans" Multiplicity="1" />
+          <End Type="PathfinderReckittModel.BusinessPlanGoal" Role="Business_Plan_Goals" Multiplicity="*" /></Association>
+        <Association Name="FK_Business_Plan_Tactics_Business_Plan_Goals">
+          <End Type="PathfinderReckittModel.BusinessPlanGoal" Role="Business_Plan_Goals" Multiplicity="1" />
+          <End Type="PathfinderReckittModel.BusinessPlanTactic" Role="Business_Plan_Tactics" Multiplicity="*" /></Association>
+        <EntityType Name="BusinessPlanSchedulePeriod">
+          <Key>
+            <PropertyRef Name="Schedule_Period_ID" /></Key>
+          <Property Name="Schedule_Period_ID" Type="Int32" Nullable="false" />
+          <Property Name="Schedule_Period" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="BusinessPlanStatus">
+          <Key>
+            <PropertyRef Name="Status_ID" /></Key>
+          <Property Name="Status_ID" Type="Int32" Nullable="false" />
+          <Property Name="Status_Name" Type="String" Nullable="false" />
+          <NavigationProperty Name="Business_Plan_Goals" Relationship="PathfinderReckittModel.FK_Business_Plan_Goals_Lkp_Business_Plan_Status" FromRole="BusinessPlanStatus" ToRole="BusinessPlanGoal" />
+          <NavigationProperty Name="Business_Plan_Tactics" Relationship="PathfinderReckittModel.FK_Business_Plan_Tactics_Tactic_Status" FromRole="BusinessPlanStatus" ToRole="BusinessPlanTactic" /></EntityType>
+        <EntityType Name="BusinessPlanTacticsView">
+          <Key>
+            <PropertyRef Name="Goal_ID" />
+            <PropertyRef Name="Tactic_ID" />
+            <PropertyRef Name="Tactic_Status" /></Key>
+          <Property Name="Goal_ID" Type="Int32" Nullable="false" />
+          <Property Name="Tactic_ID" Type="Int32" Nullable="false" />
+          <Property Name="Tactic_Description" Type="String" Nullable="true" />
+          <Property Name="Tactic_Status" Type="String" Nullable="false" />
+          <Property Name="Tactic_Status_Other" Type="String" Nullable="true" />
+          <Property Name="Tactic_Completion_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Tactic_Status_ID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="BusinessPlanGoalsView">
+          <Key>
+            <PropertyRef Name="Goal_ID" />
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Goal_Status" />
+            <PropertyRef Name="Goal_Status_ID" /></Key>
+          <Property Name="Goal_ID" Type="Int32" Nullable="false" />
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Goal_Description" Type="String" Nullable="true" />
+          <Property Name="Goal_Status" Type="String" Nullable="false" />
+          <Property Name="Goal_Status_Other" Type="String" Nullable="true" />
+          <Property Name="Goal_Completion_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Goal_Status_ID" Type="Int32" Nullable="false" /></EntityType>
+        <Association Name="FK_Business_Plan_Goals_Lkp_Business_Plan_Status">
+          <End Type="PathfinderReckittModel.BusinessPlanStatus" Role="BusinessPlanStatus" Multiplicity="1" />
+          <End Type="PathfinderReckittModel.BusinessPlanGoal" Role="BusinessPlanGoal" Multiplicity="*" /></Association>
+        <Association Name="FK_Business_Plan_Tactics_Tactic_Status">
+          <End Type="PathfinderReckittModel.BusinessPlanStatus" Role="BusinessPlanStatus" Multiplicity="0..1" />
+          <End Type="PathfinderReckittModel.BusinessPlanTactic" Role="BusinessPlanTactic" Multiplicity="*" /></Association>
+        <EntityType Name="tblBusinessPlanKeyContacts">
+          <Key>
+            <PropertyRef Name="Business_Plan_ID" />
+            <PropertyRef Name="Key_Contact_ID" />
+            <PropertyRef Name="Key_Contact_Type_ID" /></Key>
+          <Property Name="Business_Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Key_Contact_ID" Type="Int32" Nullable="false" />
+          <Property Name="Key_Contact_Type_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BusinessPlan" Relationship="PathfinderReckittModel.FK_Business_Plan_Key_Contacts_Business_Plans" FromRole="Business_Plan_Key_Contacts" ToRole="BusinessPlan" /></EntityType>
+        <Association Name="FK_Business_Plan_Key_Contacts_Business_Plans">
+          <End Type="PathfinderReckittModel.BusinessPlan" Role="BusinessPlan" Multiplicity="1" />
+          <End Type="PathfinderReckittModel.tblBusinessPlanKeyContacts" Role="Business_Plan_Key_Contacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BusinessPlan">
+              <PropertyRef Name="Business_Plan_ID" /></Principal>
+            <Dependent Role="Business_Plan_Key_Contacts">
+              <PropertyRef Name="Business_Plan_ID" /></Dependent></ReferentialConstraint></Association>
+        <EntityType Name="PlanList">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="AE_UserID" />
+            <PropertyRef Name="Territory_ID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="AE_UserID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Section_Name" Type="String" Nullable="false" />
+          <Property Name="Territory_ID" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="Lkp_Meeting_Type">
+          <Key>
+            <PropertyRef Name="Meeting_Type_ID" /></Key>
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="Lkp_Meeting_Activity">
+          <Key>
+            <PropertyRef Name="Meeting_Activity_ID" /></Key>
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="Lkp_Products_Discussed">
+          <Key>
+            <PropertyRef Name="Products_Discussed_ID" /></Key>
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="false" />
+          <Property Name="Client_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="Contact_Reports">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="false" />
+          <Property Name="Meeting_Type_Other" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_Other" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_Other" Type="String" Nullable="true" />
+          <Property Name="Meeting_Outcome_Other" Type="String" Nullable="true" />
+          <Property Name="Key_Contacts_Other" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Lkp_Followup_Notes">
+          <Key>
+            <PropertyRef Name="Followup_Notes_ID" /></Key>
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_Notes_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="Lkp_Meeting_Outcome">
+          <Key>
+            <PropertyRef Name="Meeting_Outcome_ID" /></Key>
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="PlanSearchOTC">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="AE_UserID" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="AE_UserID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="ContactReportData">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Products_Discussed_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Persons_Met" Type="String" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Is_National" Type="Int32" Nullable="false" />
+          <Property Name="Account_Manager" Type="String" Nullable="true" />
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_Notes_Name" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="ContactReportFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Outcome_ID" Type="Int32" Nullable="true" />
+          <Property Name="Followup_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="ContactReportDrillDownFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="Outcome_ID" Type="Int32" Nullable="true" />
+          <Property Name="Followup_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="ContactReportProductData">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Persons_Met" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Is_National" Type="Int32" Nullable="false" />
+          <Property Name="Account_Manager" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="ContactReportDataSummary">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Is_National" Type="Int32" Nullable="false" />
+          <Property Name="Account_Manager" Type="String" Nullable="true" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS" Space="C-S">
+        <Alias Key="Model" Value="PathFinderReckittModel" />
+        <Alias Key="Target" Value="PathfinderReckittModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="PathfinderReckittEntities" StorageEntityContainer="PathfinderReckittModelStoreContainer">
+          <EntitySetMapping Name="tblOTCCoverageSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.tblOTCCoverage)">
+              <MappingFragment StoreEntitySet="OTC_Coverage">
+                <ScalarProperty Name="Is_Other" ColumnName="Is_Other" />
+                <ScalarProperty Name="Is_Education_Brochures" ColumnName="Is_Education_Brochures" />
+                <ScalarProperty Name="Is_Health_Fairs" ColumnName="Is_Health_Fairs" />
+                <ScalarProperty Name="Is_CoughCold" ColumnName="Is_CoughCold" />
+                <ScalarProperty Name="Product_Other_Text" ColumnName="Product_Other_Text" />
+                <ScalarProperty Name="Person_Managing_ClinicPharmacy" ColumnName="Person_Managing_ClinicPharmacy" />
+                <ScalarProperty Name="ClinicPharmacy" ColumnName="ClinicPharmacy" />
+                <ScalarProperty Name="Is_ClinicPharmacy_Associated" ColumnName="Is_ClinicPharmacy_Associated" />
+                <ScalarProperty Name="Type_of_Programs" ColumnName="Type_of_Programs" />
+                <ScalarProperty Name="Person_Responsible_ForAntibiotic_Education" ColumnName="Person_Responsible_ForAntibiotic_Education" />
+                <ScalarProperty Name="Person_Responsible_ForDecision" ColumnName="Person_Responsible_ForDecision" />
+                <ScalarProperty Name="Is_CoughCold_EduProgram_ForEmps" ColumnName="Is_CoughCold_EduProgram_ForEmps" />
+                <ScalarProperty Name="Person_Responsible_ForEducational_Prgms" ColumnName="Person_Responsible_ForEducational_Prgms" />
+                <ScalarProperty Name="Person_Responsible_ForValueadd_Prgms" ColumnName="Person_Responsible_ForValueadd_Prgms" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Desc_Other" ColumnName="Desc_Other" />
+                <ScalarProperty Name="Desc_Education_Brochures" ColumnName="Desc_Education_Brochures" />
+                <ScalarProperty Name="Desc_Health_Fairs" ColumnName="Desc_Health_Fairs" />
+                <ScalarProperty Name="Desc_CoughCold_Kits" ColumnName="Desc_CoughCold_Kits" />
+                <ScalarProperty Name="Is_Opportunities_Exist" ColumnName="Is_Opportunities_Exist" />
+                <ScalarProperty Name="Is_Customer_Contracting" ColumnName="Is_Customer_Contracting" />
+                <ScalarProperty Name="OTC_Co_Pay_Level" ColumnName="OTC_Co_Pay_Level" />
+                <ScalarProperty Name="Rx_Require" ColumnName="Rx_Require" />
+                <ScalarProperty Name="Product_Other" ColumnName="Product_Other" />
+                <ScalarProperty Name="Product_Obesity" ColumnName="Product_Obesity" />
+                <ScalarProperty Name="Product_Smoking" ColumnName="Product_Smoking" />
+                <ScalarProperty Name="Product_Pediatric_OTC" ColumnName="Product_Pediatric_OTC" />
+                <ScalarProperty Name="Product_Antihistamines" ColumnName="Product_Antihistamines" />
+                <ScalarProperty Name="Product_PPI" ColumnName="Product_PPI" />
+                <ScalarProperty Name="Is_OTC_Coverage" ColumnName="Is_OTC_Coverage" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Section_Id" ColumnName="Section_Id" />
+                <ScalarProperty Name="OTC_Coverage_Id" ColumnName="OTC_Coverage_Id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanSearchSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.PlanSearch)">
+              <MappingFragment StoreEntitySet="V_Plan_Search">
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="OTCCoverageSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.OTCCoverage)">
+              <MappingFragment StoreEntitySet="V_OTC_Coverage">
+                <ScalarProperty Name="AE_UserID" ColumnName="AE_UserID" />
+                <ScalarProperty Name="AE_Name" ColumnName="AE_Name" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Person_Managing_ClinicPharmacy" ColumnName="Person_Managing_ClinicPharmacy" />
+                <ScalarProperty Name="ClinicPharmacy" ColumnName="ClinicPharmacy" />
+                <ScalarProperty Name="Is_ClinicPharmacy_Associated" ColumnName="Is_ClinicPharmacy_Associated" />
+                <ScalarProperty Name="Type_of_Programs" ColumnName="Type_of_Programs" />
+                <ScalarProperty Name="Person_Responsible_ForAntibiotic_Education" ColumnName="Person_Responsible_ForAntibiotic_Education" />
+                <ScalarProperty Name="Person_Responsible_ForDecision" ColumnName="Person_Responsible_ForDecision" />
+                <ScalarProperty Name="Is_CoughCold_EduProgram_ForEmps" ColumnName="Is_CoughCold_EduProgram_ForEmps" />
+                <ScalarProperty Name="Person_Responsible_ForEducational_Prgms" ColumnName="Person_Responsible_ForEducational_Prgms" />
+                <ScalarProperty Name="Person_Responsible_ForValueadd_Prgms" ColumnName="Person_Responsible_ForValueadd_Prgms" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Desc_Other" ColumnName="Desc_Other" />
+                <ScalarProperty Name="Is_Other" ColumnName="Is_Other" />
+                <ScalarProperty Name="Desc_Education_Brochures" ColumnName="Desc_Education_Brochures" />
+                <ScalarProperty Name="Is_Education_Brochures" ColumnName="Is_Education_Brochures" />
+                <ScalarProperty Name="Desc_Health_Fairs" ColumnName="Desc_Health_Fairs" />
+                <ScalarProperty Name="Is_Health_Fairs" ColumnName="Is_Health_Fairs" />
+                <ScalarProperty Name="Desc_CoughCold_Kits" ColumnName="Desc_CoughCold_Kits" />
+                <ScalarProperty Name="Is_CoughCold" ColumnName="Is_CoughCold" />
+                <ScalarProperty Name="Is_Opportunities_Exist" ColumnName="Is_Opportunities_Exist" />
+                <ScalarProperty Name="Is_Customer_Contracting" ColumnName="Is_Customer_Contracting" />
+                <ScalarProperty Name="OTC_Co_Pay_Level" ColumnName="OTC_Co_Pay_Level" />
+                <ScalarProperty Name="Rx_Require" ColumnName="Rx_Require" />
+                <ScalarProperty Name="Product_Other_Text" ColumnName="Product_Other_Text" />
+                <ScalarProperty Name="Product_Other" ColumnName="Product_Other" />
+                <ScalarProperty Name="Product_Obesity" ColumnName="Product_Obesity" />
+                <ScalarProperty Name="Product_Smoking" ColumnName="Product_Smoking" />
+                <ScalarProperty Name="Product_Pediatric_OTC" ColumnName="Product_Pediatric_OTC" />
+                <ScalarProperty Name="Product_Antihistamines" ColumnName="Product_Antihistamines" />
+                <ScalarProperty Name="Product_PPI" ColumnName="Product_PPI" />
+                <ScalarProperty Name="Is_OTC_Coverage" ColumnName="Is_OTC_Coverage" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Section_Id" ColumnName="Section_Id" />
+                <ScalarProperty Name="OTC_Coverage_Id" ColumnName="OTC_Coverage_Id" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlansClientSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.PlansClient)">
+              <MappingFragment StoreEntitySet="Plans_Client">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Is_Profiled" ColumnName="Is_Profiled" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_Type_Name" ColumnName="Plan_Type_Name" />
+                <ScalarProperty Name="Outlet_Number" ColumnName="Outlet_Number" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanningKeyContactsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanningKeyContacts)">
+              <MappingFragment StoreEntitySet="V_Business_Plans_Key_Contacts">
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="KC_Phone" ColumnName="KC_Phone" />
+                <ScalarProperty Name="KC_Email" ColumnName="KC_Email" />
+                <ScalarProperty Name="KC_Title_Name" ColumnName="KC_Title_Name" />
+                <ScalarProperty Name="KC_L_Name" ColumnName="KC_L_Name" />
+                <ScalarProperty Name="KC_F_Name" ColumnName="KC_F_Name" />
+                <ScalarProperty Name="KC_Type_ID" ColumnName="KC_Type_ID" />
+                <ScalarProperty Name="KC_ID" ColumnName="KC_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="V_Business_PlansSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.V_Business_Plans)">
+              <MappingFragment StoreEntitySet="V_Business_Plans">
+                <ScalarProperty Name="Timeframe_Reduced_YN" ColumnName="Timeframe_Reduced_YN" />
+                <ScalarProperty Name="NA_Schedule_Period" ColumnName="NA_Schedule_Period" />
+                <ScalarProperty Name="Product_Review_Period" ColumnName="Product_Review_Period" />
+                <ScalarProperty Name="NO_PT_Explanation" ColumnName="NO_PT_Explanation" />
+                <ScalarProperty Name="PT_Review_YN" ColumnName="PT_Review_YN" />
+                <ScalarProperty Name="O_Other_Explanation" ColumnName="O_Other_Explanation" />
+                <ScalarProperty Name="O_Other_YN" ColumnName="O_Other_YN" />
+                <ScalarProperty Name="O_Education_Brochures_YN" ColumnName="O_Education_Brochures_YN" />
+                <ScalarProperty Name="O_Health_Fairs_YN" ColumnName="O_Health_Fairs_YN" />
+                <ScalarProperty Name="O_Cough_Cold_Kits_YN" ColumnName="O_Cough_Cold_Kits_YN" />
+                <ScalarProperty Name="OTC_Opportunities_YN" ColumnName="OTC_Opportunities_YN" />
+                <ScalarProperty Name="OTC_Coverage_YN" ColumnName="OTC_Coverage_YN" />
+                <ScalarProperty Name="Acct_Summary" ColumnName="Acct_Summary" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanGoalSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanGoal)">
+              <MappingFragment StoreEntitySet="Business_Plan_Goals">
+                <ScalarProperty Name="Goal_Completion_DT" ColumnName="Goal_Completion_DT" />
+                <ScalarProperty Name="Goal_Status_Other" ColumnName="Goal_Status_Other" />
+                <ScalarProperty Name="Goal_Description" ColumnName="Goal_Description" />
+                <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanTacticSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanTactic)">
+              <MappingFragment StoreEntitySet="Business_Plan_Tactics">
+                <ScalarProperty Name="Tactic_Completion_Date" ColumnName="Tactic_Completion_Date" />
+                <ScalarProperty Name="Tactic_Status_Other" ColumnName="Tactic_Status_Other" />
+                <ScalarProperty Name="Tactic_Description" ColumnName="Tactic_Description" />
+                <ScalarProperty Name="Tactic_ID" ColumnName="Tactic_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlan)">
+              <MappingFragment StoreEntitySet="Business_Plans">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Timeframe_Reduced_YN" ColumnName="Timeframe_Reduced_YN" />
+                <ScalarProperty Name="NA_Schedule_Period" ColumnName="NA_Schedule_Period" />
+                <ScalarProperty Name="Product_Review_Period" ColumnName="Product_Review_Period" />
+                <ScalarProperty Name="NO_PT_Explanation" ColumnName="NO_PT_Explanation" />
+                <ScalarProperty Name="PT_Review_YN" ColumnName="PT_Review_YN" />
+                <ScalarProperty Name="O_Other_Explanation" ColumnName="O_Other_Explanation" />
+                <ScalarProperty Name="O_Other_YN" ColumnName="O_Other_YN" />
+                <ScalarProperty Name="O_Education_Brochures_YN" ColumnName="O_Education_Brochures_YN" />
+                <ScalarProperty Name="O_Health_Fairs_YN" ColumnName="O_Health_Fairs_YN" />
+                <ScalarProperty Name="O_Cough_Cold_Kits_YN" ColumnName="O_Cough_Cold_Kits_YN" />
+                <ScalarProperty Name="OTC_Opportunities_YN" ColumnName="OTC_Opportunities_YN" />
+                <ScalarProperty Name="OTC_Coverage_YN" ColumnName="OTC_Coverage_YN" />
+                <ScalarProperty Name="Acct_Summary" ColumnName="Acct_Summary" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Goals_Business_Plans" TypeName="PathfinderReckittModel.FK_Business_Plan_Goals_Business_Plans" StoreEntitySet="Business_Plan_Goals">
+            <EndProperty Name="Business_Plan_Goals">
+              <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" /></EndProperty>
+            <EndProperty Name="Business_Plans">
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Tactics_Business_Plan_Goals" TypeName="PathfinderReckittModel.FK_Business_Plan_Tactics_Business_Plan_Goals" StoreEntitySet="Business_Plan_Tactics">
+            <EndProperty Name="Business_Plan_Tactics">
+              <ScalarProperty Name="Tactic_ID" ColumnName="Tactic_ID" /></EndProperty>
+            <EndProperty Name="Business_Plan_Goals">
+              <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" /></EndProperty></AssociationSetMapping>
+          <EntitySetMapping Name="BusinessPlanSchedulePeriodSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanSchedulePeriod)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Schedule_Periods">
+                <ScalarProperty Name="Schedule_Period" ColumnName="Schedule_Period" />
+                <ScalarProperty Name="Schedule_Period_ID" ColumnName="Schedule_Period_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanStatusSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanStatus)">
+              <MappingFragment StoreEntitySet="Lkp_Business_Plan_Status">
+                <ScalarProperty Name="Status_Name" ColumnName="Status_Name" />
+                <ScalarProperty Name="Status_ID" ColumnName="Status_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanTacticsViewSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanTacticsView)">
+              <MappingFragment StoreEntitySet="V_Business_Plan_Tactics">
+                <ScalarProperty Name="Tactic_Status_ID" ColumnName="Tactic_Status_ID" />
+                <ScalarProperty Name="Tactic_Completion_Date" ColumnName="Tactic_Completion_Date" />
+                <ScalarProperty Name="Tactic_Status_Other" ColumnName="Tactic_Status_Other" />
+                <ScalarProperty Name="Tactic_Status" ColumnName="Tactic_Status" />
+                <ScalarProperty Name="Tactic_Description" ColumnName="Tactic_Description" />
+                <ScalarProperty Name="Tactic_ID" ColumnName="Tactic_ID" />
+                <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" />
+                </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="BusinessPlanGoalsViewSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.BusinessPlanGoalsView)">
+              <MappingFragment StoreEntitySet="V_Business_Plan_Goals">
+                <ScalarProperty Name="Goal_Status_ID" ColumnName="Goal_Status_ID" />
+                <ScalarProperty Name="Goal_Completion_DT" ColumnName="Goal_Completion_DT" />
+                <ScalarProperty Name="Goal_Status_Other" ColumnName="Goal_Status_Other" />
+                <ScalarProperty Name="Goal_Status" ColumnName="Goal_Status" />
+                <ScalarProperty Name="Goal_Description" ColumnName="Goal_Description" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" />
+                <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Goals_Lkp_Business_Plan_Status" TypeName="PathfinderReckittModel.FK_Business_Plan_Goals_Lkp_Business_Plan_Status" StoreEntitySet="Business_Plan_Goals">
+            <EndProperty Name="BusinessPlanGoal">
+              <ScalarProperty Name="Goal_ID" ColumnName="Goal_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlanStatus">
+              <ScalarProperty Name="Status_ID" ColumnName="Goal_Status_ID" /></EndProperty></AssociationSetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Tactics_Tactic_Status" TypeName="PathfinderReckittModel.FK_Business_Plan_Tactics_Tactic_Status" StoreEntitySet="Business_Plan_Tactics">
+            <EndProperty Name="BusinessPlanTactic">
+              <ScalarProperty Name="Tactic_ID" ColumnName="Tactic_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlanStatus">
+              <ScalarProperty Name="Status_ID" ColumnName="Tactic_Status_ID" /></EndProperty>
+            <Condition ColumnName="Tactic_Status_ID" IsNull="false" /></AssociationSetMapping>
+          <EntitySetMapping Name="tblBusinessPlanKeyContactsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.tblBusinessPlanKeyContacts)">
+              <MappingFragment StoreEntitySet="Business_Plan_Key_Contacts">
+                <ScalarProperty Name="Key_Contact_Type_ID" ColumnName="Key_Contact_Type_ID" />
+                <ScalarProperty Name="Key_Contact_ID" ColumnName="Key_Contact_ID" />
+                <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_Business_Plan_Key_Contacts_Business_Plans" TypeName="PathfinderReckittModel.FK_Business_Plan_Key_Contacts_Business_Plans" StoreEntitySet="Business_Plan_Key_Contacts">
+            <EndProperty Name="Business_Plan_Key_Contacts">
+              <ScalarProperty Name="Key_Contact_Type_ID" ColumnName="Key_Contact_Type_ID" />
+              <ScalarProperty Name="Key_Contact_ID" ColumnName="Key_Contact_ID" />
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty>
+            <EndProperty Name="BusinessPlan">
+              <ScalarProperty Name="Business_Plan_ID" ColumnName="Business_Plan_ID" /></EndProperty></AssociationSetMapping>
+          <EntitySetMapping Name="PlanListSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.PlanList)">
+              <MappingFragment StoreEntitySet="V_Plan_List">
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Plan_Type_Name" ColumnName="Plan_Type_Name" />
+                <ScalarProperty Name="Plan_Type_ID" ColumnName="Plan_Type_ID" />
+                <ScalarProperty Name="AE_UserID" ColumnName="AE_UserID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingTypeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Lkp_Meeting_Type)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Type">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingActivitySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Lkp_Meeting_Activity)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Activity">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpProductsDiscussedSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Lkp_Products_Discussed)">
+              <MappingFragment StoreEntitySet="Lkp_Products_Discussed">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Contact_Reports)">
+              <MappingFragment StoreEntitySet="Contact_Reports">
+                <ScalarProperty Name="Key_Contacts_Other" ColumnName="Key_Contacts_Other" />
+                <ScalarProperty Name="Meeting_Outcome_Other" ColumnName="Meeting_Outcome_Other" />
+                <ScalarProperty Name="Followup_Notes_Other" ColumnName="Followup_Notes_Other" />
+                <ScalarProperty Name="Meeting_Activity_Other" ColumnName="Meeting_Activity_Other" />
+                <ScalarProperty Name="Meeting_Type_Other" ColumnName="Meeting_Type_Other" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpFollowupNotesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Lkp_Followup_Notes)">
+              <MappingFragment StoreEntitySet="Lkp_Followup_Notes">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingOutcomeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.Lkp_Meeting_Outcome)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Outcome">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanSearchOTCSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.PlanSearchOTC)">
+              <MappingFragment StoreEntitySet="V_Plan_Search_OTC">
+                <ScalarProperty Name="AE_UserID" ColumnName="AE_UserID" />
+                <ScalarProperty Name="ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportFilterSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.ContactReportFilter)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Filter">
+                <ScalarProperty Name="Followup_ID" ColumnName="Followup_ID" />
+                <ScalarProperty Name="Outcome_ID" ColumnName="Outcome_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportDrillDownFilterSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.ContactReportDrillDownFilter)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_DrillDownFilter">
+                <ScalarProperty Name="Followup_ID" ColumnName="Followup_ID" />
+                <ScalarProperty Name="Outcome_ID" ColumnName="Outcome_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportDataSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.ContactReportData)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Search">
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" />
+                <ScalarProperty Name="Account_Manager" ColumnName="Account_Manager" />
+                <ScalarProperty Name="Is_National" ColumnName="Is_National" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Persons_Met" ColumnName="Persons_Met" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportProductDataSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.ContactReportProductData)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Data">
+                <ScalarProperty Name="Account_Manager" ColumnName="Account_Manager" />
+                <ScalarProperty Name="Is_National" ColumnName="Is_National" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" />
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" />
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Persons_Met" ColumnName="Persons_Met" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportDataSummarySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderReckittModel.ContactReportDataSummary)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Data_Summary">
+                <ScalarProperty Name="Account_Manager" ColumnName="Account_Manager" />
+                <ScalarProperty Name="Is_National" ColumnName="Is_National" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PathFinderReckittModel" ZoomLevel="68" >
+        <EntityTypeShape EntityType="PathfinderReckittModel.tblOTCCoverage" Width="1.5" PointX="0.75" PointY="0.75" Height="4.5505582682291656" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.OTCCoverage" Width="1.5" PointX="2.75" PointY="0.75" Height="7.8375048828125" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.PlanSearch" Width="1.5" PointX="5.25" PointY="0.75" Height="1.427958984375" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.PlansClient" Width="1.5" PointX="9.25" PointY="0.875" Height="3.4001269531249996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanningKeyContacts" Width="1.5" PointX="5.375" PointY="3.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.V_Business_Plans" Width="1.5" PointX="7.375" PointY="5.75" Height="3.2357796223958335" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanGoal" Width="1.5" PointX="3" PointY="11.125" Height="2.0853483072916656" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanTactic" Width="1.5" PointX="5.25" PointY="11.125" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlan" Width="1.5" PointX="0.75" PointY="10" Height="4.2218636067708317" />
+        <AssociationConnector Association="PathfinderReckittModel.FK_Business_Plan_Goals_Business_Plans" >
+          <ConnectorPoint PointX="2.25" PointY="12.167674153645834" />
+          <ConnectorPoint PointX="3" PointY="12.167674153645834" /></AssociationConnector>
+        <AssociationConnector Association="PathfinderReckittModel.FK_Business_Plan_Tactics_Business_Plan_Goals" >
+          <ConnectorPoint PointX="4.5" PointY="12.08550048828125" />
+          <ConnectorPoint PointX="5.25" PointY="12.08550048828125" /></AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanSchedulePeriod" Width="1.5" PointX="9.375" PointY="5.75" Height="1.2636116536458335" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanStatus" Width="1.5" PointX="7.375" PointY="9.75" Height="1.2636116536458317" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanTacticsView" PointX="9.375" PointY="8.75" Width="1.5" Height="1.9210009765624996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.BusinessPlanGoalsView" Width="1.5" PointX="11.375" PointY="0.75" Height="2.085348307291667" />
+        <AssociationConnector Association="PathfinderReckittModel.FK_Business_Plan_Goals_Lkp_Business_Plan_Status" >
+          <ConnectorPoint PointX="7.375" PointY="10.437499500000001" />
+          <ConnectorPoint PointX="3.75" PointY="10.437499500000001" />
+          <ConnectorPoint PointX="3.75" PointY="11.125" /></AssociationConnector>
+        <AssociationConnector Association="PathfinderReckittModel.FK_Business_Plan_Tactics_Tactic_Status" >
+          <ConnectorPoint PointX="8.125" PointY="11.342306315104167" />
+          <ConnectorPoint PointX="8.125" PointY="12.194154145833334" />
+          <ConnectorPoint PointX="6.75" PointY="12.194154145833334" /></AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderReckittModel.tblBusinessPlanKeyContacts" Width="1.5" PointX="3" PointY="14.375" Height="1.5923063151041674" />
+        <AssociationConnector Association="PathfinderReckittModel.FK_Business_Plan_Key_Contacts_Business_Plans" >
+          <ConnectorPoint PointX="1.5" PointY="14.3862109375" />
+          <ConnectorPoint PointX="1.5" PointY="15.176759126302084" />
+          <ConnectorPoint PointX="3" PointY="15.176759126302084" /></AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderReckittModel.PlanList" Width="1.5" PointX="7.25" PointY="0.75" Height="2.7158007812499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Lkp_Meeting_Type" Width="1.5" PointX="19.5" PointY="0.75" Height="2.7158007812499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Lkp_Meeting_Activity" Width="1.5" PointX="17.25" PointY="6.75" Height="2.7158007812499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Lkp_Products_Discussed" Width="1.5" PointX="19.25" PointY="6.875" Height="2.9052945963541656" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Contact_Reports" Width="1.5" PointX="13.375" PointY="0.75" Height="2.9070849609374996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Lkp_Followup_Notes" Width="1.5" PointX="13.375" PointY="5.5" Height="2.7158007812499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.Lkp_Meeting_Outcome" Width="1.5" PointX="13.375" PointY="8.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.PlanSearchOTC" Width="1.5" PointX="9.375" PointY="11.5" Height="1.7683317057291657" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.ContactReportData" Width="1.5" PointX="13.375" PointY="11.75" Height="5.5582080078125031" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.ContactReportFilter" Width="1.5" PointX="15.375" PointY="0.75" Height="1.4279589843749998" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.ContactReportDrillDownFilter" Width="1.5" PointX="15.375" PointY="3.75" Height="1.592306315104167" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.ContactReportProductData" Width="1.5" PointX="15.375" PointY="6.75" Height="4.8792529296875" />
+        <EntityTypeShape EntityType="PathfinderReckittModel.ContactReportDataSummary" Width="1.5" PointX="17.25" PointY="9.75" Height="4.6107389322916674" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

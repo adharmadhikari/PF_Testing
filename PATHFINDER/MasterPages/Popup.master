@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPages/PartialPage.master" AutoEventWireup="true" CodeFile="Popup.master.cs" Inherits="MasterPages_Popup" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="scriptContainer" Runat="Server">
+        <script type="text/javascript">
+            var title = '<%=Request["title"] != null ? Request["title"] : "" %>';
+            var beak = '<%=Request["beak"] %>';
+            
+            clientManager.add_pageLoaded(popup_pageLoaded, "infoPopup");
+            clientManager.add_pageUnloaded(popup_pageUnloaded, "infoPopup");
+        
+            function popup_pageLoaded()
+            {
+                $("#infoPopup .ajaxLoader").hide();
+
+                //set tip title
+                if(title && title != "") $("#infoPopup .tileContainerHeader .title:first").text(title);
+        
+                if(beak=="true")
+                    $(".popUpArrow").show();
+
+                $("#popupContentContainer").css("visibility", "visible");
+
+                $addHandler(document.body, "click", popup_checkhidePopup);
+            }
+
+            function popup_pageUnloaded()
+            {
+                                
+                try { $removeHandler(document.body, "click", popup_checkhidePopup); } catch (ex) { }
+                
+                $("#popupContentContainer").css("visibility", "hidden");
+
+                $("#infoPopup .ajaxLoader").show().css("top", ($("#infoPopup").height()/2)-6).css("left", ($("#infoPopup").width()/2)-31);
+
+                clientManager.remove_pageLoaded(popup_pageLoaded, "infoPopup");
+                clientManager.remove_pageUnloaded(popup_pageUnloaded, "infoPopup");
+            }
+
+            function popup_hidePopup()
+            {
+                try { $removeHandler(document.body, "click", hidePopup); } catch (ex) { }
+                $('#infoPopup').hide();
+                $(".popUpArrow").hide();
+                clientManager.unloadPage("infoPopup");
+
+                $("#fauxModal").fadeTo("slow", 0.00);
+            }
+            
+            function popup_checkhidePopup(e)
+            {
+                //first see if activeRegion was set - activeRegion is the area in which the tooltip originated such as affiliations grid or plan grid - if not specified just close the tip otherwise check bounds
+                var id = $("#infoPopup").attr("activeRegion");
+                var o;
+
+                if (id && id != "")
+                {
+                    if (id.indexOf(".") != 0 || id.indexOf("#") != 0)
+                        id = "#" + id;
+                        
+                    o = $(id);
+                    if (o.length > 0)
+                        o = o[0];
+                    else
+                        o = null;
+                }
+                
+                var rect = (o ? Sys.UI.DomElement.getBounds(o) : null);
+                var rect2 = Sys.UI.DomElement.getBounds($get("infoPopup"));
+                //Hide tip if no activeRegion or mouse click is outside activeRegion AND tip itself is not clicked in 
+                if ( (!rect || rect.x > e.clientX || (rect.x + rect.width) < e.clientX || rect.y > e.clientY || (rect.y + rect.height) < e.clientY) &&
+                    (e.clientX < rect2.x || e.clientX > (rect2.x + rect2.width) || e.clientY < rect2.y || e.clientY > (rect2.y + rect2.height)) )
+                {
+                    popup_hidePopup();
+                }
+            }
+            var ie6 = $.browser.msie && $.browser.version == "6.0";
+            function safeSub(val1, val2)
+                {
+                    var val = val1 - val2;
+                    return val >= 0 ? val : 0;
+                }
+            $("#infoPopup .showHideBtn").show();
+            var popUpHeight = $("#infoPopup").height();
+            var popUpHeader = $("#infoPopup .tileContainerHeader").height();
+            if (ie6) {
+                if($get ("popupContentContainer")){
+                $("#popupContentContainer").height(popUpHeight -  popUpHeader) }
+
+            } else {
+            $("#popupContentContainer").height(popUpHeight - 26);
+        }
+             
+        </script>
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="partialPage" Runat="Server">
+    <div class="tileContainerHeader">
+        <div id="header" class="title">
+            <asp:ContentPlaceHolder runat="server" ID="title" />
+        </div>
+        <div class="tools"><asp:ContentPlaceHolder runat="server" ID="tools" /><img id="imgClose" class="showHideBtn close" alt="close" title="close" runat="server" onclick="popup_hidePopup()" /></div>
+        <div id="titlePaging" class="pagination"></div>
+         <div class="clearAll"></div>
+    </div>    
+    <div id="popupContentContainer">
+        <asp:ContentPlaceHolder runat="server" ID="main"></asp:ContentPlaceHolder>
+    </div>        
+    <img src="app_themes/pathfinder/images/loader.gif" alt="Loading" class="ajaxLoader" />
+    <img src="app_themes/pathfinder/images/popUpArw.png" style="display:none;" class="popUpArrow" />
+</asp:Content>
+

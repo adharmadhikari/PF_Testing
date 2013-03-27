@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"
+    EnableTheming="true" %>
+
+<%@ Register Src="~/controls/header.ascx" TagName="header" TagPrefix="pinso" %>
+<%@ Register Src="~/controls/footer.ascx" TagName="footer" TagPrefix="pinso" %>
+<%@ Register Src="~/controls/alert.ascx" TagName="alert" TagPrefix="pinso" %>
+<%@ Register Src="~/controls/googleanalytics.ascx" TagName="analytics" TagPrefix="google" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=8" /> 
+    <title runat="server">
+        <asp:Literal runat="server" ID="titleText" Text='<%$ Resources:Resource, Assembly_ApplicationName %>'></asp:Literal>
+    </title>
+
+    <link runat="server" href="~/content/styles/main.css" rel="stylesheet" type="text/css" />
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="content/styles/ie6.css" />
+        <link rel="stylesheet" type="text/css" href="content/styles/ie6Pathfinder.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="content/styles/ie7.css" />
+    <![endif]-->
+
+</head>
+<body>
+    <form id="form" runat="server">
+    <asp:ScriptManager runat="server" ID="scriptManager">
+        <Scripts>
+            <asp:ScriptReference Path="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" />
+          <%--  <asp:ScriptReference Path="~/content/scripts/jquery-1.4.1-vsdoc.js" />
+            <asp:ScriptReference Path="~/content/scripts/jquery-ui-1.7.2.custom.min.js" />--%>
+            <asp:ScriptReference Path="https://ajax.microsoft.com/ajax/jquery.ui/1.8.5/jquery-ui.min.js" />
+            <asp:ScriptReference Path="~/content/scripts/ui.js" />
+            <asp:ScriptReference Path="~/content/scripts/components.js" />
+            <asp:ScriptReference Path="~/content/scripts/clientmanager.js" />
+           
+         </Scripts>
+        <%--<Services>
+            <asp:ServiceReference Path="~/services/securityservice.svc" />
+        </Services>--%>
+    </asp:ScriptManager>
+    <div class="wrapper">
+    <asp:Image SkinID="lf_cover" ID="lf_cover" runat="server" />
+    <asp:Image SkinID="rt_cover" ID="rt_cover" runat="server" />
+        <div class="header">
+            <pinso:header ID="header" runat="server" />
+        </div>
+        <div id="report-pane" style="position: relative;height:100%" >     
+            <div id="report-loading" class="loadingWheel"><img src="content/images/loader.gif" width="31" height="31" />
+                <div style="margin-left:-20px; width: 75px;"><strong>Loading</strong></div>
+            </div>               
+        </div>
+        <div id="mainSection" class="contentWrapper">
+            <div class="contentArea">
+                <asp:ContentPlaceHolder ID="main" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div><div id="fauxModal"></div>
+    </div>
+    <div class="footer">
+        <pinso:footer ID="footer" runat="server" />
+    </div>
+        
+
+    </form>
+    
+    <asp:ContentPlaceHolder ID="initializationScript" runat="server">
+    </asp:ContentPlaceHolder>
+    <pinso:alert runat="server" ID="customAlert" />
+    <google:analytics runat="server" ID="googleScript" />
+</body>
+</html>

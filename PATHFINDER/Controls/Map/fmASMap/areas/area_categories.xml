@@ -1,0 +1,41 @@
+<areaCategories>
+  <!--0 not available for user-->
+  <category id='0' zoom='false' enabled='false' tooltip='' poitextField='state' poitextCategory='state' >
+    <color up='0xaFaFaF' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <!--1 covered w/o restrictions-->
+  <category id='1' zoom='true' enabled='true' tooltip='popups/tooltip.swf' poitextField='state' poitextCategory='state' >
+		<color up='0x00ca38' over='0xe1e0e0' down='0xe1e0e0' />
+	</category>
+  <!--2 covered w/restrictions-->
+  <category id='2' zoom='true' enabled='true' tooltip='popups/tooltip.swf' poitextField='state' poitextCategory='state' >
+    <color up='0xf8ce0c' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <!--3 non covered-->
+  <category id='3' zoom='true' enabled='true' tooltip='popups/tooltip.swf' poitextField='state' poitextCategory='state' >
+    <color up='0xed0026' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <!--u unknown-->
+  <category id='4' zoom='true' enabled='true' tooltip='' poitextField='state' poitextCategory='state' >
+    <color up='0xffffff' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>  
+  <category id='u' zoom='true' enabled='true' tooltip='' poitextField='state' poitextCategory='state' >
+    <color up='0xffffff' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <!--d default-->
+  <category id='d' zoom='true' enabled='true' tooltip='false' poitextField='state' poitextCategory='state' >
+    <color up='0xefc56b' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <!--ss sell sheet map-->
+  <category id='ss' zoom='false' enabled='true' tooltip='false' poitextField='state' poitextCategory='state' >
+    <color up='0xe2e6e9' over='0x2d58a7' down='0x2d58a7' />
+    <action event="onRelease" target="_js" url="ssMap_click" />
+  </category>
+  <!--ta Today's Accounts default when no showing coverage-->
+  <category id='ta' zoom='true' enabled='true' tooltip='popups/tooltip.swf' poitextField='state' poitextCategory='state' >
+    <color up='0x5a83ce' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+  <category id='tad' zoom='true' enabled='true' tooltip='false' poitextField='state' poitextCategory='state' >
+    <color up='0x5a83ce' over='0xe1e0e0' down='0xe1e0e0' />
+  </category>
+</areaCategories>

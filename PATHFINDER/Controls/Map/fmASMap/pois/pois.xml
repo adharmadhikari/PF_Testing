@@ -1,0 +1,54 @@
+<POIs>
+	<!--<POI id='101' category='msa' label='Los Angeles' lat='34.01326' lon='-118.28288' />
+	<POI id='102' category='msa' label='Boston' lat='42.36391' lon='-71.06285' />
+	<POI id='103' category='msa' label='Newark' lat='40.81896' lon='-74.09265' />
+	<POI id='104' category='msa' label='New York' lat='40.74941' lon='-73.99218' />
+	<POI id='105' category='msa' label='Philadelphia' lat='39.90488' lon='-75.17353' />
+	<POI id='106' category='msa' label='Toronto' lat='43.7' lon='-79.4167' />
+	<POI id='107' category='msa' label='Chicago' lat='41.88126' lon='-87.67429' />
+	<POI id='108' category='msa' label='Cleveland' lat='41.49644' lon='-81.69035' />
+	<POI id='109' category='msa' label='Detroit' lat='42.69605' lon='-83.24192' />
+	<POI id='110' category='msa' label='Indiana' lat='39.76397' lon='-86.15595' />
+	<POI id='111' category='msa' label='Milwaukee' lat='43.04306' lon='-87.91602' />
+	<POI id='112' category='msa' label='Atlanta' lat='33.75711' lon='-84.39595' />
+	<POI id='113' category='msa' label='Charlotte' lat='35.18857' lon='-80.91354' />
+	<POI id='114' category='msa' label='Miami' lat='25.78005' lon='-80.18901' />
+	<POI id='115' category='msa' label='Orlando' lat='28.42162' lon='-81.58151' />
+	<POI id='116' category='msa' label='Washington' lat='38.89737' lon='-77.01981' />
+	<POI id='117' category='msa' label='Denver' lat='39.74549' lon='-105.00982' />
+	<POI id='118' category='msa' label='Minnesota' lat='44.97958' lon='-93.27487' />
+	<POI id='119' category='msa' label='Portland' lat='45.53071' lon='-122.66651' />
+	<POI id='120' category='msa' label='Seattle' lat='47.62216' lon='-122.35021' />
+	<POI id='121' category='msa' label='Salt Lake City' lat='40.76897' lon='-111.89936' />
+	<POI id='122' category='msa' label='Golden State' lat='37.75464' lon='-122.20529' />
+	<POI id='123' category='msa' label='Phoenix' lat='33.44647' lon='-112.06996' />
+	<POI id='124' category='msa' label='Sacramento' lat='38.65132' lon='-121.51435' />
+	<POI id='125' category='msa' label='Dallas' lat='32.78158' lon='-96.78131' />
+	<POI id='126' category='msa' label='Houston' lat='29.75252' lon='-95.36336' />
+	<POI id='127' category='msa' label='Memphis' lat='35.13935' lon='-90.05179' />
+	<POI id='128' category='msa' label='San Antonio' lat='29.42508' lon='-98.44374' />-->
+
+  <POI id='1' category='visn' label='VISN 1' lat='44.5' lon='-71.5' />
+  <POI id='2' category='visn' label='VISN 2' lat='43' lon='-77.5' />
+  <POI id='3' category='visn' label='VISN 3' lat='41' lon='-73' />
+  <POI id='4' category='visn' label='VISN 4' lat='41.25' lon='-79' />
+  <POI id='5' category='visn' label='VISN 5' lat='39.25' lon='-77.5' />
+  <POI id='6' category='visn' label='VISN 6' lat='36.25' lon='-79.5' />
+  <POI id='7' category='visn' label='VISN 7' lat='34' lon='-83.75' />
+  <POI id='8' category='visn' label='VISN 8' lat='27.5' lon='-83.75' />
+  <POI id='9' category='visn' label='VISN 9' lat='36.5' lon='-85' />
+  <POI id='10' category='visn' label='VISN 10' lat='39.25' lon='-84' />
+  <POI id='11' category='visn' label='VISN 11' lat='41.25' lon='-86.25' />
+  <POI id='12' category='visn' label='VISN 12' lat='45.5' lon='-88' />
+  <POI id='15' category='visn' label='VISN 15' lat='38' lon='-96' />
+  <POI id='16' category='visn' label='VISN 16' lat='33' lon='-91' />
+  <POI id='17' category='visn' label='VISN 17' lat='30' lon='-99' />
+  <POI id='18' category='visn' label='VISN 18' lat='33.5' lon='-108' />
+  <POI id='19' category='visn' label='VISN 19' lat='44' lon='-108' />
+  <POI id='20' category='visn' label='VISN 20' lat='45' lon='-117' />
+  <POI id='20' category='visn' label='VISN 20' lat='30' lon='-117' />
+  <POI id='21' category='visn' label='VISN 21' lat='39' lon='-122' />
+  <POI id='21' category='visn' label='VISN 21' lat='28.25' lon='-107' />
+  <POI id='22' category='visn' label='VISN 22' lat='35' lon='-117' />
+  <POI id='23' category='visn' label='VISN 23' lat='43' lon='-96' />
+</POIs>

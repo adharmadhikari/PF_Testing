@@ -1,0 +1,12 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/standardreports/MasterPages/filters.master" AutoEventWireup="true" CodeFile="livesdistribution_filters.aspx.cs" Inherits="standardreports_managedmedicaid_livesdistribution_filters" %>
+<%@ Register src="../controls/FilterSearchTypeManagedMedicaid.ascx" tagname="FilterSearchType" tagprefix="uc1" %>
+<%@ Register src="../controls/FilterGeography.ascx" tagname="FilterGeography" tagprefix="uc2" %>
+<%@ Register src="../controls/FilterAccountType.ascx" tagname="FilterAccountType" tagprefix="uc3" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="filtersContainer" Runat="Server">
+
+    <uc3:FilterAccountType ID="AccountType" runat="server" />
+    <uc2:FilterGeography ID="Geography" runat="server" />
+    <uc1:FilterSearchType ID="SearchType" runat="server" />
+</asp:Content>
+

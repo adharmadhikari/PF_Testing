@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PathfinderDeyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PathfinderDeyModelStoreContainer">
+          <EntitySet Name="Sell_Sheet_Orders" EntityType="PathfinderDeyModel.Store.Sell_Sheet_Orders" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Sell_Sheet_Reps" EntityType="PathfinderDeyModel.Store.Sell_Sheet_Reps" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_Territory" EntityType="PathfinderDeyModel.Store.MS_Territory" store:Type="Tables" Schema="tr" />
+          <EntitySet Name="V_Restrictions_Report_Drilldown" EntityType="PathfinderDeyModel.Store.V_Restrictions_Report_Drilldown" store:Type="Views" store:Schema="dbo" store:Name="V_Restrictions_Report_Drilldown">
+            <DefiningQuery>SELECT 
+      [V_Restrictions_Report_Drilldown].[Item_Rank] AS [Item_Rank], 
+      [V_Restrictions_Report_Drilldown].[Class_Partition] AS [Class_Partition], 
+      [V_Restrictions_Report_Drilldown].[Is_All_Section] AS [Is_All_Section], 
+      [V_Restrictions_Report_Drilldown].[Client_ID] AS [Client_ID], 
+      [V_Restrictions_Report_Drilldown].[Thera_ID] AS [Thera_ID], 
+      [V_Restrictions_Report_Drilldown].[Plan_ID] AS [Plan_ID], 
+      [V_Restrictions_Report_Drilldown].[Section_ID] AS [Section_ID], 
+      [V_Restrictions_Report_Drilldown].[Section_Name] AS [Section_Name], 
+      [V_Restrictions_Report_Drilldown].[Segment_ID] AS [Segment_ID], 
+      [V_Restrictions_Report_Drilldown].[Product_ID] AS [Product_ID], 
+      [V_Restrictions_Report_Drilldown].[Plan_Name] AS [Plan_Name], 
+      [V_Restrictions_Report_Drilldown].[Med_D_Offering_ID] AS [Med_D_Offering_ID], 
+      [V_Restrictions_Report_Drilldown].[Plan_Classification_ID] AS [Plan_Classification_ID], 
+      [V_Restrictions_Report_Drilldown].[Geography_ID] AS [Geography_ID], 
+      [V_Restrictions_Report_Drilldown].[Geography_Name] AS [Geography_Name], 
+      [V_Restrictions_Report_Drilldown].[Formulary_ID] AS [Formulary_ID], 
+      [V_Restrictions_Report_Drilldown].[Formulary_Name] AS [Formulary_Name], 
+      [V_Restrictions_Report_Drilldown].[Covered_Lives] AS [Covered_Lives], 
+      [V_Restrictions_Report_Drilldown].[Formulary_Lives] AS [Formulary_Lives], 
+      [V_Restrictions_Report_Drilldown].[Is_Predominant] AS [Is_Predominant], 
+      [V_Restrictions_Report_Drilldown].[Prod_Type_ID] AS [Prod_Type_ID], 
+      [V_Restrictions_Report_Drilldown].[Drug_ID] AS [Drug_ID], 
+      [V_Restrictions_Report_Drilldown].[Drug_Name] AS [Drug_Name], 
+      [V_Restrictions_Report_Drilldown].[Copay_Range] AS [Copay_Range], 
+      [V_Restrictions_Report_Drilldown].[Formulary_Status_Name] AS [Formulary_Status_Name], 
+      [V_Restrictions_Report_Drilldown].[PA] AS [PA], 
+      [V_Restrictions_Report_Drilldown].[QL] AS [QL], 
+      [V_Restrictions_Report_Drilldown].[ST] AS [ST], 
+      [V_Restrictions_Report_Drilldown].[Tier_ID] AS [Tier_ID], 
+      [V_Restrictions_Report_Drilldown].[Tier_Name] AS [Tier_Name], 
+      [V_Restrictions_Report_Drilldown].[Criteria_ID] AS [Criteria_ID], 
+      [V_Restrictions_Report_Drilldown].[Criteria_Name] AS [Criteria_Name], 
+      [V_Restrictions_Report_Drilldown].[Criteria_Description] AS [Criteria_Description], 
+      [V_Restrictions_Report_Drilldown].[PBM_Id] AS [PBM_Id], 
+      [V_Restrictions_Report_Drilldown].[PBM_Name] AS [PBM_Name]
+      FROM [dbo].[V_Restrictions_Report_Drilldown] AS [V_Restrictions_Report_Drilldown]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Restrictions_Report_Summary" EntityType="PathfinderDeyModel.Store.V_Restrictions_Report_Summary" store:Type="Views" store:Schema="dbo" store:Name="V_Restrictions_Report_Summary">
+            <DefiningQuery>SELECT 
+      [V_Restrictions_Report_Summary].[Item_Rank] AS [Item_Rank], 
+      [V_Restrictions_Report_Summary].[Class_Partition] AS [Class_Partition], 
+      [V_Restrictions_Report_Summary].[Is_All_Section] AS [Is_All_Section], 
+      [V_Restrictions_Report_Summary].[Client_ID] AS [Client_ID], 
+      [V_Restrictions_Report_Summary].[Thera_ID] AS [Thera_ID], 
+      [V_Restrictions_Report_Summary].[Segment_ID] AS [Segment_ID], 
+      [V_Restrictions_Report_Summary].[Plan_ID] AS [Plan_ID], 
+      [V_Restrictions_Report_Summary].[Section_ID] AS [Section_ID], 
+      [V_Restrictions_Report_Summary].[Section_Name] AS [Section_Name], 
+      [V_Restrictions_Report_Summary].[Plan_Name] AS [Plan_Name], 
+      [V_Restrictions_Report_Summary].[Med_D_Offering_ID] AS [Med_D_Offering_ID], 
+      [V_Restrictions_Report_Summary].[Plan_Classification_ID] AS [Plan_Classification_ID], 
+      [V_Restrictions_Report_Summary].[Geography_ID] AS [Geography_ID], 
+      [V_Restrictions_Report_Summary].[Geography_Name] AS [Geography_Name], 
+      [V_Restrictions_Report_Summary].[Covered_Lives] AS [Covered_Lives], 
+      [V_Restrictions_Report_Summary].[Pharmacy_Lives] AS [Pharmacy_Lives], 
+      [V_Restrictions_Report_Summary].[Commercial_Pharmacy_Lives] AS [Commercial_Pharmacy_Lives], 
+      [V_Restrictions_Report_Summary].[PartD_Lives] AS [PartD_Lives], 
+      [V_Restrictions_Report_Summary].[Medicaid_Lives] AS [Medicaid_Lives], 
+      [V_Restrictions_Report_Summary].[Formulary_ID] AS [Formulary_ID], 
+      [V_Restrictions_Report_Summary].[Formulary_Name] AS [Formulary_Name], 
+      [V_Restrictions_Report_Summary].[Formulary_Lives] AS [Formulary_Lives], 
+      [V_Restrictions_Report_Summary].[Is_Predominant] AS [Is_Predominant], 
+      [V_Restrictions_Report_Summary].[Prod_Type_ID] AS [Prod_Type_ID], 
+      [V_Restrictions_Report_Summary].[Drug_ID] AS [Drug_ID], 
+      [V_Restrictions_Report_Summary].[Drug_Name] AS [Drug_Name], 
+      [V_Restrictions_Report_Summary].[Tier_no] AS [Tier_no], 
+      [V_Restrictions_Report_Summary].[PA] AS [PA], 
+      [V_Restrictions_Report_Summary].[QL] AS [QL], 
+      [V_Restrictions_Report_Summary].[ST] AS [ST], 
+      [V_Restrictions_Report_Summary].[P1] AS [P1], 
+      [V_Restrictions_Report_Summary].[P2] AS [P2], 
+      [V_Restrictions_Report_Summary].[P3] AS [P3], 
+      [V_Restrictions_Report_Summary].[P4] AS [P4], 
+      [V_Restrictions_Report_Summary].[Criteria_ID] AS [Criteria_ID], 
+      [V_Restrictions_Report_Summary].[Criteria_Name] AS [Criteria_Name], 
+      [V_Restrictions_Report_Summary].[PBM_Id] AS [PBM_Id], 
+      [V_Restrictions_Report_Summary].[PBM_Name] AS [PBM_Name]
+      FROM [dbo].[V_Restrictions_Report_Summary] AS [V_Restrictions_Report_Summary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Sell_Sheet_Territory_Reps" EntityType="PathfinderDeyModel.Store.V_Sell_Sheet_Territory_Reps" store:Type="Views" store:Schema="dbo" store:Name="V_Sell_Sheet_Territory_Reps">
+            <DefiningQuery>SELECT 
+      [V_Sell_Sheet_Territory_Reps].[ID] AS [ID], 
+      [V_Sell_Sheet_Territory_Reps].[Name] AS [Name], 
+      [V_Sell_Sheet_Territory_Reps].[Title] AS [Title], 
+      [V_Sell_Sheet_Territory_Reps].[Rep_Email] AS [Rep_Email], 
+      [V_Sell_Sheet_Territory_Reps].[RepFullAddress] AS [RepFullAddress], 
+      [V_Sell_Sheet_Territory_Reps].[Territory_ID] AS [Territory_ID], 
+      [V_Sell_Sheet_Territory_Reps].[Territory_Name] AS [Territory_Name], 
+      [V_Sell_Sheet_Territory_Reps].[User_Level] AS [User_Level], 
+      [V_Sell_Sheet_Territory_Reps].[Parent_Territory] AS [Parent_Territory]
+      FROM [dbo].[V_Sell_Sheet_Territory_Reps] AS [V_Sell_Sheet_Territory_Reps]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_SellSheet_Orders" EntityType="PathfinderDeyModel.Store.V_SellSheet_Orders" store:Type="Views" store:Schema="dbo" store:Name="V_SellSheet_Orders">
+            <DefiningQuery>SELECT 
+      [V_SellSheet_Orders].[Sell_Sheet_ID] AS [Sell_Sheet_ID], 
+      [V_SellSheet_Orders].[Sell_Sheet_Name] AS [Sell_Sheet_Name], 
+      [V_SellSheet_Orders].[Order_ID] AS [Order_ID], 
+      [V_SellSheet_Orders].[OrderDate] AS [OrderDate], 
+      [V_SellSheet_Orders].[Quantity] AS [Quantity], 
+      [V_SellSheet_Orders].[ID] AS [ID], 
+      [V_SellSheet_Orders].[RepName] AS [RepName], 
+      [V_SellSheet_Orders].[ShipLocation] AS [ShipLocation]
+      FROM [dbo].[V_SellSheet_Orders] AS [V_SellSheet_Orders]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_SellSheet_Territory" EntityType="PathfinderDeyModel.Store.V_SellSheet_Territory" store:Type="Views" store:Schema="dbo" store:Name="V_SellSheet_Territory">
+            <DefiningQuery>SELECT 
+      [V_SellSheet_Territory].[Rep_ID] AS [Rep_ID], 
+      [V_SellSheet_Territory].[User_Level] AS [User_Level], 
+      [V_SellSheet_Territory].[Parent_Territory_ID] AS [Parent_Territory_ID], 
+      [V_SellSheet_Territory].[Territory_ID] AS [Territory_ID], 
+      [V_SellSheet_Territory].[Territory_Name] AS [Territory_Name]
+      FROM [dbo].[V_SellSheet_Territory] AS [V_SellSheet_Territory]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_MS_Territory_MS_Territory" Association="PathfinderDeyModel.Store.FK_MS_Territory_MS_Territory">
+            <End Role="MS_Territory" EntitySet="MS_Territory" />
+            <End Role="MS_Territory1" EntitySet="MS_Territory" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Sell_Sheet_Orders">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rep_ID" Type="int" Nullable="false" />
+          <Property Name="Sell_Sheet_ID" Type="int" Nullable="false" />
+          <Property Name="Sell_Sheet_Copies" Type="int" />
+          <Property Name="Ship_Location_ID" Type="int" />
+          <Property Name="Ship_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_Address2" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_City" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_State" Type="char" MaxLength="2" />
+          <Property Name="Ship_Zip" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Ship_Email" Type="varchar" MaxLength="255" />
+          <Property Name="Printer_Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Printer_Email" Type="varchar" MaxLength="255" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Sell_Sheet_Reps">
+          <Key>
+            <PropertyRef Name="Rep_ID" />
+          </Key>
+          <Property Name="Rep_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Territory_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Rep_F_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Rep_L_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Rep_Email" Type="varchar" MaxLength="250" />
+          <Property Name="Rep_Ext" Type="varchar" MaxLength="50" />
+          <Property Name="Rep_Cell" Type="varchar" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="250" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Zip" Type="varchar" MaxLength="50" />
+          <Property Name="Title" Type="varchar" MaxLength="250" />
+          <Property Name="Territory_Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="MS_Territory">
+          <Key>
+            <PropertyRef Name="MS_Territory_ID" />
+          </Key>
+          <Property Name="MS_Territory_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MS_Territory_Name" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="MS_Territory_Level_ID" Type="int" Nullable="false" />
+          <Property Name="MS_Parent_Territory_ID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Dey.dbo.V_Restrictions_Report_Drilldown' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Restrictions_Report_Drilldown">
+          <Key>
+            <PropertyRef Name="Is_All_Section" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Geography_ID" />
+            <PropertyRef Name="Geography_Name" />
+            <PropertyRef Name="Formulary_ID" />
+            <PropertyRef Name="Covered_Lives" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="Tier_Name" />
+            <PropertyRef Name="Criteria_ID" />
+            <PropertyRef Name="PBM_Id" />
+            <PropertyRef Name="PBM_Name" />
+          </Key>
+          <Property Name="Item_Rank" Type="bigint" />
+          <Property Name="Class_Partition" Type="int" />
+          <Property Name="Is_All_Section" Type="bit" Nullable="false" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Section_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Product_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Med_D_Offering_ID" Type="int" />
+          <Property Name="Plan_Classification_ID" Type="int" />
+          <Property Name="Geography_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Geography_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Formulary_ID" Type="int" Nullable="false" />
+          <Property Name="Formulary_Name" Type="varchar" MaxLength="291" />
+          <Property Name="Covered_Lives" Type="int" Nullable="false" />
+          <Property Name="Formulary_Lives" Type="int" />
+          <Property Name="Is_Predominant" Type="bit" />
+          <Property Name="Prod_Type_ID" Type="int" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Copay_Range" Type="varchar" MaxLength="50" />
+          <Property Name="Formulary_Status_Name" Type="varchar" MaxLength="255" />
+          <Property Name="PA" Type="varchar" MaxLength="2" />
+          <Property Name="QL" Type="varchar" MaxLength="2" />
+          <Property Name="ST" Type="varchar" MaxLength="2" />
+          <Property Name="Tier_ID" Type="int" />
+          <Property Name="Tier_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Criteria_ID" Type="int" Nullable="false" />
+          <Property Name="Criteria_Name" Type="varchar" MaxLength="250" />
+          <Property Name="Criteria_Description" Type="varchar" MaxLength="2000" />
+          <Property Name="PBM_Id" Type="int" Nullable="false" />
+          <Property Name="PBM_Name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Dey.dbo.V_Restrictions_Report_Summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Restrictions_Report_Summary">
+          <Key>
+            <PropertyRef Name="Is_All_Section" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Geography_ID" />
+            <PropertyRef Name="Geography_Name" />
+            <PropertyRef Name="Covered_Lives" />
+            <PropertyRef Name="Pharmacy_Lives" />
+            <PropertyRef Name="Commercial_Pharmacy_Lives" />
+            <PropertyRef Name="PartD_Lives" />
+            <PropertyRef Name="Medicaid_Lives" />
+            <PropertyRef Name="Formulary_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="Criteria_ID" />
+            <PropertyRef Name="PBM_Id" />
+            <PropertyRef Name="PBM_Name" />
+          </Key>
+          <Property Name="Item_Rank" Type="bigint" />
+          <Property Name="Class_Partition" Type="int" />
+          <Property Name="Is_All_Section" Type="bit" Nullable="false" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Thera_ID" Type="int" Nullable="false" />
+          <Property Name="Segment_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Section_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Med_D_Offering_ID" Type="int" />
+          <Property Name="Plan_Classification_ID" Type="int" />
+          <Property Name="Geography_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Geography_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Covered_Lives" Type="int" Nullable="false" />
+          <Property Name="Pharmacy_Lives" Type="int" Nullable="false" />
+          <Property Name="Commercial_Pharmacy_Lives" Type="int" Nullable="false" />
+          <Property Name="PartD_Lives" Type="int" Nullable="false" />
+          <Property Name="Medicaid_Lives" Type="int" Nullable="false" />
+          <Property Name="Formulary_ID" Type="int" Nullable="false" />
+          <Property Name="Formulary_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Formulary_Lives" Type="int" />
+          <Property Name="Is_Predominant" Type="bit" />
+          <Property Name="Prod_Type_ID" Type="int" />
+          <Property Name="Drug_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Tier_no" Type="int" />
+          <Property Name="PA" Type="varchar" MaxLength="2" />
+          <Property Name="QL" Type="varchar" MaxLength="2" />
+          <Property Name="ST" Type="varchar" MaxLength="2" />
+          <Property Name="P1" Type="int" />
+          <Property Name="P2" Type="int" />
+          <Property Name="P3" Type="int" />
+          <Property Name="P4" Type="int" />
+          <Property Name="Criteria_ID" Type="int" Nullable="false" />
+          <Property Name="Criteria_Name" Type="varchar" MaxLength="250" />
+          <Property Name="PBM_Id" Type="int" Nullable="false" />
+          <Property Name="PBM_Name" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Dey.dbo.V_Sell_Sheet_Territory_Reps' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Sell_Sheet_Territory_Reps">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_Level" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="501" />
+          <Property Name="Title" Type="varchar" MaxLength="250" />
+          <Property Name="Rep_Email" Type="varchar" MaxLength="250" />
+          <Property Name="RepFullAddress" Type="varchar" MaxLength="409" />
+          <Property Name="Territory_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Territory_Name" Type="varchar" MaxLength="250" />
+          <Property Name="User_Level" Type="int" Nullable="false" />
+          <Property Name="Parent_Territory" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Dey.dbo.V_SellSheet_Orders' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_SellSheet_Orders">
+          <Key>
+            <PropertyRef Name="Sell_Sheet_ID" />
+            <PropertyRef Name="Sell_Sheet_Name" />
+            <PropertyRef Name="Order_ID" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="Sell_Sheet_ID" Type="int" Nullable="false" />
+          <Property Name="Sell_Sheet_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Order_ID" Type="int" Nullable="false" />
+          <Property Name="OrderDate" Type="datetime" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="RepName" Type="varchar" MaxLength="501" />
+          <Property Name="ShipLocation" Type="varchar" MaxLength="409" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Dey.dbo.V_SellSheet_Territory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_SellSheet_Territory">
+          <Key>
+            <PropertyRef Name="Rep_ID" />
+            <PropertyRef Name="User_Level" />
+          </Key>
+          <Property Name="Rep_ID" Type="int" Nullable="false" />
+          <Property Name="User_Level" Type="int" Nullable="false" />
+          <Property Name="Parent_Territory_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Territory_ID" Type="varchar" MaxLength="50" />
+          <Property Name="Territory_Name" Type="varchar" MaxLength="250" />
+        </EntityType>
+        <Association Name="FK_MS_Territory_MS_Territory">
+          <End Role="MS_Territory" Type="PathfinderDeyModel.Store.MS_Territory" Multiplicity="0..1" />
+          <End Role="MS_Territory1" Type="PathfinderDeyModel.Store.MS_Territory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_Territory">
+              <PropertyRef Name="MS_Territory_ID" />
+            </Principal>
+            <Dependent Role="MS_Territory1">
+              <PropertyRef Name="MS_Parent_Territory_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PathfinderDeyModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="PathfinderDeyEntities" >
+          <EntitySet Name="RestrictionsReportDrilldownSet" EntityType="PathfinderDeyModel.RestrictionsReportDrilldown" />
+          <EntitySet Name="RestrictionsReportSummarySet" EntityType="PathfinderDeyModel.RestrictionsReportSummary" />
+          <EntitySet Name="SellSheetRepsSet" EntityType="PathfinderDeyModel.SellSheetReps" />
+          <EntitySet Name="MSTerritorySet" EntityType="PathfinderDeyModel.MSTerritory" />
+          <AssociationSet Name="FK_MS_Territory_MS_Territory" Association="PathfinderDeyModel.FK_MS_Territory_MS_Territory">
+            <End Role="MS_Territory" EntitySet="MSTerritorySet" />
+            <End Role="MS_Territory1" EntitySet="MSTerritorySet" /></AssociationSet>
+          <EntitySet Name="SellSheetTerritorySet" EntityType="PathfinderDeyModel.SellSheetTerritory" />
+          <EntitySet Name="SellSheetTerritoryRepsSet" EntityType="PathfinderDeyModel.SellSheetTerritoryReps" />
+          <EntitySet Name="SellSheetOrdersSet" EntityType="PathfinderDeyModel.SellSheetOrders" />
+          <EntitySet Name="SellSheetOrdersListSet" EntityType="PathfinderDeyModel.SellSheetOrdersList" /></EntityContainer>
+        <EntityType Name="RestrictionsReportDrilldown">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Geography_ID" />
+            <PropertyRef Name="Geography_Name" />
+            <PropertyRef Name="Formulary_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="Tier_Name" />
+            <PropertyRef Name="Criteria_ID" />
+            <PropertyRef Name="Covered_Lives" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Product_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Is_All_Section" />
+            <PropertyRef Name="PBM_Id" />
+            <PropertyRef Name="PBM_Name" /></Key>
+          <Property Name="Item_Rank" Type="Int64" Nullable="true" />
+          <Property Name="Class_Partition" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Med_D_Offering_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_Classification_ID" Type="Int32" Nullable="true" />
+          <Property Name="Geography_ID" Type="String" Nullable="false" />
+          <Property Name="Geography_Name" Type="String" Nullable="false" />
+          <Property Name="Formulary_ID" Type="Int32" Nullable="false" />
+          <Property Name="Formulary_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Lives" Type="Int32" Nullable="true" />
+          <Property Name="Is_Predominant" Type="Boolean" Nullable="true" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="false" />
+          <Property Name="PA" Type="String" Nullable="true" />
+          <Property Name="QL" Type="String" Nullable="true" />
+          <Property Name="ST" Type="String" Nullable="true" />
+          <Property Name="Tier_ID" Type="Int32" Nullable="true" />
+          <Property Name="Tier_Name" Type="String" Nullable="false" />
+          <Property Name="Criteria_ID" Type="Int32" Nullable="false" />
+          <Property Name="Criteria_Name" Type="String" Nullable="true" />
+          <Property Name="Criteria_Description" Type="String" Nullable="true" />
+          <Property Name="Covered_Lives" Type="Int32" Nullable="false" />
+          <Property Name="Copay_Range" Type="String" Nullable="true" />
+          <Property Name="Formulary_Status_Name" Type="String" Nullable="true" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Product_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="false" />
+          <Property Name="Prod_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Is_All_Section" Type="Boolean" Nullable="false" />
+          <Property Name="PBM_Id" Type="Int32" Nullable="false" />
+          <Property Name="PBM_Name" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="RestrictionsReportSummary">
+          <Key>
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="Thera_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Section_Name" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Geography_ID" />
+            <PropertyRef Name="Geography_Name" />
+            <PropertyRef Name="Covered_Lives" />
+            <PropertyRef Name="Pharmacy_Lives" />
+            <PropertyRef Name="Commercial_Pharmacy_Lives" />
+            <PropertyRef Name="PartD_Lives" />
+            <PropertyRef Name="Medicaid_Lives" />
+            <PropertyRef Name="Formulary_ID" />
+            <PropertyRef Name="Drug_ID" />
+            <PropertyRef Name="Drug_Name" />
+            <PropertyRef Name="Criteria_ID" />
+            <PropertyRef Name="Segment_ID" />
+            <PropertyRef Name="Is_All_Section" />
+            <PropertyRef Name="PBM_Id" />
+            <PropertyRef Name="PBM_Name" /></Key>
+          <Property Name="Item_Rank" Type="Int64" Nullable="true" />
+          <Property Name="Class_Partition" Type="Int32" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="Thera_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Med_D_Offering_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_Classification_ID" Type="Int32" Nullable="true" />
+          <Property Name="Geography_ID" Type="String" Nullable="false" />
+          <Property Name="Geography_Name" Type="String" Nullable="false" />
+          <Property Name="Covered_Lives" Type="Int32" Nullable="false" />
+          <Property Name="Pharmacy_Lives" Type="Int32" Nullable="false" />
+          <Property Name="Commercial_Pharmacy_Lives" Type="Int32" Nullable="false" />
+          <Property Name="PartD_Lives" Type="Int32" Nullable="false" />
+          <Property Name="Medicaid_Lives" Type="Int32" Nullable="false" />
+          <Property Name="Formulary_ID" Type="Int32" Nullable="false" />
+          <Property Name="Formulary_Name" Type="String" Nullable="true" />
+          <Property Name="Formulary_Lives" Type="Int32" Nullable="true" />
+          <Property Name="Is_Predominant" Type="Boolean" Nullable="true" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_Name" Type="String" Nullable="false" />
+          <Property Name="Tier_no" Type="Int32" Nullable="true" />
+          <Property Name="PA" Type="String" Nullable="true" />
+          <Property Name="QL" Type="String" Nullable="true" />
+          <Property Name="ST" Type="String" Nullable="true" />
+          <Property Name="P1_Lives" Type="Int32" Nullable="true" />
+          <Property Name="P2_Lives" Type="Int32" Nullable="true" />
+          <Property Name="P3_Lives" Type="Int32" Nullable="true" />
+          <Property Name="P4_Lives" Type="Int32" Nullable="true" />
+          <Property Name="Criteria_ID" Type="Int32" Nullable="false" />
+          <Property Name="Criteria_Name" Type="String" Nullable="true" />
+          <Property Name="Segment_ID" Type="Int32" Nullable="false" />
+          <Property Name="Prod_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Is_All_Section" Type="Boolean" Nullable="false" />
+          <Property Name="PBM_Id" Type="Int32" Nullable="false" />
+          <Property Name="PBM_Name" Type="String" Nullable="false" /></EntityType>
+        <EntityType Name="SellSheetReps">
+          <Key>
+            <PropertyRef Name="Rep_ID" /></Key>
+          <Property Name="Rep_ID" Type="Int32" Nullable="false" />
+          <Property Name="Rep_F_Name" Type="String" Nullable="true" />
+          <Property Name="Rep_L_Name" Type="String" Nullable="true" />
+          <Property Name="Rep_Email" Type="String" Nullable="true" />
+          <Property Name="Rep_Ext" Type="String" Nullable="true" />
+          <Property Name="Rep_Cell" Type="String" Nullable="true" />
+          <Property Name="Address" Type="String" Nullable="true" />
+          <Property Name="City" Type="String" Nullable="true" />
+          <Property Name="State" Type="String" Nullable="true" />
+          <Property Name="Zip" Type="String" Nullable="true" />
+          <Property Name="Title" Type="String" Nullable="true" />
+          <Property Name="Territory_Name" Type="String" Nullable="true" />
+          <Property Name="Territory_ID" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="MSTerritory">
+          <Key>
+            <PropertyRef Name="MS_Territory_ID" /></Key>
+          <Property Name="MS_Territory_ID" Type="String" Nullable="false" />
+          <Property Name="MS_Territory_Name" Type="String" Nullable="false" />
+          <Property Name="MS_Territory_Level_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MS_Territory1" Relationship="PathfinderDeyModel.FK_MS_Territory_MS_Territory" FromRole="MS_Territory" ToRole="MS_Territory1" />
+          <NavigationProperty Name="MS_Territory2" Relationship="PathfinderDeyModel.FK_MS_Territory_MS_Territory" FromRole="MS_Territory1" ToRole="MS_Territory" /></EntityType>
+        <Association Name="FK_MS_Territory_MS_Territory">
+          <End Type="PathfinderDeyModel.MSTerritory" Role="MS_Territory" Multiplicity="0..1" />
+          <End Type="PathfinderDeyModel.MSTerritory" Role="MS_Territory1" Multiplicity="*" /></Association>
+        <EntityType Name="SellSheetTerritory">
+          <Key>
+            <PropertyRef Name="Rep_ID" />
+            <PropertyRef Name="User_Level" /></Key>
+          <Property Name="Rep_ID" Type="Int32" Nullable="false" />
+          <Property Name="Parent_Territory_ID" Type="String" Nullable="true" />
+          <Property Name="ID" Type="String" Nullable="true" />
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="User_Level" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="SellSheetTerritoryReps">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="User_Level" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="true" />
+          <Property Name="Title" Type="String" Nullable="true" />
+          <Property Name="Rep_Email" Type="String" Nullable="true" />
+          <Property Name="RepFullAddress" Type="String" Nullable="true" />
+          <Property Name="Territory_ID" Type="String" Nullable="true" />
+          <Property Name="Territory_Name" Type="String" Nullable="true" />
+          <Property Name="User_Level" Type="Int32" Nullable="false" />
+          <Property Name="Parent_Territory" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="SellSheetOrders">
+          <Key>
+            <PropertyRef Name="Order_ID" /></Key>
+          <Property Name="Order_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sell_Sheet_ID" Type="Int32" Nullable="false" />
+          <Property Name="Rep_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sell_Sheet_Copies" Type="Int32" Nullable="false" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Ship_Location_ID" Type="Int32" Nullable="true" />
+          <Property Name="Ship_Name" Type="String" Nullable="true" />
+          <Property Name="Ship_Address1" Type="String" Nullable="true" />
+          <Property Name="Ship_Address2" Type="String" Nullable="true" />
+          <Property Name="Ship_City" Type="String" Nullable="true" />
+          <Property Name="Ship_State" Type="String" Nullable="true" />
+          <Property Name="Ship_Zip" Type="String" Nullable="true" />
+          <Property Name="Ship_Phone" Type="String" Nullable="true" />
+          <Property Name="Ship_Email" Type="String" Nullable="true" />
+          <Property Name="Printer_Fax" Type="String" Nullable="true" />
+          <Property Name="Printer_Email" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="SellSheetOrdersList">
+          <Key>
+            <PropertyRef Name="Sell_Sheet_ID" />
+            <PropertyRef Name="Sell_Sheet_Name" />
+            <PropertyRef Name="Order_ID" />
+            <PropertyRef Name="ID" /></Key>
+          <Property Name="Sell_Sheet_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sell_Sheet_Name" Type="String" Nullable="false" />
+          <Property Name="Order_ID" Type="Int32" Nullable="false" />
+          <Property Name="OrderDate" Type="DateTime" Nullable="true" />
+          <Property Name="Quantity" Type="Int32" Nullable="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="RepName" Type="String" Nullable="true" />
+          <Property Name="ShipLocation" Type="String" Nullable="true" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="PathfinderDeyModelStoreContainer" CdmEntityContainer="PathfinderDeyEntities" >
+          <EntitySetMapping Name="RestrictionsReportDrilldownSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.RestrictionsReportDrilldown)">
+              <MappingFragment StoreEntitySet="V_Restrictions_Report_Drilldown">
+                <ScalarProperty Name="PBM_Name" ColumnName="PBM_Name" />
+                <ScalarProperty Name="PBM_Id" ColumnName="PBM_Id" />
+                <ScalarProperty Name="Is_All_Section" ColumnName="Is_All_Section" />
+                <ScalarProperty Name="Prod_Type_ID" ColumnName="Prod_Type_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Formulary_Status_Name" ColumnName="Formulary_Status_Name" />
+                <ScalarProperty Name="Copay_Range" ColumnName="Copay_Range" />
+                <ScalarProperty Name="Covered_Lives" ColumnName="Covered_Lives" />
+                <ScalarProperty Name="Criteria_Description" ColumnName="Criteria_Description" />
+                <ScalarProperty Name="Criteria_Name" ColumnName="Criteria_Name" />
+                <ScalarProperty Name="Criteria_ID" ColumnName="Criteria_ID" />
+                <ScalarProperty Name="Tier_Name" ColumnName="Tier_Name" />
+                <ScalarProperty Name="Tier_ID" ColumnName="Tier_ID" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Is_Predominant" ColumnName="Is_Predominant" />
+                <ScalarProperty Name="Formulary_Lives" ColumnName="Formulary_Lives" />
+                <ScalarProperty Name="Formulary_Name" ColumnName="Formulary_Name" />
+                <ScalarProperty Name="Formulary_ID" ColumnName="Formulary_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_Classification_ID" ColumnName="Plan_Classification_ID" />
+                <ScalarProperty Name="Med_D_Offering_ID" ColumnName="Med_D_Offering_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Class_Partition" ColumnName="Class_Partition" />
+                <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="RestrictionsReportSummarySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.RestrictionsReportSummary)">
+              <MappingFragment StoreEntitySet="V_Restrictions_Report_Summary">
+                <ScalarProperty Name="PBM_Name" ColumnName="PBM_Name" />
+                <ScalarProperty Name="PBM_Id" ColumnName="PBM_Id" />
+                <ScalarProperty Name="Is_All_Section" ColumnName="Is_All_Section" />
+                <ScalarProperty Name="Prod_Type_ID" ColumnName="Prod_Type_ID" />
+                <ScalarProperty Name="Segment_ID" ColumnName="Segment_ID" />
+                <ScalarProperty Name="Criteria_Name" ColumnName="Criteria_Name" />
+                <ScalarProperty Name="Criteria_ID" ColumnName="Criteria_ID" />
+                <ScalarProperty Name="P4_Lives" ColumnName="P4" />
+                <ScalarProperty Name="P3_Lives" ColumnName="P3" />
+                <ScalarProperty Name="P2_Lives" ColumnName="P2" />
+                <ScalarProperty Name="P1_Lives" ColumnName="P1" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="QL" ColumnName="QL" />
+                <ScalarProperty Name="PA" ColumnName="PA" />
+                <ScalarProperty Name="Tier_no" ColumnName="Tier_no" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Is_Predominant" ColumnName="Is_Predominant" />
+                <ScalarProperty Name="Formulary_Lives" ColumnName="Formulary_Lives" />
+                <ScalarProperty Name="Formulary_Name" ColumnName="Formulary_Name" />
+                <ScalarProperty Name="Formulary_ID" ColumnName="Formulary_ID" />
+                <ScalarProperty Name="Medicaid_Lives" ColumnName="Medicaid_Lives" />
+                <ScalarProperty Name="PartD_Lives" ColumnName="PartD_Lives" />
+                <ScalarProperty Name="Commercial_Pharmacy_Lives" ColumnName="Commercial_Pharmacy_Lives" />
+                <ScalarProperty Name="Pharmacy_Lives" ColumnName="Pharmacy_Lives" />
+                <ScalarProperty Name="Covered_Lives" ColumnName="Covered_Lives" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_Classification_ID" ColumnName="Plan_Classification_ID" />
+                <ScalarProperty Name="Med_D_Offering_ID" ColumnName="Med_D_Offering_ID" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Thera_ID" ColumnName="Thera_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Class_Partition" ColumnName="Class_Partition" />
+                <ScalarProperty Name="Item_Rank" ColumnName="Item_Rank" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SellSheetRepsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.SellSheetReps)">
+              <MappingFragment StoreEntitySet="Sell_Sheet_Reps">
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="Territory_Name" ColumnName="Territory_Name" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Rep_Cell" ColumnName="Rep_Cell" />
+                <ScalarProperty Name="Rep_Ext" ColumnName="Rep_Ext" />
+                <ScalarProperty Name="Rep_Email" ColumnName="Rep_Email" />
+                <ScalarProperty Name="Rep_L_Name" ColumnName="Rep_L_Name" />
+                <ScalarProperty Name="Rep_F_Name" ColumnName="Rep_F_Name" />
+                <ScalarProperty Name="Rep_ID" ColumnName="Rep_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MSTerritorySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.MSTerritory)">
+              <MappingFragment StoreEntitySet="MS_Territory">
+                <ScalarProperty Name="MS_Territory_Level_ID" ColumnName="MS_Territory_Level_ID" />
+                <ScalarProperty Name="MS_Territory_Name" ColumnName="MS_Territory_Name" />
+                <ScalarProperty Name="MS_Territory_ID" ColumnName="MS_Territory_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="FK_MS_Territory_MS_Territory" TypeName="PathfinderDeyModel.FK_MS_Territory_MS_Territory" StoreEntitySet="MS_Territory">
+            <EndProperty Name="MS_Territory1">
+              <ScalarProperty Name="MS_Territory_ID" ColumnName="MS_Territory_ID" /></EndProperty>
+            <EndProperty Name="MS_Territory">
+              <ScalarProperty Name="MS_Territory_ID" ColumnName="MS_Parent_Territory_ID" /></EndProperty>
+            <Condition ColumnName="MS_Parent_Territory_ID" IsNull="false" /></AssociationSetMapping>
+          <EntitySetMapping Name="SellSheetTerritorySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.SellSheetTerritory)">
+              <MappingFragment StoreEntitySet="V_SellSheet_Territory">
+                <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+                <ScalarProperty Name="Name" ColumnName="Territory_Name" />
+                <ScalarProperty Name="ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="Parent_Territory_ID" ColumnName="Parent_Territory_ID" />
+                <ScalarProperty Name="Rep_ID" ColumnName="Rep_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SellSheetTerritoryRepsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.SellSheetTerritoryReps)">
+              <MappingFragment StoreEntitySet="V_Sell_Sheet_Territory_Reps">
+                <ScalarProperty Name="Parent_Territory" ColumnName="Parent_Territory" />
+                <ScalarProperty Name="User_Level" ColumnName="User_Level" />
+                <ScalarProperty Name="Territory_Name" ColumnName="Territory_Name" />
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="RepFullAddress" ColumnName="RepFullAddress" />
+                <ScalarProperty Name="Rep_Email" ColumnName="Rep_Email" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SellSheetOrdersSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.SellSheetOrders)">
+              <MappingFragment StoreEntitySet="Sell_Sheet_Orders">
+                <ScalarProperty Name="Printer_Email" ColumnName="Printer_Email" />
+                <ScalarProperty Name="Printer_Fax" ColumnName="Printer_Fax" />
+                <ScalarProperty Name="Ship_Email" ColumnName="Ship_Email" />
+                <ScalarProperty Name="Ship_Phone" ColumnName="Ship_Phone" />
+                <ScalarProperty Name="Ship_Zip" ColumnName="Ship_Zip" />
+                <ScalarProperty Name="Ship_State" ColumnName="Ship_State" />
+                <ScalarProperty Name="Ship_City" ColumnName="Ship_City" />
+                <ScalarProperty Name="Ship_Address2" ColumnName="Ship_Address2" />
+                <ScalarProperty Name="Ship_Address1" ColumnName="Ship_Address1" />
+                <ScalarProperty Name="Ship_Name" ColumnName="Ship_Name" />
+                <ScalarProperty Name="Ship_Location_ID" ColumnName="Ship_Location_ID" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Sell_Sheet_Copies" ColumnName="Sell_Sheet_Copies" />
+                <ScalarProperty Name="Rep_ID" ColumnName="Rep_ID" />
+                <ScalarProperty Name="Sell_Sheet_ID" ColumnName="Sell_Sheet_ID" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SellSheetOrdersListSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderDeyModel.SellSheetOrdersList)">
+              <MappingFragment StoreEntitySet="V_SellSheet_Orders">
+                <ScalarProperty Name="ShipLocation" ColumnName="ShipLocation" />
+                <ScalarProperty Name="RepName" ColumnName="RepName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="Sell_Sheet_Name" ColumnName="Sell_Sheet_Name" />
+                <ScalarProperty Name="Sell_Sheet_ID" ColumnName="Sell_Sheet_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PathfinderDeyModel" ZoomLevel="62" >
+        <EntityTypeShape EntityType="PathfinderDeyModel.RestrictionsReportDrilldown" Width="1.5" PointX="0.75" PointY="0.75" Height="5.8263151041666656" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.RestrictionsReportSummary" Width="1.5" PointX="2.75" PointY="0.75" Height="7.3647265625" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.SellSheetReps" PointX="5.375" PointY="0.75" Width="1.5" Height="3.0714322916666665" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.MSTerritory" Width="1.5" PointX="5.5" PointY="4.25" Height="1.4279589843749996" />
+        <AssociationConnector Association="PathfinderDeyModel.FK_MS_Territory_MS_Territory" >
+          <ConnectorPoint PointX="6.0307593374399042" PointY="5.677958984375" />
+          <ConnectorPoint PointX="6.0307593374399042" PointY="5.927958984375" />
+          <ConnectorPoint PointX="6.4796806941105771" PointY="5.927958984375" />
+          <ConnectorPoint PointX="6.4796806941105771" PointY="5.677958984375" /></AssociationConnector>
+        <EntityTypeShape EntityType="PathfinderDeyModel.SellSheetTerritory" Width="1.5" PointX="7.375" PointY="0.75" Height="1.5923063151041665" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.SellSheetTerritoryReps" Width="1.875" PointX="7.625" PointY="3.25" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.SellSheetOrders" PointX="5.375" PointY="7.75" Width="1.5" Height="2.2496956380208326" />
+        <EntityTypeShape EntityType="PathfinderDeyModel.SellSheetOrdersList" Width="1.5" PointX="7.375" PointY="7.75" Height="2.2496956380208326" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class controls_planinfo : System.Web.UI.UserControl
+{
+    protected override void OnLoad(EventArgs e)
+    {
+        gridPlanInfo.Style[HtmlTextWriterStyle.Visibility] = "hidden";
+        base.OnLoad(e);
+    }
+}

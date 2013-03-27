@@ -1,0 +1,316 @@
+div.footer {
+	position: absolute;
+	bottom:-1px;
+}
+div.RadMenu_pathfinder .rmLink {
+	PADDING-TOP: 3px !important;
+}
+DIV.viewSelect .rmLeftImage 	
+{
+	TOP: 5px !important;
+}
+div.viewOptions, div.contactSearch
+{
+	padding:4px 0 0 0 !important;
+}
+#tile1 
+{
+	display:inline-block;
+}
+div.todaysAccounts1 
+{
+	padding-bottom:0px !important;
+}
+.contactSearch 
+{
+	margin:0px 5px 0 0 !important;
+	display:none;
+}
+div.addFav 
+{
+	padding:4px 0 !important;
+}
+#tile1
+{
+		margin-right:2px !important;
+}
+.rgHeaderDivPlanInfo
+{
+	width:auto!important;
+}
+#kcView 
+{
+	width: 100% !important;
+}
+#infoPopup #kcView 
+{
+    width: 98% !important;
+    overflow-x:auto;
+    overflow-y:hidden;
+    }
+#myKcView .rgMasterTable
+{
+	width: 100% !important;
+}
+#divTile3, #divTile3Max
+{
+	width:auto !important;
+
+}
+#htmlModalWindow .title 
+{
+	padding:0 5px 5px 5px;
+}
+.TriSectionLft .dashboardTable table, .TriSection3 .dashboardTable table, #tile3Max .dashboardTable table
+{
+    margin-left:-2px;
+}
+#tile3Max .tools, #tile4Max .tools
+{
+    position:relative
+}
+
+.singleSection #divTile3Container, #maxAff #divTile3Container, #tile3Max #divTile3Container 
+{
+    width:100%;
+}
+.section2SR #divTile4Container, .section2SR #divTile5Container 
+{
+    width:99%;
+}
+.bottomT #divTile5Container 
+{
+    width:auto;
+}
+#filtersContainer div, #filtersContainer input, #optionsContainer div, #optionsContainer input, .modalFormButtons
+{
+    position:relative;
+}
+.modalFormButtons 
+{
+    padding-left:10px;
+}
+.section2SR #divTile4 .dashboardTable
+{
+    position:relative;
+}
+#maxSRTile5 .tileContainerHeader
+{
+    width:100%;
+    }
+#maxSRTile5 .rgHeaderDiv
+{
+    width:auto !important;
+    padding-right:16px;
+    margin-right:0;
+    }
+ .tools .rmScrollWrap .rmLink 
+ {
+     padding-left:20px !important;
+ } 
+ 
+ #tile3T 
+ {
+     position:relative;
+     z-index:8000;
+ }
+ .viewSelect 
+ {
+     position:relative;
+     z-index:8005;
+ }
+ #infoPopup
+{
+    overflow:auto !important;
+}
+
+/*Formulary Shell Sheets */
+.sellsheets .step1
+{
+    margin-left: -18px !important;
+}
+
+.sellsheets .tipTextList
+{
+    margin-left: 0px !important;
+}
+
+.sellsheets .selectedTemplate
+{
+    margin: -1px !important;
+    border: solid 1px #2e59a8 !important;
+    position: relative;
+}
+
+.jcarousel-skin-sidebar .jcarousel-item-horizontal /* Space between thumbnails: */
+{
+   margin-left: 2px !important;
+}
+
+.jcarousel-skin-sidebar .jcarousel-container-horizontal /*The entire width of the carousel */
+{
+    width: 136px !important;
+}
+
+.jcarousel-skin-sidebar .jcarousel-clip-horizontal /* Area where the thumbnails go into: */
+{
+    width:  136px !important;
+}
+
+.sellsheets #classAndTemplateContainer
+{
+    height: 360px !important;
+    overflow: auto !important;
+}
+
+.sellsheets .completedSellSheet
+{
+    margin: 0px !important;
+}
+
+.sellsheets .previousOrders
+{
+    margin-right: 0px !important;
+    height: 230px !important;
+}
+
+.sellsheets .newOrder
+{
+    margin-right: 0px !important;
+    height: 230px !important;
+}
+
+.sellsheets .sellsheetLeft
+{
+    width: 49% !important;
+}
+
+.sellsheets .sellsheetRight
+{
+    width: 49% !important;
+}
+
+.sellsheets .rgDataDiv
+{
+    width: auto !important;
+    overflow: auto !important;
+}
+
+.sellsheets .rgHeaderDiv
+{
+    width: auto !important;
+    overflow: auto !important;
+}
+
+#contactTypeOptions 
+{
+	float:none;
+}
+#contactTypeOptions label
+{
+	vertical-align:middle;	
+}
+
+.ui-datepicker-cover
+{
+    display: none!important;
+}
+
+.customercontactreports #searchList
+{
+    width: 300px!important;
+}
+
+.customercontactreports #tile5
+{
+    width: 74%!important;
+}
+
+#htmlModalWindow #header
+{
+    padding-top: 5px!important;
+}
+
+.rcbScroll LABEL
+{
+    position: relative!important;
+    bottom: -4px!important;
+}
+
+.standardreports .channel
+{
+	padding-right:0px;
+	padding-left:0px;
+	width:187px !important;
+}
+.standardreports .channel li
+{
+	width:185px !important;
+}
+
+.standardreports .channel a
+{
+	width:185px !important;
+}
+
+.marketplaceanalytics .drillDownContainer
+{
+	margin-right:16px;
+}
+
+.marketplaceanalytics #timeFrameContainer .tools
+{
+    height:16px;
+    overflow:hidden;
+}
+
+.chkBoxDiv INPUT
+{
+	padding: 4px;
+}
+
+.marketplaceanalytics  .section2SR #divTile5Container 
+{
+    width:100%;
+}
+
+.marketplaceanalytics #infoPopup
+{
+    overflow:hidden!important;
+}
+
+.channelSelectorContainer .rmSlide
+{
+    width: 197px!important;
+    background-color: White;
+}
+
+.channelSelectorContainer .rmSrollWrap, .channelSelectorContainer .rmGroup, .channelSelectorContainer .rmLevelrmLevel1, .channelSelectorContainer .rmItem, .channelSelectorContainer .rmLink, .channelSelectorContainer .rmFirst, .channelSelectorContainer .menuClicked, .channelSelectorContainer .rmVertical
+{
+    width: 195px!important;
+}
+
+#ctl00_Tile4_gridFDSummary_gridNational_gridformularystatus_ctl00_Header, #ctl00_Tile4_gridFDSummary_gridNational_gridformularystatus_ctl00,
+#ctl00_Tile4_gridFDSummary_gridRegional_gridformularystatus_ctl00_Header, #ctl00_Tile4_gridFDSummary_gridRegional_gridformularystatus_ctl00,
+#ctl00_Tile3_gridLivesDistribution_gridLDReport_ctl00_Header, #ctl00_Tile3_gridLivesDistribution_gridLDReport_ctl00,
+#ctl00_Tile4_tiercoveragedata1_dataUS_gridtiercoverage_ctl00_Header, #ctl00_Tile4_tiercoveragedata1_dataUS_gridtiercoverage_ctl00,
+#ctl00_Tile4_tiercoveragedata1_dataStateTerr_gridtiercoverage_ctl00_Header, #ctl00_Tile4_tiercoveragedata1_dataStateTerr_gridtiercoverage_ctl00
+{
+    width: 100%;
+}
+
+.formularystatus #divTile4, .tiercoveragecomparison #divTile4
+{
+    position: relative!important;
+}
+.addplan 
+{
+	margin:0px 5px 0 0 !important;
+	display:none;
+}
+
+.header
+{
+    width: 100%;
+    height: 34px;
+}

@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PartialPage.master.cs" Inherits="MasterPages_PartialPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+        </asp:ScriptManager>
+        
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+        
+        <div id="partialPageContainer" class="tileContainer">
+            <asp:ContentPlaceHolder id="partialPage" runat="server" />        
+        </div>    
+    </form>    
+</body>
+</html>

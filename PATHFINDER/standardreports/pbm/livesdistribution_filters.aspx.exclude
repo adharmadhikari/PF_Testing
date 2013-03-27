@@ -1,0 +1,6 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/standardreports/MasterPages/filters.master" AutoEventWireup="true" CodeFile="livesdistribution_filters.aspx.cs" Inherits="standardreports_pbm_livesdistribution_filters" %>
+<%@ Register src="../controls/FilterSearchTypePBM.ascx" tagname="FilterSearchType" tagprefix="uc1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="filtersContainer" Runat="Server">
+    <uc1:FilterSearchType ID="SearchType" runat="server" />
+</asp:Content>
+

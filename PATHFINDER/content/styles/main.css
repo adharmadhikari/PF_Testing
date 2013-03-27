@@ -1,0 +1,2090 @@
+
+/* CSS Document - Look and feel - for Theme */
+/* GENERAL */
+
+html {
+	height:100%;
+	margin:0 4px;
+	padding:0;
+	min-height:100%;
+	overflow:hidden;
+}
+
+body {
+	margin:0; 
+	padding: 0;
+	text-align: center; 
+	height:100%;
+
+}
+img {
+	border:none;
+}
+.clearAll {
+	clear:both;
+	height:0px;
+	line-height:0px;
+	font-size:0px;
+	overflow:hidden;
+}
+p, h1, h2, h3, h4, iframe, input {
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+td, th, thead
+{
+	padding:0;
+	margin:0;
+}
+.error 
+{
+	color:#ff0000;
+}
+.require 
+{
+    font-style:italic;
+    width:625px;
+    margin:10px auto;
+    color:#fff;
+    text-align:center;
+}
+.require span
+{
+    font-weight:bold;
+}
+/* MARGIN / PADDING ADJUSTMENTS */
+.pt23 {
+	padding-top:23px;
+}
+.mr10 
+{
+	margin-right:10px;
+}
+.ml10 
+{
+	margin-left:10px;
+}
+.mt30 
+{
+	margin-top:30px;
+}
+.alignRight, td.alignRight
+{
+	text-align:right !important;
+}
+.alignLeft 
+{
+	text-align:left;
+}
+/* STRUCTURE */
+div.wrapper {
+	width: 100%;  
+	margin: 0 auto; 
+	text-align: left; 
+}
+div.header {
+	padding:8px 16px 0 16px;
+}
+div.welcomeMenu {
+	float:right;
+	padding:4px 14px;
+	text-align:right;
+}
+div.welcomeMenu a {
+	text-decoration:none;
+	padding:0 10px;
+}
+div.welcomeMenu a:hover {
+	text-decoration:underline;
+}
+div.logo {
+	float:left;
+	width:50%;
+}
+div.logo a { 
+	text-indent:-1000px;
+	width:300px;
+	height:30px;
+	display:block;
+}
+.headerLogo 
+{
+	float:left;
+	margin:0 0 8px 0;
+}
+.tagLine 
+{
+	padding:8px 20px;
+	color:#fff;
+	font-size:11px;
+	float:left;
+}
+div.contentWrapper 
+{
+}
+div.contentArea 
+{
+}
+
+div.footer {
+	position: fixed;
+	width:100%;
+	text-align:center;
+	bottom:0px;
+	left:0px;
+	z-index:200;
+}
+div.footer .inside{
+	padding:6px 4px;
+	
+}
+div.disclaimer 
+{
+	overflow:auto;
+	padding:5px;
+	height:363px;
+	text-align:left;	
+}
+div.disclaimer .intro
+{
+	padding:0px 20px;
+}
+div.disclaimer ol ul li
+{
+	list-style-type:disc;
+	font-weight:normal;
+}
+div.disclaimer ol ul li span
+{
+	font-weight:bold;
+}
+div.disclaimer ol li
+{
+	font-weight:bold;
+}
+div.disclaimer ol li div
+{
+	font-weight:normal;
+	padding:10px 0px 10px 0px;
+}
+div.disclaimer .addr
+{
+	text-align:center;
+}
+.topLeft 
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    z-index:100;
+}
+.topRight 
+{
+    position:absolute;
+    right:0px;
+    top:0px;
+    z-index:100;
+}
+/* LOG IN PAGE */
+body.login 
+{
+	overflow:hidden;
+}
+#spanProgress 
+{
+	margin:15px 0px;
+	visibility:hidden;
+}
+div.signIn {
+	width:722px;
+	margin: 0 auto;
+	position:relative;
+}
+#htmlModalWindow div.signIn
+{
+	margin:10px auto;
+}
+div.signIn .top{
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+div.signIn .btm{
+}
+div.signIn .inside{
+	padding:40px 20px 0 20px;
+	
+}
+div.signIn .inside .userIcon {
+	float:left;
+	padding:11px 2px 0px 35px;
+}
+div.signIn .inside .logos{
+	padding-bottom:10px;
+	width:500px;
+	margin: 0 auto 20px auto;
+}
+div.signIn .inside .welcome{
+	padding-bottom:10px;
+	width:250px;
+	margin: 0 auto 20px auto;
+}
+div.signIn .inside .userInfo{
+	width:300px;
+	float:left
+}
+div.signIn .loginBox 
+{
+}
+div.signIn .loginBox input
+{
+	border:none;
+}
+div.signIn p {
+	padding: 5px 0;
+	float:left;
+}
+input.formButton 
+{
+	
+	background:none;
+	border:none;
+	display:inline-block;
+
+}
+.login .coreTextBox, .modalForm .coreTextBox {
+	background-position:0 0;
+	padding-left:5px;
+	margin-bottom:3px;
+}
+.login span.readOnlyBox {
+	padding-left:2px;
+}
+
+.login .coreTextBox, .login .coreTextBox *, .modalForm .coreTextBox, .modalForm .coreTextBox * {
+	display:inline-block;
+	height:22px;
+}
+.login .coreTextBox .bg, .modalForm .coreTextBox .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:5px;
+}
+.login .coreTextBox .bg2, .modalForm .coreTextBox .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.login .coreTextBox input, .modalForm .coreTextBox input
+{
+	border:none 0px;
+	background:none;
+	height:18px;
+	width:160px;
+
+}
+.login INPUT.textBoxReadOnly 
+{
+		width:167px;
+}
+.login .rightCol
+{
+	height:20px;
+}
+/* DASH BOARD HOME */
+.channelSelectorContainer
+{
+	display:none;
+}
+.moduleSubHeader
+{
+	display:none;
+}
+
+div.home {
+	width:540px;
+	margin:40px auto;
+	text-align:center;
+	
+}
+#sortable  {
+	list-style-type: none; 
+	margin: 50px 0 0 0; 
+	padding: 0; 
+}
+#sortable li{
+	margin: 3px 3px 10px 0; 
+	padding: 1px; 
+	float: left; 
+	width: 172px; 
+	height: 200px; 
+	text-align: center; 
+	cursor:move;
+	background:#fff;
+	border:1px dashed #ffffff;
+}
+.oldPlace
+{
+	border:1px dashed #cccccc !important;
+	float: left; 
+	width: 172px; 
+	height: 200px; 
+}
+#sortable a 
+{
+	display:block;
+}
+#sortable img{
+	padding:10px 0;
+	display:block;
+	margin:0 auto;
+	width:106px;
+}
+
+
+/* DASHBOARD */
+div.navbar 
+{
+	width:100%;
+	height:26px;
+}
+div.navbar2 
+{
+	padding:5px 5px 0 5px;
+
+}
+div.navbar2 .navbar 
+{
+	padding:0px 5px;
+	width:auto;
+}
+div.viewSelect 
+{
+	float:left;
+	padding:0 20px 0 0;
+	margin-right:15px;
+	
+}
+
+div.viewOptions 
+{
+	float:left;
+	padding:5px 0 ;
+}
+#bpsFile .coreBtn *
+{
+    right:0px !important;
+    }
+    
+#bpsFile .coreBtn .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:0px;
+
+}
+#bpsFile .coreBtn .bg .bg2 span{
+	height:17px;
+
+}
+#bpsFile .coreBtn .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+#bpsFile .coreBtn input
+{
+	border:none;
+	background:none;
+}   
+    
+.coreBtn {
+	background-position:0 0;
+	padding-left:7px;
+}
+
+.coreBtn, .coreBtn * {
+	cursor:pointer;
+	display:inline-block;
+	height:18px;
+}
+.coreBtn .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:8px;
+
+}
+.coreBtn .bg .bg2 span{
+	height:17px;
+
+}
+.coreBtn .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.coreBtn input
+{
+	border:none;
+	background:none;
+}
+.button 
+{
+	padding:1px 3px;
+	line-height:15px;
+}
+.contactSearch 
+{
+	float:right;
+	margin:3px 5px 0 0;
+	position:relative;
+	display:none;
+}
+.goSearch 
+{
+	position:absolute;
+	z-index:22;
+	right:5px;
+	top:5px;
+}
+.goSearch a 
+{
+	display:block;
+	width:10px;
+	height:10px;
+	text-indent:-1000px;
+	overflow:hidden;
+}
+div.addFav 
+{
+	float:right;
+	padding:6px 5px 0 0;
+	white-space:nowrap;
+}
+a.addFav 
+{
+	padding:0 10px 0 10px;
+	display:inline;
+}
+
+
+.addFavDropDn 
+{
+	width:10px;
+	height:10px;
+	text-indent:-1000px;
+	overflow:hidden;
+}
+#favoritesListWindow 
+{
+	width:300px;
+	position:absolute;
+	z-index:800;
+
+}
+.favList 
+{
+	padding:5px;
+	margin-top:5px;
+}
+#favoritesListWindow 
+{
+	z-index:8001;
+}
+.favList a
+{
+	padding: 0 0 5px 0;
+}
+
+/*TILES*/
+#fauxModal 
+{
+	background-color: #999;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+ 
+.todaysAccounts1
+{
+	padding:5px 5px 0px 5px;
+}
+.todaysAccounts2
+{
+	padding:5px;
+	
+}
+#tile1, #tile2, #tileMin1
+{
+	height:343px;
+	position:relative;
+}
+#tile1
+{
+	margin-right:5px;
+}
+#tile1 .tools 
+{
+	height:26px;
+}
+#tile3Max, #tile3Min
+{	
+	position:relative;
+	float:left;
+}
+#tile4Min, #tile4Max 
+{
+	float:right;
+	width: 28px;
+	position:relative;
+}
+#tile4Min .tileContainerHeader .title, #tile4Min .tileContainerHeader .tools
+{
+	display:none;
+}
+
+.todaysAccounts2 #divTile3 .title,  .todaysAccounts2 #divTile4 .title
+{
+	width:200px;
+}
+.todaysAccounts td
+{
+	width:50%;
+	margin:0;
+	vertical-align:top;
+	padding:0;
+	
+}
+div.tileContainer
+{
+	position:relative;
+}
+
+.todaysAccounts1 .leftTile .tileContainer
+{
+	margin:0;
+}
+.todaysAccounts1 .rightTile .tileContainer
+{
+	overflow:hidden;
+	margin:0;
+}
+.todaysAccounts2 .leftTile .tileContainer
+{
+	margin:0 5px 0 0 ;
+}
+
+.todaysAccounts2 .rightTile .tileContainer
+{
+	overflow:hidden;
+	margin:0;
+	position:relative;
+}
+.tile5Data 
+{
+    height: auto;
+    overflow:scroll;
+}
+
+.todaysAccounts1 .leftTile 
+{
+	z-index:300;
+	width:41.8%;
+}
+
+.todaysAccounts1 .rightTile 
+{
+	float:none;
+	width:auto;
+	overflow:hidden;
+}
+.leftTile 
+{
+	float:left;
+	width:50%;
+}
+.leftOneThird
+{
+	width:33.3%;
+	float:left;
+}
+ .rightOneThird
+ {
+	width:33.3%;
+	float:right; 	
+ }
+.middleOneThird
+{
+	width:33.4%;
+	float:left;
+}
+.rightOneThird .tileContainer
+{
+	margin-top:6px;
+}
+.todaysAccounts2 .leftOneThird .tileContainer, .todaysAccounts2 .middleOneThird .tileContainer
+{
+	margin:0 5px 0 0 ;
+}
+.rightTile 
+{
+	float:right;
+	width:50%;
+}
+.bottomT 
+{
+	width:100%;
+}
+
+#expandTile1 
+{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:0px;
+	vertical-align: middle;
+	z-index:20;
+	overflow:hidden;
+}
+#expandTile1 a
+{
+	cursor:pointer;
+	display:block;
+	z-index:21;
+	width:30px;
+	height:150px;
+}
+#expandTile2SR 
+{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:0px;
+	vertical-align: middle;
+	z-index:20;
+	overflow:hidden;
+}
+#expandTile2SR a
+{
+	cursor:pointer;
+	display:block;
+	z-index:21;
+	width:30px;
+	height:150px;
+}
+#expandTile4 
+{
+	position:absolute;
+	top:0;
+	right:0;
+	width:28px;
+	vertical-align: middle;
+	z-index:20;
+	overflow:hidden;
+	
+}
+#expandTile4 a
+{
+	cursor:pointer;
+	display:block;
+	z-index:21;
+	width:28px;
+	height:155px;
+}
+div.tileContainerHeader 
+{
+	padding: 0 5px 0 0;
+	height:26px;
+	text-align:left;
+}
+.formularyhistoryreporting div.tilePaginationHeader 
+{
+	padding: 2px 5px 2px 5px;
+	height:15px;
+	text-align:left;
+	background:#2d58a7;
+	color:#fff;
+	border-top: solid 1px #fff;
+	width:auto;	
+}
+.formularyhistoryreporting #tile3 #divTile3 
+{
+    overflow: auto !important;
+    overflow-x: auto !important;
+}
+.formularyhistoryreporting #infoPopup div.tileContainerHeader
+{
+    cursor:move;
+}
+
+.coveredlives .ui-draggable div.tileContainerHeader
+{
+    cursor:move;
+}
+.popupArea div.areaHeader
+{
+	padding:2px 5px;
+	height:20px;
+}
+.popupArea div.areaHeader .pagination
+{
+	font-weight:normal;
+}
+.title 
+{
+	float:left;
+	white-space:nowrap;
+}
+
+div.rightTile .title
+{
+	float:left;
+	white-space:nowrap;
+	padding:5px;
+}
+#htmlModalWindow .title 
+{
+	float:left;
+	white-space:nowrap;
+	padding:5px;
+}
+#htmlModalWindow .title span
+{
+	padding:0px 5px ;
+}
+
+div.tileContainerHeader .title input
+{
+	border:none;
+	background:none;
+}
+#tile3T .title, #maxSRMap .title
+{
+	padding:0px;
+}
+.todaysAccounts2 div.tileContainerHeader .title, #infoPopup .title
+{
+	padding:5px;
+}
+.tools
+{
+	float:right;
+}
+#tile3Max .tools, #divTile4Container .tools, #divTile5Container .tools, #infoPopup .tools, #tile3Min .tileContainerHeader .tools
+{
+	padding:4px;
+}
+
+#divTile3 .tools,  #divTile4 .tools, #tile3 .tools, #tile3Max #divTile3 .tools, #maxChart .tools
+{
+	padding:4px;
+}
+#tile3Max .tileContainerHeader .tools, #tile3Min .tileContainerHeader .tools, #tile4Max .tileContainerHeader .tools, #tile4Min .tileContainerHeader .tools, #tile3 .tileContainerHeader .tools
+{
+	padding:0px 4px 4px 4px !important;
+}
+.section2SR #tile3 .tileContainerHeader .tools, .section2SR #tile3SR .tileContainerHeader .tools 
+{
+    padding:3px 4px 4px 4px !important;
+    }
+.section2SR #tile3 .tileContainerHeader .tools .addreport 
+{
+    float:right;
+    display:inline-block;
+    padding-top:2px;
+    }
+ .section2SR #tile4 #divTile4Container, .section2SR #tile5 #divTile5Container,  .section2SR #tile6 #divTile6Container, .section2SR #tile4SR #divTile4Container, .section2SR #tile5SR #divTile5Container {
+         margin-top: 6px;
+}
+#tile5T 
+{
+    margin-top:5px;
+}
+#ccrAdd
+{
+    padding-bottom:15px;
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:25%;
+    }
+   
+.btnSave
+{
+    padding-top:5px;
+    }
+ .ccrinstructions
+ {
+     padding-top:5px;
+     }
+.ccrRadioButtons
+{
+    padding-top:10px;
+    width:200px;
+    height:25px;
+    margin-left:auto;
+    margin-right:auto;
+    }
+div.leftTile #divTile3Container .tools 
+{
+	padding: 4px !important;
+}
+#infoPopup .tools
+{
+    
+}
+
+#srTile1, #tile5 #divTile5
+{
+	overflow-y: hidden;
+	overflow-x: hidden;
+	width:100%;
+	text-align: left;
+	height:100%;
+}
+.section2SR #tile3 #divTile3 .rgDataDiv  {
+    overflow: auto !important;
+    overflow-x: auto !important;
+}
+#tile3 #divTile3, #tile4 #divTile4, #divTile3Max, #divTile4Max, #maxBtmRt #divTile4, #tile4SR #divTile4 {
+    width:100% !important;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: left;
+	height:100%;
+}
+
+#kcView, #myKcView
+{
+	width:100%;
+	overflow: auto;
+}
+
+div.tileContainerHeader .pagination 
+{
+	float:right;
+	padding:5px 0 ;
+	display:inline-block;
+	
+}
+div.tileContainerHeader .pagination .pagerButtons a 
+{
+	padding:0 2px;
+}
+div.tileContainerHeader .pagination img
+{
+	width:10px;
+	height:10px;
+	margin: 0 2px;
+	
+}
+div.tileContainerHeader .pagination .pagerText
+{
+	margin: 0 8px;
+}
+div.tileContainerHeader .pagination .pagerButtons span 
+{
+	padding:0 2px;
+}
+.mapTile 
+{
+	text-align:center;
+	position:relative;
+}
+.insetMap 
+{
+	z-index:900;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	
+	cursor:pointer;
+	border-left: solid 1px #CCC;
+	border-top: solid 1px #CCC;
+	background-color:#fff;
+
+} 
+.textResize 
+{
+	display:none;
+	padding: 0 5px;
+}
+#htmlModalWindow .textResize 
+{
+	display:inline;
+}
+.textResize span
+{
+	padding:0 3px;
+}
+.textSm 
+{
+	font-size:10px;
+}
+.textMd 
+{
+	font-size:12px;
+}
+.textLg 
+{
+	font-size:14px;
+}
+
+.dashboardTable {text-align:left; border:0; }
+.dashboardTable .planInfoFilterRow{display:none;}
+.dashboardTable thead 
+{
+	text-align:center;
+}
+.dashboardTable thead a
+{
+	font-weight:normal;
+}
+.dashboardTable .rgFilterBox
+{
+	width:75%;
+}
+.dashboardTable td, .dashboardTable th
+{
+	padding:2px 5px;
+	text-align:center;
+	overflow:hidden;
+	
+}
+
+.dashboardTable .GridFilterRow_Default td
+{
+	text-align:left;
+}
+div.dashboardTable td.firstCol 
+{
+	text-align:left;
+}
+.dashboardTable .rgHeader
+{
+	white-space:nowrap;
+}
+.dashboardTable .rgHeader a 
+{	
+    white-space:nowrap;
+}
+.dashboardTable td.commentsCell
+{
+	padding:0px !important;
+	text-align:center;
+	white-space:nowrap !important;
+}
+
+.section2SR .singleSection .dashboardTable .rgHeader
+{
+	white-space: normal;
+}
+.section2SR .singleSection .dashboardTable th
+{
+	padding:2px 5px;
+}
+.section2SR .singleSection .dashboardTable .rgHeader a 
+{	
+    white-space: normal;
+}
+
+.TriSectionLft .rgHeader a
+{		
+    white-space:normal !important;
+}
+
+
+.section2SR .dashboardTable .rgHeader a 
+{		
+    white-space:normal !important;
+}
+.section2SR .dashboardTable .rgHeader 
+{		
+    white-space:normal !important;
+
+}
+.dashboardTable TBODY TD
+{
+	text-align:left;
+	/*cursor:pointer;*/
+}
+
+.todaysaccounts #divTile2Container TBODY TD,
+.coveredlives #divTile4 TBODY TD,
+.affiliations #divTile3 TBODY TD,
+.contacts #divTile3 TBODY TD,
+.contacts #divTile4 TBODY TD,
+.customercontactreports #divTile8 TBODY TD,
+.customercontactreports #divTile7 TBODY TD,
+.customercontactreports #divTile6 TBODY TD,
+.customercontactreports #divTile4 TBODY TD,
+.sellsheets .draftedSellSheet TBODY TD,
+.sellsheets .completedSellSheet TBODY TD,
+.sellsheets .previousOrders TBODY TD
+{
+    cursor: pointer;
+}
+
+.showHideBtn 
+{
+	display:none;
+	cursor:pointer;
+	margin:7px 2px 0 2px;
+}
+.section2SR .showHideBtn, #section2 .showHideBtn, #section2 .genBtn
+{
+	float:left;
+	margin:4px 2px 0 2px;
+	cursor:pointer;
+}
+.normBtn 
+{
+	cursor:pointer;
+	margin:7px 2px 0 2px;
+}
+.resetBtnDiv 
+{
+	cursor:pointer;
+	margin:4px 2px 0 8px;
+}
+
+.coreTextBox {
+	background-position:0 0;
+	padding-left:9px;
+}
+
+.coreTextBox, .coreTextBox * {
+	display:inline-block;
+}
+.coreTextBox .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:10px;
+}
+.coreTextBox .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+}
+.coreTextBox input
+{
+	border:none 0px;
+	background:none;
+	height:17px;
+}
+
+div.dashboardTable .rgHeader
+{
+}
+/* General Tables */
+
+.genTable, #ccrForm .genTable 
+{
+	width:100% !important;
+}
+.genTable th, .areaHeader
+{
+	padding:2px 5px;
+	font-weight:bold;
+}
+.genTable th.buttons
+{
+	text-align:right;
+}
+.genTable td
+{
+	padding:2px 5px;
+	width:50%;
+	text-align:left;
+	/*cursor:pointer;*/
+}
+
+.genTable td td
+{
+	padding:0px;
+}
+.genTable label
+{
+	width:80px;
+	display:inline-block;
+	font-weight:bold;
+}
+.genTable textarea 
+{
+	vertical-align:middle !important;
+}
+
+td.subTable
+{
+	padding:0px;
+	border-right-style:none !important;
+	border-bottom-style:none !important;
+}
+
+td.subTable table th
+{
+	font-weight:normal;
+	text-align:left;
+	border-bottom-style:none !important;
+}
+td.subTable table td
+{
+	padding:2px 5px;
+	border-style:none;
+}
+/* General Tables 3 columns */
+
+.genTable3, #ccrForm .genTable, .genTable3-sec2
+{
+	width:100% !important;
+}
+.genTable3-sec3, .genTable3-sec4, .genTable3-sec5 
+{
+}
+.genTable3-sec3 td, .genTable3-sec4 td, .genTable3-sec5 td
+{
+    
+	padding-bottom:3px;
+	padding-top: 3px;
+	text-align:left;
+	cursor:pointer;
+}
+
+.genTable3-sec3, .genTable3-sec4
+{
+    float:left;
+    width:50%;
+    display:inline-block;
+    
+}
+.genTable3-sec3 .BusinessPlanDisplay,.genTable3-sec4 .DocumentsDisplay
+{
+    height:80px;
+    }
+.genTable3-sec3 .bpframe
+{
+    width:100%;
+    }
+.genTable3-sec3 iframe, .genTable3-sec4 iframe
+{
+    height:60px;
+    width:100%;
+    }
+.genTable3-sec5
+{
+    display:block;
+    width:100%;
+    
+}
+.genTable3-sec2
+{
+    
+}
+.genTable3-header
+{
+    text-align:left;
+    
+    }
+.genTable3-sec2 input 
+{
+    padding:0;
+    border:none;
+}
+.genTable3 th, .areaHeader, .genTable3-sec2 th
+{
+	padding:2px 5px;
+	font-weight:bold;
+}
+.genTable3-header td
+{
+    padding-bottom:3px;
+	padding-top: 3px;
+ }
+.genTable3-sec2 .genTable3-header td label
+{
+    font-weight:bold;
+}
+.genTable3 th.buttons
+{
+	text-align:right;	
+}
+.genTable3-sec3 td label 
+{
+    width: 125px;
+}
+.genTable3 td, genTable3-sec3 td, genTable3-sec4 td, .genTable3-sec5 td label
+{
+	padding-left:5px;
+	padding-bottom:2px;
+	padding-top: 2px;
+	text-align:left;
+	cursor:pointer;
+	
+}
+.genTable3-header td label
+{
+   width:115px !important;
+    }
+.genTable3 td td
+{
+	padding:0px;
+	
+}
+.genTable3-sec5 textarea
+{
+    margin-bottom:2px;
+    }
+.genTable3-sec3 label, .genTable3-sec4 label, .genTable3-sec5 label 
+{
+   padding-bottom:2px;
+	display:inline-block;
+	font-weight:bold; 
+}
+.genTable3 label 
+{
+	width:110px;
+	padding-bottom:5px !important;
+	padding-top:2px !important;
+	display:inline-block;
+	font-weight:bold;
+}
+.genTable3 textarea 
+{
+	vertical-align:middle !important;
+
+}
+#filterFormButtons
+{
+    text-align: left;
+}
+.modalFormButtons 
+{
+	padding:10px 10px 0 0;
+	text-align:right;
+}
+.TriSection3 .modalFormButtons 
+{
+	padding:3px 10px 0 0;
+	text-align:right;
+}
+.modalFormButtons .coreBtn {
+	background-position:0 0;
+	margin-left:7px;
+	padding-bottom:5px;
+}
+.modalFormButtons .coreBtn, .modalFormButtons .coreBtn * {
+	display:inline-block;
+	height:18px;
+}
+.modalFormButtons .coreBtn .bg {
+	background-position: top right;
+	background-repeat:no-repeat;
+	padding-right:9px;
+	height:18px;
+}
+.modalFormButtons .coreBtn .bg2 {
+	background-position:0 -52px;
+	background-repeat:repeat-x;
+	height:18px;
+}
+.modalFormButtons .coreBtn input
+{
+	border:none 0px;
+	background:none;
+	height:18px;
+	line-height:12px;
+}
+#JT_arrow_left{
+	background-image: url(../images/arrow_left.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	position: absolute;
+	z-index:101;
+	left:-12px;
+	height:23px;
+	width:10px;
+    top:-3px;
+}
+#JT_arrow_right{
+	position: absolute;
+	z-index:101;
+	height:23px;
+	width:11px;
+    top:-2px;
+}
+#JT {
+	position: absolute;
+	z-index:1;
+	text-align:left;
+}
+
+#JT_copy{
+	padding:10px 10px 10px 10px;
+}
+
+.JT_loader{
+	width:100%;
+	height:12px;
+}
+
+#JT_close_left{
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+
+#JT_close_right{
+	text-align: left;
+	padding-left: 8px;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+
+#JT_copy p{
+  margin:3px 0;
+}
+
+#JT_copy img{
+	padding: 1px;
+}
+
+.jTip img
+{
+	margin:7px 8px 0 2px;
+}
+/* Forgot Password */
+.instructions 
+{
+	padding:20px 0;
+}
+.modalForm 
+{
+	padding:20px 60px;
+	text-align:left;
+}
+.debug table
+{
+	color: #000;
+	border: solid 1px #000;
+	background-color: #FFFF00;
+}
+
+.debug td 
+{
+	padding: 3px 3px 3px 3px;
+}
+
+/*Info Modal Popup */
+#infoPopup 
+{
+	background-color:#fff;
+	position:absolute;
+	display:none;
+}
+#popupContentContainer 
+{
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+}
+.popupTopLft 
+{
+	float:left;
+	width:32%;
+	margin-right:5px;
+}
+.popupTopRt 
+{
+	float:right;
+	width:64%;
+}
+.popupBtmLft 
+{
+	float:left;
+	width:47%;
+	margin-right:5px;
+}
+.popupBtmRt 
+{
+	float:right;
+	width:49%;
+}
+.ajaxLoader
+{
+	position:absolute;
+	top:200px;
+	left:245px;
+}
+.popUpArrow 
+{
+	position:absolute;
+	bottom: 26px;
+	left:-12px;
+}
+
+#ctl00_main_planInfo_gridPlanInfo_GridData
+{
+	overflow:scroll!important;
+	overflow-x:hidden!important;
+}
+.rgHeaderDivPlanInfo
+{
+	width:100% !important;
+}
+.section2SR .rgHeaderDivPlanInfo
+{
+	width:auto !important;
+}
+#tile4Min #divTile4Container 
+{
+	display:none;
+}
+.TriSectionLft 
+{
+	float:left;
+	width:54.5%
+}
+.TriSection3 
+{
+	float:right;
+	width:45%;
+}
+.TriSection1 
+{
+	width: 38%;            /* 40.6%;  */
+	float:left;
+}
+.TriSection2 
+{
+	width:  61.1%;           /*  58.5%;  */
+	float:right;
+}
+#CoveredLivesDrilldownTitle 
+{
+	padding:4px;
+}
+/* Standard Reports Buttons */
+.moduleSelector .coreBtn {
+	padding-left:0px;
+	display:block;
+}
+.moduleSelector a {
+	width:190px;
+	padding:5px 0 5px 10px;
+}
+
+.moduleSelector .coreBtn, .moduleSelector .coreBtn * {
+	height:auto;
+}
+.moduleSelector .coreBtn .bg .bg2 span {
+	height: auto;
+
+}
+.chkBoxDiv, #filtersContainer
+{
+	padding:5px 0;
+	margin:5px 0;
+}
+.chkBoxDiv
+{
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
+.chkBoxDiv label 
+{
+	padding: 0 2px 0 0;
+}
+.chkBoxDiv input 
+{
+	margin:4px;
+}
+#filtersContainer #Plan_Name
+{
+    margin-left:4px;
+    margin-bottom: 4px;
+    width: 160px;
+    height: 18px;
+}
+.filterGeo
+{
+    padding-left:5px;
+}
+.filterForm 
+{
+    padding-left:5px;
+}
+#filterControls
+{
+    overflow-x:hidden;
+    overflow-y:auto;
+    position:relative;
+}
+    
+.sectionDisclaimer
+{
+   	text-align:center !important;
+   	border-right-style:none !important;
+   	font-size:9px;
+}
+.validator
+{
+	display:none;
+}
+
+.invalid
+{
+	background-color: #FFFF00;
+	border:1px solid #ccc;
+}
+
+#dashboardAlert
+{
+	display:none;
+	visibility:hidden;
+	position:absolute;
+	left:-1000px;
+	z-index:3000;
+}
+
+#dashboardAlert .header
+{
+	text-align:left;
+	margin:0px 0px 0px 0px;
+	padding:3px 0px 3px 0px;
+}
+#dashboardAlert .message 
+{
+	text-align:center;	
+	overflow:auto;
+}
+#dashboardAlert .showHideBtn 
+{
+	margin:1px;
+}
+.ui-effects-transfer { border: 2px dotted gray; } 
+.divTile3Scroll 
+{
+    position:relative;
+}
+.chartThumb
+{
+    position:absolute;
+	width:40px;
+	background-color:#e8e8e8;
+	border:solid 1px #2d58a7;	
+	right:10px;
+	bottom:10px;
+	height:20px;
+}
+
+.chartThumb img
+{
+	width:40px;
+	height:auto!important;
+	cursor:move;
+	z-index:2000;
+}
+
+.chartThumb span
+{
+	width:100px;
+	color:#2d58a7;
+}
+.divtiercoverageChart {
+    position:relative;
+}
+.chartContainer 
+{
+    float:left;
+    width:100%;
+    position:relative;
+    /*FF fix*/
+    height:100%;
+}
+/*float causing align issues on geo cvg */
+#tile4T .chartContainer 
+{
+    float:none;
+}
+
+#tooltip 
+{
+    position:absolute;
+    border:1px solid #2d58a7;
+    background:#fff;
+    padding:5px;
+    font-size:10px;
+    text-align:left;
+    width:200px;
+    font-weight:bold;
+}
+
+.singleSectionnoheader
+{
+    float:left;
+    overflow:auto;
+    overflow-x:hidden;
+    width:100%;
+    }
+.ssnh
+{
+    text-align:right;
+    margin-right:15px;
+    }
+.ssnh img
+{
+    float:left;
+    }
+
+.changePassword 
+{
+    width:300px;
+    margin:20px auto;
+}
+.changePassword table, .changePassword table table
+{
+    width:100%
+}
+.changePassword table table td
+{
+   /*text-align:center !important;*/
+   padding-bottom:2px;
+}
+#maxSRTile4 .rgHeaderDiv table, #maxSRTile4 .rgDataDiv table
+{
+    width:100% !important;
+}
+
+.exportConfirmText
+{
+	height:120px;
+	padding: 5px 5px 0px 5px;
+}
+
+
+/*SPH - STYLES ADDED TO SUPPORT FORMULARY SELL SHEETS 
+.sellsheets #section2 
+{
+	margin: 0px 0px 0px 275px;
+}
+
+.mysellsheets #section2
+{
+	margin: 0px 0px 0px 0px !important;
+}*/
+
+.sellsheets #customInfoArea
+{
+	position:absolute;
+	height:500px;
+	width:270px;
+	top: 73px;
+	left: 8px;
+	
+	/*SPH - temp - should move to skin css */
+	border: solid 1px #2d58a7;		
+}
+
+.sellsheets #customInfoArea div
+{
+	visibility: hidden;
+}
+
+/*SPH - STYLES ADDED TO SUPPORT FORMULARY SELL SHEETS */
+
+
+/* This is used to highlight selected rows when reviewing sell sheet plan selection */
+/* Added by: Ash Dharmadhikari on Feb 8 2010*/
+.Highlighter .PlanNMHighlight, .Highlighter .yourProduct, .Highlighter .yourProductRight
+{
+	font-weight: bold;  
+}
+
+.UnHighlighter
+{
+	font-weight: normal;  
+}
+/*END*/
+
+.sellsheetinvalid
+{
+	background-color: #FFFF00;
+	border:1px solid #ccc;
+}
+
+.sellsheetLeft
+{
+	float:left;
+	width:50%;
+}
+.sellsheetRight
+{
+	float:right;
+	width:50%;
+}
+.sellsheetPreview
+{
+	height:345px;
+}
+
+.sellsheets #divTile3 .title,  .sellsheets #divTile4 .title
+{
+	width:auto !important;
+}
+
+.sellsheets .dashboardTable .rgHeader
+{
+	white-space:normal;
+}
+
+.sellsheets .dashboardTable .rgHeader a
+{
+	white-space:normal;
+}
+
+
+.sellSheetSteps 
+{
+	background-repeat:no-repeat;
+	white-space:nowrap;
+	height:46px;
+	width:760px;
+	margin:0px auto 0px auto;
+}
+
+.sellSheetSteps ul
+{
+	list-style-type:none;
+}
+
+.sellSheetSteps li
+{	
+	height:46px;
+	float:left;	
+	width:112px;
+}
+
+.sellSheetSteps .step1
+{
+	margin-left:-35px;	
+}
+.sellSheetSteps .step2
+{
+	width:108px;
+}
+.sellSheetSteps .step3
+{
+	width:111px;
+}
+.sellSheetSteps .step4
+{
+	width:112px;
+}
+.sellSheetSteps .step5
+{
+
+}
+.sellSheetSteps .step6
+{
+	width:103px;
+}
+.sellSheetSteps .step7
+{
+	width:90px;
+}
+
+.sellSheetSteps a
+{
+	color:#fff;	
+	float:left;
+	padding-top:12px;
+}
+
+.sellSheetSteps .stepNumber
+{
+	font-size:20pt;
+	float:left;
+	margin-top:-5px;
+}
+
+.sellSheetSteps .stepText
+{
+	font-size:7pt;
+	white-space:normal;
+	font-weight:bold;
+	
+}
+
+/*.sellSheetSteps .step2 .stepText, .sellSheetSteps .step4 .stepText, .sellSheetSteps .step5 .stepText, .sellSheetSteps .step6 .stepText
+{
+	margin-top:5px;
+}*/
+
+.sellSheetSteps .step2 .stepText
+{
+    float: right;
+}
+
+/*.sellSheetSteps .step7 .stepText
+{
+	margin-top:-3px;
+}*/
+
+.clDate
+{
+	font-size:9px;
+	color:#000;
+	text-align:center;	
+	border-top:solid 1px #e8e8e8;
+}
+
+.fhrNote
+{
+	font-size:10px;
+	font-weight:bold;
+	color:#000;
+	text-align:left;	
+	/*border-top:solid 1px #e8e8e8;*/
+	width:auto;	
+	position:absolute;
+	left:3px;
+	bottom:3px;
+	z-index:1;
+}
+
+.fhrNoteBox
+{
+    height: 10px;
+    width: 12px;
+    background-color:Yellow;
+    float: left;
+    border: solid 1px #cfcfcf;
+    padding: 0px 2px 0px 2px;
+    margin-left: 4px;
+    margin-right: 2px;
+}
+
+.formularyUpdateDate
+{
+	position:absolute;
+	left:3px;
+	bottom:0px;
+	z-index:1;
+}
+
+#contactTypeOptions 
+{
+	/*float:right;*/
+}
+#contactTypeOptions label
+{
+	/*vertical-align:top;*/
+	padding-left:2px;
+	padding-right:4px;
+}
+
+.planinformation .jTip 
+{
+	float:left;
+}
+.planinformation .jTip img
+{
+	margin:4px 8px 0 2px;
+}
+
+.customercontactreports .ccrPlanSelectView
+{
+	float:left;
+	width:100%;
+	margin: 1px;
+	height:100%;
+}
+.customercontactreports .ccrBusinessPlans
+{
+	float:right;
+	width:39.15%;
+	margin: 1px 1px 1px 0px;
+	height:190px;
+	display:none;
+}
+
+.customercontactreports .ccrMeetings
+{
+	margin: 0px 1px 1px 1px;
+	display:none;
+}
+
+.customercontactreports .todaysAccounts2 DIV.tileContainerHeader .title
+{
+	width:auto !important;
+}
+
+.standardreports .channelSelectorContainer
+{
+	display:block !important;
+}
+
+.standardreports .channelSelectorContainer .moduleSelector
+{
+	display:none;
+}
+
+.standardreports .moduleSubHeader
+{
+    /* do not display the subheader */
+	display:none;
+}
+
+.standardreports .channel
+{
+	padding-right:0px;
+	padding-left:0px;
+	width:200px !important;
+}
+.standardreports .channel li
+{
+	width:198px !important;
+}
+
+.standardreports .channel a
+{
+	width:198px !important;
+}
+
+div.terms 
+{
+	padding:0px 15px;
+	overflow:auto;
+	height:374px;
+	text-align:left;
+}
+div.terms p
+{
+	padding:10px 0px 10px 0px;
+}
+
+#PP h1, #Terms h1
+{
+    text-align:left;
+    padding:0;
+    margin:0;
+    }
+#PP .line, #Terms .line
+{
+    border-bottom:solid 1px #ccc;
+    width:100%;
+    margin:0;
+    
+    }
+  
+
+    
+.terms div li
+{
+	list-style-type:none;
+    list-style-image:none;
+}
+.letter
+{
+    list-style-type:lower-alpha !important;
+ }
+
+ .coveredLivesInfo
+ {
+ 	padding:5px;
+ 	font-size:7pt;
+ 	font-weight:bold;
+ 	font-style:italic;
+ 	border-style:none;
+ 	background-color:#fff;
+ }
+ 
+.marketplaceanalytics .chartContainer
+{
+	text-align:center;
+}
+
+/*sph 9/13/10 - leave out 
+.tileContainer .tools
+{
+	padding:4px;
+}
+*/
+
+.drillDownInstruct
+{
+	text-align:center;
+	margin:40px auto;
+	width:90%;
+}
+
+.geographiccoverage #divTile5
+{
+	overflow:hidden;
+}
+
+.geographiccoverage #divTile5Container
+{
+	position:static;
+}
+
+.marketplaceanalytics #popupContentContainer 
+{
+	overflow-x:visible;
+	overflow-y:visible;
+}
+
+.marketplaceanalytics #partialPageContainer
+{
+	overflow-x:visible;
+	overflow-y:visible;	
+}
+
+.marketplaceanalytics #physGrid
+{
+	width:100%;
+	/*height:520px;*/
+	overflow:auto;
+}
+
+.marketplaceanalytics #infoPopup .tools
+{
+	padding:0px;
+}
+ /*.btmGrid .rgDataDiv .rgRow td, .rightPane .rgDataDiv .rgRow td, .rightPane .rgDataDiv .rgAltRow td, .btmGrid .rgDataDiv .rgAltRow td, .topGrid .rgDataDiv .rgRow td, .topGrid .rgDataDiv .rgAltRow td
+{
+    padding:0px;
+    }
+.btmGrid .rgDataDiv td table td, .topGrid .rgDataDiv td table td, .rightPane .rgDataDiv td table td 
+{
+    padding: 8px 5px 8px 8px !important;
+    width:50%;
+}
+.btmGrid .rgHeaderDiv .rgHeader table td, .rightPane .rgHeaderDiv .rgHeader table td, .topGrid .rgHeaderDiv .rgHeader table td, .btmGrid .rgHeaderDiv .rightScroll table td, .topGrid .rgHeaderDiv .rightScroll table td , .rightPane .rgHeaderDiv .rightScroll table td
+{
+    padding: 3px 15px !important;
+    width:50%;
+}*/
+.formularyhistoryreporting .fhrContainer
+{
+    /*overflow-x: auto!important;
+    overflow-y: auto!important;*/
+}
+
+.addplan 
+{
+	float:right;
+	margin:3px 5px 0 0;
+	position:relative;
+	display:none;
+}
+
+/*.divFDDRep
+{
+    display: none !important;
+    position:relative;
+}*/
+
+.StdRepHideShowCols
+{
+    display: none;
+}

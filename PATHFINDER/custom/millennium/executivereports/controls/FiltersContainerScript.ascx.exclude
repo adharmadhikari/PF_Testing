@@ -1,0 +1,58 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="FiltersContainerScript.ascx.cs" Inherits="custom_millennium_executivereports_controls_FiltersContainerScript" %>
+<%@ OutputCache Shared="true" VaryByParam="None" Duration="120" %>  
+  
+    <script type="text/javascript">
+
+        clientManager.add_pageLoaded(filters_pageLoaded, "moduleOptionsContainer");
+        clientManager.add_pageUnloaded(filters_pageUnloaded, "moduleOptionsContainer");
+
+        var _filterPageDefaults = [];
+        
+        function filters_pageLoaded(sender, args)
+        {
+            $clearAlert(); //make sure any previous alerts are cleared.
+            
+            $addHandler($get("requestReportButton"), "click", requestReport);
+            $addHandler($get("clearFiltersButton"), "click", clearReportFilters);
+            $reloadContainer("moduleOptionsContainer", clientManager.get_SelectionData());
+
+            standardreports_content_resize();         
+        }
+
+        function filters_pageUnloaded(sender, args)
+        {   
+            $clearHandlers($get("requestReportButton"));
+            $clearHandlers($get("clearFiltersButton"));
+
+            clientManager.remove_pageLoaded(filters_pageLoaded, "moduleOptionsContainer");
+            clientManager.remove_pageUnloaded(filters_pageUnloaded, "moduleOptionsContainer");
+        }
+        //request report
+        function requestReport() {
+            var data = $getContainerData("filtersContainer");
+
+            if (clientManager.get_Module() != "custom_formularystatusreportNAM" && clientManager.get_Module() != "custom_formularystatusreportFAM")
+            {
+                var geogID = data["Geography_ID"];
+
+                if ((typeof (geogID) == "undefined"))
+                    data["Geography_ID"] = "US";
+            }
+
+            if ($validateContainerData("filtersContainer", data, '<%= Resources.Resource.Label_Report_Filters %>'))
+            {
+                //Clear report pager
+                if (ReportPager.get_reportCombinations())
+                    ReportPager.resetReportPager();
+                    
+                data["__options"] = $getContainerData("optionsContainer");
+                clientManager.set_SelectionData(data);
+                //for exporting the report to excel
+                $exportModule("excel", true, clientManager.get_Application(), 0, clientManager.get_Module(), data)
+            }
+        }
+
+        function clearReportFilters() {
+            $resetContainer("filterControls");
+        }        
+    </script>

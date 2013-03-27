@@ -1,0 +1,948 @@
+﻿ .leftBgPDFTile 
+{
+    width:603px ;
+}
+
+.sppPDFTile
+{
+    width:350px ; 
+}
+
+ .PDFDivHeader
+{
+    vertical-align: top; 
+    page-break-before: always;  
+    text-align: left; 
+    font-weight:bold;
+}
+
+.leftSmPDFTile 
+{
+    width:220px ;
+}
+
+.rightMedPDFTile 
+{
+	float: left;
+    width:300px ; 
+}
+/*#################################pathfinder.css########################################*/
+
+/* CSS Document - OVER ALL STRUCTURE - No color or theme styles */
+/* GENERAL */
+
+html {
+	background:#2d58a7;
+}
+
+body, input, textarea, label {
+	font-family: Arial;
+	font-size: 9px;  
+	
+
+}
+body {
+	font-family: Arial;
+	background: #fff;
+	color: #333333;
+}
+a, .links {
+	color: #2d58a7;
+	text-decoration:none;
+	outline: none;
+	
+}
+a:hover {
+	text-decoration:none ;
+}
+table
+{
+	font-family: Arial;
+	font-size: 11px; 
+	
+}
+.navbar input, .navbar a.button, .navbar .textBox, .navbar .favLabel 
+{font-size: 12px;
+} 
+.tagLine 
+{
+	background: url(images/hash.jpg) no-repeat 10px 0px;
+}
+/* STRUCTURE */
+div.wrapper {
+}
+div.header {
+	background:#2d58a7;
+}
+div.welcomeMenu {
+	color:#fff;
+}
+div.welcomeMenu a {
+	color:#fff;
+}
+div.welcomeMenu a:hover {
+	color:#fff;
+}
+
+div.tileContainer
+{
+	background-color:#fff;
+
+}
+/* LOG IN PAGE */
+	
+#htmlModalWindow .genTable .textBox 
+{
+	border:0px;
+	background-color:#eaeaea;
+	margin:0 0 0 10px;
+	padding:2px 4px;
+	color:#2d58a8;
+	vertical-align:baseline;
+	display:inline;
+}
+ 
+#htmlModalWindow .rgHeaderDiv .textBox, #htmlModalWindow .genTable3 .textBox, #htmlModalWindow .genTable3-sec5 .textBox
+{
+	border:1px solid #ccc;
+	background-color:#fff;
+	padding:2px 4px;
+	color:#2d58a8;
+}
+
+#htmlModalWindow .genTable3-sec2 .textBox
+{
+	border:none;
+	background-color:#fff;
+	padding:2px 4px;
+	color:#2d58a8;
+	width:98%;
+}
+#htmlModalWindow .genTable3-sec5 .textBox
+{
+	border:1px solid #ccc;
+	background-color:#fff;
+	padding:2px 4px;
+	color:#2d58a8;
+	width:98%;
+}
+#htmlModalWindow .genTableSub .lastCol 
+{
+    width:20px ;
+}
+.genTableSub td
+{
+    padding:5px;
+    
+}
+
+#section2 .selected, #infoPopup .selected{
+	background:transparent url(images/btnLfbl.gif) no-repeat scroll 0 0;
+}
+#section2 .selected span, #infoPopup .selected span {
+	background-image:url(images/btnRtbl.gif);
+}
+
+#section2 .selected .button, #infoPopup .selected .button
+{
+	background-image:url(images/btnBgbl.gif) ;
+	background-repeat:repeat-x ;
+	color:#000;
+
+}
+
+/*TILES*/
+div.title, div.title a, div.title a:hover
+{
+	color:#fff;
+	font-family: Arial;
+	font-size: 11px;   
+}
+div.tileContainerHeader 
+{
+	background:#2d58a7;
+	color:#fff
+/*	border-bottom:1px solid #CCC; */
+}
+div.tileContainerHeader a 
+{
+	color:#fff
+}
+
+#htmlModalWindow #divBusinessPlanPaging .pagerPrev, #htmlModalWindow #divDocumentsPaging .pagerPrev
+{
+	background: url(images/arwLtSm.gif) no-repeat;
+	cursor:pointer;
+	width:7px;
+	height:7px;
+	margin:0 5px;
+}
+#htmlModalWindow #divBusinessPlanPaging .pagerNext, #htmlModalWindow #divDocumentsPaging .pagerNext
+{
+	background: url(images/arwRtSm.gif) no-repeat;
+	cursor:pointer;
+	width:7px;
+	height:7px;
+	margin:0 5px;
+}
+#htmlModalWindow #divBusinessPlanPaging .pagerText, #htmlModalWindow #divDocumentsPaging .pagerText
+{
+	margin:0 5px;
+}
+
+div.dashboardTable
+{
+	background-color:#E8E8E8;
+}
+
+div.dashboardTable table, .disablelink, .disablelink a
+{
+	color:#333333;	
+}
+
+div.dashboardTable 
+{
+	/*border-top:1px solid #fff;*/
+
+}
+div.dashboardTable thead 
+{
+	background:#E8E8E8;
+
+}
+div.dashboardTable .rgFilterBox 
+{
+	border:1px solid #ccc;
+	background:#fff url(images/arwDwnGray.png) 3px center no-repeat;
+	padding:1px 2px 1px 15px;
+	color:#1a4b9e;
+}
+/* GRID */
+
+div.dashboardTable td
+{
+	border-bottom:1px solid #ccc;
+	border-left:1px solid #ccc;	
+}
+div.dashboardTable .firstCol, div.dashboardTable .rgNoRecords td
+{
+	border-left:none ;
+	/*cursor:pointer;*/
+}
+.rgSelectedRow td
+{
+	background: #acc7ff;
+}
+.dashboardTable .rgHeader
+{
+	color:#333333;
+
+}
+.dashboardTable th.rgHeader
+{
+	text-align:center ;
+
+}
+.TriSection1 #divTile3 .dashboardTable th.rgHeader
+{
+	text-align:left ;
+
+}
+#tile3 .dashboardTable th.rgHeader
+{
+	text-align:center ;
+
+}
+.dashboardTable .rgHeader a 
+{
+	color:#333333;
+	font-weight:bold;
+}
+div.dashboardTable .rgHeader .rgSortAsc 
+{
+	background:url(images/arwUp.png) no-repeat center;
+	width:15px;
+	height:15px;
+	border:none;
+}
+div.dashboardTable .rgHeader .rgSortDesc 
+{
+	background:url(images/arwDwn.png) no-repeat center;
+	width:15px;
+	height:15px;
+	border:none;
+}
+
+div.dashboardTable .rgHeader, div.dashboardTable .rgFilterRow td
+{
+	border-left:1px solid #fff;
+}
+div.dashboardTable .GridFilterRow_Default td 
+{
+	border-left:1px solid #fff;
+}
+div.dashboardTable .rcbArrowCellRight, div.dashboardTable .rgFilter
+{
+	display:none;
+	visibility: hidden;
+}
+div.dashboardTable .rgDataDiv, div.dashboardTable .rgMasterTable
+{
+	background-color:#fff;		
+}
+div.dashboardTable .rgFooterDiv
+{
+	border-top:1px solid #ccc;
+}
+
+#tile1 .tools, #tile4Max .tileContainerHeader .tools 
+{
+	border-left:solid 1px #fff;
+}
+#divTile3 .tools a, #divTile4 .tools a
+{
+    color:#2d58a8 ;
+}
+
+div.tileContainerHeader .title .advToggle
+{
+	vertical-align:middle;
+}
+
+#htmlModalWindow .searchTextBox
+{
+	border: solid 1px #ccc;
+}
+
+#htmlModalWindow
+{
+	margin:0 ;
+	background: none ;
+	overflow:hidden ;
+}
+
+ /*General Tables */
+
+.genTable 
+{
+		empty-cells:show;
+}
+.genTable th, .areaHeader
+{
+	border-bottom:2px solid #1a4b9e;
+	border-top:1px solid #fff;
+	background:#2854a5;
+	color:#fff;
+
+	
+}
+
+.genTable td
+{
+	border-bottom:1px solid #ccc;
+	border-right:1px solid #ccc;
+
+}
+.genTable td.rn
+{
+	border-right:none;
+	font-weight: normal
+}
+.genTable td.bn
+{
+	border-bottom:none;
+}
+/*General Tables 3 columns */
+
+.genTable3, .genTable3-sec3 
+{
+		empty-cells:show;
+}
+.genTable3 th, .areaHeader, .genTable3-sec2 th, .genTable3-sec3 th, .genTable3-sec4 th
+{
+	border-bottom:2px solid #1a4b9e;
+	border-top:1px solid #fff;
+	background:#2854a5;
+	color:#fff;
+
+	
+}
+.genTable3-sec3, .genTable3-sec4 
+{
+    height:100px;
+    }
+.genTable3 input, .genTable3-sec3 input, .genTable3-sec4 input, .genTable3-sec5 input
+{
+    height:15px ;
+    margin-top: 2px;
+    margin-bottom:2px;
+    }
+.genTable3 td 
+{
+    border-top: 2px solid #2d58a7;
+    /*border-right:2px solid #333;*/
+    }
+.genTableSub
+{
+    border-top:1px solid #ccc ;
+    }
+.genTable3-sec3 .genTable3-header td, .genTable3-sec4 .genTable3-header td
+{
+   height:10px; 
+}
+.genTable3-header td
+{
+    background-color:#e8e8e8;
+    border-top:2px solid #2d58a7;
+    
+    }
+.genTable3-header label
+{
+   padding-top:3px;
+   padding-bottom:3px;
+   padding-left:5px; 
+    }
+.genTable3-sec2 .sec2, .genTable3-sec3 .sec2, .genTable3-sec3 .bpframe, .genTable3-sec3 .BusinessPlanDisplay
+{
+    border-right:2px solid #2d58a7 ;
+    }
+.genTable3-sec3 .BusinessPlanDisplay, .genTable3-sec4 .DocumentsDisplay
+{
+    padding:0;
+    width:100%;
+    }
+.genTable3-sec3, .genTable3-sec4
+{
+   border-right:1px solid #2d58a7;
+    }
+.genTable3-sec5
+{
+    border-bottom:2px solid #2d58a7;
+    }
+/*.genTable, .genTable3-sec2 td 
+{
+    border:1px solid #ccc;
+    }*/
+.genTable3-sec3 td,  .genTable3-sec4 td, .genTable3-sec5 td 
+{
+	
+	
+}
+
+.genTable3 td.rn
+{
+	border-right:none;
+	font-weight: normal;
+}
+.genTable3 td.bn
+{
+	border-bottom:none;
+}
+.genTableSub .lastCol 
+{
+    padding:0;
+    height:auto;
+    }
+
+/*.staticTable
+{
+	background-color:#fff;
+}*/
+
+
+/*#################################Main.css########################################*/
+
+
+/* CSS Document - Look and feel - for Theme */
+/* GENERAL */
+
+html {
+	height:100%;
+	margin:0 4px;
+	padding:0;
+	min-height:100%;
+	overflow:hidden;
+}
+
+body {
+	margin:0; 
+	padding: 0;
+	text-align: center; 
+	height:100%;
+
+}
+img {
+	border:none;
+}
+.clearAll {
+	clear:both;
+	height:0px;
+	line-height:0px;
+	font-size:0px;
+	overflow:hidden;
+}
+p, h1, h2, h3, h4, iframe, input {
+	margin:0;
+	padding:0;
+	font-weight:normal;
+}
+td, th, thead
+{
+	padding:0;
+	margin:0;
+}
+
+.alignRight, td.alignRight
+{
+	text-align:right ;
+}
+.alignLeft 
+{
+	text-align:left;
+}
+/* STRUCTURE */
+div.wrapper {
+	width: 100%;  
+	margin: 0 auto; 
+	text-align: left; 
+}
+div.header {
+	padding:8px 16px 0 16px;
+}
+div.welcomeMenu {
+	float:right;
+	padding:4px 14px;
+	text-align:right;
+}
+div.welcomeMenu a {
+	text-decoration:none;
+	padding:0 10px;
+}
+div.welcomeMenu a:hover {
+	text-decoration:underline;
+}
+
+/* DASH BOARD HOME */
+div.home {
+	width:540px;
+	margin:40px auto;
+	text-align:center;
+	
+}
+
+/* DASHBOARD */
+
+/*TILES*/
+
+div.tileContainer
+{
+	position:relative;
+}
+
+.leftTile 
+{
+	float:left;
+}
+.rightTile 
+{
+	float:right;
+}
+.bottomT 
+{
+	width:100%;
+}
+
+div.tileContainerHeader 
+{
+	padding: 0 5px 0 0;
+	height:26px;
+	text-align:left;
+}
+
+div.rightTile .title
+{
+	float:left;
+	white-space:nowrap;
+	padding:5px;
+}
+#htmlModalWindow .title 
+{
+	float:left;
+	white-space:nowrap;
+	padding:5px;
+}
+#htmlModalWindow .title span
+{
+	padding:0px 5px ;
+}
+
+div.tileContainerHeader .title input
+{
+	border:none;
+	background:none;
+}
+
+#divTile3 .tools,  #divTile4 .tools, #tile3 .tools, #tile3Max #divTile3 .tools, #maxChart .tools
+{
+	padding:4px;
+}
+#tile3Max .tileContainerHeader .tools, #tile3Min .tileContainerHeader .tools, #tile4Max .tileContainerHeader .tools, #tile4Min .tileContainerHeader .tools, #tile3 .tileContainerHeader .tools
+{
+	padding:0px 4px 4px 4px ;
+}
+.section2SR #tile3 .tileContainerHeader .tools, .section2SR #tile3SR .tileContainerHeader .tools 
+{
+    padding:3px 4px 4px 4px ;
+    }
+.section2SR #tile3 .tileContainerHeader .tools .addreport 
+{
+    float:right;
+    display:inline-block;
+    padding-top:2px;
+    }
+ .section2SR #tile4 #divTile4Container, .section2SR #tile5 #divTile5Container,  .section2SR #tile4SR #divTile4Container, .section2SR #tile5SR #divTile5Container {
+         margin-top: 6px;
+}
+
+div.leftTile #divTile3Container .tools 
+{
+	padding: 4px ;
+}
+
+.section2SR #tile3 #divTile3 .rgDataDiv  {
+    overflow: auto ;
+    overflow-x: auto ;
+}
+#tile3 #divTile3, #tile4 #divTile4, #divTile3Max, #divTile4Max, #maxBtmRt #divTile4 {
+    width:100% ;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: left;
+	height:100%;
+}
+
+
+.dashboardTable {text-align:left; border:0; }
+.dashboardTable .planInfoFilterRow{display:none;}
+.dashboardTable thead 
+{
+	text-align:center;
+}
+.dashboardTable thead a
+{
+	font-weight:normal;
+}
+.dashboardTable .rgFilterBox
+{
+	width:75%;
+}
+.dashboardTable td, .dashboardTable th
+{
+	padding:2px 5px;
+	text-align:center;
+	overflow:hidden;
+	
+}
+
+.dashboardTable .GridFilterRow_Default td
+{
+	text-align:left;
+}
+div.dashboardTable td.firstCol 
+{
+	text-align:left;
+}
+.dashboardTable .rgHeader
+{
+	white-space:nowrap;
+}
+.dashboardTable .rgHeader a 
+{	
+    white-space:nowrap;
+}
+.dashboardTable td.commentsCell
+{
+	padding:0px ;
+	text-align:center;
+	white-space:nowrap ;
+}
+
+.section2SR .singleSection .dashboardTable .rgHeader
+{
+	white-space: normal;
+}
+.section2SR .singleSection .dashboardTable th
+{
+	padding:2px;
+}
+.section2SR .singleSection .dashboardTable .rgHeader a 
+{	
+    white-space: normal;
+}
+
+.section2SR .dashboardTable .rgHeader a 
+{		
+    white-space:normal ;
+}
+.section2SR .dashboardTable .rgHeader 
+{		
+    white-space:normal ;
+
+}
+.dashboardTable TBODY TD
+{
+	text-align:left;
+	cursor:pointer;
+}
+
+.section2SR .showHideBtn, #section2 .showHideBtn
+{
+	float:left;
+	margin:4px 2px 0 2px;
+
+}
+
+div.dashboardTable .rgHeader
+{
+}
+/* General Tables */
+
+.genTable, #ccrForm .genTable 
+{
+	width:100% ;
+}
+.genTable th, .areaHeader
+{
+	padding:2px 5px;
+	font-weight:bold;
+}
+.genTable th.buttons
+{
+	text-align:right;
+}
+.genTable td
+{
+	padding:2px 5px;
+	width:50%;
+	text-align:left;
+	cursor:pointer;
+}
+
+.genTable td td
+{
+	padding:0px;
+}
+.genTable label
+{
+	width:80px;
+	display:inline-block;
+	font-weight:bold;
+}
+.genTable textarea 
+{
+	vertical-align:middle ;
+}
+/* General Tables 3 columns */
+
+.genTable3, #ccrForm .genTable, .genTable3-sec2
+{
+	width:100% ;
+}
+.genTable3-sec3, .genTable3-sec4, .genTable3-sec5 
+{
+}
+.genTable3-sec3 td, .genTable3-sec4 td, .genTable3-sec5 td
+{
+    
+	padding-bottom:3px;
+	padding-top: 3px;
+	text-align:left;
+	cursor:pointer;
+}
+
+.genTable3-sec3, .genTable3-sec4
+{
+    float:left;
+    width:50%;
+    display:inline-block;
+    
+}
+.genTable3-sec3 .BusinessPlanDisplay,.genTable3-sec4 .DocumentsDisplay
+{
+    height:80px;
+    }
+.genTable3-sec3 .bpframe
+{
+    width:100%;
+    }
+.genTable3-sec3 iframe, .genTable3-sec4 iframe
+{
+    height:60px;
+    width:100%;
+    }
+.genTable3-sec5
+{
+    display:block;
+    width:100%;
+    
+}
+.genTable3-sec2
+{
+    
+}
+.genTable3-header
+{
+    text-align:left;
+    
+    }
+.genTable3-sec2 input 
+{
+    padding:0;
+    border:none;
+}
+.genTable3 th, .areaHeader, .genTable3-sec2 th
+{
+	padding:2px 5px;
+	font-weight:bold;
+}
+.genTable3-header td
+{
+    padding-bottom:3px;
+	padding-top: 3px;
+ }
+.genTable3-sec2 .genTable3-header td label
+{
+    font-weight:bold;
+}
+.genTable3 th.buttons
+{
+	text-align:right;	
+}
+.genTable3-sec3 td label 
+{
+    width: 125px;
+}
+.genTable3 td, genTable3-sec3 td, genTable3-sec4 td, .genTable3-sec5 td label
+{
+	padding-left:5px;
+	padding-bottom:2px;
+	padding-top: 2px;
+	text-align:left;
+	cursor:pointer;
+	
+}
+.genTable3-header td label
+{
+   width:115px ;
+    }
+.genTable3 td td
+{
+	padding:0px;
+	
+}
+.genTable3-sec5 textarea
+{
+    margin-bottom:2px;
+    }
+.genTable3-sec3 label, .genTable3-sec4 label, .genTable3-sec5 label 
+{
+   padding-bottom:2px;
+	display:inline-block;
+	font-weight:bold; 
+}
+.genTable3 label 
+{
+	width:110px;
+	padding-bottom:5px ;
+	padding-top:2px ;
+	display:inline-block;
+	font-weight:bold;
+}
+.genTable3 textarea 
+{
+	vertical-align:middle ;
+
+}
+
+/*################################################################################*/
+
+ 
+    /*////////////////////////////////////////////////////////*/
+
+.bpPDFTile
+{
+	border-style:none;  
+}
+
+.divborder 
+{
+    border: solid 1px #2d58a7;
+    height: 196px ;
+    overflow-x: hidden;
+ 	overflow-y: auto;
+ 	vertical-align: top ;
+}
+
+.businessplanning .staticTable 
+{
+    border-collapse:separate;
+}
+
+.businessplanning .staticTable th
+{
+	background-color: #e8e8e8; 
+	border-left:solid 1px #fff;
+}
+.businessplanning .staticTable .firstCol
+{
+	border-left:none 1px #fff;
+}    
+
+th
+{
+	background-color: #e8e8e8; 
+	border-left:solid 1px #fff;
+	color: Black ;
+	font-weight:bold ; 
+	color: Black;
+}
+
+td
+{
+	background-color: White;
+}
+
+.staticTable th
+{
+	background-color: #e8e8e8; 
+	border-left:solid 1px #fff;
+}
+
+staticTable .firstCol
+{
+	border-left:none 1px #fff;
+}  
+
+.staticTable 
+{
+    border-collapse:separate;
+}  
+
+.firstGeneric
+{
+	border-right: #ccc 1px solid;
+}
+
+.MedPolicyCol
+{
+	border-bottom: #ccc 1px solid; 
+}
+
+.MedicareTile
+{
+	text-align: left;
+	font-size: 11px;
+	font-family: Arial;
+	margin-left: 4px;
+}
+

@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"
+    EnableTheming="true" %>
+
+<%@ Register Src="~/powerplanrx/controls/header.ascx" TagName="header" TagPrefix="pinso" %>
+<%@ Register Src="~/controls/footer.ascx" TagName="footer" TagPrefix="pinso" %>
+<%@ Register Src="~/powerplanrx/controls/maintab.ascx" TagName="tab" TagPrefix="pinso" %>
+<%@ Register Src="~/powerplanrx/controls/subtab.ascx" TagName="subtab" TagPrefix="pinso" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link runat="server" href="~/powerplanrx/content/styles/main.css" rel="stylesheet" type="text/css" />
+    <link id="Link2" runat="server" href="~/powerplanrx/content/styles/ui.all.css" rel="stylesheet" type="text/css" />     
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form" runat="server">
+    <asp:ScriptManager runat="server" ID="scriptManager">
+        <Scripts>
+            <asp:ScriptReference Path="https://ajax.microsoft.com/ajax/jquery/jquery-1.3.2.min.js" />
+            <asp:ScriptReference Path="~/powerplanrx/content/scripts/jquery-ui-1.7.2.custom.min.js" />
+            <asp:ScriptReference Path="~/powerplanrx/content/scripts/ui.js" />
+            <asp:ScriptReference Path="~/powerplanrx/content/scripts/css_browser_selector.js" />
+            <asp:ScriptReference Path="~/powerplanrx/content/scripts/print.js" />
+
+        </Scripts>
+    </asp:ScriptManager>
+    
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#dialInfo").dialog({ autoOpen: false, modal: true, width: 800, title: "" });
+        });
+
+        function disclaimer()
+        {
+            $("#dialInfo").html("Loading...").load("disclaimer.aspx form >*").dialog('option', 'title', 'Disclaimer').dialog('open');
+        }
+
+        function terms()
+        {
+            $("#dialInfo").html("Loading...").load("terms.aspx form >*").dialog('option', 'title', 'Terms of Use').dialog('open');
+        }
+    </script>
+        
+    <div class="wrapper">
+        <asp:Image SkinID="lf_cover" ID="lf_cover" runat="server" />
+        <asp:Image SkinID="rt_cover" ID="rt_cover" runat="server" />
+        <div class="header">            
+            <pinso:header ID="header" runat="server" />
+        </div>
+        <div class="navbar">
+            <pinso:tab runat="server" ID="tab"></pinso:tab>
+        </div>
+        <pinso:subtab runat="server" ID="subtab"></pinso:subtab>
+      
+        <div class="impactBtns" id="divButtons" runat="server" > 
+           <div id="divEditBtns" runat="server" >
+            <span class="coreBtn"><span class="bg"><span class="bg2">
+                <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="OnEdit" />
+            </span></span></span></div>         
+           <div id="divSubmitBtns" runat="server" visible="false">
+              <span class="coreBtn"><span class="bg"><span class="bg2">
+                <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="OnSubmit" />
+            </span></span></span><span class="coreBtn"><span class="bg"><span class="bg2">
+                <asp:Button runat="server" Text="Cancel" OnClick="OnReset" CausesValidation="false" />
+            </span></span></span></div>
+        </div>
+        <div class="clearAll">
+        </div>
+        <div id="mainSection" class="contentWrapper impact">
+            <div class="contentArea">               
+                <asp:ContentPlaceHolder ID="main" runat="server">
+                </asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="error" runat="server" Visible="false">
+                    This step cannot be accessed until all prior steps have been completed.
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="fauxModal">
+        </div>
+    </div>
+    
+    <div id="dialInfo" style="display:none;"></div>
+    
+    <div class="footer">
+        <pinso:footer ID="footer" runat="server" />
+    </div>
+    </form>
+</body>
+</html>

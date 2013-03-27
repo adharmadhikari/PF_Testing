@@ -1,0 +1,48 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="formularycomparisontelerik.ascx.cs" Inherits="custom_pinso_formularyhistoryreporting_controls_formularycomparison" %>
+
+<div class="tilePaginationHeader" id="divPage" runat="server">    
+         <pinso:CustomButton ID="btnPrevious" runat="server" Text="Previous" OnClientClick="javascript:RefreshPage('custom/pinso/formularyhistoryreporting/all/FormularyComparison.aspx','Previous','fhrGridContainer');" /> 
+          <asp:Label ID="lblPageText" runat="server" Text="Page"></asp:Label>
+          <asp:Label ID="lblPageIndex" runat="server" Text="1"></asp:Label>      
+         <pinso:CustomButton ID="btnNext" runat="server" Text="Next" OnClientClick="javascript:RefreshPage('custom/pinso/formularyhistoryreporting/all/FormularyComparison.aspx','Next','fhrGridContainer');" />            
+</div>
+ <div id="divNoRecords" runat="server" visible="false" >
+     <asp:Label ID="lblNoRecords" runat="server" Text="No records found."></asp:Label>
+ </div>
+  <div id="fhrColorLegend" runat="server" class="fhrNote" visible="false" >
+                <div class="fhrNoteBox"></div>
+                <%= Resources.Resource.Label_FHR_Note %>
+    </div>  
+
+  <telerik:RadGrid EnableEmbeddedSkins="false" runat="server" ID="gridFHX" SkinID="radTable"
+    AutoGenerateColumns="false" AllowSorting="true"
+    OnPreRender="SetupDualHeaders"
+    OnItemCreated="gridFHX_ItemCreated"
+    PageSize="50" AllowPaging="false">
+        <MasterTableView DataKeyNames="Plan_ID, Plan_Pharmacy_Lives, Formulary_Name,Formulary_lives, Drug_Name" AllowSorting="false"  PageSize="30" 
+        AllowPaging="false" HeaderStyle-Wrap="true" Width="100%">
+            <ItemStyle CssClass="row" />
+            <PagerStyle BackColor="Gray" Mode="NumericPages" />
+            <AlternatingItemStyle CssClass="alt" />            
+            <ItemStyle CssClass="itemList" />
+            <Columns>   
+               <telerik:GridBoundColumn DataField="Plan_Name" HeaderText="Account Name" ItemStyle-Wrap="true" HeaderStyle-Wrap="true" ItemStyle-CssClass="firstcol planName merged" HeaderStyle-Width ="9%"  ></telerik:GridBoundColumn>   
+               <telerik:GridBoundColumn DataField="Plan_State_ID" HeaderText="State" ItemStyle-CssClass="itemList merged"></telerik:GridBoundColumn>   
+               <telerik:GridBoundColumn DataField="Plan_Pharmacy_Lives" HeaderText="Pharmacy Lives" DataFormatString="{0:n0}" ItemStyle-CssClass="alignRight pharmacyLives merged" HeaderStyle-Width ="9%" ></telerik:GridBoundColumn>   
+               <telerik:GridBoundColumn DataField="Product_Name" HeaderText="Product Name" ></telerik:GridBoundColumn>
+               <telerik:GridBoundColumn DataField="Formulary_Name" HeaderText="Benefit Design" ItemStyle-CssClass="itemList merged" HeaderStyle-Width="9%"></telerik:GridBoundColumn>   
+               <telerik:GridBoundColumn DataField="Formulary_Lives" HeaderText="Formulary Lives" DataFormatString="{0:n0}" ItemStyle-CssClass="alignRight pharmacyLives merged" HeaderStyle-Width ="9%" ></telerik:GridBoundColumn> 
+               <telerik:GridBoundColumn DataField="Drug_Name" HeaderText="Drug Name" ItemStyle-CssClass="itemList merged" ></telerik:GridBoundColumn>     
+                          
+            </Columns>
+        </MasterTableView>
+        <ClientSettings>
+            <Scrolling AllowScroll="true" FrozenColumnsCount="4" SaveScrollPosition="true" UseStaticHeaders="true" />
+            <ClientEvents />
+        </ClientSettings>
+    </telerik:RadGrid>
+    
+ 
+
+ 
+  

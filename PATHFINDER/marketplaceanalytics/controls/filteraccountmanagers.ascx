@@ -1,0 +1,16 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="filteraccountmanagers.ascx.cs" Inherits="marketplaceanalytics_controls_filteraccountmanagers" %>
+<asp:PlaceHolder runat="server" id="placeholder">
+  <div class="filterGeo">
+        <asp:Literal runat="server" ID="filterLabel" Text='<%$ Resources:Resource, Label_Account_Manager %>' />
+    </div>
+    <telerik:RadComboBox runat="server" ID="Territory_ID" DataSourceID="dsAcctMgr" DataTextField="FullName" DataValueField="Territory_ID" 
+      AppendDataBoundItems="true" Skin="pathfinder" EnableEmbeddedSkins="false" MaxHeight="300px" >
+        
+    </telerik:RadComboBox>  
+  
+</asp:PlaceHolder>
+<asp:EntityDataSource ID="dsAcctMgr" runat="server" EntitySetName="AccountManagersByTerritorySet" DefaultContainerName="PathfinderClientEntities" OrderBy="it.User_F_Name, it.User_L_Name"
+    AutoGenerateWhereClause="true">
+</asp:EntityDataSource> 
+
+ 

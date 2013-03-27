@@ -1,0 +1,6 @@
+<POICategories>
+	<category id='msa' enabled='true' iconUrl='multipoi' iconEmbedded='true' />
+  <category id='visn' enabled='true' iconUrl='multipoi' iconEmbedded='true'>
+    <action event='onRelease' target='_JS' url='onFilterPlansByVISN' />
+  </category>
+</POICategories>

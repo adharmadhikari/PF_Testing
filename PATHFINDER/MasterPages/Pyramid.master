@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Pyramid.master.cs" Inherits="MasterPages_Pyramid" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head" runat="server">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+    </asp:ScriptManager>
+    <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+    <div id="tile3">
+        <div id="divTile3Container" class="tileContainer">
+            <div class="tileContainerHeader">
+                <div class="title">
+                    <asp:ContentPlaceHolder ID="Tile3Title" runat="server" />
+                </div>
+                <div class="tools">
+                    <asp:ContentPlaceHolder ID="Tile3Tools" runat="server" />
+                    <img class="showHideBtn enlarge" alt="enlarge" title="enlarge" src="content/images/spacer.gif"
+                        onclick="maxChart();" />
+                    <img class="showHideBtn close" alt="close" title="close" src="content/images/spacer.gif"
+                        onclick="minChart();" />
+                </div>
+                <div class="pagination">
+                </div>
+                <div class="clearAll">
+                </div>
+            </div>
+            <div id="divTile3" class="divTile3Scroll">
+                <asp:ContentPlaceHolder ID="Tile3" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="srBottom">
+    <div id="tile4" class="leftTile tile">
+        <div id="divTile4Container" class="tileContainer">
+            <div class="tileContainerHeader">
+                <div class="title">
+                    <asp:ContentPlaceHolder ID="Tile4Title" runat="server" />
+                </div>
+                <div class="tools">
+                    <asp:ContentPlaceHolder ID="Tile4Tools" runat="server" />
+                    <img class="showHideBtn enlarge" alt="enlarge" title="enlarge" src="content/images/spacer.gif"
+                        onclick="maxTile(4);" />
+                    <img class="showHideBtn close" alt="close" title="close" src="content/images/spacer.gif"
+                        onclick="minTile();" />
+                </div>
+                <div class="pagination">
+                </div>
+                <div class="clearAll">
+                </div>
+            </div>
+            <div id="divTile4">
+                <asp:ContentPlaceHolder ID="Tile4" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div id="tile5" class="rightTile tile">
+        <div id="divTile5Container" class="tileContainer">
+            <div class="tileContainerHeader">
+                <div class="title">
+                    <asp:ContentPlaceHolder ID="Tile5Title" runat="server" />
+                </div>
+                <div class="tools">
+                    <asp:ContentPlaceHolder ID="Tile5Tools" runat="server" />
+                    <img class="showHideBtn enlarge" alt="enlarge" title="enlarge" src="content/images/spacer.gif"
+                        onclick="maxTile(5, maxGridTile);" />
+                    <img class="showHideBtn close" alt="close" title="close" src="content/images/spacer.gif"
+                        onclick="minTile();" />
+                </div>
+                <div class="pagination">
+                </div>
+                <div class="clearAll">
+                </div>
+            </div>
+            <div id="divTile5" class="tileContent">
+                <asp:ContentPlaceHolder ID="Tile5" runat="server" />
+            </div>
+        </div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>

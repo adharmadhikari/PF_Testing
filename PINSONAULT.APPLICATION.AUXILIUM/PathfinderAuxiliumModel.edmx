@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PathfinderAuxiliumModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="PathfinderAuxiliumModelStoreContainer">
+          <EntitySet Name="Contact_Report_Followup_Notes" EntityType="PathfinderAuxiliumModel.Store.Contact_Report_Followup_Notes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Report_Key_Contacts" EntityType="PathfinderAuxiliumModel.Store.Contact_Report_Key_Contacts" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Report_Objectives" EntityType="PathfinderAuxiliumModel.Store.Contact_Report_Objectives" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Report_Outcome" EntityType="PathfinderAuxiliumModel.Store.Contact_Report_Outcome" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Report_Products_Discussed" EntityType="PathfinderAuxiliumModel.Store.Contact_Report_Products_Discussed" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact_Reports" EntityType="PathfinderAuxiliumModel.Store.Contact_Reports" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Followup_Notes" EntityType="PathfinderAuxiliumModel.Store.Lkp_Followup_Notes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Activity" EntityType="PathfinderAuxiliumModel.Store.Lkp_Meeting_Activity" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Outcome" EntityType="PathfinderAuxiliumModel.Store.Lkp_Meeting_Outcome" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Meeting_Type" EntityType="PathfinderAuxiliumModel.Store.Lkp_Meeting_Type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Lkp_Products_Discussed" EntityType="PathfinderAuxiliumModel.Store.Lkp_Products_Discussed" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_Contact_Report" EntityType="PathfinderAuxiliumModel.Store.V_Contact_Report" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report].[User_ID] AS [User_ID], 
+      [V_Contact_Report].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report].[status] AS [status], 
+      [V_Contact_Report].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report].[Products_Discussed_ID] AS [Products_Discussed_ID]
+      FROM [dbo].[V_Contact_Report] AS [V_Contact_Report]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_DrillDownFilter" EntityType="PathfinderAuxiliumModel.Store.V_Contact_Report_DrillDownFilter" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_DrillDownFilter">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_DrillDownFilter].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_DrillDownFilter].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_DrillDownFilter].[Outcome_ID] AS [Outcome_ID], 
+      [V_Contact_Report_DrillDownFilter].[Followup_ID] AS [Followup_ID]
+      FROM [dbo].[V_Contact_Report_DrillDownFilter] AS [V_Contact_Report_DrillDownFilter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Filter" EntityType="PathfinderAuxiliumModel.Store.V_Contact_Report_Filter" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Filter">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Filter].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Filter].[Outcome_ID] AS [Outcome_ID], 
+      [V_Contact_Report_Filter].[Followup_ID] AS [Followup_ID]
+      FROM [dbo].[V_Contact_Report_Filter] AS [V_Contact_Report_Filter]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Product_Data" EntityType="PathfinderAuxiliumModel.Store.V_Contact_Report_Product_Data" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Product_Data">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Product_Data].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Product_Data].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report_Product_Data].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report_Product_Data].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report_Product_Data].[User_ID] AS [User_ID], 
+      [V_Contact_Report_Product_Data].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report_Product_Data].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report_Product_Data].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report_Product_Data].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report_Product_Data].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report_Product_Data].[status] AS [status], 
+      [V_Contact_Report_Product_Data].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_Product_Data].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report_Product_Data].[Persons_Met] AS [Persons_Met], 
+      [V_Contact_Report_Product_Data].[Followup_Notes_Name] AS [Followup_Notes_Name], 
+      [V_Contact_Report_Product_Data].[Followup_Notes_ID] AS [Followup_Notes_ID], 
+      [V_Contact_Report_Product_Data].[Meeting_Outcome_ID] AS [Meeting_Outcome_ID], 
+      [V_Contact_Report_Product_Data].[Meeting_Outcome_Name] AS [Meeting_Outcome_Name], 
+      [V_Contact_Report_Product_Data].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report_Product_Data].[Geography_Name] AS [Geography_Name], 
+      [V_Contact_Report_Product_Data].[Section_ID] AS [Section_ID], 
+      [V_Contact_Report_Product_Data].[Plan_Name] AS [Plan_Name], 
+      [V_Contact_Report_Product_Data].[Section_Name] AS [Section_Name], 
+      [V_Contact_Report_Product_Data].[Is_National] AS [Is_National], 
+      [V_Contact_Report_Product_Data].[Account_Manager] AS [Account_Manager]
+      FROM [dbo].[V_Contact_Report_Product_Data] AS [V_Contact_Report_Product_Data]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Contact_Report_Search" EntityType="PathfinderAuxiliumModel.Store.V_Contact_Report_Search" store:Type="Views" store:Schema="dbo" store:Name="V_Contact_Report_Search">
+            <DefiningQuery>SELECT 
+      [V_Contact_Report_Search].[Contact_Report_ID] AS [Contact_Report_ID], 
+      [V_Contact_Report_Search].[Plan_ID] AS [Plan_ID], 
+      [V_Contact_Report_Search].[Geography_ID] AS [Geography_ID], 
+      [V_Contact_Report_Search].[Client_ID] AS [Client_ID], 
+      [V_Contact_Report_Search].[User_ID] AS [User_ID], 
+      [V_Contact_Report_Search].[Contact_Date] AS [Contact_Date], 
+      [V_Contact_Report_Search].[Meeting_Type_ID] AS [Meeting_Type_ID], 
+      [V_Contact_Report_Search].[Meeting_Type_Name] AS [Meeting_Type_Name], 
+      [V_Contact_Report_Search].[Meeting_Activity_ID] AS [Meeting_Activity_ID], 
+      [V_Contact_Report_Search].[Meeting_Activity_Name] AS [Meeting_Activity_Name], 
+      [V_Contact_Report_Search].[status] AS [status], 
+      [V_Contact_Report_Search].[Products_Discussed_ID] AS [Products_Discussed_ID], 
+      [V_Contact_Report_Search].[Followup_Notes_ID] AS [Followup_Notes_ID], 
+      [V_Contact_Report_Search].[Meeting_Outcome_ID] AS [Meeting_Outcome_ID], 
+      [V_Contact_Report_Search].[Followup_Date] AS [Followup_Date], 
+      [V_Contact_Report_Search].[Geography_Name] AS [Geography_Name], 
+      [V_Contact_Report_Search].[Section_ID] AS [Section_ID], 
+      [V_Contact_Report_Search].[Plan_Name] AS [Plan_Name], 
+      [V_Contact_Report_Search].[Section_Name] AS [Section_Name], 
+      [V_Contact_Report_Search].[Is_National] AS [Is_National], 
+      [V_Contact_Report_Search].[Account_Manager] AS [Account_Manager], 
+      [V_Contact_Report_Search].[Drug_Name] AS [Drug_Name], 
+      [V_Contact_Report_Search].[Persons_Met] AS [Persons_Met], 
+      [V_Contact_Report_Search].[Followup_Notes_Name] AS [Followup_Notes_Name], 
+      [V_Contact_Report_Search].[Meeting_Outcome_Name] AS [Meeting_Outcome_Name]
+      FROM [dbo].[V_Contact_Report_Search] AS [V_Contact_Report_Search]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_KeyContact_CCRPersonsMet" EntityType="PathfinderAuxiliumModel.Store.V_KeyContact_CCRPersonsMet" store:Type="Views" store:Schema="dbo" store:Name="V_KeyContact_CCRPersonsMet">
+            <DefiningQuery>SELECT 
+      [V_KeyContact_CCRPersonsMet].[Plan_ID] AS [Plan_ID], 
+      [V_KeyContact_CCRPersonsMet].[KC_ID] AS [KC_ID], 
+      [V_KeyContact_CCRPersonsMet].[KC_F_Name] AS [KC_F_Name], 
+      [V_KeyContact_CCRPersonsMet].[KC_M_Name] AS [KC_M_Name], 
+      [V_KeyContact_CCRPersonsMet].[KC_L_Name] AS [KC_L_Name], 
+      [V_KeyContact_CCRPersonsMet].[Full_Name] AS [Full_Name], 
+      [V_KeyContact_CCRPersonsMet].[Full_ID] AS [Full_ID]
+      FROM [dbo].[V_KeyContact_CCRPersonsMet] AS [V_KeyContact_CCRPersonsMet]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="V_Plan_List" EntityType="PathfinderAuxiliumModel.Store.V_Plan_List" store:Type="Views" store:Schema="dbo" store:Name="V_Plan_List">
+            <DefiningQuery>SELECT 
+      [V_Plan_List].[Plan_ID] AS [Plan_ID], 
+      [V_Plan_List].[Plan_Name] AS [Plan_Name], 
+      [V_Plan_List].[Section_ID] AS [Section_ID], 
+      [V_Plan_List].[Plan_Type_ID] AS [Plan_Type_ID], 
+      [V_Plan_List].[Plan_Type_Name] AS [Plan_Type_Name], 
+      [V_Plan_List].[Plan_State] AS [Plan_State], 
+      [V_Plan_List].[Section_Name] AS [Section_Name], 
+      [V_Plan_List].[Territory_ID] AS [Territory_ID], 
+      [V_Plan_List].[AE_UserID] AS [AE_UserID]
+      FROM [dbo].[V_Plan_List] AS [V_Plan_List]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="Contact_Report_Followup_Notes">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Followup_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Followup_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact_Report_Key_Contacts">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Key_Contact_ID" />
+            <PropertyRef Name="Is_Client_Key_Contact" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Key_Contact_ID" Type="int" Nullable="false" />
+          <Property Name="Is_Client_Key_Contact" Type="bit" Nullable="false" />
+          <Property Name="KC_F_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_L_Name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Contact_Report_Objectives">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Contact_Objective_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Objective_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact_Report_Outcome">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Outcome_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Outcome_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact_Report_Products_Discussed">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Products_Discussed_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact_Reports">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" Nullable="false" />
+          <Property Name="Meeting_Type_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Meeting_Activity_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Followup_Notes_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Meeting_Outcome_Other" Type="varchar" MaxLength="250" />
+          <Property Name="Key_Contacts_Other" Type="varchar" MaxLength="25" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Lkp_Followup_Notes">
+          <Key>
+            <PropertyRef Name="Followup_Notes_ID" />
+          </Key>
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Activity">
+          <Key>
+            <PropertyRef Name="Meeting_Activity_ID" />
+          </Key>
+          <Property Name="Meeting_Activity_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Outcome">
+          <Key>
+            <PropertyRef Name="Meeting_Outcome_ID" />
+          </Key>
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="255" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Meeting_Type">
+          <Key>
+            <PropertyRef Name="Meeting_Type_ID" />
+          </Key>
+          <Property Name="Meeting_Type_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Meeting_Type_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Lkp_Products_Discussed">
+          <Key>
+            <PropertyRef Name="Products_Discussed_ID" />
+          </Key>
+          <Property Name="Products_Discussed_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="Drug_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Sort_Index" Type="int" />
+          <Property Name="Status" Type="bit" />
+          <Property Name="Created_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Created_DT" Type="datetime" />
+          <Property Name="Modified_BY" Type="varchar" MaxLength="50" />
+          <Property Name="Modified_DT" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Contact_Report' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="status" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_ID" Type="char" MaxLength="2" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Contact_Report_DrillDownFilter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_DrillDownFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+          <Property Name="Outcome_ID" Type="int" />
+          <Property Name="Followup_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Contact_Report_Filter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Filter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Outcome_ID" Type="int" />
+          <Property Name="Followup_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Contact_Report_Product_Data' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Product_Data">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="int" />
+          <Property Name="Drug_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Persons_Met" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Is_National" Type="int" Nullable="false" />
+          <Property Name="Account_Manager" Type="varchar" MaxLength="102" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Contact_Report_Search' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Contact_Report_Search">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="status" />
+            <PropertyRef Name="Products_Discussed_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Geography_ID" Type="varchar" MaxLength="255" />
+          <Property Name="Client_ID" Type="int" Nullable="false" />
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="Contact_Date" Type="datetime" />
+          <Property Name="Meeting_Type_ID" Type="int" />
+          <Property Name="Meeting_Type_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Meeting_Activity_ID" Type="int" />
+          <Property Name="Meeting_Activity_Name" Type="varchar" MaxLength="255" />
+          <Property Name="status" Type="bit" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="int" Nullable="false" />
+          <Property Name="Followup_Notes_ID" Type="int" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="int" Nullable="false" />
+          <Property Name="Followup_Date" Type="datetime" />
+          <Property Name="Geography_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Is_National" Type="int" Nullable="false" />
+          <Property Name="Account_Manager" Type="varchar" MaxLength="102" />
+          <Property Name="Drug_Name" Type="varchar(max)" />
+          <Property Name="Persons_Met" Type="varchar" MaxLength="500" />
+          <Property Name="Followup_Notes_Name" Type="varchar" MaxLength="500" />
+          <Property Name="Meeting_Outcome_Name" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_KeyContact_CCRPersonsMet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_KeyContact_CCRPersonsMet">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="KC_ID" />
+            <PropertyRef Name="Full_Name" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="KC_ID" Type="int" Nullable="false" />
+          <Property Name="KC_F_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_M_Name" Type="varchar" MaxLength="255" />
+          <Property Name="KC_L_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Full_Name" Type="varchar" Nullable="false" MaxLength="765" />
+          <Property Name="Full_ID" Type="varchar" MaxLength="41" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'PF_Auxilium.dbo.V_Plan_List' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_Plan_List">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Territory_ID" />
+            <PropertyRef Name="AE_UserID" />
+          </Key>
+          <Property Name="Plan_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Name" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="Section_ID" Type="int" Nullable="false" />
+          <Property Name="Plan_Type_ID" Type="int" />
+          <Property Name="Plan_Type_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Plan_State" Type="char" MaxLength="2" />
+          <Property Name="Section_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Territory_ID" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="AE_UserID" Type="int" Nullable="false" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PathfinderAuxiliumModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="PathfinderAuxiliumEntities">
+          <EntitySet Name="ContactReportFollowupNotesSet" EntityType="PathfinderAuxiliumModel.ContactReportFollowupNotes" />
+          <EntitySet Name="ContactReportKeyContactsSet" EntityType="PathfinderAuxiliumModel.ContactReportKeyContacts" />
+          <EntitySet Name="Contact_Report_Objectives" EntityType="PathfinderAuxiliumModel.Contact_Report_Objectives" />
+          <EntitySet Name="ContactReportOutcomeSet" EntityType="PathfinderAuxiliumModel.ContactReportOutcome" />
+          <EntitySet Name="ContactReportProductsDiscussedSet" EntityType="PathfinderAuxiliumModel.ContactReportProductsDiscussed" />
+          <EntitySet Name="Contact_Reports" EntityType="PathfinderAuxiliumModel.Contact_Reports" />
+          <EntitySet Name="LkpFollowupNotesSet" EntityType="PathfinderAuxiliumModel.LkpFollowupNotes" />
+          <EntitySet Name="LkpMeetingActivitySet" EntityType="PathfinderAuxiliumModel.LkpMeetingActivity" />
+          <EntitySet Name="LkpMeetingOutcomeSet" EntityType="PathfinderAuxiliumModel.LkpMeetingOutcome" />
+          <EntitySet Name="LkpMeetingTypeSet" EntityType="PathfinderAuxiliumModel.LkpMeetingType" />
+          <EntitySet Name="LkpProductsDiscussedSet" EntityType="PathfinderAuxiliumModel.LkpProductsDiscussed" />
+          <EntitySet Name="ContactReportSet" EntityType="PathfinderAuxiliumModel.ContactReport" />
+          <EntitySet Name="ContactReportFilterSet" EntityType="PathfinderAuxiliumModel.ContactReportFilter" />
+          <EntitySet Name="PlanListSet" EntityType="PathfinderAuxiliumModel.PlanList" />
+          <EntitySet Name="ContactReportDataSet" EntityType="PathfinderAuxiliumModel.ContactReportData" />
+          <EntitySet Name="ContactReportProductDataSet" EntityType="PathfinderAuxiliumModel.ContactReportProductData" />
+          <EntitySet Name="ContactReportDrillDownFilterSet" EntityType="PathfinderAuxiliumModel.ContactReportDrillDownFilter" />
+          <EntitySet Name="KeyContactCCRPersonsMetSet" EntityType="PathfinderAuxiliumModel.KeyContactCCRPersonsMet" /></EntityContainer>
+        <EntityType Name="ContactReportFollowupNotes">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Followup_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactReportKeyContacts">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Key_Contact_ID" />
+            <PropertyRef Name="Is_Client_Key_Contact" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Key_Contact_ID" Type="Int32" Nullable="false" />
+          <Property Name="Is_Client_Key_Contact" Type="Boolean" Nullable="false" />
+          <Property Name="KC_F_Name" Type="String" Nullable="true" />
+          <Property Name="KC_L_Name" Type="String" Nullable="true" /></EntityType>
+        <EntityType Name="Contact_Report_Objectives">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Contact_Objective_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Objective_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactReportOutcome">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Outcome_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Outcome_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ContactReportProductsDiscussed">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Products_Discussed_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Contact_Reports">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+          </Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" />
+          <Property Name="Meeting_Type_ID" Type="Int32" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" />
+          <Property Name="Followup_Date" Type="DateTime" />
+          <Property Name="Created_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Created_DT" Type="DateTime" />
+          <Property Name="Modified_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="false" />
+          <Property Name="Meeting_Type_Other" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Meeting_Activity_Other" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Followup_Notes_Other" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Meeting_Outcome_Other" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="Key_Contacts_Other" Type="String" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="LkpFollowupNotes">
+          <Key>
+            <PropertyRef Name="Followup_Notes_ID" />
+          </Key>
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_Notes_Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sort_Index" Type="Int32" />
+          <Property Name="Client_ID" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Created_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Created_DT" Type="DateTime" />
+          <Property Name="Modified_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_DT" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="LkpMeetingActivity">
+          <Key>
+            <PropertyRef Name="Meeting_Activity_ID" />
+          </Key>
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sort_Index" Type="Int32" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Created_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Created_DT" Type="DateTime" />
+          <Property Name="Modified_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_DT" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="LkpMeetingOutcome">
+          <Key>
+            <PropertyRef Name="Meeting_Outcome_ID" />
+          </Key>
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sort_Index" Type="Int32" />
+          <Property Name="Client_ID" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
+          <Property Name="Created_BY" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Created_DT" Type="DateTime" />
+          <Property Name="Modified_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_DT" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="LkpMeetingType">
+          <Key>
+            <PropertyRef Name="Meeting_Type_ID" />
+          </Key>
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Sort_Index" Type="Int32" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Created_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Created_DT" Type="DateTime" />
+          <Property Name="Modified_BY" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Modified_DT" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="LkpProductsDiscussed">
+          <Key>
+            <PropertyRef Name="Products_Discussed_ID" /></Key>
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="false" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="Drug_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Sort_Index" Type="Int32" Nullable="true" />
+          <Property Name="Status" Type="Boolean" Nullable="true" />
+          <Property Name="Created_BY" Type="String" Nullable="true" />
+          <Property Name="Created_DT" Type="DateTime" Nullable="true" />
+          <Property Name="Modified_BY" Type="String" Nullable="true" />
+          <Property Name="Modified_DT" Type="DateTime" Nullable="true" /></EntityType>
+        <EntityType Name="ContactReport">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="status" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="status" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="ContactReportFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Outcome_ID" Type="Int32" Nullable="true" />
+          <Property Name="Followup_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="PlanList">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Territory_ID" />
+            <PropertyRef Name="AE_UserID" /></Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Plan_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Plan_State" Type="String" Nullable="true" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Territory_ID" Type="String" Nullable="false" />
+          <Property Name="AE_UserID" Type="Int32" Nullable="false" /></EntityType>
+        <EntityType Name="ContactReportData">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Products_Discussed_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+            <PropertyRef Name="status" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Is_National" Type="Int32" Nullable="false" />
+          <Property Name="Account_Manager" Type="String" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Persons_Met" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Outcome_Name" Type="String" Nullable="true" />
+          <Property Name="status" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="ContactReportProductData">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" />
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="Client_ID" />
+            <PropertyRef Name="User_ID" />
+            <PropertyRef Name="Followup_Notes_ID" />
+            <PropertyRef Name="Meeting_Outcome_ID" />
+            <PropertyRef Name="Section_ID" />
+            <PropertyRef Name="Plan_Name" />
+            <PropertyRef Name="Is_National" />
+            <PropertyRef Name="status" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="Geography_ID" Type="String" Nullable="true" />
+          <Property Name="Client_ID" Type="Int32" Nullable="false" />
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="Contact_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Meeting_Type_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Type_Name" Type="String" Nullable="true" />
+          <Property Name="Meeting_Activity_ID" Type="Int32" Nullable="true" />
+          <Property Name="Meeting_Activity_Name" Type="String" Nullable="true" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="Drug_Name" Type="String" Nullable="true" />
+          <Property Name="Persons_Met" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Notes_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_ID" Type="Int32" Nullable="false" />
+          <Property Name="Meeting_Outcome_Name" Type="String" Nullable="true" />
+          <Property Name="Followup_Date" Type="DateTime" Nullable="true" />
+          <Property Name="Geography_Name" Type="String" Nullable="true" />
+          <Property Name="Section_ID" Type="Int32" Nullable="false" />
+          <Property Name="Plan_Name" Type="String" Nullable="false" />
+          <Property Name="Section_Name" Type="String" Nullable="true" />
+          <Property Name="Is_National" Type="Int32" Nullable="false" />
+          <Property Name="Account_Manager" Type="String" Nullable="true" />
+          <Property Name="status" Type="Boolean" Nullable="false" /></EntityType>
+        <EntityType Name="ContactReportDrillDownFilter">
+          <Key>
+            <PropertyRef Name="Contact_Report_ID" /></Key>
+          <Property Name="Contact_Report_ID" Type="Int32" Nullable="false" />
+          <Property Name="Products_Discussed_ID" Type="Int32" Nullable="true" />
+          <Property Name="Outcome_ID" Type="Int32" Nullable="true" />
+          <Property Name="Followup_ID" Type="Int32" Nullable="true" /></EntityType>
+        <EntityType Name="KeyContactCCRPersonsMet">
+          <Key>
+            <PropertyRef Name="Plan_ID" />
+            <PropertyRef Name="KC_ID" />
+            <PropertyRef Name="Full_Name" /></Key>
+          <Property Name="Plan_ID" Type="Int32" Nullable="false" />
+          <Property Name="KC_ID" Type="Int32" Nullable="false" />
+          <Property Name="KC_F_Name" Type="String" Nullable="true" />
+          <Property Name="KC_M_Name" Type="String" Nullable="true" />
+          <Property Name="KC_L_Name" Type="String" Nullable="true" />
+          <Property Name="Full_Name" Type="String" Nullable="false" />
+          <Property Name="Full_ID" Type="String" Nullable="true" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="PathfinderAuxiliumModelStoreContainer" CdmEntityContainer="PathfinderAuxiliumEntities">
+          <EntitySetMapping Name="ContactReportFollowupNotesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportFollowupNotes)">
+              <MappingFragment StoreEntitySet="Contact_Report_Followup_Notes">
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Followup_ID" ColumnName="Followup_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactReportKeyContactsSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportKeyContacts)">
+              <MappingFragment StoreEntitySet="Contact_Report_Key_Contacts">
+                <ScalarProperty Name="KC_L_Name" ColumnName="KC_L_Name" />
+                <ScalarProperty Name="KC_F_Name" ColumnName="KC_F_Name" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Key_Contact_ID" ColumnName="Key_Contact_ID" />
+                <ScalarProperty Name="Is_Client_Key_Contact" ColumnName="Is_Client_Key_Contact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact_Report_Objectives">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.Contact_Report_Objectives)">
+              <MappingFragment StoreEntitySet="Contact_Report_Objectives">
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Contact_Objective_ID" ColumnName="Contact_Objective_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactReportOutcomeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportOutcome)">
+              <MappingFragment StoreEntitySet="Contact_Report_Outcome">
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Outcome_ID" ColumnName="Outcome_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactReportProductsDiscussedSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportProductsDiscussed)">
+              <MappingFragment StoreEntitySet="Contact_Report_Products_Discussed">
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contact_Reports">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.Contact_Reports)">
+              <MappingFragment StoreEntitySet="Contact_Reports">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Key_Contacts_Other" ColumnName="Key_Contacts_Other" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Meeting_Type_Other" ColumnName="Meeting_Type_Other" />
+                <ScalarProperty Name="Meeting_Activity_Other" ColumnName="Meeting_Activity_Other" />
+                <ScalarProperty Name="Followup_Notes_Other" ColumnName="Followup_Notes_Other" />
+                <ScalarProperty Name="Meeting_Outcome_Other" ColumnName="Meeting_Outcome_Other" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpFollowupNotesSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.LkpFollowupNotes)">
+              <MappingFragment StoreEntitySet="Lkp_Followup_Notes">
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" />
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingActivitySet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.LkpMeetingActivity)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Activity">
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingOutcomeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.LkpMeetingOutcome)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Outcome">
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpMeetingTypeSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.LkpMeetingType)">
+              <MappingFragment StoreEntitySet="Lkp_Meeting_Type">
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LkpProductsDiscussedSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.LkpProductsDiscussed)">
+              <MappingFragment StoreEntitySet="Lkp_Products_Discussed">
+                <ScalarProperty Name="Modified_DT" ColumnName="Modified_DT" />
+                <ScalarProperty Name="Modified_BY" ColumnName="Modified_BY" />
+                <ScalarProperty Name="Created_DT" ColumnName="Created_DT" />
+                <ScalarProperty Name="Created_BY" ColumnName="Created_BY" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Sort_Index" ColumnName="Sort_Index" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Drug_ID" ColumnName="Drug_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReport)">
+              <MappingFragment StoreEntitySet="V_Contact_Report">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportFilterSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportFilter)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Filter">
+                <ScalarProperty Name="Followup_ID" ColumnName="Followup_ID" />
+                <ScalarProperty Name="Outcome_ID" ColumnName="Outcome_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PlanListSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.PlanList)">
+              <MappingFragment StoreEntitySet="V_Plan_List">
+                <ScalarProperty Name="AE_UserID" ColumnName="AE_UserID" />
+                <ScalarProperty Name="Territory_ID" ColumnName="Territory_ID" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_State" ColumnName="Plan_State" />
+                <ScalarProperty Name="Plan_Type_Name" ColumnName="Plan_Type_Name" />
+                <ScalarProperty Name="Plan_Type_ID" ColumnName="Plan_Type_ID" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportDataSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportData)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Search">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Persons_Met" ColumnName="Persons_Met" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Account_Manager" ColumnName="Account_Manager" />
+                <ScalarProperty Name="Is_National" ColumnName="Is_National" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" />
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportProductDataSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportProductData)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_Product_Data">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="Account_Manager" ColumnName="Account_Manager" />
+                <ScalarProperty Name="Is_National" ColumnName="Is_National" />
+                <ScalarProperty Name="Section_Name" ColumnName="Section_Name" />
+                <ScalarProperty Name="Plan_Name" ColumnName="Plan_Name" />
+                <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+                <ScalarProperty Name="Geography_Name" ColumnName="Geography_Name" />
+                <ScalarProperty Name="Followup_Date" ColumnName="Followup_Date" />
+                <ScalarProperty Name="Meeting_Outcome_Name" ColumnName="Meeting_Outcome_Name" />
+                <ScalarProperty Name="Meeting_Outcome_ID" ColumnName="Meeting_Outcome_ID" />
+                <ScalarProperty Name="Followup_Notes_ID" ColumnName="Followup_Notes_ID" />
+                <ScalarProperty Name="Followup_Notes_Name" ColumnName="Followup_Notes_Name" />
+                <ScalarProperty Name="Persons_Met" ColumnName="Persons_Met" />
+                <ScalarProperty Name="Drug_Name" ColumnName="Drug_Name" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Meeting_Activity_Name" ColumnName="Meeting_Activity_Name" />
+                <ScalarProperty Name="Meeting_Activity_ID" ColumnName="Meeting_Activity_ID" />
+                <ScalarProperty Name="Meeting_Type_Name" ColumnName="Meeting_Type_Name" />
+                <ScalarProperty Name="Meeting_Type_ID" ColumnName="Meeting_Type_ID" />
+                <ScalarProperty Name="Contact_Date" ColumnName="Contact_Date" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+                <ScalarProperty Name="Geography_ID" ColumnName="Geography_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ContactReportDrillDownFilterSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.ContactReportDrillDownFilter)">
+              <MappingFragment StoreEntitySet="V_Contact_Report_DrillDownFilter">
+                <ScalarProperty Name="Followup_ID" ColumnName="Followup_ID" />
+                <ScalarProperty Name="Outcome_ID" ColumnName="Outcome_ID" />
+                <ScalarProperty Name="Products_Discussed_ID" ColumnName="Products_Discussed_ID" />
+                <ScalarProperty Name="Contact_Report_ID" ColumnName="Contact_Report_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="KeyContactCCRPersonsMetSet">
+            <EntityTypeMapping TypeName="IsTypeOf(PathfinderAuxiliumModel.KeyContactCCRPersonsMet)">
+              <MappingFragment StoreEntitySet="V_KeyContact_CCRPersonsMet">
+                <ScalarProperty Name="Full_ID" ColumnName="Full_ID" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="KC_L_Name" ColumnName="KC_L_Name" />
+                <ScalarProperty Name="KC_M_Name" ColumnName="KC_M_Name" />
+                <ScalarProperty Name="KC_F_Name" ColumnName="KC_F_Name" />
+                <ScalarProperty Name="KC_ID" ColumnName="KC_ID" />
+                <ScalarProperty Name="Plan_ID" ColumnName="Plan_ID" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="PathfinderAuxiliumModel" ZoomLevel="75">
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportFollowupNotes" Width="1.5" PointX="6" PointY="2.25" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportKeyContacts" Width="1.5" PointX="7.75" PointY="2.125" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.Contact_Report_Objectives" Width="1.5" PointX="7.625" PointY="0.5" Height="1.4033821614583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportOutcome" Width="1.5" PointX="2.25" PointY="6.5" Height="1.4033821614583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportProductsDiscussed" Width="1.5" PointX="6" PointY="0.5" Height="1.4033821614583331" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.Contact_Reports" Width="1.5" PointX="4.125" PointY="0.5" Height="4.0956022135416656" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.LkpFollowupNotes" Width="1.5" PointX="2.375" PointY="0.5" Height="2.7494921875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.LkpMeetingActivity" Width="1.5" PointX="0.5" PointY="3.375" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.LkpMeetingOutcome" Width="1.5" PointX="0.5" PointY="0.5" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.LkpMeetingType" Width="1.5" PointX="0.5" PointY="6.5" Height="2.7494921875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.LkpProductsDiscussed" Width="1.5" PointX="2.25" PointY="3.375" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReport" Width="1.5" PointX="7.75" PointY="6" Height="3.5186979166666656" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportFilter" Width="1.5" PointX="7.75" PointY="4.25" Height="1.5956835937499996" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.PlanList" Width="1.5" PointX="4.125" PointY="5.375" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportData" Width="1.5" PointX="9.625" PointY="2.75" Height="5.634013671875" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportProductData" Width="1.5" PointX="5.875" PointY="3.875" Height="5.634013671875" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.ContactReportDrillDownFilter" Width="1.5" PointX="9.625" PointY="0.625" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="PathfinderAuxiliumModel.KeyContactCCRPersonsMet" Width="1.5" PointX="0.75" PointY="9.75" Height="2.0853483072916674" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

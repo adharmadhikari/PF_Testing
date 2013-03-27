@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14C7A577-1B81-4F21-832B-72AA2BC5E39D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pinsonault</RootNamespace>
+    <AssemblyName>Pinsonault.Application</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Services">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Reports\Report.cs" />
+    <Compile Include="Reports\ReportColors.cs" />
+    <Compile Include="StandardReports\QueryDefinition.cs" />
+    <Compile Include="StandardReports\ReportDefinitions.cs" />
+    <Compile Include="StandardReports\Reports.cs" />
+    <Compile Include="StandardReports\StandardReportsClientDataService.cs" />
+    <Compile Include="StandardReports\StandardReportsDataService.cs" />
+    <Compile Include="TodaysAccounts\QueryDefinition.cs" />
+    <Compile Include="TodaysAccounts\ReportDefinitions.cs" />
+    <Compile Include="TodaysAccounts\Reports.cs" />
+    <Compile Include="TodaysAccounts\TodaysAccountsClientDataService.cs" />
+    <Compile Include="TodaysAccounts\TodaysAccountsDataService.cs" />
+    <Compile Include="Web.Services\PathfinderDataServiceBase.cs" />
+    <Compile Include="Web.UI\CheckboxList.cs" />
+    <Compile Include="Web.UI\CheckboxListClientControl.cs" />
+    <Compile Include="Web.UI\ClientValidator.cs" />
+    <Compile Include="Web.UI\ContentPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\CustomButton.cs" />
+    <Compile Include="Web.UI\CustomButtonNonServer.cs" />
+    <Compile Include="Web.UI\HtmlGrid.cs" />
+    <Compile Include="Web.UI\IFilterControl.cs" />
+    <Compile Include="Web.UI\InputFormBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\MasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\MaxLengthValidator.cs" />
+    <Compile Include="Web.UI\Menu.cs" />
+    <Compile Include="Web.UI\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web.UI\RadioButtonList.cs" />
+    <Compile Include="Web.UI\RadioButtonListControl.cs" />
+    <Compile Include="Web.UI\SearchList.cs" />
+    <Compile Include="Web.UI\SearchTextbox.cs" />
+    <Compile Include="Web.UI\ThinGrid.cs" />
+    <Compile Include="Web.UI\TipLink.cs" />
+    <Compile Include="Web\ApplicationState.cs" />
+    <Compile Include="Web\FormHttpHandler.cs" />
+    <Compile Include="Web\GenericHttpHandler.cs" />
+    <Compile Include="Web\GeographicCoverageMapDataWriter.cs" />
+    <Compile Include="Web\GeographicCoverageTAMapDataWriter.cs" />
+    <Compile Include="Web\LINQHelper.cs" />
+    <Compile Include="Web\MapData.cs" />
+    <Compile Include="Web\MapDataWriterBase.cs" />
+    <Compile Include="Web\ReportingServicesDownloader.cs" />
+    <Compile Include="Web\SellSheetsMapDataWriter.cs" />
+    <Compile Include="Web\StandardReportApplicationState.cs" />
+    <Compile Include="Web\Support.cs" />
+    <Compile Include="Web\PathfinderMembershipProvider.cs" />
+    <Compile Include="Web\PathfinderMembershipUser.cs" />
+    <Compile Include="Web\PathfinderRoleProvider.cs" />
+    <Compile Include="Web\Session.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PathfinderClientModel\PathfinderClientModel.csproj">
+      <Project>{EBECCA6B-101A-460A-AAB7-D46595074B08}</Project>
+      <Name>PathfinderClientModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PathfinderModel\PathfinderModel.csproj">
+      <Project>{4C8C11C8-8D1D-4996-BC4A-15E68AE14C13}</Project>
+      <Name>PathfinderModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pinsonault.Core\Pinsonault.Core.csproj">
+      <Project>{00156E6A-2873-49BE-9441-9C1D1909CC74}</Project>
+      <Name>Pinsonault.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,68 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:GridView runat="server" SkinId="basic" GridLines="None" BorderStyle="None" CssClass="staticTable" CellPadding="0" CellSpacing="0" />
+
+<asp:Image SkinId="lf_cover"  AlternateText="" ImageUrl="images/spacer.gif" runat="server" CssClass="topLeft" />
+<asp:Image SkinId="rt_cover"  AlternateText="" ImageUrl="images/spacer.gif" runat="server" CssClass="topRight" />
+
+<asp:Image SkinId="mainLogo"  AlternateText="Pathfinder" ImageUrl="images/logo.gif" runat="server" CssClass="headerLogo" />
+<asp:Image SkinId="loginLogo"  AlternateText="Pathfinder" ImageUrl="images/loginLogo.jpg" runat="server" />
+<asp:Image SkinId="btmImage"  AlternateText="" ImageUrl="images/btm.jpg" CssClass="btm" runat="server" />
+<asp:Image SkinId="topImage"  AlternateText="" ImageUrl="images/top.jpg" CssClass="top" runat="server" />
+
+<telerik:RadMenu runat="server" SkinId="options" ImageUrl="content/images/spacer.gif"  CssClass="drugMenu" 
+    ExpandedImageUrl="content/images/spacer.gif" Width="60px" DefaultGroupSettings-Width="100px"  DefaultGroupSettings-OffsetX="-52" DefaultGroupSettings-OffsetY="2"  />
+<telerik:RadMenuItem runat="server" SkinId="excel" ImageUrl="/App_Themes/pathfinder/images/excelIcon.gif" 
+    ExpandedImageUrl="App_Themes/pathfinder/images/excelIcon.gif" Width="120px" />
+<telerik:RadMenuItem runat="server" SkinId="word" ImageUrl="App_Themes/pathfinder/images/wordIcon.gif" 
+    ExpandedImageUrl="App_Themes/pathfinder/images/wordIcon.gif" Width="120px" />
+<telerik:RadMenuItem runat="server" SkinId="print" ImageUrl="/App_Themes/pathfinder/images/printIcon.gif" 
+    ExpandedImageUrl="App_Themes/pathfinder/images/printIcon.gif" Width="120px" />
+<telerik:RadMenuItem runat="server" SkinId="email" ImageUrl="App_Themes/pathfinder/images/emailIcon.gif" 
+    ExpandedImageUrl="App_Themes/pathfinder/images/emailIcon.gif" Width="120px" />
+<telerik:RadMenuItem runat="server" SkinId="im" ImageUrl="App_Themes/pathfinder/images/imIcon.gif" 
+    ExpandedImageUrl="App_Themes/pathfinder/images/imIcon.gif" Width="120px" />
+
+<telerik:RadMenu runat="server" SkinId="accountView" ImageUrl="content/images/spacer.gif"  CssClass="drugMenu" 
+    ExpandedImageUrl="content/images/spacer.gif" Width="90px" DefaultGroupSettings-Width="100px"  DefaultGroupSettings-OffsetX="0" DefaultGroupSettings-OffsetY="2"  />
+
+
+<asp:HyperLink runat="server" SkinId="addFav" CssClass="addFav" />
+<asp:HyperLink runat="server" SkinId="addFavDropDn" CssClass="addFavDropDn" ImageUrl="~/content/images/spacer.gif" />
+<telerik:RadGrid runat="server" SkinID="radTable" CssClass="dashboardTable" EnableEmbeddedBaseStylesheet="false" />
+
+<telerik:radwindowmanager runat="server" IconUrl="" VisibleStatusbar="false" VisibleTitlebar ="true" Animation="Fade"  />
+
+<asp:Login runat="server" SkinID="loginBox" LoginButtonType="Link" CssClass="loginBox" 
+            TextLayout="TextOnTop" TitleText="" UserNameLabelText="" PasswordLabelText=""></asp:Login>
+<asp:Button SkinID="formButton" CssClass="formButton" runat="server" />
+
+<telerik:RadComboBox SkinID="planInfoCombo" runat="server" EnableEmbeddedBaseStylesheet="false" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000"/>
+<telerik:RadComboBox SkinID="dashboardDropDown" runat="server" EnableEmbeddedBaseStylesheet="false" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000" width="130px"/>
+<telerik:RadComboBox SkinID="planInfoTruncate" EnableEmbeddedBaseStylesheet="false" CssClass="planInfoTruncate" runat="server" ExpandAnimation-Type="Linear" OffsetX="2" OffsetY="-2" ZIndex="20000"/>
+<telerik:RadComboBox SkinID="standardReportsTruncate" EnableEmbeddedBaseStylesheet="false" CssClass="standardReportsTruncate" runat="server" ExpandAnimation-Type="Linear" ZIndex="20000"/>
+
+<asp:FormView runat="server" SkinID="resultsTable" Cssclass="resultsTable" />
+<asp:TextBox runat="server" CssClass="textBox" />
+<asp:TextBox runat="server" SkinID="datePicker" CssClass="textBox datePicker" />
+
+<telerik:RadMenu SkinID="helpMenu" runat="server" EnableEmbeddedBaseStylesheet="false" CssClass="helpMenu" DefaultGroupSettings-Width="100px" />
+<telerik:RadMenu SkinID="mainMenu" runat="server" EnableEmbeddedBaseStylesheet="false" width="166px" DefaultGroupSettings-Width="173px" CssClass="mainMenu" />
+<telerik:RadMenu SkinID="channel" runat="server" EnableEmbeddedBaseStylesheet="false" width="180px" DefaultGroupSettings-Width="180px" CssClass="channel" />
+
+<telerik:RadMenu SkinID="drugName" runat="server" EnableEmbeddedBaseStylesheet="false" DefaultGroupSettings-Width="150px" CssClass="drugMenu" />
+<telerik:RadMenu SkinID="drugMarket" runat="server" EnableEmbeddedBaseStylesheet="false" DefaultGroupSettings-Width="225px" CssClass="drugMenu" />

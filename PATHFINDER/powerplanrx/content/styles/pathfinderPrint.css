@@ -1,0 +1,73 @@
+
+/* PRINT CSS */
+/* GENERAL */
+
+html {
+}
+
+body, input, textarea, label {
+	font-family: Arial;
+	font-size: 11px;  
+
+}
+body {
+	font-family: Arial;
+	background: #fff;
+	color: #333333;
+
+}
+a, .links {
+	color: #333333;
+	text-decoration:none;
+	outline: none;
+	
+}
+a:hover {
+	text-decoration:none !important;
+}
+table
+{
+	font-family: Arial;
+	
+}
+table td
+{
+	padding: 5px;
+	
+}
+.header 
+{
+    width:753px;
+    height:89px;
+    
+}
+.footer 
+{    
+    width:753px;
+    height:45px;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    background-color:#fff;
+
+}
+.copyright 
+{
+    color:#999;
+    font-size: 9px;
+    text-align:right;
+}
+h1 
+{
+    padding:5px;
+    margin:5px 0;
+    color: #2d58a7;
+}
+.panelImage img 
+{
+    width:753px;
+}
+ .printContent 
+{
+    padding: 0 5px 40px 5px;
+}

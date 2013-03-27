@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Popup.master.cs" Inherits="MasterPages_Popup" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title></title>
+    <link id="Link1" runat="server" href="~/powerplanrx/content/styles/main.css" rel="stylesheet" type="text/css" />
+    <link id="Link2" runat="server" href="~/powerplanrx/content/styles/ui.all.css" rel="stylesheet" type="text/css" />             
+        <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+    <body>
+        <form id="form1" runat="server">    
+            <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">     
+                <Scripts>
+                    <asp:ScriptReference Path="https://ajax.microsoft.com/ajax/jquery/jquery-1.3.2.min.js" />
+                    <asp:ScriptReference Path="~/content/scripts/jquery-ui-1.7.2.custom.min.js" />
+                    <asp:ScriptReference Path="~/content/scripts/ui.js" />
+                    <asp:ScriptReference Path="~/powerplanrx/content/scripts/css_browser_selector.js" />
+                    <asp:ScriptReference Path="~/powerplanrx/content/scripts/print.js" />
+                </Scripts>                    
+            </asp:ScriptManager>    
+                
+            <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />        
+            <div>
+                <asp:ContentPlaceHolder id="partialPage" runat="server" >
+                    <div id="popupContentContainer">
+                        <asp:ContentPlaceHolder runat="server" ID="main"></asp:ContentPlaceHolder>
+                    </div> 
+                </asp:ContentPlaceHolder>        
+            </div>    
+        </form>    
+    </body>
+</html>
+

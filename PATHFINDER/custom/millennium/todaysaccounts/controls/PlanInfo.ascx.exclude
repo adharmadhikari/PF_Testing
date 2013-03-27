@@ -1,0 +1,55 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PlanInfo.ascx.cs" Inherits="controls_planinfo"
+    EnableTheming="true" %>
+ <div class="addplan" id="addplanOpt">
+   
+    <a id="Add" href="javascript:OpenPlanInfo('AddPlan','')">Add</a> 
+ <a id="Delete" href="javascript:OpenPlanInfo('DelPlan','')">| Delete</a>
+</div>
+ <div class="clearAll">
+ </div> 
+<telerik:RadGrid SkinID="radTable" runat="server" ID="gridPlanInfo" AllowSorting="true"
+    PageSize="50" AllowPaging="true" AllowFilteringByColumn="true" EnableEmbeddedSkins="false">
+    <MasterTableView AllowSorting="true" AutoGenerateColumns="False" ClientDataKeyNames="Plan_ID" PageSize="50" Width="100%">
+        <Columns>
+            <%-- DataFormatString="{0 }" will fix issue for A&P that only shows A if attribute is not present.  Don't know why because AT&T does not have issue and others that have '&' in name.  Adding space or any other chars seem to fix issue for A&P.--%>
+            <telerik:GridBoundColumn DataField="Plan_Name" DataFormatString="{0} " HeaderText='<%$ Resources:Resource, Label_Plan_Name %>'
+                SortExpression="Plan_Name" UniqueName="Plan_Name" DataType="System.String" ItemStyle-CssClass="firstCol planName">
+                <FilterTemplate>
+                    <div class="searchTextBox"><input class="textBox" type="text" onkeyup="clientManager.setPlanInfoGridTimeout(this, {dataField:'Plan_Name', filterType:'Contains'})" /></div>                    
+                </FilterTemplate>
+            </telerik:GridBoundColumn>
+                     
+            <telerik:GridBoundColumn DataField="Plan_State" ItemStyle-CssClass="planState" HeaderText='<%$ Resources:Resource, Label_State %>'
+                SortExpression="Plan_State" UniqueName="Plan_State">
+                <FilterTemplate>
+                    <telerik:RadComboBox EnableEmbeddedSkins="false" SkinID="planInfoCombo" Skin="pathfinder"
+                        runat="server" ID="rdlStates" DataSourceID="dsStates" Width="90%" DropDownWidth="120px"
+                        DataTextField="Name" DataValueField="ID" AppendDataBoundItems="true" MaxHeight="200"
+                        OnClientSelectedIndexChanged="onFilterPlansByState">
+                        <Items>
+                            <telerik:RadComboBoxItem Value="" Text="" />
+                        </Items>
+                    </telerik:RadComboBox>
+                </FilterTemplate>
+            </telerik:GridBoundColumn> 
+            <%-- kink of hackish but setting website inside span to handle click event instead of using hyperlink so we can grab event information --%>
+            <telerik:GridBoundColumn DataFormatString='<%$ Resources:Resource, HTML_PlanWebsite_Link %>' DataField="Plan_WebSite" AllowFiltering="false"  HeaderText='<%$ Resources:Resource, Label_Website %>' UniqueName="Plan_WebSite" ItemStyle-CssClass="links planWebsite" />            
+        </Columns>
+        <SortExpressions>
+            <telerik:GridSortExpression FieldName="Plan_Name" SortOrder="Ascending" />
+        </SortExpressions>
+        <PagerStyle Visible="false" />
+        <FilterItemStyle CssClass="planInfoFilterRow" />
+    </MasterTableView>
+
+    <ClientSettings>
+        <DataBinding Location="~/custom/millennium/todaysaccounts/services/pathfinderdataservice.svc" DataService-TableName="PlanInfoListViewSet" SelectCountMethod="GetPlanInfoListViewCount" />
+        <Scrolling AllowScroll="True" UseStaticHeaders="True" ScrollHeight="100%" />
+        <Selecting AllowRowSelect="True" />
+    </ClientSettings>
+</telerik:RadGrid>
+<pinso:RadGridWrapper runat="server" ID="radGridWrapper" Target="gridPlanInfo" ClientTypeName="Pathfinder.UI.PlanInfoGridWrapper" MergeRows="false" RequiresFilter="false" AutoUpdate="false" PagingSelector="#divTile2Container .pagination" />
+
+<asp:EntityDataSource runat="server" ID="dsStates" ConnectionString="name=PathfinderEntities" DefaultContainerName="PathfinderEntities" EntitySetName="StateSet" OrderBy="it.Name" />
+<asp:EntityDataSource runat="server" ID="dsPlanType" ConnectionString="name=PathfinderEntities" DefaultContainerName="PathfinderEntities" EntitySetName="PlanTypeSet" OrderBy="it.Name" />
+<asp:EntityDataSource runat="server" ID="dsLivesRange" ConnectionString="name=PathfinderEntities" DefaultContainerName="PathfinderEntities" EntitySetName="LivesRangeSet" OrderBy="it.Sort_Order" />

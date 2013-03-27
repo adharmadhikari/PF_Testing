@@ -1,0 +1,334 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GeographicCoverageScript.ascx.cs" Inherits="custom_millennium_executivereports_controls_GeographicCoverageScript" %>
+<%@ OutputCache Shared="true" VaryByParam="None" Duration="100" %>
+
+<script type="text/javascript">
+
+    //var formularyReportScaleChart = function() { scaleChart(); };
+
+    clientManager.add_pageInitialized(millenniumGeographicCoverageReportPageInitialized);
+    clientManager.add_pageLoaded(millenniumGeographicCoverageReportPageLoaded);
+    clientManager.add_pageUnloaded(millenniumGeographicCoverageReportPageUnloaded);
+
+    var binding = false;
+    
+    function millenniumGeographicCoverageReportPageInitialized(sender, args) 
+    {
+        //change scale function to use geographic coverage specific version
+        //formularyReportScaleChart = geographicCoverage_scaleChart;
+        if (!ReportPager.get_reportCombinations())
+        {
+            ReportPager.set_pageSize(1);
+            ReportPager.constructReportPager();
+        }        
+    }
+
+    function millenniumGeographicCoverageReportPageLoaded(sender, args)
+    {
+        var r = ReportPager.get_reportCombinations();
+        if (r)
+        {
+            var page = ReportPager.get_currentPageNumber() - 1
+            $("#tile4T .pagination").html(ReportPager.get_pagingHTML());
+
+            var fullName;
+            var drugName;
+            var restrictionCombo;
+            var sectionName;
+
+            if (r[page].FullName)
+                fullName = r[page].FullName;
+
+            if (r[page].Drug_Name)
+                drugName = r[page].Drug_Name;
+
+            if (r[page].Restriction_Combination)
+                restrictionCombo = r[page].Restriction_Combination.replace(/_/g, ",");
+
+            if (r[page].Section_Name)
+                sectionName = r[page].Section_Name;
+
+            $('#tile3T .title').text(fullName + " | " + drugName + " | " + restrictionCombo + " | " + sectionName);
+
+            var mapIsReady = false;
+
+            if (flashSupported)
+            {
+                var j = $("#divTile1 object").remove();
+
+                if ($.browser.msie)
+                {
+                    j.appendTo("#divReportMap");
+
+                    if (!ensureMapIsLoaded(millenniumGeographicCoverage_mapState(), "divReportMap"))
+                    {
+                        if (!clientManager.get_MapIsReady())
+                            new cmd(null, initMap, ["fmASEngine", millenniumGeographicCoverage_mapState()], 500);
+                        else
+                            mapIsReady = true;
+                    }
+                }
+            }
+            else
+                mapIsReady = true;
+
+            if (mapIsReady)
+                millenniumGeographicCoverage_reloadMap();
+
+            millenniumGeographicCoverage_selectionChanged(sender);
+            sender.add_regionChanged(millenniumGeographicCoverage_regionChanged);
+
+            //Formulary Status
+            //sender.add_pageInitialized(formularyReportScaleChart, "divformularystatusChart");
+
+            var gridDrilldown = $get("ctl00_Tile5_gridFSDrilldown_gridformularystatusdrilldown").GridWrapper;
+            gridDrilldown.add_dataBound(gridformularystatusdrilldown_onDataBound);
+
+            //formularyReportScaleChart();
+
+            //check if drill down already set due to restoreView
+            uiStateChanged(clientManager);
+
+            sender.add_uiStateChanged(uiStateChanged);  
+            //////////////////////////////////////////
+
+
+            if (!$.browser.msie)
+                ensureMapIsLoaded(millenniumGeographicCoverage_mapState(), "divReportMap");
+
+            $("#divReportMap").mouseenter(fixMapTip);
+        }
+    }
+
+    function millenniumGeographicCoverageReportPageUnloaded(sender, args)
+    {
+        //relocate map back to tile1
+        if (flashSupported)
+        {
+            var j = $("#divReportMap object").remove();
+
+            if ($.browser.msie)
+                j.appendTo("#divTile1");
+        }
+        else
+            $("#divReportMap map").remove();
+
+        $("#divReportMap").unbind("mouseenter", fixMapTip);
+        
+        sender.remove_regionChanged(millenniumGeographicCoverage_regionChanged);       
+        
+        //Formulary Status
+        sender.remove_pageInitialized(millenniumGeographicCoverageReportPageInitialized);
+        sender.remove_pageLoaded(millenniumGeographicCoverageReportPageLoaded);
+        //sender.remove_pageInitialized(formularyReportScaleChart, "divformularystatusChart");
+        sender.remove_pageUnloaded(millenniumGeographicCoverageReportPageUnloaded);
+        sender.remove_uiStateChanged(uiStateChanged);    
+    }
+    
+    
+    //Formulary Status
+    function uiStateChanged(sender, args)
+    {
+        //If data drill down otherwise clear grid.
+        var data = clientManager.get_SelectionData(1);
+        if (data)
+        {
+            data = data["__options"];
+            if (data)
+                drilldownTitle = String.format("<%= Resources.Resource.Label_Formulary_Status_DrillDown %>", data["chartTitle"], data["drugName"], data["coverageStatus"]);
+        }
+        else
+        {
+            $("#formularyStatusDrilldownTitle").html('<%= Resources.Resource.Message_Formulary_Status_DrillDown %>');
+
+            var gw = $get("ctl00_Tile5_gridFSDrilldown_gridformularystatusdrilldown").GridWrapper;
+            if (gw)
+            {
+                gw.clearGrid();
+                $(gw.get_element()).css("visibility", "hidden");
+            }
+        }
+        adjustTile5HeightForDrilldown();
+    }
+
+    function geographicCoverage_scaleChart() {
+        scaleChart(4);
+    }
+    
+    function millenniumGeographicCoverage_selectionChanged(sender, args) {
+        if (!args || args.level == 0)
+            sender.loadPage("custom/millennium/executivereports/controls/GeographicCoverageFormularyStatusChartImage.aspx?" + sender.getSelectionDataForPostback(), "divformularystatusChart");
+    }
+    function millenniumGeographicCoverage_regionChanged(sender, args)
+    {
+        var region = sender.get_Region();
+        if (!region) region = "US";
+
+        var data = clientManager.get_SelectionData();
+        data["Geography_ID"] = region;
+        //partial page update to avoid pageinitialize event and reducing page load time
+        clientManager.loadPage("custom/millennium/executivereports/controls/GeographicCoverageFormularyStatusChartImage.aspx?" + $getDataForPostback(data), "divformularystatusChart");
+
+        $("#formularyStatusDrilldownTitle").html('<%= Resources.Resource.Message_Formulary_Status_DrillDown %>');
+
+        if ($get("ctl00_Tile5_gridFSDrilldown_gridformularystatusdrilldown"))
+        {
+            var gw = $get("ctl00_Tile5_gridFSDrilldown_gridformularystatusdrilldown").GridWrapper;
+            if (gw)
+            {
+                gw.clearGrid();
+                $(gw.get_element()).css("visibility", "hidden");
+            }
+        }
+
+        adjustTile5HeightForDrilldown();
+        if (!flashSupported)
+            millenniumGeographicCoverage_reloadMap();
+    }
+    
+    
+    function millenniumGeographicCoverage_mapState() {
+        var data = clientManager.get_SelectionData();
+
+
+        var mapData = {};
+        mapData["UserKey"] = clientManager.get_UserKey();
+        mapData["Application"] = 18;
+        if (clientManager.get_Region())
+            mapData["Region"] = clientManager.get_Region();
+        mapData["Channel"] = data && data["Section_ID"] ? data["Section_ID"] : 1;
+        if (data["Drug_ID"])
+            mapData["Drug"] = data ? data["Drug_ID"] : 0;
+        if (data["User_ID"])
+            mapData["UserID"] = data ? data["User_ID"] : 0;
+        //if (data["Market_Basket_ID"])
+        //    mapData["MarketBasket"] = data["Market_Basket_ID"].value;
+
+        //Market Basket is not used for Geographic Coverage report but it is used as a placeholder for NamRamID
+        //in order to avoid additional properties to mapData/
+        
+            
+        //Since restrictions are already formatted from database, this code is not necessary
+//        var restrictions = "";
+
+//        if (data["PA"])
+//            restrictions = "PA";
+//        if (data["QL"]) {
+//            if (restrictions == "") restrictions = "QL";
+//            else restrictions = restrictions + "_QL";
+//        }
+//        if (data["ST"]) {
+//            if (restrictions == "") restrictions = "ST";
+//            else restrictions = restrictions + "_ST";
+//        }
+        //        mapData["restrictions"] = restrictions;
+        mapData["restrictions"] = data["restrictions"];
+
+        return Sys.Serialization.JavaScriptSerializer.serialize(mapData);
+
+    }
+
+    function millenniumGeographicCoverage_reloadMap() {
+        if (flashSupported)
+            fmThemeReloadAreas("areas/mapdatamillennium.ashx?s=" + millenniumGeographicCoverage_mapState());
+        else {
+            $("#divTile1 map").remove();
+            $("#divReportMap").load("map.aspx?cmd=restoreview&s=" + millenniumGeographicCoverage_mapState() + " form>*");
+        }
+    }
+
+    //Formulary Status
+    function gridFSDrilldown_setfilter(drugID, drugName, coverageStatusID, coverageStatus, region)
+    {
+        if (binding) return;
+        binding = true;
+
+        var grid = $get("ctl00_Tile5_gridFSDrilldown_gridformularystatusdrilldown").control;
+        var masterTable = grid.get_masterTableView();
+
+        var data = {};
+
+        data["Geography_ID"] = new Pathfinder.UI.dataParam("Geography_ID", region, "System.String", "EqualTo");
+
+        //data["Market_Basket_ID"] = clientManager.get_SelectionData()["Market_Basket_ID"];
+        //data["Plan_ID"] = clientManager.get_SelectionData()["Plan_ID"];
+
+        data["Drug_ID"] = drugID;
+
+        if (coverageStatusID != 4)
+            data["Coverage_Status_ID"] = coverageStatusID;
+        else
+            data["Coverage_Status_ID"] = 2; //still restriction if 4
+
+        //data["Rank"] = clientManager.get_SelectionData()["Rank"];
+
+        data["User_ID"] = clientManager.get_SelectionData()["User_ID"];
+
+        //data["Is_Predominant"] = clientManager.get_SelectionData()["Is_Predominant"];
+
+        //Plan Classification ID
+        //        if (clientManager.get_SelectionData()["Plan_Classification_ID"])
+        //            data["Plan_Classification_ID"] = clientManager.get_SelectionData()["Plan_Classification_ID"];
+        //if (clientManager.get_SelectionData()["Class_Partition"])
+        //    data["Class_Partition"] = clientManager.get_SelectionData()["Class_Partition"];
+
+
+        if (coverageStatusID == 2)
+        {
+            var d = clientManager.get_SelectionData();
+
+            if (d["PA"])
+                data["PA"] = d["PA"];
+            if (d["QL"])
+                data["QL"] = d["QL"];
+            if (d["ST"])
+                data["ST"] = d["ST"];
+        }
+        else if (coverageStatusID == 4) //if Coverage_Status_ID=4 then use 'Other_Lives' field
+        {
+            var d = clientManager.get_SelectionData();
+            //FYI:  DataService requires "IsNull" filter type to work while export (which uses Generic query gen) needs value to be #NULL
+            if (d["PA"])
+                data["PA"] = new Pathfinder.UI.dataParam("PA", "#NULL", "System.String", "IsNull");
+            if (d["QL"])
+                data["QL"] = new Pathfinder.UI.dataParam("QL", "#NULL", "System.String", "IsNull");
+            if (d["ST"])
+                data["ST"] = new Pathfinder.UI.dataParam("ST", "#NULL", "System.String", "IsNull");
+
+            data["_others"] = new Pathfinder.UI.dataParam("_others", "true", "System.String", "EqualTo", null, true);
+        }
+
+
+        var channel = clientManager.get_SelectionData()["Section_ID"];
+        data["Section_ID"] = channel;
+        //data["rcbGeographyType"] = clientManager.get_SelectionData()["rcbGeographyType"];
+
+        //set these values as "options" so they don't get applied as filters.
+        data["__options"] = { "drugName": drugName, "coverageStatus": coverageStatus, "chartTitle": clientManager.getRegionNameByID(region) };
+
+        clientManager.set_SelectionData(data, 1);
+    }
+
+    function gridformularystatusdrilldown_onDataBound(sender, args)
+    {
+        $(sender.get_element()).css("visibility", "visible");
+
+        $("#formularyStatusDrilldownTitle").html(drilldownTitle);
+
+        adjustTile5HeightForDrilldown();
+
+        binding = false;
+    }
+
+    function setGridPage(page, totalCount)
+    {
+        ReportPager.set_currentPageNumber(page + 1);
+        ReportPager.constructPager(totalCount);
+        ReportPager.refreshPage();
+
+        var r = ReportPager.get_reportCombinations();
+        var page = ReportPager.get_currentPageNumber() - 1
+        $("#tile4T .pagination").html(ReportPager.get_pagingHTML());
+        $('#tile3T .title').text(r[page].FullName + " " + r[page].Drug_Name + " " + r[page].Restriction_Combination);
+    }
+
+</script>

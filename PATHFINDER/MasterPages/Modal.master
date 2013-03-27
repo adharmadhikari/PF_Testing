@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Modal.master.cs" Inherits="MasterPages_Modal" %>
+
+<%@ Register Src="~/controls/googleanalytics.ascx" TagName="analytics" TagPrefix="google" %>
+<%@ Register Src="~/controls/alert.ascx" TagName="alert" TagPrefix="pinso" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" id="htmlModalWindow">
+<head runat="server">
+    <title></title>
+    <link href="../content/styles/main.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!--[if IE 6]>
+        <link rel="stylesheet" type="text/css" href="../content/styles/ie6.css" />
+        <link rel="stylesheet" type="text/css" href="../content/styles/ie6Pathfinder.css" />
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" type="text/css" href="../content/styles/ie7.css" />
+    <![endif]-->
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server" ID="scriptManager">
+            <Scripts>
+                <asp:ScriptReference Path="https://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" />
+                <asp:ScriptReference Path="~/content/scripts/jquery-ui-1.7.2.custom.min.js" />
+                <asp:ScriptReference Path="~/content/scripts/ui.js" />
+                <asp:ScriptReference Path="~/content/scripts/components.js" />
+                <asp:ScriptReference Path="~/content/scripts/clientmanager.js" />            
+            </Scripts>
+        </asp:ScriptManager>
+    
+        <div class="tileContainerHeader">
+            <div id="header" class="title">
+                <asp:ContentPlaceHolder runat="server" ID="title" />
+            </div>
+            <div class="tools"><asp:ContentPlaceHolder runat="server" ID="tools" /><img id="Img1" class="showHideBtn close" alt="close" title="close" runat="server" src="~/content/images/spacer.gif" onclick="$closeWindow()" /></div>
+            <div id="titlePaging" class="pagination"></div>
+             <div class="clearAll"></div>
+        </div>            
+        <div id="divTile2">
+            <asp:ContentPlaceHolder id="main" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <script type="text/javascript">        
+
+        if(window.top.clientManager)
+            window.top.clientManager.get_ApplicationManager().resizeModal();
+
+        $(document).ready(function()
+        {
+            $(".close").show();
+            if (window.top.clientManager)
+            {
+                var current = $(document.body).attr("class");
+                setPageUIState(window.top.clientManager);
+                $(document.body).addClass(current);
+            }
+        });
+    </script>    
+    
+    <pinso:alert runat="server" ID="customAlert" />
+    <google:analytics runat="server" ID="googleScript" />
+</body>
+</html>
+

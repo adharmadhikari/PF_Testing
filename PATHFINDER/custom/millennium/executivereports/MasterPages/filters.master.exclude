@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="filters.master.cs" Inherits="custom_millennium_executivereports_MasterPages_filters" %>
+<%@ Register src="~/custom/millennium/executivereports/controls/FiltersContainerScript.ascx" tagname="FiltersContainerScript" tagprefix="pinso" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+        <asp:ScriptManager runat="server" ID="scriptManager" EnablePartialRendering="false">
+        </asp:ScriptManager>
+        
+        <pinso:FiltersContainerScript runat="server" ID="filtersContainerScript" />        
+        <asp:ContentPlaceHolder runat="server" ID="scriptContainer" />
+        
+        <div class="tileContainer" id="partialPageContainer">
+            <asp:ContentPlaceHolder id="partialPage" runat="server">            
+                    <div class="tileContainerHeader">
+                                    <div class="title"><asp:Literal runat="server" ID="literalTitle" Text='<%$ Resources:Resource, Label_Report_Filters %>' />
+                                    </div>
+                                    <div class="tools"><div id="warnings" onclick="$alert()"></div>
+                                    </div>
+                                    <div class="clearAll">
+                                    </div>
+                                </div>
+                        <div id="filterControls">
+                            <div id="filtersContainer">
+                                 <asp:ContentPlaceHolder ID="filtersContainer" runat="server">
+                                    
+                                 </asp:ContentPlaceHolder>
+                            </div>
+                            <div id="optionsContainer">
+                                <asp:ContentPlaceHolder ID="optionsContainer" runat="server" />  
+                            </div>
+                        </div>                           
+                        <div class="modalFormButtons" id="filterFormButtons">
+                            <pinso:CustomButtonNonServer runat="server" id="requestReportButton" Text="Submit" />
+                            <pinso:CustomButtonNonServer runat="server" id="clearFiltersButton" Text="Reset" />        
+                        </div>                            
+            </asp:ContentPlaceHolder> 
+        </div>
+    </form>    
+</body>
+</html>

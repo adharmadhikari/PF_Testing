@@ -1,0 +1,54 @@
+<areas>
+  <area id='us_az' category='d' statename='Arizona' state='AZ' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ca' category='d' statename='California' state='CA' enabled='false' tooltip='false' totalcovered="" mst="" trx=""  />
+  <area id='us_co' category='d' statename='Colorado' state='CO' enabled='false' tooltip='false' totalcovered="" mst="" trx=""  />
+  <area id='us_dc' category='d' statename='D. Columbia' state='DC' enabled='false' tooltip='false' totalcovered="" mst="" trx=""  />
+  <area id='us_fl' category='d' statename='Florida' state='FL' enabled='false' tooltip='false' totalcovered="" mst="" trx=""  />
+  <area id='us_ga' category='d' statename='Georgia' state='GA' enabled='false' tooltip='false' totalcovered="" mst="" trx=""  />
+  <area id='us_il' category='d' statename='Illinois' state='IL'  enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_in' category='d' statename='Indiana' state='IN' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ma' category='d' statename='Massachusetts' state='MA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_mi' category='d' statename='Michigan' state='MI' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_mn' category='d' statename='Minnesota' state='MN' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nc' category='d' statename='North Carolina' state='NC' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nj' category='d' statename='New Jersey' state='NJ' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ny' category='d' statename='New York' state='NY' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_oh' category='d' statename='Ohio' state='OH' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ok' category='d' statename='Oklahoma' state='OK' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_or' category='d' statename='Oregon' state='OR' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_pa' category='d' statename='Pennsylvania' state='PA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_tn' category='d' statename='Tennessee' state='TN' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_tx' category='d' statename='Texas' state='TX' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ut' category='d' statename='Utah' state='UT' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_wa' category='d' statename='Washington' state='WA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_wi' category='d' statename='Wisconsin' state='WI' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ak' category='d' statename='Alaska' state='AK' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_al' category='d' statename='Alabama' state='AL' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ar' category='d' statename='Arkansas' state='AR' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ct' category='d' statename='Connecticut' state='CT' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_de' category='d' statename='Delaware' state='DE' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_hi' category='d' statename='Hawaii' state='HI' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ia' category='d' statename='Iowa' state='IA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_id' category='d' statename='Idaho' state='ID' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ks' category='d' statename='Kansas' state='KS' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ky' category='d' statename='Kentucky' state='KY' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_la' category='d' statename='Louisiana' state='LA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_md' category='d' statename='Maryland' state='MD' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_me' category='d' statename='Maine' state='ME' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_mo' category='d' statename='Missouri' state='MO' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ms' category='d' statename='Mississippi' state='MS' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_mt' category='d' statename='Montana' state='MT' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nd' category='d' statename='North Dakota' state='ND' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ne' category='d' statename='Nebraska' state='NE' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nh' category='d' statename='New Hampshire' state='NH' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nm' category='d' statename='New Mexico' state='NM' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_nv' category='d' statename='Nevada' state='NV' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_pr' category='d' statename='Puerto Rico' state='PR' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_ri' category='d' statename='Rhode Island' state='RI' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_sc' category='d' statename='South Carolina' state='SC' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_sd' category='d' statename='South Dakota' state='SD' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_va' category='d' statename='Virginia' state='VA' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_vt' category='d' statename='Vermont' state='VT' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_wv' category='d' statename='West Virginia' state='WV' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+  <area id='us_wy' category='d' statename='Wyoming' state='WY' enabled='false' tooltip='false' totalcovered="" mst="" trx="" />
+</areas>

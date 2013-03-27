@@ -1,0 +1,53 @@
+div.footer {
+	position: absolute;
+	bottom:-1px;
+}
+div.RadMenu_pathfinder .rmLink {
+	PADDING-TOP: 3px !important;
+}
+DIV.viewSelect .rmLeftImage 	
+{
+	TOP: 5px !important;
+}
+div.viewOptions, div.contactSearch
+{
+	padding:4px 0 0 0 !important;
+}
+#tile1 
+{
+	display:inline-block;
+}
+div.todaysAccounts1 
+{
+	padding-bottom:0px !important;
+}
+.contactSearch 
+{
+	margin:0px 5px 0 0 !important;
+	display:none;
+}
+div.addFav 
+{
+	padding:4px 0 !important;
+}
+#tile1
+{
+		margin-right:2px !important;
+}
+.rgHeaderDivPlanInfo
+{
+	width:auto!important;
+}
+#kcView 
+{
+	width: 100% !important;
+}
+#divTile3 
+{
+	width:auto !important;
+
+}
+#htmlModalWindow .title 
+{
+	padding:0 5px 5px 5px;
+}
